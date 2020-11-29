@@ -1,14 +1,28 @@
 <template>
 	<div>
-		<Nuxt />
+		<Header />
+		<main class="main">
+			<Nuxt />
+		</main>
 	</div>
 </template>
 
-<style>
+<script>
+	export default {}
+</script>
+
+<style lang="scss">
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		margin: 0;
+	}
+
 	html {
 		font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
 			'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-		font-size: 16px;
+		font-size: 10px;
 		word-spacing: 1px;
 		-ms-text-size-adjust: 100%;
 		-webkit-text-size-adjust: 100%;
@@ -17,11 +31,8 @@
 		box-sizing: border-box;
 	}
 
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-		margin: 0;
+	body {
+		font-size: 1rem;
 	}
 
 	.button--green {
@@ -51,5 +62,21 @@
 	.button--grey:hover {
 		color: #fff;
 		background-color: #35495e;
+	}
+
+	.container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.inner {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	.main {
+		padding-top: 6rem;
+		font-size: 1.6rem;
 	}
 </style>
