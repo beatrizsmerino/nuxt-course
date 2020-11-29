@@ -1,9 +1,6 @@
 <template>
 	<header class="header inner">
-		<nuxt-link
-			to="/"
-			class="header__logo"
-		>
+		<nuxt-link to="/" class="header__logo">
 			<Icon
 				icon-id="icon-logo-nuxt-dark-theme"
 				icon-aria-label="Nuxt App"
@@ -23,7 +20,7 @@
 	export default {
 		name: 'Header',
 		components: {}
-	}
+	};
 </script>
 
 <style lang="scss" scoped>
