@@ -13,7 +13,8 @@
 	},
 	"dependencies": {
 		"core-js": "^3.6.5",
-		"nuxt": "^2.14.6"
+		"nuxt": "^2.14.6",
+		"nuxt-svg-sprite-module": "^1.0.7"
 	},
 	"devDependencies": {
 		"@nuxtjs/eslint-config": "^3.1.0",
