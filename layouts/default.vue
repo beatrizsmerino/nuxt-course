@@ -35,33 +35,37 @@
 		font-size: 1rem;
 	}
 
-	.button--green {
-		display: inline-block;
-		border-radius: 4px;
-		border: 1px solid #3b8070;
-		color: #3b8070;
+	.button {
+		margin: 1rem;
+		padding: 1.2rem 3rem;
 		text-decoration: none;
-		padding: 10px 30px;
-	}
-
-	.button--green:hover {
-		color: #fff;
-		background-color: #3b8070;
-	}
-
-	.button--grey {
+		font-size: 1.6rem;
+		font-weight: bold;
 		display: inline-block;
-		border-radius: 4px;
-		border: 1px solid #35495e;
-		color: #35495e;
-		text-decoration: none;
-		padding: 10px 30px;
-		margin-left: 15px;
-	}
+		border: 0.2rem solid #000;
+		border-radius: 0.5rem;
+		outline: none;
+		cursor: pointer;
 
-	.button--grey:hover {
-		color: #fff;
-		background-color: #35495e;
+		&--green {
+			border-color: $color-brand-3;
+			color: $color-brand-3;
+
+			&:hover {
+				color: #fff;
+				background-color: $color-brand-3;
+			}
+		}
+
+		&--grey {
+			border-color: $color-brand-2;
+			color: $color-brand-2;
+
+			&:hover {
+				color: #fff;
+				background-color: $color-brand-2;
+			}
+		}
 	}
 
 	.container {
