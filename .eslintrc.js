@@ -26,9 +26,9 @@ module.exports = {
 		'array-callback-return': 1,
 		'array-element-newline': 2,
 		'arrow-body-style': [
-			1,
-			'as-needed'
-		],
+1,
+'as-needed'
+],
 		'arrow-parens': 0,
 		'arrow-spacing': 2,
 		'block-scoped-var': 2,
@@ -73,9 +73,9 @@ module.exports = {
 		'func-names': 0,
 		'func-style': 0,
 		'function-call-argument-newline': [
-			2,
-			'consistent'
-		],
+2,
+'consistent'
+],
 		'function-paren-newline': 2,
 		'generator-star-spacing': 0,
 		'global-require': 2,
@@ -93,9 +93,9 @@ module.exports = {
 		'implicit-arrow-linebreak': 2,
 		'init-declarations': 2,
 		'jsx-quotes': [
-			2,
-			'prefer-double'
-		],
+2,
+'prefer-double'
+],
 		'key-spacing': 2,
 		'keyword-spacing': 2,
 		'line-comment-position': 2,
@@ -267,9 +267,9 @@ module.exports = {
 		'operator-assignment': 2,
 		'operator-linebreak': 2,
 		'padded-blocks': [
-			1,
-			'never'
-		],
+1,
+'never'
+],
 		'padding-line-between-statements': 2,
 		'prefer-arrow-callback': [
 			0,
@@ -291,9 +291,9 @@ module.exports = {
 		'prefer-spread': 2,
 		'prefer-template': 2,
 		'quote-props': [
-			2,
-			'consistent'
-		],
+2,
+'consistent'
+],
 		'quotes': [
 			2,
 			'single',
@@ -303,17 +303,17 @@ module.exports = {
 			}
 		],
 		'radix': [
-			2,
-			'as-needed'
-		],
+2,
+'as-needed'
+],
 		'require-atomic-updates': 2,
 		'require-await': 2,
 		'require-unicode-regexp': 2,
 		'rest-spread-spacing': 2,
 		'semi': [
-			2,
-			'always'
-		],
+2,
+'always'
+],
 		'semi-spacing': 2,
 		'semi-style': 2,
 		'sort-imports': 2,
@@ -321,9 +321,9 @@ module.exports = {
 		'sort-vars': 2,
 		'space-before-blocks': 2,
 		'space-before-function-paren': [
-			2,
-			'never'
-		],
+2,
+'never'
+],
 		'space-in-parens': 2,
 		'space-infix-ops': 2,
 		'space-unary-ops': 2,
@@ -334,9 +334,9 @@ module.exports = {
 		'template-curly-spacing': 2,
 		'template-tag-spacing': 2,
 		'unicode-bom': [
-			2,
-			'never'
-		],
+2,
+'never'
+],
 		'vars-on-top': 2,
 		'wrap-iife': 2,
 		'wrap-regex': 2,
@@ -345,9 +345,9 @@ module.exports = {
 
 		// VUE
 		'vue/component-name-in-template-casing': [
-			'error',
-			'PascalCase'
-		],
+'error',
+'PascalCase'
+],
 		'vue/html-indent': [
 			'error',
 			'tab',
