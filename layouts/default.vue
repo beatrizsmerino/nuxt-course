@@ -35,39 +35,6 @@
 		font-size: 1rem;
 	}
 
-	.button {
-		margin: 1rem;
-		padding: 1.2rem 3rem;
-		text-decoration: none;
-		font-size: 1.6rem;
-		font-weight: bold;
-		display: inline-block;
-		border: 0.2rem solid #000;
-		border-radius: 0.5rem;
-		outline: none;
-		cursor: pointer;
-
-		&--green {
-			border-color: $color-brand-3;
-			color: $color-brand-3;
-
-			&:hover {
-				color: #fff;
-				background-color: $color-brand-3;
-			}
-		}
-
-		&--grey {
-			border-color: $color-brand-2;
-			color: $color-brand-2;
-
-			&:hover {
-				color: #fff;
-				background-color: $color-brand-2;
-			}
-		}
-	}
-
 	.container {
 		width: 100%;
 		max-width: 1200px;
@@ -82,5 +49,30 @@
 	.main {
 		padding-top: 6rem;
 		font-size: 1.6rem;
+	}
+
+	.form {
+		&__item {
+			min-width: 50%;
+
+			&:not(:only-of-type) {
+				margin-bottom: 1rem;
+			}
+		}
+
+		&__group {
+			.form {
+				&__item {
+					&:not(:last-child) {
+						margin-right: 2rem;
+					}
+				}
+			}
+
+			&--column {
+				display: flex;
+				align-items: flex-end;
+			}
+		}
 	}
 </style>

@@ -6,22 +6,22 @@
 				nuxt-app
 			</h1>
 			<div class="links">
-				<a
+				<Button
 					href="https://nuxtjs.org/"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="button button--green"
 				>
 					Documentation
-				</a>
-				<a
+				</Button>
+				<Button
 					href="https://github.com/nuxt/nuxt.js"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="button button--grey"
 				>
 					GitHub
-				</a>
+				</Button>
 			</div>
 		</div>
 	</div>
@@ -31,7 +31,7 @@
 	export default {};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.container {
 		margin: 0 auto;
 		min-height: calc(100vh - 6rem);
@@ -62,5 +62,14 @@
 
 	.links {
 		padding-top: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		> * {
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
+		}
 	}
 </style>

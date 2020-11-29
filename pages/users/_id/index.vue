@@ -1,10 +1,12 @@
 <template>
 	<div class="container inner">
-		<h1 class="title">
+		<Title>
 			Page User
-		</h1>
+		</Title>
 
-		<h2>User ID: {{ $route.params.id }}</h2>
+		<Subtitle>
+			User with ID: {{ $route.params.id }}
+		</Subtitle>
 	</div>
 </template>
 
@@ -12,22 +14,4 @@
 	export default {};
 </script>
 
-<style lang="scss">
-	.title {
-		margin: 5rem 0 7rem;
-		font-size: 4rem;
-		position: relative;
-		color: $color-brand-1;
-
-		&:after {
-			content: '';
-			display: inline-block;
-			width: 15rem;
-			height: 0.4rem;
-			position: absolute;
-			left: 0;
-			bottom: -1rem;
-			background-color: $color-brand-2;
-		}
-	}
-</style>
+<style lang="scss"></style>
