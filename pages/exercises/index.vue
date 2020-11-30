@@ -46,6 +46,13 @@
 						description:
 							'<div class="exercise-steps"><ol><li>From Routes to Folders</li><li>Creating a Route with a Dynamic Path</li><li>Two-Way Data Binding to Custom Components in Vue.js</li><li>Adding Links & Navigating Around</li></ol></div> ',
 						status: false
+					},
+					{
+						url: '/exercises/products',
+						name: 'Products',
+						description:
+							'<div class="exercise-steps"><ol><li>Create two routes: /products and /products/:pid</li><li>Add a button to the main page. The button should navigate (programmatically) to /products</li><li>Add two links to the /products page. The links should go to /products/1 and /products/2</li><li>Output the product id on the /products/:pid page</li></ol></div>',
+						status: false
 					}
 				]
 			};
