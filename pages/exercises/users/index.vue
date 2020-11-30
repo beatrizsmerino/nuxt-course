@@ -1,8 +1,6 @@
 <template>
 	<div class="container inner">
-		<Title>
-			Page users
-		</Title>
+		<Title>Page users</Title>
 
 		<section>
 			<article>
@@ -39,7 +37,18 @@
 </template>
 
 <script>
+	import Button from '~/components/UI/Button.vue';
+	import Field from '~/components/UI/Form/Field.vue';
+	import Label from '~/components/UI/Form/Label.vue';
+	import Title from '~/components/Title.vue';
+
 	export default {
+		components: {
+			Title,
+			Button,
+			Label,
+			Field
+		},
 		data() {
 			return {
 				user: {
@@ -49,7 +58,7 @@
 		},
 		methods: {
 			loadUser() {
-				this.$router.push(`/users/${this.user.id}`);
+				this.$router.push(`/exercises/users/${this.user.id}`);
 			}
 		}
 	};

@@ -8,8 +8,8 @@
 		</nuxt-link>
 		<ul>
 			<li>
-				<nuxt-link to="/users">
-					Users
+				<nuxt-link to="/exercises">
+					Exercises
 				</nuxt-link>
 			</li>
 		</ul>

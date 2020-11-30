@@ -68,6 +68,11 @@
 		cursor: pointer;
 		appearance: none;
 
+		&--icon {
+			padding: 1rem;
+			border: none;
+		}
+
 		&--green {
 			border-color: $color-brand-3;
 			color: $color-brand-3;

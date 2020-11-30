@@ -12,8 +12,8 @@
 
 <style lang="scss" scoped>
 	.subtitle {
-		margin: 5rem 0 7rem;
-		font-size: 3rem;
+		margin: 3rem 0 5rem;
+		font-size: 3.5rem;
 		position: relative;
 		color: $color-brand-2;
 	}
