@@ -1,6 +1,6 @@
 <template>
 	<h1>
-		Product
+		Product {{ $route.params.id }}
 	</h1>
 </template>
 
