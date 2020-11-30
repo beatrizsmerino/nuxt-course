@@ -68,6 +68,13 @@
 		cursor: pointer;
 		appearance: none;
 
+		&.nuxt-link-active,
+		&:hover {
+			color: $color-white;
+			border-color: mix($color-white, $color-black, 20%);
+			background-color: mix($color-white, $color-black, 20%);
+		}
+
 		&--icon {
 			padding: 1rem;
 			border: none;

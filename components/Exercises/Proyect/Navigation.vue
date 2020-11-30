@@ -2,7 +2,7 @@
 	<nav class="navigation">
 		<ul>
 			<li>
-				<Button to="/exercises/proyect">
+				<Button to="/exercises/proyect/home">
 					Home
 				</Button>
 			</li>
@@ -47,6 +47,9 @@
 
 				@include media('md') {
 					width: calc(50% - 2rem);
+				}
+
+				a {
 				}
 			}
 		}
