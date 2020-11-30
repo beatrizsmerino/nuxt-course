@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped>
 	.title {
-		margin: 5rem 0 7rem;
+		margin: 0 0 7rem;
 		font-size: 4.5rem;
 		position: relative;
 		color: $color-brand-1;

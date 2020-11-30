@@ -24,7 +24,8 @@
 	}
 
 	.main {
-		padding-top: 6rem;
+		margin-top: 6rem;
+		padding: 5rem 0 8rem;
 		font-size: 1.6rem;
 	}
 
