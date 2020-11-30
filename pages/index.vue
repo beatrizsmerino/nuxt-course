@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div class="container inner">
 		<div>
 			<Logo />
 			<h1 class="title">
@@ -40,7 +40,7 @@
 <style lang="scss" scoped>
 	.container {
 		margin: 0 auto;
-		min-height: calc(100vh - 6rem);
+		min-height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
