@@ -1,6 +1,6 @@
 <template>
 	<div class="container inner">
-		<Title>Page users</Title>
+		<Title>Users</Title>
 
 		<section>
 			<article>

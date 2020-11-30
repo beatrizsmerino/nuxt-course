@@ -1,6 +1,6 @@
 <template>
 	<div class="container inner">
-		<Title>Page Products</Title>
+		<Title>Products</Title>
 
 		<section>
 			<article class="products-list">
