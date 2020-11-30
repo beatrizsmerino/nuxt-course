@@ -345,11 +345,12 @@ module.exports = {
 
 		// VUE
 		'vue/component-name-in-template-casing': [
-			'error',
+			2,
 			'PascalCase'
 		],
+		'vue/no-v-html': 0,
 		'vue/html-indent': [
-			'error',
+			2,
 			'tab',
 			{
 				attribute: 1,
@@ -359,14 +360,14 @@ module.exports = {
 			}
 		],
 		'vue/html-closing-bracket-newline': [
-			'error',
+			2,
 			{
 				singleline: 'never',
 				multiline: 'always'
 			}
 		],
 		'vue/singleline-html-element-content-newline': [
-			'error',
+			2,
 			{
 				ignoreWhenEmpty: true
 			}
