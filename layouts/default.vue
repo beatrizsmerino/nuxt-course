@@ -74,5 +74,11 @@
 				align-items: flex-end;
 			}
 		}
+
+		&__info {
+			margin-top: 0.5rem;
+			font-size: 1.3rem;
+			color: $color-brand-2;
+		}
 	}
 </style>
