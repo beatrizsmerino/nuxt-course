@@ -56,8 +56,8 @@
 						status: false
 					},
 					{
-						url: '/exercises/posts',
-						name: 'Posts',
+						url: '/exercises/proyect',
+						name: 'Proyect',
 						description:
 							'<div class="exercise-steps"><ol><li></li></ol></div>',
 						status: false
