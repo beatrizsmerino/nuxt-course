@@ -1,18 +1,22 @@
 <template>
-	<div class="container inner">
-		<Title>Proyect</Title>
-		<Navigation />
-	</div>
+	<Layout>
+		<template #title>
+			Last Posts
+		</template>
+		<template #content>
+			<PostsList />
+		</template>
+	</Layout>
 </template>
 
 <script>
-	import Navigation from '~/components/Exercises/Proyect/Navigation.vue';
-	import Title from '~/components/Title.vue';
+	import Layout from '~/components/Exercises/Proyect/Layout.vue';
+	import PostsList from '~/components/Exercises/Proyect/PostsList.vue';
 
 	export default {
 		components: {
-			Title,
-			Navigation
+			Layout,
+			PostsList
 		},
 		layout: 'exercises'
 	};
