@@ -17,15 +17,11 @@
 			fieldTag: {
 				type: String,
 				default: null
-			},
-			fieldValue: {
-				type: String,
-				required: true
 			}
 		},
 		data() {
 			return {
-				localValue: this.fieldValue
+				localValue: ''
 			};
 		},
 		computed: {
@@ -47,9 +43,6 @@
 		watch: {
 			localValue(newValue) {
 				this.$emit('input', newValue);
-			},
-			fieldValue(newValue) {
-				this.localValue = this.fieldValue;
 			}
 		},
 		methods: {
