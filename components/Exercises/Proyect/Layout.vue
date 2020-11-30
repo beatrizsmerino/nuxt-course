@@ -32,6 +32,11 @@
 
 <style lang="scss">
 	.layout {
+		background-size: 40rem;
+		background-repeat: no-repeat;
+		background-position: 95% 10%;
+		background-image: url('~assets/images/exercises/proyect/background.png');
+
 		&__title,
 		&__content {
 			font-family: $font-ubuntu;
