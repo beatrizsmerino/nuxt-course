@@ -1,6 +1,9 @@
 <template>
 	<header class="header inner">
-		<nuxt-link to="/" class="header__logo">
+		<nuxt-link
+			to="/"
+			class="header__logo"
+		>
 			<Icon
 				icon-id="icon-logo-nuxt-dark-theme"
 				icon-aria-label="Nuxt App"
@@ -42,7 +45,7 @@
 				height: 4rem;
 
 				&__use {
-					fill: #fff !important;
+					fill: $color-white !important;
 				}
 			}
 		}
@@ -54,7 +57,7 @@
 			a {
 				padding: 0.5rem;
 				text-decoration: none;
-				color: #fff;
+				color: $color-white;
 				font-weight: bold;
 
 				&:last-child {

@@ -61,10 +61,10 @@
 					font-size: 2rem;
 					font-weight: bold;
 					color: $color-brand-3;
-					background-color: mix(#fff, $color-brand-2, 90%);
+					background-color: mix($color-white, $color-brand-2, 90%);
 
 					&:hover {
-						background-color: mix(#fff, $color-brand-2, 80%);
+						background-color: mix($color-white, $color-brand-2, 80%);
 					}
 				}
 			}

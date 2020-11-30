@@ -60,7 +60,7 @@
 		font-size: 1.6rem;
 		font-weight: 900;
 		line-height: 110%;
-		border: 0.2rem solid #000;
+		border: 0.2rem solid $color-black;
 		border-radius: 0.5rem;
 		outline: none;
 		background-color: transparent;
@@ -74,13 +74,13 @@
 		}
 
 		&--black {
-			color: #fff;
-			border-color: #000;
-			background-color: #000;
+			color: $color-white;
+			border-color: $color-black;
+			background-color: $color-black;
 
 			&:hover {
-				border-color: mix(#fff, #000, 20%);
-				background-color: mix(#fff, #000, 20%);
+				border-color: mix($color-white, $color-black, 20%);
+				background-color: mix($color-white, $color-black, 20%);
 			}
 		}
 
@@ -89,7 +89,7 @@
 			color: $color-brand-3;
 
 			&:hover {
-				color: #fff;
+				color: $color-white;
 				border-color: $color-brand-3;
 				background-color: $color-brand-3;
 			}
@@ -100,7 +100,7 @@
 			color: $color-brand-4;
 
 			&:hover {
-				color: #fff;
+				color: $color-white;
 				border-color: $color-brand-4;
 				background-color: $color-brand-4;
 			}
