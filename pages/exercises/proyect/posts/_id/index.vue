@@ -1,10 +1,16 @@
 <template>
 	<Layout>
 		<template #title>
-			Post {{ $route.params.id }}
+			# {{ $route.params.id }} Post
 		</template>
 		<template #content>
 			<article class="posts-detail">
+				<div class="post-detail__image">
+					<img
+						:src="require(`~/assets/images/default/default-placeholder.png`)"
+						alt="Lorem ipsum dolor"
+					>
+				</div>
 				<div class="post-detail__header">
 					<h2 class="post-detail__title">
 						Title of the post
@@ -54,6 +60,16 @@
 
 <style lang="scss" scoped>
 	.post-detail {
+		&__image {
+			margin-bottom: 2rem;
+
+			img {
+				width: 100%;
+				height: 30rem;
+				object-fit: cover;
+			}
+		}
+
 		&__title {
 			margin-bottom: 2rem;
 		}
