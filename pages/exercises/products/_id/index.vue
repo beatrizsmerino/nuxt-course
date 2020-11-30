@@ -9,9 +9,9 @@
 </template>
 
 <script>
-	import Breadcrumbs from '~/components/Breadcrumbs.vue';
-	import Subtitle from '~/components/Subtitle.vue';
-	import Title from '~/components/Title.vue';
+	import Breadcrumbs from '@/components/Breadcrumbs.vue';
+	import Subtitle from '@/components/Subtitle.vue';
+	import Title from '@/components/Title.vue';
 
 	export default {
 		components: {

@@ -38,10 +38,10 @@
 </template>
 
 <script>
-	import Button from '~/components/UI/Button.vue';
-	import Field from '~/components/UI/Form/Field.vue';
-	import Label from '~/components/UI/Form/Label.vue';
-	import Title from '~/components/Title.vue';
+	import Button from '@/components/UI/Button.vue';
+	import Field from '@/components/UI/Form/Field.vue';
+	import Label from '@/components/UI/Form/Label.vue';
+	import Title from '@/components/Title.vue';
 
 	export default {
 		components: {

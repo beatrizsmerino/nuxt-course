@@ -7,8 +7,8 @@
 </template>
 
 <script>
-	import Subtitle from '~/components/Subtitle.vue';
-	import Title from '~/components/Title.vue';
+	import Subtitle from '@/components/Subtitle.vue';
+	import Title from '@/components/Title.vue';
 
 	export default {
 		components: {
