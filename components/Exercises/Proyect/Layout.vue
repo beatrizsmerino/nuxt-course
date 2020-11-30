@@ -31,6 +31,11 @@
 </script>
 
 <style lang="scss">
+	.proyect__title,
+	.protect__content {
+		font-family: $font-ubuntu;
+	}
+
 	.proyect__title {
 		margin-bottom: 2rem !important;
 	}
