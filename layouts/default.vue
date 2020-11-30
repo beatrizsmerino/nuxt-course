@@ -7,6 +7,10 @@
 </script>
 
 <style lang="scss">
+	html {
+		font-family: $font-main;
+	}
+
 	html,
 	body {
 		height: 100%;
