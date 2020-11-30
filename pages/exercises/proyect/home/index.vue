@@ -4,7 +4,7 @@
 			Last Posts
 		</template>
 		<template #content>
-			<PostsList :posts-list-data="postsListData" />
+			<PostsList :show-last-posts="true" />
 		</template>
 	</Layout>
 </template>
@@ -18,83 +18,7 @@
 			Layout,
 			PostsList
 		},
-		layout: 'exercises',
-		data() {
-			return {
-				postsListData: [
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-1.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-2.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-3.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-4.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-5.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-6.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-7.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-8.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-9.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-10.jpg'
-					}
-				]
-			};
-		}
+		layout: 'exercises'
 	};
 </script>
 
