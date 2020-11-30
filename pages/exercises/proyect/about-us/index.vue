@@ -1,21 +1,30 @@
 <template>
-	<div class="container inner">
-		<Title>About us</Title>
-		<Navigation />
-	</div>
+	<Layout>
+		<template #title>
+			About us
+		</template>
+		<template #content>
+			<article>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet architecto ipsum magni sapiente fugiat. Distinctio quaerat itaque sint dolore voluptate laborum, reprehenderit, cumque atque quae eveniet a nihil, quas voluptas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum corporis fuga sapiente laudantium eaque cupiditate adipisci quidem odio vitae doloremque dolorum, vero vel optio unde distinctio aspernatur magni quos nam?
+				</p>
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad quae dignissimos necessitatibus, enim provident consequatur nisi labore earum minus nostrum. Nisi, officiis iure repellat obcaecati provident ipsum exercitationem veritatis sunt.
+				</p>
+			</article>
+		</template>
+	</Layout>
 </template>
 
 <script>
-	import Navigation from '~/components/Exercises/Proyect/Navigation.vue';
-	import Title from '~/components/Title.vue';
+	import Layout from '~/components/Exercises/Proyect/Layout.vue';
 
 	export default {
 		components: {
-			Title,
-			Navigation
+			Layout
 		},
 		layout: 'exercises'
 	};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>

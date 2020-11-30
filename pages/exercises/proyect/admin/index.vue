@@ -1,21 +1,21 @@
 <template>
-	<div class="container inner">
-		<Title>Admin</Title>
-		<Navigation />
-	</div>
+	<Layout>
+		<template #title>
+			Admin
+		</template>
+		<template #content />
+	</Layout>
 </template>
 
 <script>
-	import Navigation from '~/components/Exercises/Proyect/Navigation.vue';
-	import Title from '~/components/Title.vue';
+	import Layout from '~/components/Exercises/Proyect/Layout.vue';
 
 	export default {
 		components: {
-			Title,
-			Navigation
+			Layout
 		},
 		layout: 'exercises'
 	};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>
