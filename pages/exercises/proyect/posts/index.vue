@@ -1,19 +1,21 @@
 <template>
 	<div class="container inner">
 		<Title>Posts</Title>
+		<Navigation />
 	</div>
 </template>
 
 <script>
+	import Navigation from '~/components/Exercises/Proyect/Navigation.vue';
 	import Title from '~/components/Title.vue';
 
 	export default {
 		components: {
-			Title
+			Title,
+			Navigation
 		},
 		layout: 'exercises'
 	};
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
