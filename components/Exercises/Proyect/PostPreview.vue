@@ -5,19 +5,25 @@
 	>
 		<div class="post-preview__image">
 			<img
-				:src="require(`~/assets/images/default/default-placeholder.png`)"
-				alt="Lorem ipsum dolor"
+				:src="require(`~/assets/images/exercises/proyect/posts/${postData.image}`)"
+				:alt="postData.title"
 			>
 		</div>
 		<h3 class="post-preview__title">
-			Post 0
+			{{ postData.title }}
 		</h3>
 	</nuxt-link>
 </template>
 
 <script>
 	export default {
-		name: 'PostPreview'
+		name: 'PostPreview',
+		props: {
+			postData: {
+				type: Object,
+				required: true
+			}
+		}
 	};
 </script>
 

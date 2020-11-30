@@ -120,7 +120,7 @@ module.exports = {
 		'max-lines-per-function': [
 			1,
 			{
-				max: 30
+				max: 100
 			}
 		],
 		'max-nested-callbacks': 2,

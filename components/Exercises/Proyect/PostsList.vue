@@ -1,8 +1,11 @@
 <template>
 	<article class="posts-list">
 		<ul>
-			<li>
-				<PostPreview />
+			<li
+				v-for="(item, index) in postsListData"
+				:key="`post-${index}`"
+			>
+				<PostPreview :post-data="item" />
 			</li>
 		</ul>
 	</article>
@@ -15,6 +18,12 @@
 		name: 'PostsList',
 		components: {
 			PostPreview
+		},
+		props: {
+			postsListData: {
+				type: Array,
+				required: true
+			}
 		}
 	};
 </script>
