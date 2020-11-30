@@ -14,6 +14,18 @@
 		components: {
 			Title,
 			Subtitle
+		},
+		validate(data) {
+			console.log(data);
+
+			// eslint-disable-next-line no-unused-vars
+			const equalTo1 = data.params.id === 1;
+
+			// return equalTo1;
+
+			const equalToNumber = (/^\d+$/u).test(data.params.id);
+
+			return equalToNumber;
 		}
 	};
 </script>

@@ -43,7 +43,7 @@ module.exports = {
 				ignoreImports: false
 			}
 		],
-		'capitalized-comments': 2,
+		'capitalized-comments': 0,
 		'class-methods-use-this': 2,
 		'comma-dangle': [
 			2,
