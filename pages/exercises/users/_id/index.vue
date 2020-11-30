@@ -1,18 +1,16 @@
 <template>
-	<div class="container inner">
-		<Title>User</Title>
+	<div class="user-detail">
+		<Subtitle>User</Subtitle>
 
-		<Subtitle>User ID: {{ $route.params.id }}</Subtitle>
+		<p>User ID: {{ $route.params.id }}</p>
 	</div>
 </template>
 
 <script>
 	import Subtitle from '@/components/Subtitle.vue';
-	import Title from '@/components/Title.vue';
 
 	export default {
 		components: {
-			Title,
 			Subtitle
 		},
 		validate(data) {
@@ -30,4 +28,10 @@
 	};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+	.user-detail {
+		.subtitle {
+			margin-bottom: 2rem !important;
+		}
+	}
+</style>
