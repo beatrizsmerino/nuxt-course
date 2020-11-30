@@ -50,6 +50,7 @@
 			Label,
 			Field
 		},
+		layout: 'exercises',
 		data() {
 			return {
 				user: {

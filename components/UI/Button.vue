@@ -73,7 +73,18 @@
 			border: none;
 		}
 
-		&--green {
+		&--black {
+			color: #fff;
+			border-color: #000;
+			background-color: #000;
+
+			&:hover {
+				border-color: mix(#fff, #000, 20%);
+				background-color: mix(#fff, #000, 20%);
+			}
+		}
+
+		&--brand-1-dark-line {
 			border-color: $color-brand-3;
 			color: $color-brand-3;
 
@@ -84,7 +95,7 @@
 			}
 		}
 
-		&--grey {
+		&--brand-2-dark-line {
 			border-color: $color-brand-4;
 			color: $color-brand-4;
 

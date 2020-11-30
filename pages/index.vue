@@ -10,7 +10,7 @@
 					href="https://nuxtjs.org/"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="button button--green"
+					class="button button--brand-1-dark-line"
 				>
 					Documentation
 				</Button>
@@ -18,9 +18,15 @@
 					href="https://github.com/nuxt/nuxt.js"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="button button--grey"
+					class="button button--brand-2-dark-line"
 				>
 					GitHub
+				</Button>
+				<Button
+					to="/exercises"
+					class="button button--black"
+				>
+					Exercises
 				</Button>
 			</div>
 		</div>

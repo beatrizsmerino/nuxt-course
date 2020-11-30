@@ -1,9 +1,6 @@
 <template>
 	<div>
-		<Header />
-		<main class="main">
-			<Nuxt />
-		</main>
+		<Nuxt />
 	</div>
 </template>
 
@@ -33,52 +30,5 @@
 
 	body {
 		font-size: 1rem;
-	}
-
-	.container {
-		width: 100%;
-		max-width: 1200px;
-		margin: 0 auto;
-	}
-
-	.inner {
-		padding-left: 3rem;
-		padding-right: 3rem;
-	}
-
-	.main {
-		padding-top: 6rem;
-		font-size: 1.6rem;
-	}
-
-	.form {
-		&__item {
-			min-width: 50%;
-
-			&:not(:only-of-type) {
-				margin-bottom: 1rem;
-			}
-		}
-
-		&__group {
-			.form {
-				&__item {
-					&:not(:last-child) {
-						margin-right: 2rem;
-					}
-				}
-			}
-
-			&--column {
-				display: flex;
-				align-items: flex-end;
-			}
-		}
-
-		&__info {
-			margin-top: 0.5rem;
-			font-size: 1.3rem;
-			color: $color-brand-2;
-		}
 	}
 </style>

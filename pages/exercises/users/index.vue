@@ -6,7 +6,7 @@
 
 <script>
 	export default {
-
+		layout: 'exercises'
 	};
 </script>
 

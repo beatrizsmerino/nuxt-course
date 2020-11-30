@@ -37,6 +37,7 @@
 
 <script>
 	export default {
+		layout: 'exercises',
 		data() {
 			return {
 				exercisesList: [

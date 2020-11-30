@@ -19,6 +19,7 @@
 			Subtitle,
 			Breadcrumbs
 		},
+		layout: 'exercises',
 		data() {
 			return {
 				breadcrumbsListData: [

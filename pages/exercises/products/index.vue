@@ -28,6 +28,7 @@
 		components: {
 			Title
 		},
+		layout: 'exercises',
 		data() {
 			return {};
 		}
