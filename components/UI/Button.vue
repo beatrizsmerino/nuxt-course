@@ -2,6 +2,7 @@
 	<component
 		:is="checkTag"
 		:href="href"
+		:to="to"
 		:value="value"
 		class="button"
 		@click="buttonClick"
@@ -31,6 +32,8 @@
 			checkTag() {
 				if (this.href) {
 					return 'a';
+				} else if (this.to) {
+					return 'nuxt-link';
 				} else if (this.value) {
 					return 'input';
 				}
