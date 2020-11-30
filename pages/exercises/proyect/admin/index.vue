@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<Layout class="layout-admin">
 		<template #title>
 			Admin
 		</template>

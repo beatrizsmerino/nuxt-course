@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<Layout class="layout-about">
 		<template #title>
 			About us
 		</template>
@@ -27,4 +27,5 @@
 	};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+</style>

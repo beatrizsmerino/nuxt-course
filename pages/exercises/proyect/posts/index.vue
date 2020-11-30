@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<Layout class="layout-posts">
 		<template #title>
 			Posts
 		</template>

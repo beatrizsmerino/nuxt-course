@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<Layout class="layout-home">
 		<template #title>
 			Last Posts
 		</template>

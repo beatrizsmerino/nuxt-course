@@ -4,11 +4,11 @@
 
 		<Navigation />
 
-		<Subtitle class="proyect__title">
+		<Subtitle class="layout__title">
 			<slot name="title" />
 		</Subtitle>
 
-		<section class="proyect__content">
+		<section class="layout__content">
 			<slot name="content" />
 		</section>
 	</div>
@@ -31,25 +31,27 @@
 </script>
 
 <style lang="scss">
-	.proyect__title,
-	.protect__content {
-		font-family: $font-ubuntu;
-	}
+	.layout {
+		&__title,
+		&__content {
+			font-family: $font-ubuntu;
+		}
 
-	.proyect__title {
-		margin-bottom: 2rem !important;
-	}
+		&__title {
+			margin-bottom: 2rem !important;
+		}
 
-	.proyect__content {
-		font-size: 1.8rem;
+		&__content {
+			font-size: 1.8rem;
 
-		p {
-			&:not(:last-child) {
-				margin-bottom: 1rem;
-			}
+			p {
+				&:not(:last-child) {
+					margin-bottom: 1rem;
+				}
 
-			&:only-child {
-				margin-bottom: 0;
+				&:only-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}

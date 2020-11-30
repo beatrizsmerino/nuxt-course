@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<Layout class="layout-post">
 		<template #title>
 			# {{ $route.params.id }} Post
 		</template>

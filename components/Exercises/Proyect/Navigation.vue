@@ -1,5 +1,5 @@
 <template>
-	<nav class="proyect__navigation">
+	<nav class="navigation">
 		<ul>
 			<li>
 				<Button to="/exercises/proyect">
@@ -33,9 +33,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.proyect__navigation {
-		margin-bottom: 3rem;
-
+	.navigation {
 		ul {
 			padding: 0;
 			display: flex;
