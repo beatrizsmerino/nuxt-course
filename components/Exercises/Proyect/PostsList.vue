@@ -5,14 +5,17 @@
 				v-for="(item, index) in getPosts"
 				:key="`post-${index}`"
 			>
-				<PostPreview :post-data="item" />
+				<nuxt-link :to="`/exercises/proyect/posts/${index}`">
+					<PostPreview :post-data="item" />
+				</nuxt-link>
 			</li>
 		</ul>
 	</article>
 </template>
 
 <script>
-	import PostPreview from '~/components/Exercises/Proyect/PostPreview.vue';
+	import PostPreview from '@/components/Exercises/Proyect/PostPreview.vue';
+	import postsListData from '~/assets/data/data-posts-list.json';
 
 	export default {
 		name: 'PostsList',
@@ -31,87 +34,16 @@
 		},
 		data() {
 			return {
-				postsListData: [
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-1.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-2.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-3.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-4.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-5.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-6.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-7.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-8.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-9.jpg'
-					},
-					{
-						title: 'Post title',
-						data: 'YYYY-MM-DD',
-						author: 'Post Author name',
-						description: 'Post description',
-						image: 'post-10.jpg'
-					}
-				]
+				postsList: postsListData
 			};
 		},
 		computed: {
 			getPosts() {
 				if (this.showLastPosts) {
-					return this.postsListData.slice(0, this.maxPostsList);
+					return this.postsList.slice(0, this.maxPostsList);
 				}
 
-				return this.postsListData;
+				return this.postsList;
 			}
 		}
 	};
@@ -133,8 +65,20 @@
 				justify-content: center;
 				align-items: center;
 
-				@include media('sm') {
+				@include media('md') {
 					width: calc(100% - 2rem);
+				}
+
+				a {
+					width: 100%;
+					text-decoration: none;
+					color: $color-brand-3;
+					background-color: mix($color-white, $color-brand-1, 40%);
+
+					&:hover {
+						color: mix($color-white, $color-black, 15%);
+						background-color: mix($color-white, $color-brand-1, 20%);
+					}
 				}
 			}
 		}

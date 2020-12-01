@@ -1,5 +1,5 @@
 <template>
-	<div class="container inner">
+	<div class="layout__inner container inner">
 		<Title>Proyect</Title>
 
 		<Navigation />
@@ -30,12 +30,15 @@
 	};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.layout {
-		background-size: 40rem;
-		background-repeat: no-repeat;
-		background-position: 95% 10%;
-		background-image: url('~assets/images/exercises/proyect/background.png');
+		&__inner {
+			min-height: 100rem;
+			background-size: 50rem;
+			background-repeat: no-repeat;
+			background-position: 95% 0;
+			background-image: url('~assets/images/exercises/proyect/background.png');
+		}
 
 		&__title,
 		&__content {
@@ -43,7 +46,7 @@
 		}
 
 		&__title {
-			margin-bottom: 2rem !important;
+			margin: 5rem 1rem 1.8rem;
 		}
 
 		&__content {

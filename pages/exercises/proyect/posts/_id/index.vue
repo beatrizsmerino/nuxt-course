@@ -1,8 +1,5 @@
 <template>
 	<Layout class="layout-post">
-		<template #title>
-			# {{ $route.params.id }} Post
-		</template>
 		<template #content>
 			<PostDetail />
 		</template>

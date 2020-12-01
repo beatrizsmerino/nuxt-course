@@ -60,6 +60,7 @@
 		font-size: 1.6rem;
 		font-weight: 900;
 		line-height: 110%;
+		color: $color-black;
 		border: 0.2rem solid $color-black;
 		border-radius: 0.5rem;
 		outline: none;
