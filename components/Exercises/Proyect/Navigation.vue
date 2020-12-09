@@ -34,7 +34,6 @@
 				</ul>
 			</div>
 		</transition>
-		Window width: {{ getWindowWidth }}
 	</nav>
 </template>
 
@@ -83,7 +82,6 @@
 				this.onResize();
 			});
 			window.addEventListener('resize', () => {
-				console.info('Window resized');
 				this.onResize();
 			});
 		},
@@ -97,11 +95,7 @@
 			},
 			onResize() {
 				this.window.width = window.innerWidth;
-				console.log('onResize', this.window.width);
-
 				this.responsive();
-				console.log('Mobile', this.isMobile);
-
 				this.closeNavigation();
 			},
 			toggleNavigation() {
