@@ -69,6 +69,10 @@
 		cursor: pointer;
 		appearance: none;
 
+		> * {
+			pointer-events: none;
+		}
+
 		&.nuxt-link-active,
 		&:hover {
 			color: $color-white;
@@ -79,6 +83,11 @@
 		&--icon {
 			padding: 1rem;
 			border: none;
+
+			&:hover {
+				color: $color-black;
+				background-color: transparent;
+			}
 		}
 
 		&--black {
@@ -96,10 +105,26 @@
 			border-color: $color-brand-3;
 			color: $color-brand-3;
 
+			/deep/ {
+				.icon {
+					&__use {
+						fill: $color-brand-3;
+					}
+				}
+			}
+
 			&:hover {
 				color: $color-white;
 				border-color: $color-brand-3;
 				background-color: $color-brand-3;
+
+				/deep/ {
+					.icon {
+						&__use {
+							fill: $color-white;
+						}
+					}
+				}
 			}
 		}
 
@@ -107,10 +132,26 @@
 			border-color: $color-brand-4;
 			color: $color-brand-4;
 
+			/deep/ {
+				.icon {
+					&__use {
+						fill: $color-brand-4;
+					}
+				}
+			}
+
 			&:hover {
 				color: $color-white;
 				border-color: $color-brand-4;
 				background-color: $color-brand-4;
+
+				/deep/ {
+					.icon {
+						&__use {
+							fill: $color-white;
+						}
+					}
+				}
 			}
 		}
 	}
