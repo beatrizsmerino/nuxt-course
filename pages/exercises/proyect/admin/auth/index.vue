@@ -3,23 +3,15 @@
 		<template #title>
 			Admin
 		</template>
-		<template #content>
-			<article>
-				<Button to="/exercises/proyect/admin/posts/new">
-					Create new post
-				</Button>
-			</article>
-		</template>
+		<template #content />
 	</Layout>
 </template>
 
 <script>
-	import Button from '@/components/UI/Button';
 	import Layout from '@/components/Exercises/Proyect/Layout';
 
 	export default {
 		components: {
-			Button,
 			Layout
 		},
 		layout: 'exercises'
