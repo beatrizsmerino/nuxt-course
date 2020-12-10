@@ -7,6 +7,10 @@
 </script>
 
 <style lang="scss">
+	// PARTIALS SASS
+	// =================================================
+	@import '~/assets/scss/components/components-form';
+
 	html {
 		font-family: $font-main;
 	}

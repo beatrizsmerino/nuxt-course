@@ -1,0 +1,155 @@
+// COMPONENTS
+// FORM
+// =================================================
+
+.form {
+	width: 100%;
+	display: inline-block;
+
+	&__group {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+
+		@include media('sm') {
+			width: 100% !important;
+			flex-direction: column !important;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+
+			@include media('sm') {
+				margin: 0 0 2rem !important;
+			}
+		}
+
+		.form__item {
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__column {
+		@include media('sm') {
+			width: 100% !important;
+			flex-direction: column !important;
+		}
+
+		&:not(:last-child) {
+			margin-right: 2rem !important;
+
+			@include media('sm') {
+				margin-right: 0 !important;
+				margin-bottom: 2rem !important;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 1.9rem;
+		}
+
+		&:not(.is-empty),
+		&.is-focus {
+			.label--anim {
+				top: 0.8rem;
+				font-size: 1.2rem;
+				color: $color-brand-1;
+				transform: translate(0, 0);
+				transition: top 0.2s ease-in-out 0s;
+			}
+		}
+
+		&.is-empty {
+			.label--anim {
+				color: $color-brand-1;
+			}
+			.form__field--anim {
+				padding: 1.2rem;
+			}
+		}
+
+		&.is-focus {
+			.form__field--anim {
+				padding: 2rem 1.2rem 0.4rem;
+				background-color: rgba($color-brand-1, 0.2);
+
+				&.select__field {
+					padding: 2rem 3rem 0.4rem 1.2rem;
+				}
+			}
+
+			&.form__item {
+				&--textarea {
+					.label--anim {
+						top: 1rem;
+					}
+					.form__field--anim {
+						padding: 2.4rem 1.2rem 1.2rem;
+					}
+				}
+			}
+		}
+
+		&:not(.is-focus) {
+			&:not(.is-empty) {
+				.label--anim {
+					color: $color-brand-1;
+				}
+				.form__field--anim {
+					padding: 2rem 1.2rem 0.4rem;
+
+					&.select__field {
+						padding: 2rem 3rem 0.5rem 1.2rem;
+					}
+				}
+
+				&.form__item {
+					&--textarea {
+						.label--anim {
+							top: 1rem;
+						}
+						.form__field--anim {
+							padding: 2.4rem 1.2rem 1.2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__field {
+		min-height: 4.3rem;
+	}
+
+	&__info {
+		margin-top: 0.5rem;
+		font-size: 1.3rem;
+		color: $color-brand-2;
+	}
+}
+
+.label {
+	width: 100%;
+	margin-bottom: 0.5rem;
+	display: inline-block;
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: $color-brand-4;
+
+	&--anim {
+		width: auto;
+		margin-bottom: 0;
+		position: absolute;
+		top: 50%;
+		left: 1.2rem;
+		transform: translate(0, -50%);
+	}
+}
