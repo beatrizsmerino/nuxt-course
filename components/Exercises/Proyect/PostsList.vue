@@ -6,7 +6,7 @@
 				:key="`post-${index}`"
 			>
 				<nuxt-link :to="`/exercises/proyect/posts/${index}`">
-					<PostPreview :post-data="item" />
+					<PostPreview :post-data="item" :class="{'last-post': showLastPosts}" />
 				</nuxt-link>
 			</li>
 		</ul>
@@ -78,6 +78,42 @@
 					&:hover {
 						color: mix($color-white, $color-black, 15%);
 						background-color: mix($color-white, $color-brand-1, 20%);
+					}
+				}
+			}
+		}
+	}
+
+	.last-posts {
+		ul {
+			justify-content: center;
+
+			li {
+				width: calc(33.333% - 2rem) !important;
+
+				@include media('lg') {
+					width: calc(50% - 2rem) !important;
+				}
+
+				@include media('sm') {
+					width: 100% !important;
+				}
+
+				a {
+					color: mix($color-white, $color-black, 30%) !important;
+					background-color: mix(
+						$color-white,
+						$color-black,
+						80%
+					) !important;
+
+					&:hover {
+						color: $color-white !important;
+						background-color: mix(
+							$color-white,
+							$color-black,
+							20%
+						) !important;
 					}
 				}
 			}

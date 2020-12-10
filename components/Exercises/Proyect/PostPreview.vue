@@ -15,6 +15,9 @@
 		<h3 class="post-preview__title">
 			{{ postData.title }}
 		</h3>
+		<div class="post-preview__description">
+			{{ shortDescription }}
+		</div>
 	</div>
 </template>
 
@@ -25,6 +28,25 @@
 			postData: {
 				type: Object,
 				required: true
+			}
+		},
+		data() {
+			return {
+				maxCharacters: 250
+			};
+		},
+		computed: {
+			shortDescription() {
+				return this.ellipsize(this.postData.description);
+			}
+		},
+		methods: {
+			ellipsize(text) {
+				if (typeof text !== 'string' || text.lenght <= this.maxCharacters) {
+					return text;
+				}
+
+				return `${text.slice(0, this.maxCharacters)}...`;
 			}
 		}
 	};
@@ -64,14 +86,44 @@
 
 		&__title {
 			height: 6.5rem;
-			padding: 0.8rem 1rem;
+			padding: 0.8rem 2rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			text-align: center;
 			font-size: 1.4rem;
-			font-weight: 500;
-			line-height: 100%;
+			font-weight: 600;
+			line-height: 120%;
+		}
+
+		&__description{
+			width: 100%;
+			height: calc(100% - 6.5rem);
+			padding: 1.2rem;
+			position: absolute;
+			font-size: 1.4rem;
+			line-height: 120%;
+			background-color: mix($color-black, $color-brand-1, 5%);
+			opacity: 0;
+			transition: opacity 0.4s ease-in-out 0s;
+		}
+
+		&:hover{
+			.post-preview{
+				&__description{
+					opacity: 1;
+				}
+			}
+		}
+
+		&.last-post{
+			&:hover{
+				.post-preview {
+					&__description{
+						display: none;
+					}
+				}
+			}
 		}
 	}
 </style>
