@@ -27,7 +27,7 @@
 						v-for="(item, index) in navigationList"
 						:key="`navigation-link-${index}`"
 					>
-						<Button :to="item.url" @button-click="closeNavigation">
+						<Button :to="item.url">
 							{{ item.name }}
 						</Button>
 					</li>
@@ -83,6 +83,7 @@
 			});
 			window.addEventListener('resize', () => {
 				this.onResize();
+				this.toggleNavigation();
 			});
 		},
 		methods: {
@@ -96,18 +97,10 @@
 			onResize() {
 				this.window.width = window.innerWidth;
 				this.responsive();
-				this.closeNavigation();
 			},
 			toggleNavigation() {
 				if (this.isMobile) {
 					this.isOpen = !this.isOpen;
-				} else {
-					this.isOpen = true;
-				}
-			},
-			closeNavigation() {
-				if (this.isMobile) {
-					this.isOpen = false;
 				} else {
 					this.isOpen = true;
 				}

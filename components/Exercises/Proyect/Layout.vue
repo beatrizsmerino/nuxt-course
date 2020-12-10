@@ -46,7 +46,7 @@
 		}
 
 		&__title {
-			margin: 5rem 1rem 1.8rem;
+			margin: 5rem 0 1.8rem;
 		}
 
 		&__content {
