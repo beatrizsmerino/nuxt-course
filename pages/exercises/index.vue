@@ -19,10 +19,13 @@
 							class="button--icon"
 							@button-click="showMore(index)"
 						>
-							<Icon
-								icon-id="icon-chevron-down"
-								icon-aria-label="Show more"
-							/>
+							<transition name="rotate">
+								<Icon
+									:class="{ 'is-rotate': item.status }"
+									icon-id="icon-chevron-down"
+									icon-aria-label="Show more"
+								/>
+							</transition>
 						</Button>
 					</div>
 					<div
@@ -58,8 +61,7 @@
 					{
 						url: '/exercises/proyect/home',
 						name: 'Proyect',
-						description:
-							'<div class="exercise-steps"><ol><li></li></ol></div>',
+						description: '',
 						status: false
 					}
 				]
@@ -67,9 +69,7 @@
 		},
 		methods: {
 			showMore(exerciseId) {
-				this.exercisesList[exerciseId].status = !this.exercisesList[
-					exerciseId
-				].status;
+				this.exercisesList[exerciseId].status = !this.exercisesList[exerciseId].status;
 			}
 		}
 	};
@@ -111,9 +111,14 @@
 			.icon {
 				width: 3rem;
 				height: 3rem;
+				transition: transform 0.5s ease-in-out 0s;
 
 				&__use {
 					fill: $color-brand-2 !important;
+				}
+
+				&.is-rotate {
+					transform: rotate(180deg);
 				}
 			}
 		}
