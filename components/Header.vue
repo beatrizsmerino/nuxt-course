@@ -65,6 +65,7 @@
 					padding-right: 0;
 				}
 
+				&.nuxt-link-active,
 				&:hover {
 					color: $color-brand-1;
 				}
