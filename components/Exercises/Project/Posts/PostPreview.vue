@@ -8,7 +8,7 @@
 		</time>
 		<div class="post-preview__image">
 			<img
-				:src="require(`~/assets/images/exercises/proyect/posts/${postData.image}`)"
+				:src="require(`~/assets/images/exercises/project/posts/${postData.image}`)"
 				:alt="postData.title"
 			>
 		</div>

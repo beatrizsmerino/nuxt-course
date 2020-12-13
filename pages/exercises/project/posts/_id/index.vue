@@ -7,8 +7,8 @@
 </template>
 
 <script>
-	import Layout from '@/components/Exercises/Proyect/Layout';
-	import PostDetail from '@/components/Exercises/Proyect/Posts/PostDetail';
+	import Layout from '@/components/Exercises/Project/Layout';
+	import PostDetail from '@/components/Exercises/Project/Posts/PostDetail';
 
 	export default {
 		components: {

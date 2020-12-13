@@ -17,7 +17,7 @@
 </template>
 
 <script>
-	import Layout from '@/components/Exercises/Proyect/Layout';
+	import Layout from '@/components/Exercises/Project/Layout';
 
 	export default {
 		components: {

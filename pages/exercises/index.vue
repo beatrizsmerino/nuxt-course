@@ -70,8 +70,8 @@
 						status: false
 					},
 					{
-						url: '/exercises/proyect/home',
-						name: 'Proyect',
+						url: '/exercises/project/home',
+						name: 'Project',
 						description: '',
 						status: false
 					}

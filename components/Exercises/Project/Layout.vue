@@ -1,7 +1,7 @@
 <template>
 	<div class="layout__inner container inner">
 		<Title>
-			Proyect
+			Project
 		</Title>
 
 		<Navigation />
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-	import Navigation from '@/components/Exercises/Proyect/Navigation';
+	import Navigation from '@/components/Exercises/Project/Navigation';
 	import Subtitle from '@/components/Layout/Subtitle';
 	import Title from '@/components/Layout/Title';
 
@@ -39,7 +39,7 @@
 			background-size: 50rem;
 			background-repeat: no-repeat;
 			background-position: 95% 0;
-			background-image: url('~assets/images/exercises/proyect/background.png');
+			background-image: url('~assets/images/exercises/project/background.png');
 		}
 
 		&__title,

@@ -5,7 +5,7 @@
 		</template>
 		<template #content>
 			<article>
-				<Button to="/exercises/proyect/admin/posts/new">
+				<Button to="/exercises/project/admin/posts/new">
 					Create new post
 				</Button>
 			</article>
@@ -15,7 +15,7 @@
 
 <script>
 	import Button from '@/components/UI/Button';
-	import Layout from '@/components/Exercises/Proyect/Layout';
+	import Layout from '@/components/Exercises/Project/Layout';
 
 	export default {
 		components: {

@@ -53,19 +53,19 @@
 				navigationList: [
 					{
 						name: 'Home',
-						url: '/exercises/proyect/home'
+						url: '/exercises/project/home'
 					},
 					{
 						name: 'About Us',
-						url: '/exercises/proyect/about-us'
+						url: '/exercises/project/about-us'
 					},
 					{
 						name: 'Posts',
-						url: '/exercises/proyect/posts'
+						url: '/exercises/project/posts'
 					},
 					{
 						name: 'Admin',
-						url: '/exercises/proyect/admin'
+						url: '/exercises/project/admin'
 					}
 				],
 				window: {

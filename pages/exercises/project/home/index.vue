@@ -13,8 +13,8 @@
 </template>
 
 <script>
-	import Layout from '@/components/Exercises/Proyect/Layout';
-	import PostsList from '@/components/Exercises/Proyect/Posts/PostsList';
+	import Layout from '@/components/Exercises/Project/Layout';
+	import PostsList from '@/components/Exercises/Project/Posts/PostsList';
 
 	export default {
 		components: {

@@ -5,7 +5,7 @@
 				v-for="(item, index) in getPosts"
 				:key="`post-${index}`"
 			>
-				<nuxt-link :to="`/exercises/proyect/posts/${index}`">
+				<nuxt-link :to="`/exercises/project/posts/${index}`">
 					<PostPreview :post-data="item" :class="{'last-post': showLastPosts}" />
 				</nuxt-link>
 			</li>
