@@ -7,8 +7,8 @@
 </template>
 
 <script>
-	import Layout from '@/components/Exercises/Proyect/Layout.vue';
-	import PostDetail from '@/components/Exercises/Proyect/PostDetail.vue';
+	import Layout from '@/components/Exercises/Proyect/Layout';
+	import PostDetail from '@/components/Exercises/Proyect/Posts/PostDetail';
 
 	export default {
 		components: {

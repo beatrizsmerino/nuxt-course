@@ -1,17 +1,21 @@
 <template>
 	<div class="container inner">
-		<Title>Product</Title>
+		<Title>
+			Product
+		</Title>
 
 		<Breadcrumbs :breadcrumbs-list-data="breadcrumbsListData" />
 
-		<Subtitle>Product ID: {{ $route.params.id }}</Subtitle>
+		<Subtitle>
+			Product ID: {{ $route.params.id }}
+		</Subtitle>
 	</div>
 </template>
 
 <script>
-	import Breadcrumbs from '@/components/Breadcrumbs.vue';
-	import Subtitle from '@/components/Subtitle.vue';
-	import Title from '@/components/Title.vue';
+	import Breadcrumbs from '@/components/Exercises/Products/Breadcrumbs';
+	import Subtitle from '@/components/Layout/Subtitle';
+	import Title from '@/components/Layout/Title';
 
 	export default {
 		components: {

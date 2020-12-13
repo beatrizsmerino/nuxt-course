@@ -1,6 +1,8 @@
 <template>
 	<div class="layout__inner container inner">
-		<Title>Proyect</Title>
+		<Title>
+			Proyect
+		</Title>
 
 		<Navigation />
 
@@ -15,9 +17,9 @@
 </template>
 
 <script>
-	import Navigation from '~/components/Exercises/Proyect/Navigation.vue';
-	import Subtitle from '~/components/Subtitle.vue';
-	import Title from '~/components/Title.vue';
+	import Navigation from '@/components/Exercises/Proyect/Navigation';
+	import Subtitle from '@/components/Layout/Subtitle';
+	import Title from '@/components/Layout/Title';
 
 	export default {
 		name: 'Layout',

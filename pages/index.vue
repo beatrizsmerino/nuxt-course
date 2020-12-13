@@ -34,7 +34,15 @@
 </template>
 
 <script>
-	export default {};
+	import Button from '@/components/UI/Button';
+	import Logo from '@/components/Layout/Logo';
+
+	export default {
+		components: {
+			Button,
+			Logo
+		}
+	};
 </script>
 
 <style lang="scss" scoped>

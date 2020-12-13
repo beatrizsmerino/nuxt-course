@@ -45,10 +45,14 @@
 </template>
 
 <script>
+	import Button from '@/components/UI/Button';
 	import postsListData from '~/assets/data/data-posts-list.json';
 
 	export default {
 		name: 'PostDetail',
+		components: {
+			Button
+		},
 		data() {
 			return {
 				postsList: postsListData,

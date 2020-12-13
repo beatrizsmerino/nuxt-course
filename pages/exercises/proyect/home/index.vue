@@ -13,8 +13,8 @@
 </template>
 
 <script>
-	import Layout from '@/components/Exercises/Proyect/Layout.vue';
-	import PostsList from '@/components/Exercises/Proyect/PostsList.vue';
+	import Layout from '@/components/Exercises/Proyect/Layout';
+	import PostsList from '@/components/Exercises/Proyect/Posts/PostsList';
 
 	export default {
 		components: {

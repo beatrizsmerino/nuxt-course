@@ -17,7 +17,7 @@
 </template>
 
 <script>
-	import Layout from '@/components/Exercises/Proyect/Layout.vue';
+	import Layout from '@/components/Exercises/Proyect/Layout';
 
 	export default {
 		components: {

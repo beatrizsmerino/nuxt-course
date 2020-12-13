@@ -1,6 +1,8 @@
 <template>
 	<div class="container inner">
-		<Title>Products</Title>
+		<Title>
+			Products
+		</Title>
 
 		<section>
 			<article class="products-list">
@@ -22,7 +24,7 @@
 </template>
 
 <script>
-	import Title from '~/components/Title.vue';
+	import Title from '@/components/Layout/Title';
 
 	export default {
 		components: {

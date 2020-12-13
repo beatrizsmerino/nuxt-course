@@ -14,7 +14,7 @@
 </template>
 
 <script>
-	import PostPreview from '@/components/Exercises/Proyect/PostPreview.vue';
+	import PostPreview from './PostPreview';
 	import postsListData from '~/assets/data/data-posts-list.json';
 
 	export default {

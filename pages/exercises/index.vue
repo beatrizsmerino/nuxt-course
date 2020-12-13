@@ -1,6 +1,8 @@
 <template>
 	<div class="container inner">
-		<Title>Exercises</Title>
+		<Title>
+			Exercises
+		</Title>
 
 		<div class="exercises-list">
 			<ul>
@@ -39,7 +41,16 @@
 </template>
 
 <script>
+	import Button from '@/components/UI/Button';
+	import Icon from '@/components/UI/Icon';
+	import Title from '@/components/Layout/Title';
+
 	export default {
+		components: {
+			Button,
+			Icon,
+			Title
+		},
 		layout: 'exercises',
 		data() {
 			return {

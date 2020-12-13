@@ -8,7 +8,13 @@
 </template>
 
 <script>
-	export default {};
+	import Header from '@/components/Layout/Header';
+
+	export default {
+		components: {
+			Header
+		}
+	};
 </script>
 
 <style lang="scss">
