@@ -8,19 +8,61 @@
 				Create a new post
 			</h3>
 			<article class="create-new-post">
-				<form id="formNewPost" class="form-new-post" action="">
+				<form
+					id="formNewPost"
+					class="form-new-post"
+					action=""
+				>
 					<div class="form__group">
 						<div class="form__column">
-							<FormField field-id="newPostTitle" field-label="Title" field-type="text" />
-							<FormField field-id="newPostDate" field-label="Date" field-type="text" field-placeholder="YYYY/MM/DD" />
+							<FormField
+								field-id="newPostTitle"
+								field-label="Title"
+								field-type="text"
+								field-modifier="anim"
+							/>
 						</div>
 						<div class="form__column">
-							<FormField field-id="newPostAuthor" field-label="Author" field-type="text" />
-							<FormField field-id="newPostLink" field-label="Link" field-type="url" />
+							<FormField
+								field-id="newPostAuthor"
+								field-label="Author"
+								field-type="text"
+								field-modifier="anim"
+							/>
 						</div>
 					</div>
-					<FormField field-id="newPostDescription" field-label="Description" field-tag="textarea" />
-					<FormField field-id="newPostText" field-label="Text" field-tag="textarea" />
+					<FormField
+						field-id="newPostLink"
+						field-label="Link"
+						field-type="url"
+						field-modifier="anim"
+					/>
+					<FormSelect
+						select-label="Category"
+						select-id="newPostCategory"
+						:select-options="categoriesList"
+						select-modifier="anim"
+					/>
+					<FormField
+						field-id="newPostDescription"
+						field-label="Description"
+						field-tag="textarea"
+						field-modifier="anim"
+					/>
+					<FormField
+						field-id="newPostText"
+						field-label="Text"
+						field-tag="textarea"
+						field-modifier="anim"
+					/>
+					<div class="form__button-list">
+						<Button class="button--success">
+							Save
+						</Button>
+						<Button class="button--error">
+							Cancel
+						</Button>
+					</div>
 				</form>
 			</article>
 		</template>
@@ -28,24 +70,45 @@
 </template>
 
 <script>
+	import Button from '@/components/UI/Button';
 	import FormField from '@/components/UI/Form/FormField';
+	import FormSelect from '@/components/UI/Form/FormSelect';
 	import Layout from '@/components/Exercises/Project/Layout';
 
 	export default {
 		components: {
-			Layout,
-			FormField
+			Button,
+			FormField,
+			FormSelect,
+			Layout
 		},
-		layout: 'exercises'
+		layout: 'exercises',
+		data() {
+			return {
+				categoriesList: [
+					'Without',
+					'Frontend',
+					'Backend',
+					'Big Data',
+					'Cibersecurity',
+					'IT',
+					'Social media',
+					'Robotics',
+					'Technology',
+					'Mobile',
+					'Legal'
+				]
+			};
+		}
 	};
 </script>
 
 <style lang="scss" scoped>
-	.create-new-post{
+	.create-new-post {
 		margin-top: 4rem;
 
-		.form{
-			&__column{
+		.form {
+			&__column {
 				width: calc(50% - 1rem);
 
 				&:not(:last-child) {

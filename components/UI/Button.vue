@@ -154,5 +154,17 @@
 				}
 			}
 		}
+
+		&--success {
+			color: $color-white;
+			border-color: $color-success;
+			background-color: $color-success;
+		}
+
+		&--error {
+			color: $color-white;
+			border-color: $color-error;
+			background-color: $color-error;
+		}
 	}
 </style>

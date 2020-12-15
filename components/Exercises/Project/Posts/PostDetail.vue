@@ -70,10 +70,10 @@
 		&__index {
 			width: 8rem;
 			height: 8rem;
-			padding: 1rem;
+			padding: 2rem 0 0 2rem;
 			position: absolute;
-			bottom: -1.2rem;
-			right: -1.2rem;
+			bottom: 0;
+			right: 0;
 			z-index: 9;
 			display: flex;
 			justify-content: center;
@@ -81,8 +81,8 @@
 			font-size: 2rem;
 			font-weight: 500;
 			color: $color-white;
-			border-radius: 60%;
-			background-color: rgba($color-black, 0.5);
+			border-radius: 8rem 0 0 0rem;
+			background-color: rgba($color-brand-2, 0.8);
 		}
 
 		&__image {

@@ -1,5 +1,9 @@
 <template>
-	<div class="post-preview">
+	<nuxt-link
+		class="post-preview"
+		:class="postModifier"
+		:to="`/exercises/project/posts/${postIndex}`"
+	>
 		<time
 			:datetime="postData.date"
 			class="post-preview__time"
@@ -18,7 +22,7 @@
 		<div class="post-preview__description">
 			{{ shortDescription }}
 		</div>
-	</div>
+	</nuxt-link>
 </template>
 
 <script>
@@ -27,6 +31,14 @@
 		props: {
 			postData: {
 				type: Object,
+				required: true
+			},
+			postIndex: {
+				type: Number,
+				required: true
+			},
+			postModifier: {
+				type: String,
 				required: true
 			}
 		},
@@ -54,9 +66,14 @@
 
 <style lang="scss" scoped>
 	.post-preview {
+		width: 100%;
 		position: relative;
+		overflow: hidden;
 		display: flex;
 		flex-direction: column;
+		text-decoration: none;
+		border-radius: 2rem 0 2rem 2rem;
+		background-color: mix($color-white, $color-brand-1, 40%);
 
 		&__time {
 			width: 100%;
@@ -75,6 +92,7 @@
 		}
 
 		&__image {
+			display: flex;
 			height: 15rem;
 
 			img {
@@ -94,32 +112,51 @@
 			font-size: 1.4rem;
 			font-weight: 600;
 			line-height: 120%;
+			color: $color-brand-3;
 		}
 
-		&__description{
+		&__description {
 			width: 100%;
 			height: calc(100% - 6.5rem);
 			padding: 1.2rem;
 			position: absolute;
 			font-size: 1.4rem;
 			line-height: 120%;
-			background-color: mix($color-black, $color-brand-1, 5%);
+			color: $color-white;
+			background-color: $color-brand-3;
 			opacity: 0;
 			transition: opacity 0.4s ease-in-out 0s;
 		}
 
-		&:hover{
-			.post-preview{
-				&__description{
+		&:hover {
+			background-color: mix($color-white, $color-brand-1, 20%);
+
+			.post-preview {
+				&__title {
+					color: mix($color-white, $color-black, 15%);
+				}
+				&__description {
 					opacity: 1;
 				}
 			}
 		}
 
-		&.last-post{
-			&:hover{
+		&.last-post {
+			background-color: mix($color-white, $color-black, 20%) !important;
+
+			.post-preview {
+				&__title {
+					color: mix($color-white, $color-black, 50%) !important;
+				}
+			}
+
+			&:hover {
 				.post-preview {
-					&__description{
+					&__title {
+						color: $color-white !important;
+					}
+
+					&__description {
 						display: none;
 					}
 				}

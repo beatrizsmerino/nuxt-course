@@ -5,9 +5,11 @@
 				v-for="(item, index) in getPosts"
 				:key="`post-${index}`"
 			>
-				<nuxt-link :to="`/exercises/project/posts/${index}`">
-					<PostPreview :post-data="item" :class="{'last-post': showLastPosts}" />
-				</nuxt-link>
+				<PostPreview
+					:post-data="item"
+					:post-index="index"
+					:post-modifier="getCssModifier"
+				/>
 			</li>
 		</ul>
 	</article>
@@ -44,6 +46,13 @@
 				}
 
 				return this.postsList;
+			},
+			getCssModifier() {
+				if (this.showLastPosts) {
+					return 'last-post';
+				}
+
+				return '';
 			}
 		}
 	};
@@ -68,18 +77,6 @@
 				@include media('md') {
 					width: calc(100% - 2rem);
 				}
-
-				a {
-					width: 100%;
-					text-decoration: none;
-					color: $color-brand-3;
-					background-color: mix($color-white, $color-brand-1, 40%);
-
-					&:hover {
-						color: mix($color-white, $color-black, 15%);
-						background-color: mix($color-white, $color-brand-1, 20%);
-					}
-				}
 			}
 		}
 	}
@@ -97,24 +94,6 @@
 
 				@include media('sm') {
 					width: 100% !important;
-				}
-
-				a {
-					color: mix($color-white, $color-black, 30%) !important;
-					background-color: mix(
-						$color-white,
-						$color-black,
-						80%
-					) !important;
-
-					&:hover {
-						color: $color-white !important;
-						background-color: mix(
-							$color-white,
-							$color-black,
-							20%
-						) !important;
-					}
 				}
 			}
 		}

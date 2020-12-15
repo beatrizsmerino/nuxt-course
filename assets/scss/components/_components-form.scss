@@ -61,7 +61,7 @@
 			.label--anim {
 				top: 0.8rem;
 				font-size: 1.2rem;
-				color: $color-brand-1;
+				color: $color-brand-3;
 				transform: translate(0, 0);
 				transition: top 0.2s ease-in-out 0s;
 			}
@@ -69,7 +69,7 @@
 
 		&.is-empty {
 			.label--anim {
-				color: $color-brand-1;
+				color: $color-brand-3;
 			}
 			.form__field--anim {
 				padding: 1.2rem;
@@ -79,7 +79,8 @@
 		&.is-focus {
 			.form__field--anim {
 				padding: 2rem 1.2rem 0.4rem;
-				background-color: rgba($color-brand-1, 0.2);
+				border-color: $color-brand-3;
+				background-color: rgba($color-brand-3, 0.2);
 
 				&.select__field {
 					padding: 2rem 3rem 0.4rem 1.2rem;
@@ -93,6 +94,7 @@
 					}
 					.form__field--anim {
 						padding: 2.4rem 1.2rem 1.2rem;
+						border-color: $color-brand-3;
 					}
 				}
 			}
@@ -101,7 +103,7 @@
 		&:not(.is-focus) {
 			&:not(.is-empty) {
 				.label--anim {
-					color: $color-brand-1;
+					color: $color-brand-3;
 				}
 				.form__field--anim {
 					padding: 2rem 1.2rem 0.4rem;
@@ -133,6 +135,27 @@
 		margin-top: 0.5rem;
 		font-size: 1.3rem;
 		color: $color-brand-2;
+	}
+
+	&__button-list {
+		display: flex;
+
+		@include media('md') {
+			justify-content: space-between;
+		}
+
+		> * {
+			min-width: 12rem;
+			
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
+
+			@include media('md') {
+				width: calc(50% - 1rem);
+				min-width: auto;
+			}
+		}
 	}
 }
 

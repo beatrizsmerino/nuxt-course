@@ -140,9 +140,10 @@
 			font-size: 1.4rem;
 			font-weight: 400;
 			color: $color-black;
-			border: 1px solid transparent;
+			border: 0.2rem solid $color-black;
+			border-radius: 0.5rem;
+			background-color: transparent;
 			outline: none;
-			background-color: rgba($color-brand-1, 0.4);
 
 			&::-webkit-input-placeholder {
 				/* Chrome/Opera/Safari */

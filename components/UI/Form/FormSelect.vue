@@ -37,9 +37,8 @@
 
 			<Button class="select__button button--icon">
 				<Icon
-					icon-id="icon-arrow-bottom"
+					icon-id="icon-chevron-down"
 					icon-aria-label="Show options"
-					icon-color="#2956A6"
 					class="select__icon"
 				/>
 			</Button>
@@ -114,9 +113,10 @@
 			font-size: 1.4rem;
 			font-weight: 400;
 			color: $color-black;
-			border: 1px solid transparent;
+			border: 0.2rem solid $color-black;
+			border-radius: 0.5rem;
+			background-color: transparent;
 			outline: none;
-			background-color: rgba($color-brand-1, 0.4);
 			cursor: pointer;
 			appearance: none;
 		}
@@ -130,12 +130,14 @@
 			transform: translate(0, -50%);
 			pointer-events: none;
 
-			.icon {
-				width: 1.2rem;
-				height: 1.2rem;
+			/deep/ {
+				.icon {
+					width: 2rem;
+					height: 2rem;
 
-				&__use {
-					fill: $color-brand-1;
+					&__use {
+						fill: $color-brand-3;
+					}
 				}
 			}
 		}
