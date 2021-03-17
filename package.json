@@ -13,7 +13,7 @@
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.12.2",
-		"core-js": "^3.8.0",
+		"core-js": "^3.9.1",
 		"nuxt": "^2.14.7",
 		"nuxt-svg-sprite-module": "^1.0.7"
 	},
