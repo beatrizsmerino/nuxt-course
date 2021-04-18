@@ -90,7 +90,7 @@
 			});
 			window.addEventListener('resize', () => {
 				this.onResize();
-				this.toggleNavigation();
+				this.showHideNavigation();
 			});
 		},
 		methods: {
@@ -105,12 +105,15 @@
 				this.window.width = window.innerWidth;
 				this.responsive();
 			},
-			toggleNavigation() {
+			showHideNavigation() {
 				if (this.isMobile) {
-					this.isOpen = !this.isOpen;
+					this.isOpen = false;
 				} else {
 					this.isOpen = true;
 				}
+			},
+			toggleNavigation() {
+				this.isOpen = !this.isOpen;
 			}
 		}
 	};
