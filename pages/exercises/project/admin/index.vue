@@ -9,6 +9,12 @@
 					Create new post
 				</Button>
 			</article>
+			<article>
+				<h2>
+					Posts created
+				</h2>
+				<PostsList />
+			</article>
 		</template>
 	</Layout>
 </template>
@@ -16,14 +22,22 @@
 <script>
 	import Button from '@/components/UI/Button';
 	import Layout from '@/components/Exercises/Project/Layout';
+	import PostsList from '@/components/Exercises/Project/Posts/PostsList';
 
 	export default {
 		components: {
 			Button,
-			Layout
+			Layout,
+			PostsList
 		},
 		layout: 'exercises'
 	};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+	article{
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
+</style>
