@@ -36,10 +36,22 @@
 	.layout {
 		&__inner {
 			min-height: 100rem;
-			background-size: 50rem;
-			background-repeat: no-repeat;
-			background-position: 95% 0;
-			background-image: url('~assets/images/exercises/project/background.png');
+			position: relative;
+
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				z-index: -1;
+				background-size: 50rem;
+				background-repeat: no-repeat;
+				background-position: 95% 0;
+				background-image: url('~assets/images/exercises/project/background.png');
+				opacity: 0.5;
+			}
 		}
 
 		&__title,
