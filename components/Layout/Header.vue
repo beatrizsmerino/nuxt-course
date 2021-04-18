@@ -20,13 +20,8 @@
 </template>
 
 <script>
-	import Icon from '@/components/UI/Icon';
-
 	export default {
-		name: 'Header',
-		components: {
-			Icon
-		}
+		name: 'Header'
 	};
 </script>
 

@@ -43,7 +43,6 @@
 </template>
 
 <script>
-	import Button from '@/components/UI/Button';
 	import Field from '@/components/Exercises/Users/Form/Field';
 	import Label from '@/components/Exercises/Users/Form/Label';
 	import Title from '@/components/Layout/Title';
@@ -51,7 +50,6 @@
 	export default {
 		components: {
 			Title,
-			Button,
 			Label,
 			Field
 		},

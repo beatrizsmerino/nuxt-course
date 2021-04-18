@@ -316,7 +316,7 @@ module.exports = {
 		],
 		'semi-spacing': 2,
 		'semi-style': 2,
-		'sort-imports': 2,
+		'sort-imports': 0,
 		'sort-keys': 0,
 		'sort-vars': 2,
 		'space-before-blocks': 2,

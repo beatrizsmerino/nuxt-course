@@ -70,14 +70,12 @@
 </template>
 
 <script>
-	import Button from '@/components/UI/Button';
 	import FormField from '@/components/UI/Form/FormField';
 	import FormSelect from '@/components/UI/Form/FormSelect';
 	import Layout from '@/components/Exercises/Project/Layout';
 
 	export default {
 		components: {
-			Button,
 			FormField,
 			FormSelect,
 			Layout

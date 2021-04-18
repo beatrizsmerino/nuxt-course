@@ -19,13 +19,8 @@
 </template>
 
 <script>
-	import Icon from '@/components/UI/Icon';
-
 	export default {
 		name: 'Breadcrumbs',
-		components: {
-			Icon
-		},
 		props: {
 			breadcrumbsListData: {
 				type: Array,

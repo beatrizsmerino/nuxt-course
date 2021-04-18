@@ -34,12 +34,10 @@
 </template>
 
 <script>
-	import Button from '@/components/UI/Button';
 	import Logo from '@/components/Layout/Logo';
 
 	export default {
 		components: {
-			Button,
 			Logo
 		}
 	};

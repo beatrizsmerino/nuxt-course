@@ -38,15 +38,9 @@
 </template>
 
 <script>
-	import Button from '@/components/UI/Button';
-	import Icon from '@/components/UI/Icon';
 
 	export default {
 		name: 'Navigation',
-		components: {
-			Button,
-			Icon
-		},
 		layout: 'exercises',
 		data() {
 			return {

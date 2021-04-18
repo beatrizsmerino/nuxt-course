@@ -20,13 +20,11 @@
 </template>
 
 <script>
-	import Button from '@/components/UI/Button';
 	import Layout from '@/components/Exercises/Project/Layout';
 	import PostsList from '@/components/Exercises/Project/Posts/PostsList';
 
 	export default {
 		components: {
-			Button,
 			Layout,
 			PostsList
 		},
