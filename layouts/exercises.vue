@@ -18,10 +18,6 @@
 </script>
 
 <style lang="scss">
-	// PARTIALS SASS
-	// =================================================
-	@import '~/assets/scss/components/components-form';
-
 	.container {
 		width: 100%;
 		max-width: 1200px;
