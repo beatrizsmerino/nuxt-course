@@ -3,13 +3,11 @@
 		class="form__item"
 		:class="[formItemModifier,isEmpty ? 'is-empty' : '', isFocus ? 'is-focus' : '']"
 	>
-		<label
-			:for="fieldId"
-			class="label"
-			:class="formLabelModifier"
-		>
-			{{ fieldLabel }}
-		</label>
+		<FormLabel
+			:label-id="fieldId"
+			:label-modifier="formLabelModifier"
+			:label-text="fieldLabel"
+		/>
 		<component
 			:is="checkTag"
 			:id="fieldId"
@@ -28,8 +26,13 @@
 </template>
 
 <script>
+	import FormLabel from '@/components/UI/Form/FormLabel';
+
 	export default {
 		name: 'FormField',
+		components: {
+			FormLabel
+		},
 		props: {
 			fieldTag: {
 				type: String,

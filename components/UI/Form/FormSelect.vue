@@ -3,13 +3,11 @@
 		class="form__item"
 		:class="{'is-empty' : isEmpty, 'is-focus' : isFocus}"
 	>
-		<label
-			:for="selectId"
-			:class="formLabelModifier"
-			class="label"
-		>
-			{{ selectLabel }}
-		</label>
+		<FormLabel
+			:label-id="selectId"
+			:label-modifier="formLabelModifier"
+			:label-text="selectLabel"
+		/>
 
 		<div class="select__wrapper">
 			<select
@@ -47,8 +45,13 @@
 </template>
 
 <script>
+	import FormLabel from '@/components/UI/Form/FormLabel';
+
 	export default {
 		name: 'Select',
+		components: {
+			FormLabel
+		},
 		props: {
 			selectId: {
 				type: String,
