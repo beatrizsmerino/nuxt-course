@@ -8,7 +8,7 @@
 			<article>
 				<form
 					id="formSelectUser"
-					class="form-select-user"
+					class="form-select-user form"
 					action=""
 					novalidate="true"
 					@submit.prevent

@@ -1,20 +1,25 @@
 <template>
 	<div
 		class="form__item"
-		:class="{'is-empty' : isEmpty, 'is-focus' : isFocus}"
+		:class="{'is-empty' : isEmpty, 'is-focus' : isFocus, 'is-error': isError}"
 	>
 		<FormLabel
 			:label-id="selectId"
 			:label-modifier="formLabelModifier"
 			:label-text="selectLabel"
+			:class="{'form__label--required': selectRequired}"
 		/>
 
 		<div class="select__wrapper">
 			<select
 				:id="selectId"
+				ref="field"
 				:name="selectId"
 				:class="formFieldModifier"
 				class="select__field form__field"
+				:required="selectRequired ? true : false"
+				@focus="onFocus"
+				@blur="onBlur"
 			>
 				<option
 					value="0"
@@ -68,25 +73,71 @@
 			selectModifier: {
 				type: String,
 				default: ''
+			},
+			selectRequired: {
+				type: Boolean,
+				default: false
 			}
 		},
 		data() {
 			return {
 				formLabelModifier: '',
 				formFieldModifier: '',
+				fieldValue: '',
 				isEmpty: false,
-				isFocus: false
+				isFocus: false,
+				isError: false
 			};
 		},
 		created() {
 			this.createdCSSModifier();
+			this.onCreated();
 		},
 		methods: {
 			createdCSSModifier() {
 				if (this.selectModifier !== '') {
-					this.formLabelModifier = `label--${this.selectModifier}`;
+					this.formLabelModifier = `form__label--${this.selectModifier}`;
 					this.formFieldModifier = `form__field--${this.selectModifier}`;
 				}
+			},
+			updateValue() {
+				this.fieldValue = this.$refs.field.value;
+			},
+			checkEmpty() {
+				console.log(this.fieldValue);
+				if (this.fieldValue == 0) {
+					this.isEmpty = true;
+				} else {
+					this.isEmpty = false;
+				}
+			},
+			addFocus() {
+				this.isFocus = true;
+			},
+			removeFocus() {
+				this.isFocus = false;
+			},
+			checkError() {
+				if (this.selectRequired && this.isEmpty) {
+					this.isError = true;
+				} else {
+					this.isError = false;
+				}
+			},
+			onFocus() {
+				this.updateValue();
+				this.checkEmpty();
+				this.addFocus();
+				this.checkError();
+			},
+			onBlur() {
+				this.updateValue();
+				this.checkEmpty();
+				this.removeFocus();
+				this.checkError();
+			},
+			onCreated() {
+				this.checkEmpty();
 			}
 		}
 	};
@@ -132,16 +183,86 @@
 					height: 2rem;
 
 					&__use {
-						fill: $color-brand-3;
+						fill: $color-black;
 					}
 				}
 			}
 		}
+	}
 
-		&--anim {
-			.select {
-				&__field {
-					padding-right: 3rem !important;
+	.form {
+		&__label {
+			&--anim {
+				top: 0.8rem;
+				font-size: 1.2rem;
+				color: $color-brand-3;
+				transform: translate(0, 0);
+				transition: top 0.2s ease-in-out 0s;
+			}
+		}
+
+		&__field {
+			&--anim {
+				padding: 2rem 3rem 0.5rem 1.2rem;
+			}
+		}
+
+		&__item {
+			&.is-focus {
+				.form {
+					&__label {
+						&--anim {
+							color: $color-brand-3 !important;
+						}
+					}
+
+					&__field {
+						&--anim {
+							border-color: $color-brand-3 !important;
+							background-color: rgba($color-brand-3, 0.2) !important;
+						}
+					}
+				}
+
+				.select {
+					&__button {
+						/deep/ {
+							.icon {
+								&__use {
+									fill: $color-brand-3 !important;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.is-error {
+				.form {
+					&__label {
+						&--anim {
+							color: $color-error;
+						}
+					}
+
+					&__field {
+						&--anim {
+							border-color: $color-error;
+							background-color: rgba($color-error, 0.2);
+						}
+					}
+				}
+
+				.select {
+					&__button {
+						/deep/ {
+							.icon {
+								&__use {
+									fill: $color-error;
+								}
+							}
+						}
+					}
 				}
 			}
 		}

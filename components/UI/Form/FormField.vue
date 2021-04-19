@@ -1,12 +1,13 @@
 <template>
 	<div
 		class="form__item"
-		:class="[formItemModifier,isEmpty ? 'is-empty' : '', isFocus ? 'is-focus' : '']"
+		:class="[formItemModifier,{'is-empty' : isEmpty, 'is-focus' : isFocus, 'is-error': isError}]"
 	>
 		<FormLabel
 			:label-id="fieldId"
 			:label-modifier="formLabelModifier"
 			:label-text="fieldLabel"
+			:class="{'form__label--required': fieldRequired}"
 		/>
 		<component
 			:is="checkTag"
@@ -18,6 +19,7 @@
 			:type="fieldType"
 			:value="fieldValue"
 			:placeholder="fieldPlaceholder"
+			:required="fieldRequired ? true : false"
 			@focus="onFocus"
 			@blur="onBlur"
 			@keypress="onKeyPress"
@@ -61,6 +63,10 @@
 			fieldModel: {
 				type: String,
 				default: ''
+			},
+			fieldRequired: {
+				type: Boolean,
+				default: false
 			}
 		},
 		data() {
@@ -70,7 +76,8 @@
 				formFieldModifier: '',
 				fieldValue: '',
 				isEmpty: false,
-				isFocus: false
+				isFocus: false,
+				isError: false
 			};
 		},
 		computed: {
@@ -89,7 +96,7 @@
 		methods: {
 			createdCSSModifier() {
 				if (this.fieldModifier !== '') {
-					this.formLabelModifier = `label--${this.fieldModifier}`;
+					this.formLabelModifier = `form__label--${this.fieldModifier}`;
 					this.formFieldModifier = `form__field--${this.fieldModifier}`;
 				}
 
@@ -101,7 +108,7 @@
 				this.fieldValue = this.$refs.field.value;
 			},
 			checkEmpty() {
-				console.log(this.fieldValue);
+				// console.log(this.fieldValue);
 				if (this.fieldValue === '') {
 					this.isEmpty = true;
 				} else {
@@ -114,19 +121,29 @@
 			removeFocus() {
 				this.isFocus = false;
 			},
+			checkError() {
+				if (this.fieldRequired && this.isEmpty) {
+					this.isError = true;
+				} else {
+					this.isError = false;
+				}
+			},
 			onFocus() {
 				this.updateValue();
 				this.checkEmpty();
 				this.addFocus();
+				this.checkError();
 			},
 			onBlur() {
 				this.updateValue();
 				this.checkEmpty();
 				this.removeFocus();
+				this.checkError();
 			},
 			onKeyPress() {
 				this.updateValue();
 				this.checkEmpty();
+				this.checkError();
 			},
 			onCreated() {
 				this.checkEmpty();
@@ -172,18 +189,117 @@
 				color: $color-brand-3;
 			}
 
-			&--line{
+			&--line {
 				border: 0.2rem solid $color-brand-3;
 				border-radius: 0.5rem;
 				background-color: transparent;
+			}
+
+			&--anim {
+				padding: 2rem 1.2rem 0.4rem;
+			}
+		}
+
+		&__label {
+			&--anim {
+				color: $color-brand-3;
 			}
 		}
 
 		&__item {
 			&--textarea {
-				.label {
-					top: 1.2rem;
-					transform: none;
+				.form {
+					&__label {
+						&--anim {
+							top: 1.2rem;
+							transform: none;
+						}
+					}
+
+					&__field {
+						&--anim {
+							padding: 2.4rem 1.2rem 1.2rem !important;
+						}
+					}
+				}
+
+				&.is-focus {
+					.form {
+						&__label {
+							&--anim {
+								top: 1rem;
+							}
+						}
+						&__field {
+							&--anim {
+								padding: 2.4rem 1.2rem 1.2rem !important;
+							}
+						}
+					}
+				}
+			}
+
+			&.is-focus {
+				.form {
+					&__label {
+						&--anim {
+							color: $color-brand-3 !important;
+						}
+					}
+
+					&__field {
+						&--anim {
+							border-color: $color-brand-3 !important;
+							background-color: rgba($color-brand-3, 0.2) !important;
+						}
+					}
+				}
+			}
+
+			&.is-empty {
+				.form {
+					&__field {
+						&--anim {
+							padding: 1.2rem;
+						}
+					}
+				}
+			}
+
+			&:not(.is-empty),
+			&.is-focus {
+				.form {
+					&__label {
+						&--anim {
+							top: 0.8rem;
+							font-size: 1.2rem;
+							color: $color-brand-3;
+							transform: translate(0, 0);
+							transition: top 0.2s ease-in-out 0s;
+						}
+					}
+					&__field {
+						&--anim {
+							padding: 2rem 1.2rem 0.4rem !important;
+						}
+					}
+				}
+			}
+
+			&.is-error {
+				.form {
+					&__label {
+						&--anim {
+							color: $color-error;
+						}
+					}
+
+					&__field {
+						&--anim {
+							border-color: $color-error;
+							background-color: rgba($color-error, 0.2);
+						}
+					}
 				}
 			}
 		}

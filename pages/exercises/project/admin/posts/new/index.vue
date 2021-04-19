@@ -10,7 +10,7 @@
 			<article class="create-new-post">
 				<form
 					id="formNewPost"
-					class="form-new-post"
+					class="form-new-post form"
 					action=""
 				>
 					<div class="form__group">
@@ -20,6 +20,7 @@
 								field-label="Title"
 								field-type="text"
 								field-modifier="anim"
+								:field-required="true"
 							/>
 						</div>
 						<div class="form__column">
@@ -42,12 +43,14 @@
 						select-id="newPostCategory"
 						:select-options="categoriesList"
 						select-modifier="anim"
+						:select-required="true"
 					/>
 					<FormField
 						field-id="newPostDescription"
 						field-label="Description"
 						field-tag="textarea"
 						field-modifier="anim"
+						:field-required="true"
 					/>
 					<FormField
 						field-id="newPostText"
