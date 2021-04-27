@@ -4,7 +4,13 @@
 	</div>
 </template>
 
-<style>
+<style lang="scss">
+	// PARTIALS SASS
+	// =================================================
+	// COMPONENTS
+	//----------------------------------------------------------------------
+	@import '@/assets/scss/components/components-icon';
+
 	html {
 		font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
 			'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
