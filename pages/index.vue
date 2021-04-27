@@ -1,10 +1,15 @@
 <template>
 	<div class="container">
 		<div>
-			<Logo />
+			<div class="logo__list">
+				<svg-icon class="logo" name="logo-vue-js" />
+				<svg-icon class="logo" name="logo-nuxt-js" />
+			</div>
+
 			<h1 class="title">
 				nuxt-app
 			</h1>
+
 			<div class="links">
 				<a
 					href="https://nuxtjs.org/"
@@ -31,7 +36,18 @@
 	export default {};
 </script>
 
-<style>
+<style lang="scss">
+	.logo {
+		width: 10rem;
+		height: 10rem;
+
+		&__list {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
 	.container {
 		margin: 0 auto;
 		min-height: 100vh;
