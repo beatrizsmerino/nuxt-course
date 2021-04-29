@@ -1,4 +1,5 @@
 export default {
+
 	// Target (https://go.nuxtjs.dev/config-target)
 	target: 'static',
 
@@ -30,17 +31,20 @@ export default {
 
 	// Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
 	buildModules: [
+
 		// https://go.nuxtjs.dev/eslint
 		'@nuxtjs/eslint-module',
 		'@nuxtjs/svg-sprite'
 	],
 	svgSprite: {
-		// manipulate module options
+
+		// Manipulate module options
 		input: '~/assets/images/icons/'
 	},
 
 	// Modules (https://go.nuxtjs.dev/config-modules)
 	modules: [
+
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
 		'@nuxtjs/style-resources'
@@ -48,4 +52,4 @@ export default {
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
 	build: {}
-}
+};
