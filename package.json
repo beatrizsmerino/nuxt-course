@@ -14,7 +14,7 @@
 	"dependencies": {
 		"@nuxtjs/axios": "^5.13.1",
 		"@nuxtjs/svg-sprite": "^0.5.2",
-		"core-js": "^3.11.1",
+		"core-js": "^3.14.0",
 		"nuxt": "^2.15.6"
 	},
 	"devDependencies": {
@@ -29,7 +29,7 @@
 		"eslint-plugin-nuxt": "^2.0.0",
 		"eslint-plugin-prettier": "^3.4.0",
 		"eslint-plugin-vue": "^7.9.0",
-		"node-sass": "^5.0.0",
+		"node-sass": "^6.0.0",
 		"prettier": "^2.2.1",
 		"sass-loader": "^10.1.1"
 	}
