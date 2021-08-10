@@ -134,7 +134,7 @@
 			display: none;
 			padding: 0 1.5rem 1.5rem;
 
-			/deep/ {
+			::v-deep {
 				ul,
 				ol {
 					padding-left: 3rem;

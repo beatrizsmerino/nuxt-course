@@ -121,7 +121,7 @@
 		}
 
 		&__text {
-			/deep/ {
+			::v-deep {
 				h4,
 				h5,
 				h6 {

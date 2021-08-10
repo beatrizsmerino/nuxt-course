@@ -177,7 +177,7 @@
 			transform: translate(0, -50%);
 			pointer-events: none;
 
-			/deep/ {
+			::v-deep {
 				.icon {
 					width: 2rem;
 					height: 2rem;
@@ -226,7 +226,7 @@
 
 				.select {
 					&__button {
-						/deep/ {
+						::v-deep {
 							.icon {
 								&__use {
 									fill: $color-brand-3 !important;
@@ -255,7 +255,7 @@
 
 				.select {
 					&__button {
-						/deep/ {
+						::v-deep {
 							.icon {
 								&__use {
 									fill: $color-error;

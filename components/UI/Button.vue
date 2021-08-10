@@ -105,7 +105,7 @@
 			border-color: $color-brand-3;
 			color: $color-brand-3;
 
-			/deep/ {
+			::v-deep {
 				.icon {
 					&__use {
 						fill: $color-brand-3;
@@ -118,7 +118,7 @@
 				border-color: $color-brand-3;
 				background-color: $color-brand-3;
 
-				/deep/ {
+				::v-deep {
 					.icon {
 						&__use {
 							fill: $color-white;
@@ -132,7 +132,7 @@
 			border-color: $color-brand-4;
 			color: $color-brand-4;
 
-			/deep/ {
+			::v-deep {
 				.icon {
 					&__use {
 						fill: $color-brand-4;
@@ -145,7 +145,7 @@
 				border-color: $color-brand-4;
 				background-color: $color-brand-4;
 
-				/deep/ {
+				::v-deep {
 					.icon {
 						&__use {
 							fill: $color-white;
