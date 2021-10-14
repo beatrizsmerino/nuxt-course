@@ -30,7 +30,7 @@
 		"eslint-plugin-prettier": "^4.0.0",
 		"eslint-plugin-vue": "^7.19.1",
 		"prettier": "^2.4.1",
-		"sass": "^1.42.1",
+		"sass": "^1.43.2",
 		"sass-loader": "^10.1.1"
 	}
 }
