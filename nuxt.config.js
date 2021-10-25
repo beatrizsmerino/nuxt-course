@@ -33,7 +33,12 @@ export default {
 	buildModules: [
 
 		// https://go.nuxtjs.dev/eslint
-		'@nuxtjs/eslint-module',
+		[
+			'@nuxtjs/eslint-module',
+			{
+				fix: true
+			}
+		],
 		'@nuxtjs/svg-sprite'
 	],
 	svgSprite: {
