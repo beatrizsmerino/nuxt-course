@@ -7,9 +7,9 @@
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
-		"lint:js": "eslint \"./**/*.{vue,js,json}\" --fix --ignore-path .gitignore .",
-		"pretty": "prettier --write \"./**/*.{vue,js,json}\"",
-		"lint": "npm run pretty && npm run lint:js"
+		"eslint:fix": "eslint \"./**/*.{vue,js,json}\" --fix --ignore-path .gitignore .",
+		"prettier:fix": "prettier --write \"./**/*.{vue,js,json}\"",
+		"lint": "npm run prettier:fix && npm run eslint:fix"
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.13.6",
