@@ -33,33 +33,26 @@ export default {
 	buildModules: [
 
 		// https://go.nuxtjs.dev/eslint
-		'@nuxtjs/eslint-module'
+		[
+			'@nuxtjs/eslint-module',
+			{
+				fix: true
+			}
+		],
+		'@nuxtjs/svg-sprite'
 	],
+	svgSprite: {
+
+		// Manipulate module options
+		input: '~/assets/images/icons/'
+	},
 
 	// Modules (https://go.nuxtjs.dev/config-modules)
 	modules: [
 
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
-		'@nuxtjs/style-resources',
-		[
-			'nuxt-svg-sprite-module',
-			{
-				directory: '~/assets/images/icons',
-
-				/*
-				 * Optional template location: defaults to __dirname + /app.html
-				 *     templateLocation: "src/app.html",
-				 */
-				options: {
-
-					/*
-					 * Configuration options:
-					 * https://github.com/jkphl/svg-sprite#configuration-basics
-					 */
-				}
-			}
-		]
+		'@nuxtjs/style-resources'
 	],
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
