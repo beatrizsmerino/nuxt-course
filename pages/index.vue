@@ -2,8 +2,14 @@
 	<div class="container">
 		<div>
 			<div class="logo__list">
-				<svg-icon class="logo" name="logo-vue-js" />
-				<svg-icon class="logo" name="logo-nuxt-js" />
+				<svg-icon
+					class="logo"
+					name="logo-vue-js"
+				/>
+				<svg-icon
+					class="logo"
+					name="logo-nuxt-js"
+				/>
 			</div>
 
 			<h1 class="title">

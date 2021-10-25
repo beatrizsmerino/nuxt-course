@@ -60,7 +60,10 @@ module.exports = {
 		],
 		'comma-spacing': 2,
 		'comma-style': 2,
-		'complexity': [2, { "max": 4 }],
+		'complexity': [
+			2,
+			{ max: 4 }
+		],
 		'computed-property-spacing': 2,
 		'consistent-return': 2,
 		'consistent-this': 1,
