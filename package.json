@@ -32,7 +32,7 @@
 		"eslint-plugin-vue": "^8.4.1",
 		"prettier": "^2.5.1",
 		"sass": "^1.49.7",
-		"sass-loader": "^10.1.1"
+		"sass-loader": "^12.4.0"
 	},
 	"resolutions": {
 		"glob-parent": "https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz",
