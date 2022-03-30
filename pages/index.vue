@@ -1,10 +1,21 @@
 <template>
 	<div class="container inner">
 		<div>
-			<Logo />
+			<div class="logo__list">
+				<svg-icon
+					class="logo"
+					name="logo-vue-js"
+				/>
+				<svg-icon
+					class="logo"
+					name="logo-nuxt-js"
+				/>
+			</div>
+
 			<h1 class="title">
 				nuxt-app
 			</h1>
+
 			<div class="links">
 				<Button
 					href="https://nuxtjs.org/"
