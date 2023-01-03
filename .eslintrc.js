@@ -395,6 +395,7 @@ module.exports = {
 			'PascalCase'
 		],
 		'vue/no-v-html': 0,
+		'vue/no-reserved-component-names': 0,
 		'vue/script-indent': [
 			2,
 			'tab',

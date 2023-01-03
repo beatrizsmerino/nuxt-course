@@ -44,16 +44,6 @@
 	</div>
 </template>
 
-<script>
-	import Logo from '@/components/Layout/Logo';
-
-	export default {
-		components: {
-			Logo
-		}
-	};
-</script>
-
 <style lang="scss" scoped>
 	.container {
 		margin: 0 auto;
