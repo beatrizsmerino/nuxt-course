@@ -1,4 +1,5 @@
 export default {
+
 	// Target (https://go.nuxtjs.dev/config-target)
 	target: 'static',
 
@@ -17,8 +18,7 @@ export default {
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{
 				rel: 'stylesheet',
-				href:
-					'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'
+				href: 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'
 			}
 		]
 	},
@@ -39,6 +39,7 @@ export default {
 
 	// Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
 	buildModules: [
+
 		// https://go.nuxtjs.dev/eslint
 		[
 			'@nuxtjs/eslint-module',
@@ -55,6 +56,7 @@ export default {
 
 	// Modules (https://go.nuxtjs.dev/config-modules)
 	modules: [
+
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
 		'@nuxtjs/style-resources',
@@ -68,6 +70,7 @@ export default {
 				 *     templateLocation: "src/app.html",
 				 */
 				options: {
+
 					/*
 					 * Configuration options:
 					 * https://github.com/jkphl/svg-sprite#configuration-basics

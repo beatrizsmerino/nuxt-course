@@ -1,8 +1,6 @@
 <template>
 	<div class="container inner">
-		<Title>
-			Users
-		</Title>
+		<Title>Users</Title>
 
 		<section>
 			<article>
@@ -70,8 +68,8 @@
 </script>
 
 <style lang="scss">
-	.form-select-user{
-		.form{
+	.form-select-user {
+		.form {
 			&__group {
 				justify-content: flex-start;
 				align-items: flex-end;
@@ -81,7 +79,7 @@
 				}
 			}
 
-			&__column{
+			&__column {
 				width: auto !important;
 
 				&:not(:last-child) {

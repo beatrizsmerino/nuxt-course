@@ -1,8 +1,6 @@
 <template>
 	<div class="layout__inner container inner">
-		<Title>
-			Project
-		</Title>
+		<Title>Project</Title>
 
 		<Navigation />
 
@@ -38,7 +36,7 @@
 			min-height: 100rem;
 			position: relative;
 
-			&:before{
+			&:before {
 				content: '';
 				display: inline-block;
 				width: 100%;

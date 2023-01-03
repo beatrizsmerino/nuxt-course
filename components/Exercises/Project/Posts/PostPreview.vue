@@ -12,7 +12,9 @@
 		</time>
 		<div class="post-preview__image">
 			<img
-				:src="require(`~/assets/images/exercises/project/posts/${postData.image}`)"
+				:src="
+					require(`~/assets/images/exercises/project/posts/${postData.image}`)
+				"
 				:alt="postData.title"
 			>
 		</div>
@@ -54,7 +56,10 @@
 		},
 		methods: {
 			ellipsize(text) {
-				if (typeof text !== 'string' || text.lenght <= this.maxCharacters) {
+				if (
+					typeof text !== 'string' ||
+					text.lenght <= this.maxCharacters
+				) {
 					return text;
 				}
 

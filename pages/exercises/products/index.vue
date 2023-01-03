@@ -1,8 +1,6 @@
 <template>
 	<div class="container inner">
-		<Title>
-			Products
-		</Title>
+		<Title>Products</Title>
 
 		<section>
 			<article class="products-list">
@@ -66,7 +64,11 @@
 					background-color: mix($color-white, $color-brand-2, 90%);
 
 					&:hover {
-						background-color: mix($color-white, $color-brand-2, 80%);
+						background-color: mix(
+							$color-white,
+							$color-brand-2,
+							80%
+						);
 					}
 				}
 			}

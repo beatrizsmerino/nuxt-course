@@ -1,12 +1,8 @@
 <template>
 	<div class="user-detail">
-		<Subtitle>
-			User
-		</Subtitle>
+		<Subtitle>User</Subtitle>
 
-		<p>
-			User ID: {{ $route.params.id }}
-		</p>
+		<p>User ID: {{ $route.params.id }}</p>
 	</div>
 </template>
 

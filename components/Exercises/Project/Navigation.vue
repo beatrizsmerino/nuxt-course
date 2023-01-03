@@ -38,7 +38,6 @@
 </template>
 
 <script>
-
 	export default {
 		name: 'Navigation',
 		layout: 'exercises',

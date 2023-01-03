@@ -58,7 +58,7 @@
 					top: -0.2rem;
 				}
 
-				&.form{
+				&.form {
 					&__label {
 						&--anim {
 							position: absolute;

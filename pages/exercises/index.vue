@@ -1,8 +1,6 @@
 <template>
 	<div class="container inner">
-		<Title>
-			Exercises
-		</Title>
+		<Title>Exercises</Title>
 
 		<div class="exercises-list">
 			<ul>
@@ -76,7 +74,8 @@
 		},
 		methods: {
 			showMore(exerciseId) {
-				this.exercisesList[exerciseId].status = !this.exercisesList[exerciseId].status;
+				this.exercisesList[exerciseId].status =
+					!this.exercisesList[exerciseId].status;
 			}
 		}
 	};

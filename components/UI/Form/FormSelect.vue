@@ -1,13 +1,17 @@
 <template>
 	<div
 		class="form__item"
-		:class="{'is-empty' : isEmpty, 'is-focus' : isFocus, 'is-error': isError}"
+		:class="{
+			'is-empty': isEmpty,
+			'is-focus': isFocus,
+			'is-error': isError
+		}"
 	>
 		<FormLabel
 			:label-id="selectId"
 			:label-modifier="formLabelModifier"
 			:label-text="selectLabel"
-			:class="{'form__label--required': selectRequired}"
+			:class="{ 'form__label--required': selectRequired }"
 		/>
 
 		<div class="select__wrapper">
@@ -219,7 +223,10 @@
 					&__field {
 						&--anim {
 							border-color: $color-brand-3 !important;
-							background-color: rgba($color-brand-3, 0.2) !important;
+							background-color: rgba(
+								$color-brand-3,
+								0.2
+							) !important;
 						}
 					}
 				}

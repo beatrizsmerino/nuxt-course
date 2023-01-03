@@ -1,5 +1,8 @@
 <template>
-	<i :class="`${iconId} icon`" :aria-label="iconAriaLabel">
+	<i
+		:class="`${iconId} icon`"
+		:aria-label="iconAriaLabel"
+	>
 		<svg class="icon__svg">
 			<use
 				class="icon__use"

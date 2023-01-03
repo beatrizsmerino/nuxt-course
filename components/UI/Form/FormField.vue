@@ -1,13 +1,16 @@
 <template>
 	<div
 		class="form__item"
-		:class="[formItemModifier,{'is-empty' : isEmpty, 'is-focus' : isFocus, 'is-error': isError}]"
+		:class="[
+			formItemModifier,
+			{ 'is-empty': isEmpty, 'is-focus': isFocus, 'is-error': isError }
+		]"
 	>
 		<FormLabel
 			:label-id="fieldId"
 			:label-modifier="formLabelModifier"
 			:label-text="fieldLabel"
-			:class="{'form__label--required': fieldRequired}"
+			:class="{ 'form__label--required': fieldRequired }"
 		/>
 		<component
 			:is="checkTag"
@@ -250,7 +253,10 @@
 					&__field {
 						&--anim {
 							border-color: $color-brand-3 !important;
-							background-color: rgba($color-brand-3, 0.2) !important;
+							background-color: rgba(
+								$color-brand-3,
+								0.2
+							) !important;
 						}
 					}
 				}

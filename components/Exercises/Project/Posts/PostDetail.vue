@@ -5,7 +5,9 @@
 				#{{ $route.params.id }}
 			</span>
 			<img
-				:src="require(`~/assets/images/exercises/project/posts/${postDetail.image}`)"
+				:src="
+					require(`~/assets/images/exercises/project/posts/${postDetail.image}`)
+				"
 				:alt="postDetail.title"
 			>
 		</div>
@@ -37,7 +39,10 @@
 			</Button>
 			<div class="post-detail__feedback">
 				<p>
-					Let me know that you think about the post, send a email to <a href="mailto:feedback@project.com">feedback@project.com</a>
+					Let me know that you think about the post, send a email to
+					<a href="mailto:feedback@project.com">
+						feedback@project.com
+					</a>
 				</p>
 			</div>
 		</div>

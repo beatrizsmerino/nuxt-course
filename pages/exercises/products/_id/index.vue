@@ -1,14 +1,10 @@
 <template>
 	<div class="container inner">
-		<Title>
-			Product
-		</Title>
+		<Title>Product</Title>
 
 		<Breadcrumbs :breadcrumbs-list-data="breadcrumbsListData" />
 
-		<Subtitle>
-			Product ID: {{ $route.params.id }}
-		</Subtitle>
+		<Subtitle>Product ID: {{ $route.params.id }}</Subtitle>
 	</div>
 </template>
 

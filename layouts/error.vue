@@ -1,8 +1,6 @@
 <template>
 	<div class="__nuxt-error-page">
-		<h1>
-			An error ocurred, we're sorry!
-		</h1>
+		<h1>An error ocurred, we're sorry!</h1>
 		<nuxt-link to="/">
 			Back Home
 		</nuxt-link>

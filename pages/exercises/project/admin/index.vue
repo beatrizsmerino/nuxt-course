@@ -10,9 +10,7 @@
 				</Button>
 			</article>
 			<article>
-				<h2>
-					Posts created
-				</h2>
+				<h2>Posts created</h2>
 				<PostsList />
 			</article>
 		</template>
@@ -33,7 +31,7 @@
 </script>
 
 <style lang="scss" scoped>
-	article{
+	article {
 		&:not(:last-child) {
 			margin-bottom: 3rem;
 		}

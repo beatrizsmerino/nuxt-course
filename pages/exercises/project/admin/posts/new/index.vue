@@ -4,9 +4,7 @@
 			Admin
 		</template>
 		<template #content>
-			<h3>
-				Create a new post
-			</h3>
+			<h3>Create a new post</h3>
 			<article class="create-new-post">
 				<form
 					id="formNewPost"
