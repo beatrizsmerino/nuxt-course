@@ -48,8 +48,8 @@
 
 <style lang="scss" scoped>
 	.logo {
-		width: 10rem;
-		height: 10rem;
+		width: 16rem;
+		height: 16rem;
 
 		&__list {
 			display: flex;
