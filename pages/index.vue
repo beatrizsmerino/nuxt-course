@@ -2,13 +2,15 @@
 	<div class="container inner">
 		<div>
 			<div class="logo__list">
-				<svg-icon
+				<Icon
 					class="logo"
-					name="logo-vue-js"
+					icon-id="icon-logo-vue-js"
+					icon-aria-label="Logo Vue"
 				/>
-				<svg-icon
+				<Icon
 					class="logo"
-					name="logo-nuxt-js"
+					icon-id="icon-logo-nuxt-light-theme"
+					icon-aria-label="Logo Nuxt"
 				/>
 			</div>
 
@@ -45,6 +47,17 @@
 </template>
 
 <style lang="scss" scoped>
+	.logo {
+		width: 10rem;
+		height: 10rem;
+
+		&__list {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
 	.container {
 		margin: 0 auto;
 		min-height: 100%;
