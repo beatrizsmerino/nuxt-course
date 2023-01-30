@@ -83,11 +83,10 @@ export default {
 
 				// Optional template location: defaults to __dirname + /app.html
 				//     templateLocation: "src/app.html",
-				"options": {
-
-					// Configuration options:
-					// https://github.com/jkphl/svg-sprite#configuration-basics
-				},
+				// "options": {
+				// Configuration options:
+				// https://github.com/jkphl/svg-sprite#configuration-basics
+				// },
 			},
 		],
 	],
