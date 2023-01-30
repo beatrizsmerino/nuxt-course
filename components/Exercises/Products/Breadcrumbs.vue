@@ -20,13 +20,13 @@
 
 <script>
 	export default {
-		name: 'Breadcrumbs',
-		props: {
-			breadcrumbsListData: {
-				type: Array,
-				required: true
-			}
-		}
+		"name": "Breadcrumbs",
+		"props": {
+			"breadcrumbsListData": {
+				"type": Array,
+				"required": true,
+			},
+		},
 	};
 </script>
 

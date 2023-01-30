@@ -9,27 +9,27 @@
 </template>
 
 <script>
-	import Breadcrumbs from '@/components/Exercises/Products/Breadcrumbs';
-	import Subtitle from '@/components/Layout/Subtitle';
-	import Title from '@/components/Layout/Title';
+	import Breadcrumbs from "@/components/Exercises/Products/Breadcrumbs";
+	import Subtitle from "@/components/Layout/Subtitle";
+	import Title from "@/components/Layout/Title";
 
 	export default {
-		components: {
+		"components": {
 			Title,
 			Subtitle,
-			Breadcrumbs
+			Breadcrumbs,
 		},
-		layout: 'exercises',
+		"layout": "exercises",
 		data() {
 			return {
-				breadcrumbsListData: [
+				"breadcrumbsListData": [
 					{
-						url: '/exercises/products',
-						name: 'Products'
-					}
-				]
+						"url": "/exercises/products",
+						"name": "Products",
+					},
+				],
 			};
-		}
+		},
 	};
 </script>
 

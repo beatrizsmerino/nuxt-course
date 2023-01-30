@@ -29,43 +29,43 @@
 
 <script>
 	export default {
-		name: 'PostPreview',
-		props: {
-			postData: {
-				type: Object,
-				required: true
+		"name": "PostPreview",
+		"props": {
+			"postData": {
+				"type": Object,
+				"required": true,
 			},
-			postIndex: {
-				type: Number,
-				required: true
+			"postIndex": {
+				"type": Number,
+				"required": true,
 			},
-			postModifier: {
-				type: String,
-				required: true
-			}
+			"postModifier": {
+				"type": String,
+				"required": true,
+			},
 		},
 		data() {
 			return {
-				maxCharacters: 250
+				"maxCharacters": 250,
 			};
 		},
-		computed: {
+		"computed": {
 			shortDescription() {
 				return this.ellipsize(this.postData.description);
-			}
+			},
 		},
-		methods: {
+		"methods": {
 			ellipsize(text) {
 				if (
-					typeof text !== 'string' ||
+					typeof text !== "string" ||
 					text.lenght <= this.maxCharacters
 				) {
 					return text;
 				}
 
 				return `${text.slice(0, this.maxCharacters)}...`;
-			}
-		}
+			},
+		},
 	};
 </script>
 

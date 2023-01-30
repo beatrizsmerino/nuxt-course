@@ -8,13 +8,13 @@
 </template>
 
 <script>
-	import Layout from '@/components/Exercises/Project/Layout';
+	import Layout from "@/components/Exercises/Project/Layout";
 
 	export default {
-		components: {
-			Layout
+		"components": {
+			Layout,
 		},
-		layout: 'exercises'
+		"layout": "exercises",
 	};
 </script>
 

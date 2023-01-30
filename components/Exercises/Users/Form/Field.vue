@@ -12,45 +12,45 @@
 
 <script>
 	export default {
-		name: 'Field',
-		props: {
-			fieldTag: {
-				type: String,
-				default: null
-			}
+		"name": "Field",
+		"props": {
+			"fieldTag": {
+				"type": String,
+				"default": null,
+			},
 		},
 		data() {
 			return {
-				localValue: ''
+				"localValue": "",
 			};
 		},
-		computed: {
+		"computed": {
 			getFieldValue() {
 				const fieldValue = this.localValue;
 
 				return fieldValue;
 			},
 			checkTag() {
-				if (this.fieldTag === 'textarea') {
-					return 'textarea';
-				} else if (this.fieldTag === 'select') {
-					return 'select';
+				if (this.fieldTag === "textarea") {
+					return "textarea";
+				} else if (this.fieldTag === "select") {
+					return "select";
 				}
 
-				return 'input';
-			}
+				return "input";
+			},
 		},
-		watch: {
+		"watch": {
 			localValue(newValue) {
-				this.$emit('input', newValue);
-			}
+				this.$emit("input", newValue);
+			},
 		},
-		methods: {
+		"methods": {
 			updateDate() {
 				const fieldValue = this.$refs.field.value;
-				this.$emit('input', fieldValue);
-			}
-		}
+				this.$emit("input", fieldValue);
+			},
+		},
 	};
 </script>
 

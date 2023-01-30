@@ -15,24 +15,24 @@
 
 <script>
 	export default {
-		name: 'Icon',
-		props: {
-			iconId: {
-				type: String,
-				required: true
+		"name": "Icon",
+		"props": {
+			"iconId": {
+				"type": String,
+				"required": true,
 			},
-			iconAriaLabel: {
-				type: String,
-				required: true
+			"iconAriaLabel": {
+				"type": String,
+				"required": true,
 			},
-			iconColor: {
-				type: String,
-				default: ''
-			}
+			"iconColor": {
+				"type": String,
+				"default": "",
+			},
 		},
 		data() {
 			return {};
-		}
+		},
 	};
 </script>
 

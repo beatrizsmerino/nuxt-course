@@ -39,45 +39,45 @@
 </template>
 
 <script>
-	import Title from '@/components/Layout/Title';
+	import Title from "@/components/Layout/Title";
 
 	export default {
-		components: {
-			Title
+		"components": {
+			Title,
 		},
-		layout: 'exercises',
+		"layout": "exercises",
 		data() {
 			return {
-				exercisesList: [
+				"exercisesList": [
 					{
-						url: '/exercises/users',
-						name: 'Users',
-						description:
+						"url": "/exercises/users",
+						"name": "Users",
+						"description":
 							'<div class="exercise-steps"><ol><li>Creating components, layouts and pages</li><li>From Routes to Folders</li><li>Creating a Route with a Dynamic Path</li><li>Two-Way Data Binding to Custom Components in Vue.js</li><li>Adding Links & Navigating Around</li><li>Validating Parameters</li><li>Creating Nested Routes</li><li>Adding a Default Error Page</li></ol></div> ',
-						status: false
+						"status": false,
 					},
 					{
-						url: '/exercises/products',
-						name: 'Products',
-						description:
+						"url": "/exercises/products",
+						"name": "Products",
+						"description":
 							'<div class="exercise-steps"><ol><li>Create two routes: /products and /products/:pid</li><li>Add a button to the main page. The button should navigate (programmatically) to /products</li><li>Add two links to the /products page. The links should go to /products/1 and /products/2</li><li>Output the product id on the /products/:pid page</li></ol></div>',
-						status: false
+						"status": false,
 					},
 					{
-						url: '/exercises/project/home',
-						name: 'Project',
-						description: '',
-						status: false
-					}
-				]
+						"url": "/exercises/project/home",
+						"name": "Project",
+						"description": "",
+						"status": false,
+					},
+				],
 			};
 		},
-		methods: {
+		"methods": {
 			showMore(exerciseId) {
 				this.exercisesList[exerciseId].status =
 					!this.exercisesList[exerciseId].status;
-			}
-		}
+			},
+		},
 	};
 </script>
 

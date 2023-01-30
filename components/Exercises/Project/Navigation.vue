@@ -39,54 +39,54 @@
 
 <script>
 	export default {
-		name: 'Navigation',
-		layout: 'exercises',
+		"name": "Navigation",
+		"layout": "exercises",
 		data() {
 			return {
-				navigationList: [
+				"navigationList": [
 					{
-						name: 'Home',
-						url: '/exercises/project/home'
+						"name": "Home",
+						"url": "/exercises/project/home",
 					},
 					{
-						name: 'About Us',
-						url: '/exercises/project/about-us'
+						"name": "About Us",
+						"url": "/exercises/project/about-us",
 					},
 					{
-						name: 'Posts',
-						url: '/exercises/project/posts'
+						"name": "Posts",
+						"url": "/exercises/project/posts",
 					},
 					{
-						name: 'Admin',
-						url: '/exercises/project/admin'
-					}
+						"name": "Admin",
+						"url": "/exercises/project/admin",
+					},
 				],
-				window: {
-					width: 0,
-					height: 0
+				"window": {
+					"width": 0,
+					"height": 0,
 				},
-				isMobile: false,
-				isOpen: true
+				"isMobile": false,
+				"isOpen": true,
 			};
 		},
-		computed: {
+		"computed": {
 			getWindowWidth() {
 				return this.window.width;
 			},
 			changeOpenNavigation() {
 				return this.isOpen;
-			}
+			},
 		},
 		mounted() {
 			this.$nextTick(() => {
 				this.onResize();
 			});
-			window.addEventListener('resize', () => {
+			window.addEventListener("resize", () => {
 				this.onResize();
 				this.showHideNavigation();
 			});
 		},
-		methods: {
+		"methods": {
 			responsive() {
 				if (this.window.width <= 576) {
 					this.isMobile = true;
@@ -107,8 +107,8 @@
 			},
 			toggleNavigation() {
 				this.isOpen = !this.isOpen;
-			}
-		}
+			},
+		},
 	};
 </script>
 
@@ -121,7 +121,7 @@
 			display: none;
 			margin-bottom: 2rem;
 
-			@include media('sm') {
+			@include media("sm") {
 				display: flex;
 			}
 
@@ -147,7 +147,7 @@
 		}
 
 		&__list {
-			@include media('sm') {
+			@include media("sm") {
 				max-height: 500px;
 				transition: max-height 0.25s ease-in;
 			}
@@ -163,7 +163,7 @@
 					width: calc(25% - 2rem);
 					margin: 1rem;
 
-					@include media('md') {
+					@include media("md") {
 						width: calc(50% - 2rem);
 					}
 				}

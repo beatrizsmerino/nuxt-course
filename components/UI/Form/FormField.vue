@@ -3,7 +3,7 @@
 		class="form__item"
 		:class="[
 			formItemModifier,
-			{ 'is-empty': isEmpty, 'is-focus': isFocus, 'is-error': isError }
+			{ 'is-empty': isEmpty, 'is-focus': isFocus, 'is-error': isError },
 		]"
 	>
 		<FormLabel
@@ -31,80 +31,80 @@
 </template>
 
 <script>
-	import FormLabel from '@/components/UI/Form/FormLabel';
+	import FormLabel from "@/components/UI/Form/FormLabel";
 
 	export default {
-		name: 'FormField',
-		components: {
-			FormLabel
+		"name": "FormField",
+		"components": {
+			FormLabel,
 		},
-		props: {
-			fieldTag: {
-				type: String,
-				default: ''
+		"props": {
+			"fieldTag": {
+				"type": String,
+				"default": "",
 			},
-			fieldId: {
-				type: String,
-				required: true
+			"fieldId": {
+				"type": String,
+				"required": true,
 			},
-			fieldLabel: {
-				type: String,
-				required: true
+			"fieldLabel": {
+				"type": String,
+				"required": true,
 			},
-			fieldType: {
-				type: String,
-				default: null
+			"fieldType": {
+				"type": String,
+				"default": null,
 			},
-			fieldModifier: {
-				type: String,
-				default: ''
+			"fieldModifier": {
+				"type": String,
+				"default": "",
 			},
-			fieldPlaceholder: {
-				type: String,
-				default: ''
+			"fieldPlaceholder": {
+				"type": String,
+				"default": "",
 			},
-			fieldModel: {
-				type: String,
-				default: ''
+			"fieldModel": {
+				"type": String,
+				"default": "",
 			},
-			fieldRequired: {
-				type: Boolean,
-				default: false
-			}
+			"fieldRequired": {
+				"type": Boolean,
+				"default": false,
+			},
 		},
 		data() {
 			return {
-				formItemModifier: '',
-				formLabelModifier: '',
-				formFieldModifier: '',
-				fieldValue: '',
-				isEmpty: false,
-				isFocus: false,
-				isError: false
+				"formItemModifier": "",
+				"formLabelModifier": "",
+				"formFieldModifier": "",
+				"fieldValue": "",
+				"isEmpty": false,
+				"isFocus": false,
+				"isError": false,
 			};
 		},
-		computed: {
+		"computed": {
 			checkTag() {
-				if (this.fieldTag === 'textarea') {
-					return 'textarea';
+				if (this.fieldTag === "textarea") {
+					return "textarea";
 				}
 
-				return 'input';
-			}
+				return "input";
+			},
 		},
 		created() {
 			this.createdCSSModifier();
 			this.onCreated();
 		},
-		methods: {
+		"methods": {
 			createdCSSModifier() {
-				if (this.fieldModifier !== '') {
+				if (this.fieldModifier !== "") {
 					this.formLabelModifier = `form__label--${this.fieldModifier}`;
 					this.formFieldModifier = `form__field--${this.fieldModifier}`;
 				}
 
-				if (this.fieldTag === 'textarea') {
-					this.formItemModifier = 'form__item--textarea';
+				if (this.fieldTag === "textarea") {
+					this.formItemModifier = "form__item--textarea";
 				}
 			},
 			updateValue() {
@@ -112,7 +112,7 @@
 			},
 			checkEmpty() {
 				// console.log(this.fieldValue);
-				if (this.fieldValue === '') {
+				if (this.fieldValue === "") {
 					this.isEmpty = true;
 				} else {
 					this.isEmpty = false;
@@ -150,8 +150,8 @@
 			},
 			onCreated() {
 				this.checkEmpty();
-			}
-		}
+			},
+		},
 	};
 </script>
 

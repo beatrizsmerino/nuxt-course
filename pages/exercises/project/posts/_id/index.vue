@@ -7,15 +7,15 @@
 </template>
 
 <script>
-	import Layout from '@/components/Exercises/Project/Layout';
-	import PostDetail from '@/components/Exercises/Project/Posts/PostDetail';
+	import Layout from "@/components/Exercises/Project/Layout";
+	import PostDetail from "@/components/Exercises/Project/Posts/PostDetail";
 
 	export default {
-		components: {
+		"components": {
 			Layout,
-			PostDetail
+			PostDetail,
 		},
-		layout: 'exercises'
+		"layout": "exercises",
 	};
 </script>
 

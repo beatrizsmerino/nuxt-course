@@ -13,39 +13,39 @@
 
 <script>
 	export default {
-		name: 'Button',
-		props: {
-			href: {
-				type: String,
-				default: null
+		"name": "Button",
+		"props": {
+			"href": {
+				"type": String,
+				"default": null,
 			},
-			to: {
-				type: String,
-				default: null
+			"to": {
+				"type": String,
+				"default": null,
 			},
-			value: {
-				type: String,
-				default: null
-			}
+			"value": {
+				"type": String,
+				"default": null,
+			},
 		},
-		computed: {
+		"computed": {
 			checkTag() {
 				if (this.href) {
-					return 'a';
+					return "a";
 				} else if (this.to) {
-					return 'nuxt-link';
+					return "nuxt-link";
 				} else if (this.value) {
-					return 'input';
+					return "input";
 				}
 
-				return 'button';
-			}
+				return "button";
+			},
 		},
-		methods: {
+		"methods": {
 			buttonClick() {
-				this.$emit('button-click');
-			}
-		}
+				this.$emit("button-click");
+			},
+		},
 	};
 </script>
 

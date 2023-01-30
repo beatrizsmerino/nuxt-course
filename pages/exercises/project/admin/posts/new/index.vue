@@ -71,34 +71,34 @@
 </template>
 
 <script>
-	import FormField from '@/components/UI/Form/FormField';
-	import FormSelect from '@/components/UI/Form/FormSelect';
-	import Layout from '@/components/Exercises/Project/Layout';
+	import FormField from "@/components/UI/Form/FormField";
+	import FormSelect from "@/components/UI/Form/FormSelect";
+	import Layout from "@/components/Exercises/Project/Layout";
 
 	export default {
-		components: {
+		"components": {
 			FormField,
 			FormSelect,
-			Layout
+			Layout,
 		},
-		layout: 'exercises',
+		"layout": "exercises",
 		data() {
 			return {
-				categoriesList: [
-					'Without',
-					'Frontend',
-					'Backend',
-					'Big Data',
-					'Cibersecurity',
-					'IT',
-					'Social media',
-					'Robotics',
-					'Technology',
-					'Mobile',
-					'Legal'
-				]
+				"categoriesList": [
+					"Without",
+					"Frontend",
+					"Backend",
+					"Big Data",
+					"Cibersecurity",
+					"IT",
+					"Social media",
+					"Robotics",
+					"Technology",
+					"Mobile",
+					"Legal",
+				],
 			};
-		}
+		},
 	};
 </script>
 

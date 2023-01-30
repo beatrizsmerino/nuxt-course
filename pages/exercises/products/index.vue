@@ -22,16 +22,16 @@
 </template>
 
 <script>
-	import Title from '@/components/Layout/Title';
+	import Title from "@/components/Layout/Title";
 
 	export default {
-		components: {
-			Title
+		"components": {
+			Title,
 		},
-		layout: 'exercises',
+		"layout": "exercises",
 		data() {
 			return {};
-		}
+		},
 	};
 </script>
 

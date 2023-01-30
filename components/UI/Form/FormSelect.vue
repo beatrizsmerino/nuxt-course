@@ -4,7 +4,7 @@
 		:class="{
 			'is-empty': isEmpty,
 			'is-focus': isFocus,
-			'is-error': isError
+			'is-error': isError,
 		}"
 	>
 		<FormLabel
@@ -54,52 +54,52 @@
 </template>
 
 <script>
-	import FormLabel from '@/components/UI/Form/FormLabel';
+	import FormLabel from "@/components/UI/Form/FormLabel";
 
 	export default {
-		name: 'Select',
-		components: {
-			FormLabel
+		"name": "Select",
+		"components": {
+			FormLabel,
 		},
-		props: {
-			selectId: {
-				type: String,
-				required: true
+		"props": {
+			"selectId": {
+				"type": String,
+				"required": true,
 			},
-			selectLabel: {
-				type: String,
-				required: true
+			"selectLabel": {
+				"type": String,
+				"required": true,
 			},
-			selectOptions: {
-				type: Array,
-				required: true
+			"selectOptions": {
+				"type": Array,
+				"required": true,
 			},
-			selectModifier: {
-				type: String,
-				default: ''
+			"selectModifier": {
+				"type": String,
+				"default": "",
 			},
-			selectRequired: {
-				type: Boolean,
-				default: false
-			}
+			"selectRequired": {
+				"type": Boolean,
+				"default": false,
+			},
 		},
 		data() {
 			return {
-				formLabelModifier: '',
-				formFieldModifier: '',
-				fieldValue: '',
-				isEmpty: false,
-				isFocus: false,
-				isError: false
+				"formLabelModifier": "",
+				"formFieldModifier": "",
+				"fieldValue": "",
+				"isEmpty": false,
+				"isFocus": false,
+				"isError": false,
 			};
 		},
 		created() {
 			this.createdCSSModifier();
 			this.onCreated();
 		},
-		methods: {
+		"methods": {
 			createdCSSModifier() {
-				if (this.selectModifier !== '') {
+				if (this.selectModifier !== "") {
 					this.formLabelModifier = `form__label--${this.selectModifier}`;
 					this.formFieldModifier = `form__field--${this.selectModifier}`;
 				}
@@ -142,8 +142,8 @@
 			},
 			onCreated() {
 				this.checkEmpty();
-			}
-		}
+			},
+		},
 	};
 </script>
 

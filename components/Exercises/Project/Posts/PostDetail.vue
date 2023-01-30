@@ -50,19 +50,19 @@
 </template>
 
 <script>
-	import postsListData from '~/assets/data/data-posts-list.json';
+	import postsListData from "~/assets/data/data-posts-list.json";
 
 	export default {
-		name: 'PostDetail',
+		"name": "PostDetail",
 		data() {
 			return {
-				postsList: postsListData,
-				postDetail: []
+				"postsList": postsListData,
+				"postDetail": [],
 			};
 		},
 		created() {
 			this.postDetail = this.postsList[this.$route.params.id];
-		}
+		},
 	};
 </script>
 

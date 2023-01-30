@@ -15,18 +15,18 @@
 </template>
 
 <script>
-	import Navigation from '@/components/Exercises/Project/Navigation';
-	import Subtitle from '@/components/Layout/Subtitle';
-	import Title from '@/components/Layout/Title';
+	import Navigation from "@/components/Exercises/Project/Navigation";
+	import Subtitle from "@/components/Layout/Subtitle";
+	import Title from "@/components/Layout/Title";
 
 	export default {
-		name: 'Layout',
-		components: {
+		"name": "Layout",
+		"components": {
 			Title,
 			Navigation,
-			Subtitle
+			Subtitle,
 		},
-		layout: 'exercises'
+		"layout": "exercises",
 	};
 </script>
 
@@ -37,7 +37,7 @@
 			position: relative;
 
 			&:before {
-				content: '';
+				content: "";
 				display: inline-block;
 				width: 100%;
 				height: 100%;
@@ -47,7 +47,7 @@
 				background-size: 50rem;
 				background-repeat: no-repeat;
 				background-position: 95% 0;
-				background-image: url('~assets/images/exercises/project/background.png');
+				background-image: url("~assets/images/exercises/project/background.png");
 				opacity: 0.5;
 			}
 		}

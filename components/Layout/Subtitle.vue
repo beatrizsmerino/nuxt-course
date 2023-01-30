@@ -6,7 +6,7 @@
 
 <script>
 	export default {
-		name: 'Subtitle'
+		"name": "Subtitle",
 	};
 </script>
 

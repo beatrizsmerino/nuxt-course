@@ -16,30 +16,30 @@
 </template>
 
 <script>
-	import PostPreview from './PostPreview';
-	import postsListData from '~/assets/data/data-posts-list.json';
+	import PostPreview from "./PostPreview";
+	import postsListData from "~/assets/data/data-posts-list.json";
 
 	export default {
-		name: 'PostsList',
-		components: {
-			PostPreview
+		"name": "PostsList",
+		"components": {
+			PostPreview,
 		},
-		props: {
-			showLastPosts: {
-				type: Boolean,
-				default: false
+		"props": {
+			"showLastPosts": {
+				"type": Boolean,
+				"default": false,
 			},
-			maxPostsList: {
-				type: Number,
-				default: 5
-			}
+			"maxPostsList": {
+				"type": Number,
+				"default": 5,
+			},
 		},
 		data() {
 			return {
-				postsList: postsListData
+				"postsList": postsListData,
 			};
 		},
-		computed: {
+		"computed": {
 			getPosts() {
 				if (this.showLastPosts) {
 					return this.postsList.slice(0, this.maxPostsList);
@@ -49,12 +49,12 @@
 			},
 			getCssModifier() {
 				if (this.showLastPosts) {
-					return 'last-post';
+					return "last-post";
 				}
 
-				return '';
-			}
-		}
+				return "";
+			},
+		},
 	};
 </script>
 
@@ -74,7 +74,7 @@
 				justify-content: center;
 				align-items: center;
 
-				@include media('md') {
+				@include media("md") {
 					width: calc(100% - 2rem);
 				}
 			}
@@ -88,11 +88,11 @@
 			li {
 				width: calc(33.333% - 2rem) !important;
 
-				@include media('lg') {
+				@include media("lg") {
 					width: calc(50% - 2rem) !important;
 				}
 
-				@include media('sm') {
+				@include media("sm") {
 					width: 100% !important;
 				}
 			}

@@ -18,15 +18,15 @@
 </template>
 
 <script>
-	import Layout from '@/components/Exercises/Project/Layout';
-	import PostsList from '@/components/Exercises/Project/Posts/PostsList';
+	import Layout from "@/components/Exercises/Project/Layout";
+	import PostsList from "@/components/Exercises/Project/Posts/PostsList";
 
 	export default {
-		components: {
+		"components": {
 			Layout,
-			PostsList
+			PostsList,
 		},
-		layout: 'exercises'
+		"layout": "exercises",
 	};
 </script>
 

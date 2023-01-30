@@ -7,11 +7,11 @@
 </template>
 
 <script>
-	import Subtitle from '@/components/Layout/Subtitle';
+	import Subtitle from "@/components/Layout/Subtitle";
 
 	export default {
-		components: {
-			Subtitle
+		"components": {
+			Subtitle,
 		},
 		validate(data) {
 			console.log(data);
@@ -24,7 +24,7 @@
 			const equalToNumber = (/^\d+$/u).test(data.params.id);
 
 			return equalToNumber;
-		}
+		},
 	};
 </script>
 

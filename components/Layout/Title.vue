@@ -6,7 +6,7 @@
 
 <script>
 	export default {
-		name: 'Title'
+		"name": "Title",
 	};
 </script>
 
@@ -18,7 +18,7 @@
 		color: $color-brand-1;
 
 		&:after {
-			content: '';
+			content: "";
 			display: inline-block;
 			width: 15rem;
 			height: 0.4rem;

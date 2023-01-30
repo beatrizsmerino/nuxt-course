@@ -20,25 +20,35 @@ export default {
 				"content": "",
 			},
 		],
-		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+		"link": [
 			{
-				rel: 'stylesheet',
-				href: 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'
-			}
-		]
+				"rel": "icon",
+				"type": "image/x-icon",
+				"href": "/favicon.ico",
+			},
+			{
+				"rel": "stylesheet",
+				"href": "https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap",
+			},
+		],
 	},
 
 	// Global CSS (https://go.nuxtjs.dev/config-css)
-	css: ['~/assets/css/styles.css'],
+	"css": [
+		"~/assets/css/styles.css",
+	],
 
 	// Global SCSS (abstracts: variables, functions, mixins)
-	styleResources: {
-		scss: ['@/assets/scss/styles.scss']
+	"styleResources": {
+		"scss": [
+			"@/assets/scss/styles.scss",
+		],
 	},
 
 	// Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-	plugins: ['~/plugins/import-global-components'],
+	"plugins": [
+		"~/plugins/import-global-components",
+	],
 
 	// Auto import components (https://go.nuxtjs.dev/config-components)
 	"components": true,
@@ -50,9 +60,9 @@ export default {
 		[
 			"@nuxtjs/eslint-module",
 			{
-				fix: true
-			}
-		]
+				"fix": true,
+			},
+		],
 	],
 	"svgSprite": {
 
@@ -64,26 +74,22 @@ export default {
 	"modules": [
 
 		// https://go.nuxtjs.dev/axios
-		'@nuxtjs/axios',
-		'@nuxtjs/style-resources',
+		"@nuxtjs/axios",
+		"@nuxtjs/style-resources",
 		[
-			'nuxt-svg-sprite-module',
+			"nuxt-svg-sprite-module",
 			{
-				directory: '~/assets/images/icons',
+				"directory": "~/assets/images/icons",
 
-				/*
-				 * Optional template location: defaults to __dirname + /app.html
-				 *     templateLocation: "src/app.html",
-				 */
-				options: {
+				// Optional template location: defaults to __dirname + /app.html
+				//     templateLocation: "src/app.html",
+				"options": {
 
-					/*
-					 * Configuration options:
-					 * https://github.com/jkphl/svg-sprite#configuration-basics
-					 */
-				}
-			}
-		]
+					// Configuration options:
+					// https://github.com/jkphl/svg-sprite#configuration-basics
+				},
+			},
+		],
 	],
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)

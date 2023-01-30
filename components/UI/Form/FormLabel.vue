@@ -10,21 +10,21 @@
 
 <script>
 	export default {
-		name: 'FormLabel',
-		props: {
-			labelId: {
-				type: String,
-				required: true
+		"name": "FormLabel",
+		"props": {
+			"labelId": {
+				"type": String,
+				"required": true,
 			},
-			labelText: {
-				type: String,
-				required: true
+			"labelText": {
+				"type": String,
+				"required": true,
 			},
-			labelModifier: {
-				type: String,
-				default: ''
-			}
-		}
+			"labelModifier": {
+				"type": String,
+				"default": "",
+			},
+		},
 	};
 </script>
 
@@ -51,7 +51,7 @@
 				position: relative;
 
 				&:after {
-					content: '*';
+					content: "*";
 					display: inline-block;
 					padding-left: 0.2rem;
 					position: absolute;
