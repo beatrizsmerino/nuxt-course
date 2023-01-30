@@ -19,16 +19,30 @@ module.exports = {
 	plugins: [
 		'vue',
 		'nuxt',
-		'prettier'
+		'prettier',
+		'json'
 	],
-
-	// Add your custom rules here
 	rules: {
 		'accessor-pairs': 2,
-		'array-bracket-newline': 2,
-		'array-bracket-spacing': 2,
+		'array-bracket-newline': [
+			2,
+			{
+				'multiline': true,
+				'minItems': 1
+			}
+		],
+		'array-bracket-spacing': [
+			2,
+			'always'
+		],
 		'array-callback-return': 1,
-		'array-element-newline': 2,
+		'array-element-newline': [
+			2,
+			{
+				'multiline': true,
+				'minItems': 1,
+			}
+		],
 		'arrow-body-style': [
 			1,
 			'as-needed'
@@ -37,27 +51,21 @@ module.exports = {
 		'arrow-spacing': 2,
 		'block-scoped-var': 2,
 		'block-spacing': 2,
-		'brace-style': 0,
+		'brace-style': 2,
 		'callback-return': 2,
 		'camelcase': [
 			2,
 			{
 				properties: 'always',
-				ignoreDestructuring: false,
+				ignoreDestructuring: true,
 				ignoreImports: false
 			}
 		],
-		'capitalized-comments': 2,
+		'capitalized-comments': 0,
 		'class-methods-use-this': 2,
 		'comma-dangle': [
 			2,
-			{
-				arrays: 'never',
-				objects: 'never',
-				imports: 'never',
-				exports: 'never',
-				functions: 'never'
-			}
+			'always-multiline'
 		],
 		'comma-spacing': 2,
 		'comma-style': 2,
@@ -98,6 +106,7 @@ module.exports = {
 		],
 		'id-match': 2,
 		'implicit-arrow-linebreak': 2,
+		'import/no-named-as-default': 0,
 		'indent': [
 			2,
 			'tab'
@@ -123,7 +132,17 @@ module.exports = {
 		'lines-between-class-members': 2,
 		'max-classes-per-file': 1,
 		'max-depth': 1,
-		'max-length': 0,
+		'max-len': [
+			1,
+			{
+				code: 200,
+				tabWidth: 4,
+				comments: 80,
+				ignoreTemplateLiterals: true,
+				ignoreUrls: true,
+				ignoreStrings: true,
+			},
+		],
 		'max-lines': [
 			1,
 			{
@@ -135,7 +154,7 @@ module.exports = {
 		'max-lines-per-function': [
 			1,
 			{
-				max: 30
+				max: 100
 			}
 		],
 		'max-nested-callbacks': 2,
@@ -146,10 +165,24 @@ module.exports = {
 				max: 10
 			}
 		],
-		'max-statements-per-line': 2,
-		'multiline-comment-style': 2,
+		'max-statements-per-line': [
+			2,
+			{
+				max: 1
+			}
+		],
+		'multiline-comment-style': [
+			2,
+			'separate-lines'
+		],
 		'multiline-ternary': 0,
-		'new-cap': 2,
+		'new-cap': [
+			2,
+			{
+				'newIsCap': true,
+				'capIsNew': true
+			}
+		],
 		'new-parens': 2,
 		'newline-after-var': 0,
 		'newline-before-return': 2,
@@ -162,14 +195,10 @@ module.exports = {
 		'no-caller': 2,
 		'no-catch-shadow': 2,
 		'no-confusing-arrow': 2,
-
-		// Allow console.log during development only
-		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-
-		// Allow debugger during development only
-		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+		'no-console': process.env.NODE_ENV === 'production' ? 2 : 'off',
 		'no-constructor-return': 2,
 		'no-continue': 2,
+		'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 'off',
 		'no-div-regex': 2,
 		'no-dupe-else-if': 2,
 		'no-duplicate-imports': 2,
@@ -198,6 +227,7 @@ module.exports = {
 		'no-magic-numbers': 0,
 		'no-mixed-operators': 0,
 		'no-mixed-requires': 2,
+		'no-mixed-spaces-and-tabs': 2,
 		'no-multi-assign': 2,
 		'no-multi-spaces': 2,
 		'no-multi-str': 2,
@@ -235,9 +265,16 @@ module.exports = {
 		'no-self-compare': 2,
 		'no-sequences': 2,
 		'no-setter-return': 2,
-		'no-shadow': 2,
+		'no-shadow': [
+			2,
+			{
+				'allow': [
+					'state'
+				],
+			}
+		],
 		'no-spaced-func': 2,
-		'no-sync': 1,
+		'no-sync': 0,
 		'no-tabs': 0,
 		'no-template-curly-in-string': 2,
 		'no-ternary': 0,
@@ -249,8 +286,14 @@ module.exports = {
 		'no-underscore-dangle': 1,
 		'no-unmodified-loop-condition': 1,
 		'no-unneeded-ternary': 1,
+		'no-unused-expressions': [
+			1,
+			{
+				allowShortCircuit: true,
+				allowTernary: true,
+			}
+		],
 		'no-unused-vars': 1,
-		'no-unused-expressions': 1,
 		'no-use-before-define': [
 			2,
 			{
@@ -269,12 +312,35 @@ module.exports = {
 		'no-warning-comments': 2,
 		'no-whitespace-before-property': 2,
 		'nonblock-statement-body-position': 2,
-		'object-curly-newline': 2,
-		'object-curly-spacing': 2,
+		'object-curly-newline': [
+			2,
+			{
+				ObjectExpression: {
+					multiline: true,
+					minProperties: 1,
+				},
+				ObjectPattern: {
+					multiline: true,
+					minProperties: 1,
+				},
+				ImportDeclaration: {
+					multiline: true,
+					minProperties: 1,
+				},
+				ExportDeclaration: {
+					multiline: true,
+					minProperties: 3,
+				}
+			}
+		],
+		'object-curly-spacing': [
+			2,
+			'always'
+		],
 		'object-property-newline': [
 			2,
 			{
-				allowAllPropertiesOnSameLine: true
+				allowAllPropertiesOnSameLine: false,
 			}
 		],
 		'object-shorthand': 2,
@@ -308,11 +374,11 @@ module.exports = {
 		'prefer-template': 2,
 		'quote-props': [
 			2,
-			'consistent'
+			'always'
 		],
 		'quotes': [
 			2,
-			'single',
+			'double',
 			{
 				avoidEscape: true,
 				allowTemplateLiterals: true
@@ -362,9 +428,11 @@ module.exports = {
 		'wrap-regex': 2,
 		'yield-star-spacing': 2,
 		'yoda': 2,
-
-		// VUE
-		'vue/html-closing-bracket-spacing': 0,
+		'nuxt/no-cjs-in-config': 1,
+		'vue/component-name-in-template-casing': [
+			2,
+			'PascalCase'
+		],
 		'vue/html-closing-bracket-newline': [
 			2,
 			{
@@ -372,6 +440,7 @@ module.exports = {
 				multiline: 'always'
 			}
 		],
+		'vue/html-closing-bracket-spacing': 0,
 		'vue/html-indent': [
 			2,
 			'tab',
@@ -386,16 +455,27 @@ module.exports = {
 		'vue/max-attributes-per-line': [
 			2,
 			{
-				singleline: 1,
-				multiline: 1
+				singleline: {
+					'max': 1,
+				},
+				multiline: {
+					'max': 1,
+				}
 			}
 		],
 		'vue/multi-word-component-names': 0,
-		'vue/component-name-in-template-casing': [
+		'vue/multiline-html-element-content-newline': [
 			2,
-			'PascalCase'
+			{
+				ignoreWhenEmpty: true,
+				ignores: ['pre', 'textarea'],
+				allowEmptyLines: false
+			}
 		],
+		'vue/no-reserved-component-names': 0,
+		'vue/no-side-effects-in-computed-properties': 0,
 		'vue/no-v-html': 0,
+		'vue/require-default-prop': 0,
 		'vue/script-indent': [
 			2,
 			'tab',
@@ -409,18 +489,17 @@ module.exports = {
 			2,
 			{
 				ignoreWhenEmpty: true,
-				ignores: ['pre']
+				ignores: [
+					'pre'
+				]
 			}
-		],
-		'vue/no-side-effects-in-computed-properties': 0,
-		'vue/require-default-prop': 0,
-
-		// NUXT
-		'nuxt/no-cjs-in-config': 1
+		]
 	},
 	overrides: [
 		{
-			files: ['*.vue'],
+			files: [
+				'*.vue'
+			],
 			rules: {
 				indent: 'off'
 			}

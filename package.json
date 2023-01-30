@@ -9,8 +9,8 @@
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
-		"eslint:fix": "eslint \"./**/*.{vue,js,json}\" --fix --ignore-path .gitignore .",
-		"prettier:fix": "prettier --write \"./**/*.{vue,js,json}\"",
+		"eslint:fix": "eslint \"./**/*.{vue,js,json}\" --fix --ignore-path .eslintignore",
+		"prettier:fix": "prettier --write \"./**/*.{vue,js,json}\" .prettierrc",
 		"lint": "npm run prettier:fix && npm run eslint:fix"
 	},
 	"dependencies": {
