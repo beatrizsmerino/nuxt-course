@@ -9,8 +9,8 @@
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
-		"eslint:fix": "eslint \"./**/*.{vue,js,json}\" --fix --ignore-path .gitignore .",
-		"prettier:fix": "prettier --write \"./**/*.{vue,js,json}\"",
+		"eslint:fix": "eslint \"./**/*.{vue,js,json}\" --fix --ignore-path .eslintignore",
+		"prettier:fix": "prettier --write \"./**/*.{vue,js,json}\" .prettierrc",
 		"lint": "npm run prettier:fix && npm run eslint:fix"
 	},
 	"dependencies": {
@@ -20,15 +20,14 @@
 		"nuxt-svg-sprite-module": "^1.0.7"
 	},
 	"devDependencies": {
-		"@nuxtjs/eslint-config": "^6.0.1",
+		"@babel/eslint-parser": "^7.19.1",
+		"@nuxtjs/eslint-config": "^12.0.0",
 		"@nuxtjs/eslint-module": "^3.1.0",
 		"@nuxtjs/style-resources": "^1.2.1",
-		"babel-eslint": "^10.1.0",
-		"eslint": "^7.32.0",
+		"eslint": "^8.32.0",
 		"eslint-config-prettier": "^8.6.0",
-		"eslint-loader": "^4.0.2",
 		"eslint-plugin-json": "^3.1.0",
-		"eslint-plugin-nuxt": "^3.2.0",
+		"eslint-plugin-nuxt": "^4.0.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-vue": "^9.9.0",
 		"prettier": "^2.8.3",

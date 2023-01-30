@@ -1,18 +1,24 @@
 export default {
 
 	// Target (https://go.nuxtjs.dev/config-target)
-	target: 'static',
+	"target": "static",
 
 	// Global page headers (https://go.nuxtjs.dev/config-head)
-	head: {
-		title: 'nuxt-app',
-		meta: [
-			{ charset: 'utf-8' },
+	"head": {
+		"title": "nuxt-app",
+		"meta": [
 			{
-				name: 'viewport',
-				content: 'width=device-width, initial-scale=1'
+				"charset": "utf-8",
 			},
-			{ hid: 'description', name: 'description', content: '' }
+			{
+				"name": "viewport",
+				"content": "width=device-width, initial-scale=1",
+			},
+			{
+				"hid": "description",
+				"name": "description",
+				"content": "",
+			},
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -35,27 +41,27 @@ export default {
 	plugins: ['~/plugins/import-global-components'],
 
 	// Auto import components (https://go.nuxtjs.dev/config-components)
-	components: true,
+	"components": true,
 
 	// Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-	buildModules: [
+	"buildModules": [
 
 		// https://go.nuxtjs.dev/eslint
 		[
-			'@nuxtjs/eslint-module',
+			"@nuxtjs/eslint-module",
 			{
 				fix: true
 			}
 		]
 	],
-	svgSprite: {
+	"svgSprite": {
 
 		// Manipulate module options
-		input: '~/assets/images/icons/'
+		"input": "~/assets/images/icons/",
 	},
 
 	// Modules (https://go.nuxtjs.dev/config-modules)
-	modules: [
+	"modules": [
 
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
@@ -81,7 +87,7 @@ export default {
 	],
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
-	build: {
-		postcss: null
-	}
+	"build": {
+		"postcss": null,
+	},
 };
