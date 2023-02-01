@@ -6,6 +6,11 @@ module.exports = {
 	},
 	"parserOptions": {
 		"parser": "@babel/eslint-parser",
+		"ecmaFeatures": {
+			"jsx": true,
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module",
 		"requireConfigFile": false,
 	},
 	"extends": [
