@@ -6,6 +6,11 @@ module.exports = {
 	},
 	"parserOptions": {
 		"parser": "@babel/eslint-parser",
+		"ecmaFeatures": {
+			"jsx": true,
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module",
 		"requireConfigFile": false,
 	},
 	"extends": [
@@ -317,22 +322,8 @@ module.exports = {
 		"object-curly-newline": [
 			2,
 			{
-				"ObjectExpression": {
-					"multiline": true,
-					"minProperties": 1,
-				},
-				"ObjectPattern": {
-					"multiline": true,
-					"minProperties": 1,
-				},
-				"ImportDeclaration": {
-					"multiline": true,
-					"minProperties": 1,
-				},
-				"ExportDeclaration": {
-					"multiline": true,
-					"minProperties": 3,
-				},
+				"multiline": false,
+				"consistent": true,
 			},
 		],
 		"object-curly-spacing": [
