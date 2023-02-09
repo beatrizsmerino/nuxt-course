@@ -1,27 +1,27 @@
 <template>
   <div>
-    <div class="logo__list">
-      <svg-icon class="logo" name="logo-vue-js" />
-      <svg-icon class="logo" name="logo-nuxt-js" />
-    </div>
+    <LogoList :logo-list="logoList" />
   </div>
 </template>
 
 <script>
+import LogoList from '@/components/LogoList'
 export default {
   name: 'About',
+  components: {
+    LogoList,
+  },
+  data() {
+    return {
+      logoList: [
+        {
+          name: 'logo-vue-js',
+        },
+        {
+          name: 'logo-nuxt-js',
+        },
+      ],
+    }
+  },
 }
 </script>
-
-<style lang="scss" scoped>
-.logo {
-  width: 10rem;
-  height: 10rem;
-
-  &__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-</style>
