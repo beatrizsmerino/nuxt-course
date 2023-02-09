@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import LogoList from '@/components/LogoList'
+import LogoList from '@/components/Logo/LogoList'
 export default {
   name: 'About',
   components: {
