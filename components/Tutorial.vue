@@ -58,7 +58,7 @@ import LogoGithub from '@/components/Logo/LogoGithub'
 import LogoTwitter from '@/components/Logo/LogoTwitter'
 
 export default {
-  name: 'NuxtTutorial',
+  name: 'Tutorial',
   components: {
     LogoNuxt,
     LogoGithub,
