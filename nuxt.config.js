@@ -35,6 +35,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    [
+      // https://www.npmjs.com/package/@nuxtjs/style-resources
+      '@nuxtjs/style-resources',
+      {
+        scss: ['@/assets/scss/styles.scss'],
+      },
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
