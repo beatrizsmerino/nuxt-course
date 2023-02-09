@@ -29,6 +29,15 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+
+    [
+      // https://www.npmjs.com/package/@nuxtjs/svg-sprite
+      '@nuxtjs/svg-sprite',
+      {
+        // Manipulate module options
+        input: '~/assets/images/icons/',
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
