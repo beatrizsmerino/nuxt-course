@@ -37,13 +37,15 @@ html {
 }
 
 .page {
+  margin-top: 3.5rem;
+
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 3.5rem);
 
     > * {
       &:not(:last-child) {
