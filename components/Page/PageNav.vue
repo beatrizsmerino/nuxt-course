@@ -54,7 +54,7 @@ export default {
     justify-content: center;
 
     &:not(:last-child) {
-      &:after {
+      &::after {
         content: '|';
         display: inline-block;
         margin: 0 0.5rem;
@@ -66,7 +66,7 @@ export default {
     padding: 0.5rem;
     font-weight: bold;
     text-decoration: none;
-	color: $color-brand-1;
+    color: $color-brand-1;
 
     &:hover,
     &.router-link-exact-active {
