@@ -1,5 +1,6 @@
 <template>
   <div>
+    <PageHeader />
     <LogoList :logo-list="logoList" />
   </div>
 </template>
