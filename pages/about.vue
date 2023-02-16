@@ -24,19 +24,23 @@ export default {
     return {
       logoList: [
         {
+          id: 1,
           name: 'logo-vue-js',
         },
         {
+          id: 2,
           name: 'logo-nuxt-js',
         },
       ],
       buttonList: [
         {
+          id: 1,
           name: 'Documentation',
           path: 'https://nuxtjs.org/',
           modifier: 'button--green',
         },
         {
+          id: 2,
           name: 'GitHub',
           path: 'https://github.com/nuxt/nuxt.js',
           modifier: 'button--grey',

@@ -1,6 +1,6 @@
 <template>
   <ul class="button-list">
-    <li v-for="button in buttonList" :key="button" class="button-list__item">
+    <li v-for="button in buttonList" :key="button.id" class="button-list__item">
       <ButtonLink :button-link="button" />
     </li>
   </ul>

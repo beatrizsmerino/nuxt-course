@@ -1,6 +1,6 @@
 <template>
   <ul class="logo-list">
-    <li v-for="logo in logoList" :key="logo" class="logo-list__item">
+    <li v-for="logo in logoList" :key="logo.id" class="logo-list__item">
       <svg-icon :name="logo.name" />
     </li>
   </ul>
