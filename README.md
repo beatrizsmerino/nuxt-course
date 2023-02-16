@@ -1,4 +1,4 @@
-# nuxt-app
+# Nuxt exercises
 
 ## Build Setup
 
