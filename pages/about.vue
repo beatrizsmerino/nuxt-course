@@ -1,20 +1,17 @@
 <template>
   <div class="about">
-    <PageHeader />
-    <main>
+    <section class="page__container page__inner">
       <LogoList :logo-list="logoList" />
-    </main>
+    </section>
   </div>
 </template>
 
 <script>
-import PageHeader from '@/components/Page/PageHeader'
 import LogoList from '@/components/Logo/LogoList'
 
 export default {
   name: 'About',
   components: {
-    PageHeader,
     LogoList,
   },
   data() {

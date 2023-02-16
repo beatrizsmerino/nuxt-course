@@ -1,20 +1,17 @@
 <template>
   <div class="home">
-    <PageHeader />
-    <main>
-      <Tutorial />
-    </main>
+    <section>
+      <Tutorial class="page__container page__inner" />
+    </section>
   </div>
 </template>
 
 <script>
-import PageHeader from '@/components/Page/PageHeader'
 import Tutorial from '@/components/Tutorial'
 
 export default {
   name: 'Home',
   components: {
-    PageHeader,
     Tutorial,
   },
 }
