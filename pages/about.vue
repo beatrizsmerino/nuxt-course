@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="about">
     <PageHeader />
-    <LogoList :logo-list="logoList" />
+    <main>
+      <LogoList :logo-list="logoList" />
+    </main>
   </div>
 </template>
 

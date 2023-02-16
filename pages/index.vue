@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="home">
     <PageHeader />
-    <Tutorial />
+    <main>
+      <Tutorial />
+    </main>
   </div>
 </template>
 
@@ -10,7 +12,7 @@ import PageHeader from '@/components/Page/PageHeader'
 import Tutorial from '@/components/Tutorial'
 
 export default {
-  name: 'IndexPage',
+  name: 'Home',
   components: {
     PageHeader,
     Tutorial,
