@@ -12,16 +12,22 @@ export default {
 				"name": "viewport",
 				"content": "width=device-width, initial-scale=1",
 			},
-			{ "hid": "description",
+			{
+				"hid": "description",
 				"name": "description",
-				"content": "" },
-			{ "name": "format-detection",
-				"content": "telephone=no" },
+				"content": "",
+			},
+			{
+				"name": "format-detection",
+				"content": "telephone=no",
+			},
 		],
 		"link": [
-			{ "rel": "icon",
+			{
+				"rel": "icon",
 				"type": "image/x-icon",
-				"href": "/favicon.ico" },
+				"href": "/favicon.ico",
+			},
 		],
 	},
 
