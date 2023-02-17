@@ -1,6 +1,7 @@
 <template>
 	<div class="about">
 		<section class="page__container page__inner">
+			<PageTitle :page-title="pageTitle" />
 			<article>
 				<LogoList :logo-list="logoList" />
 				<h2 class="title">
@@ -13,17 +14,20 @@
 </template>
 
 <script>
+	import PageTitle from "@/components/Page/PageTitle";
 	import LogoList from "@/components/Logo/LogoList";
 	import ButtonList from "@/components/Button/ButtonList";
 
 	export default {
 		"name": "About",
 		"components": {
+			PageTitle,
 			LogoList,
 			ButtonList,
 		},
 		data() {
 			return {
+				"pageTitle": `This is an <span class="page-title__highlight">${this.$route.name}</span> page`,
 				"logoList": [
 					{
 						"id": 1,
