@@ -1,10 +1,10 @@
-const autoprefixer = require('autoprefixer')
-const browserslist = require('browserslist')
+const autoprefixer = require("autoprefixer");
+const browserslist = require("browserslist");
 
 module.exports = {
-  plugins: [
-    autoprefixer({
-      overrideBrowserslist: browserslist(),
-    }),
-  ],
-}
+	"plugins": [
+		autoprefixer({
+			"overrideBrowserslist": browserslist(),
+		}),
+	],
+};
