@@ -102,7 +102,7 @@ module.exports = {
 		],
 		"function-paren-newline": 2,
 		"generator-star-spacing": 0,
-		"global-require": 2,
+		"global-require": 0,
 		"grouped-accessor-pairs": 2,
 		"guard-for-in": 2,
 		"handle-callback-err": 2,
