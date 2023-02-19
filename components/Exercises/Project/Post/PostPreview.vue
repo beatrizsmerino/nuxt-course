@@ -1,28 +1,39 @@
 <template>
 	<nuxt-link
-		:class="`post-preview post-preview--${postModifier}`"
+		:class="`post-preview ${postModifier.join(' ')}`"
 		:to="`/exercises/project/posts/${postIndex}`"
 	>
-		<time
-			:datetime="postData.date"
-			class="post-preview__time"
-		>
-			{{ postData.date }}
-		</time>
-		<div class="post-preview__image">
-			<img
-				:src="
-					require(`~/assets/images/exercises/project/posts/${postData.image}`)
-				"
-				:alt="postData.title"
+		<template v-if="checkCssModifier === 'expanded'">
+			<time
+				:datetime="postData.date"
+				class="post-preview__time"
 			>
-		</div>
-		<h3 class="post-preview__title">
-			{{ postData.title }}
-		</h3>
-		<div class="post-preview__description">
-			{{ shortDescription }}
-		</div>
+				{{ postData.date }}
+			</time>
+			<div class="post-preview__image">
+				<img
+					:src="require(`~/assets/images/exercises/project/posts/${postData.image}`)"
+					:alt="postData.title"
+				>
+			</div>
+			<h3 class="post-preview__title">
+				{{ postData.title }}
+			</h3>
+			<div class="post-preview__description">
+				{{ shortDescription }}
+			</div>
+		</template>
+		<template v-if="checkCssModifier === 'compacted'">
+			<time
+				:datetime="postData.date"
+				class="post-preview__time"
+			>
+				{{ postData.date }}
+			</time>
+			<h3 class="post-preview__title">
+				{{ postData.title }}
+			</h3>
+		</template>
 	</nuxt-link>
 </template>
 
@@ -39,7 +50,7 @@
 				"required": true,
 			},
 			"postModifier": {
-				"type": String,
+				"type": Array,
 				"required": true,
 			},
 		},
@@ -51,6 +62,20 @@
 		"computed": {
 			shortDescription() {
 				return this.ellipsize(this.postData.description);
+			},
+			checkCssModifier() {
+				const isExpanded = this.postModifier.find(item => item.includes("expanded"));
+				const isCompacted = this.postModifier.find(item => item.includes("compacted"));
+
+				if (isCompacted) {
+					return "compacted";
+				}
+
+				if (isExpanded) {
+					return "expanded";
+				}
+
+				return "expanded";
 			},
 		},
 		"methods": {
@@ -77,22 +102,14 @@
 		flex-direction: column;
 		text-decoration: none;
 		border-radius: 2rem 0 2rem 2rem;
-		background-color: mix($color-white, $color-brand-1, 40%);
 
 		&__time {
-			width: 100%;
-			height: calc(100% - 6.5rem);
 			padding: 0.8rem;
 			display: inline-block;
-			position: absolute;
-			top: 0;
-			left: 0;
 			text-align: right;
 			font-size: 1.4rem;
 			font-weight: 500;
 			font-style: italic;
-			color: $color-white;
-			background-color: rgba($color-black, 0.5);
 		}
 
 		&__image {
@@ -107,16 +124,12 @@
 		}
 
 		&__title {
-			height: 6.5rem;
 			padding: 0.8rem 2rem;
 			display: flex;
 			align-items: center;
-			justify-content: center;
-			text-align: center;
 			font-size: 1.4rem;
 			font-weight: 600;
 			line-height: 120%;
-			color: $color-brand-3;
 		}
 
 		&__description {
@@ -132,32 +145,80 @@
 			transition: opacity 0.4s ease-in-out 0s;
 		}
 
-		&:hover {
-			background-color: mix($color-white, $color-brand-1, 20%);
+		&--expanded,
+		&--last-post-list {
+			.post-preview {
+				&__time {
+					width: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					color: $color-white;
+					background-color: rgba($color-black, 0.5);
+				}
+
+				&__title {
+					height: 6.5rem;
+					justify-content: center;
+					text-align: center;
+					color: $color-brand-3;
+				}
+			}
+		}
+
+		&--expanded {
+			background-color: mix($color-white, $color-brand-1, 40%);
+
+			&:hover {
+				background-color: mix($color-white, $color-brand-1, 20%);
+
+				.post-preview {
+					&__title {
+						color: mix($color-white, $color-black, 15%);
+					}
+
+					&__description {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		&--compacted {
+			flex-direction: row-reverse;
+			background-color: $color-light;
 
 			.post-preview {
-				&__title {
-					color: mix($color-white, $color-black, 15%);
+				&__time {
+					width: 10rem;
+					color: $color-brand-2;
 				}
-				&__description {
-					opacity: 1;
+
+				&__title {
+					width: calc(100% - 10rem);
+					text-align: left;
+					color: $color-brand-1;
+				}
+			}
+
+			&:hover {
+				background-color: mix($color-black, $color-light, 10%);
+
+				.post-preview {
+					&__title {
+						color: $color-brand-3;
+					}
 				}
 			}
 		}
 
 		&--last-post-list {
-			background-color: mix($color-white, $color-black, 20%) !important;
-
-			.post-preview {
-				&__title {
-					color: mix($color-white, $color-black, 50%) !important;
-				}
-			}
+			background-color: mix($color-white, $color-black, 20%);
 
 			&:hover {
 				.post-preview {
 					&__title {
-						color: $color-white !important;
+						color: $color-white;
 					}
 
 					&__description {

@@ -11,7 +11,7 @@
 			</article>
 			<article>
 				<h2>Posts created</h2>
-				<PostList />
+				<PostList css-modifier="compacted" />
 			</article>
 		</template>
 	</Layout>
