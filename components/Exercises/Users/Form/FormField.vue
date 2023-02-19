@@ -12,7 +12,7 @@
 
 <script>
 	export default {
-		"name": "Field",
+		"name": "FormField",
 		"props": {
 			"fieldTag": {
 				"type": String,

@@ -41,8 +41,8 @@
 </template>
 
 <script>
-	import Field from "@/components/Exercises/Users/Form/Field";
-	import Label from "@/components/Exercises/Users/Form/Label";
+	import Field from "@/components/Exercises/Users/Form/FormField";
+	import Label from "@/components/Exercises/Users/Form/FormLabel";
 	import Title from "@/components/Exercises/Layout/Title";
 
 	export default {
