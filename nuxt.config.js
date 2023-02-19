@@ -103,6 +103,14 @@ export default {
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	"build": {
-		"postcss": require("./postcss.config.js"),
+		"postcss": {
+			"preset": {
+				"autoprefixer": {
+
+					// Use the `.browserslistrc` file
+					"browsers": false,
+				},
+			},
+		},
 	},
 };
