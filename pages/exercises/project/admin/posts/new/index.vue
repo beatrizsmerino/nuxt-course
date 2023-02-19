@@ -71,8 +71,8 @@
 </template>
 
 <script>
-	import FormField from "@/components/UI/Form/FormField";
-	import FormSelect from "@/components/UI/Form/FormSelect";
+	import FormField from "@/components/Exercises/Project/Form/FormField";
+	import FormSelect from "@/components/Exercises/Project/Form/FormSelect";
 	import Layout from "@/components/Exercises/Project/Layout";
 
 	export default {

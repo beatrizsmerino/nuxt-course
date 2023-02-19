@@ -31,7 +31,7 @@
 </template>
 
 <script>
-	import FormLabel from "@/components/UI/Form/FormLabel";
+	import FormLabel from "@/components/Exercises/Project/Form/FormLabel";
 
 	export default {
 		"name": "FormField",
