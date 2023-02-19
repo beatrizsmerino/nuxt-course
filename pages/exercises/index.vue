@@ -39,7 +39,7 @@
 </template>
 
 <script>
-	import Title from "@/components/Layout/Title";
+	import Title from "@/components/Exercises/Layout/Title";
 
 	export default {
 		"components": {

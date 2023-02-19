@@ -8,7 +8,7 @@
 </template>
 
 <script>
-	import Header from "@/components/Layout/Header";
+	import Header from "@/components/Exercises/Layout/Header";
 
 	export default {
 		"components": {

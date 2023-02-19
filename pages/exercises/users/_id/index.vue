@@ -7,7 +7,7 @@
 </template>
 
 <script>
-	import Subtitle from "@/components/Layout/Subtitle";
+	import Subtitle from "@/components/Exercises/Layout/Subtitle";
 
 	export default {
 		"components": {

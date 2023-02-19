@@ -43,7 +43,7 @@
 <script>
 	import Field from "@/components/Exercises/Users/Form/Field";
 	import Label from "@/components/Exercises/Users/Form/Label";
-	import Title from "@/components/Layout/Title";
+	import Title from "@/components/Exercises/Layout/Title";
 
 	export default {
 		"components": {
