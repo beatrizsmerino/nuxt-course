@@ -1,61 +1,66 @@
 <template>
-	<div>
-		<Nuxt />
+	<div class="page">
+		<PageHeader />
+		<main class="page__main">
+			<Nuxt />
+		</main>
 	</div>
 </template>
 
-<style lang="scss">
-	// PARTIALS SASS
-	// =================================================
-	// COMPONENTS
-	//----------------------------------------------------------------------
-	@import "@/assets/scss/components/components-icon";
+<script>
+	import PageHeader from "@/components/Page/PageHeader";
 
+	export default {
+		"name": "Default",
+		"components": {
+			PageHeader,
+		},
+	};
+</script>
+
+<style lang="scss">
 	html {
-		font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-			"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-		font-size: 16px;
-		word-spacing: 1px;
-		-ms-text-size-adjust: 100%;
-		-webkit-text-size-adjust: 100%;
+		box-sizing: border-box;
+		color: $color-brand-2;
+		font-family: Avenir, Helvetica, Arial, sans-serif;
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
-		box-sizing: border-box;
+		text-size-adjust: 100%;
+		word-spacing: 0.1rem;
 	}
 
 	*,
-	*::before,
-	*::after {
+	*:before,
+	*:after {
 		box-sizing: border-box;
 		margin: 0;
 	}
 
-	.button--green {
-		display: inline-block;
-		border-radius: 4px;
-		border: 1px solid #3b8070;
-		color: #3b8070;
-		text-decoration: none;
-		padding: 10px 30px;
+	.page {
+		margin-top: 3.5rem;
+
+		&__container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			min-height: calc(100vh - 3.5rem);
+
+			> * {
+				&:not(:last-child) {
+					margin-bottom: 4rem;
+				}
+			}
+		}
+
+		&__inner {
+			padding: 0 2rem;
+		}
 	}
 
-	.button--green:hover {
-		color: #fff;
-		background-color: #3b8070;
-	}
-
-	.button--grey {
-		display: inline-block;
-		border-radius: 4px;
-		border: 1px solid #35495e;
-		color: #35495e;
-		text-decoration: none;
-		padding: 10px 30px;
-		margin-left: 15px;
-	}
-
-	.button--grey:hover {
-		color: #fff;
-		background-color: #35495e;
+	a {
+		color: $color-brand-1;
+		font-weight: bold;
 	}
 </style>

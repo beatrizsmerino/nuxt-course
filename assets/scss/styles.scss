@@ -1,0 +1,11 @@
+// PARTIALS SCSS
+// ABSTRACTS, BASE, COMPONENTS, LAYOUT, PAGES, THEMES and VENDOR
+// ===============================================================================
+
+// ABSTRACTS
+// ----------------------------------------------------------------------
+// variables
+@import 'abstracts/variables/abstracts-variables-breakpoints';
+@import 'abstracts/variables/abstracts-variables-colors';
+// mixins
+@import 'abstracts/mixins/abstracts-mixins-media';

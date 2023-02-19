@@ -2,6 +2,7 @@ module.exports = {
 	"root": true,
 	"env": {
 		"browser": true,
+		"jest/globals": true,
 		"node": true,
 	},
 	"parserOptions": {
@@ -26,6 +27,7 @@ module.exports = {
 		"nuxt",
 		"prettier",
 		"json",
+		"jest",
 	],
 	"rules": {
 		"accessor-pairs": 2,
@@ -100,7 +102,7 @@ module.exports = {
 		],
 		"function-paren-newline": 2,
 		"generator-star-spacing": 0,
-		"global-require": 2,
+		"global-require": 0,
 		"grouped-accessor-pairs": 2,
 		"guard-for-in": 2,
 		"handle-callback-err": 2,
@@ -139,17 +141,7 @@ module.exports = {
 		"lines-between-class-members": 2,
 		"max-classes-per-file": 1,
 		"max-depth": 1,
-		"max-len": [
-			1,
-			{
-				"code": 200,
-				"tabWidth": 4,
-				"comments": 80,
-				"ignoreTemplateLiterals": true,
-				"ignoreUrls": true,
-				"ignoreStrings": true,
-			},
-		],
+		"max-len": 0,
 		"max-lines": [
 			1,
 			{
@@ -391,7 +383,7 @@ module.exports = {
 		],
 		"semi-spacing": 2,
 		"semi-style": 2,
-		"sort-imports": 2,
+		"sort-imports": 0,
 		"sort-keys": 0,
 		"sort-vars": 2,
 		"space-before-blocks": 2,
