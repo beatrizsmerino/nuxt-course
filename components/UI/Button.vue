@@ -4,7 +4,7 @@
 		:href="href"
 		:to="to"
 		:value="value"
-		class="button"
+		:class="classType"
 		@click="buttonClick"
 	>
 		<slot />
@@ -26,6 +26,16 @@
 			"value": {
 				"type": String,
 				"default": null,
+			},
+			"classType": {
+				"type": String,
+				"validator": function(value) {
+					return [
+						"button",
+						"link",
+					].includes(value);
+				},
+				"default": "button",
 			},
 		},
 		"computed": {
@@ -165,6 +175,35 @@
 			color: $color-white;
 			border-color: $color-error;
 			background-color: $color-error;
+		}
+	}
+
+	.link {
+		padding: 0 0.5rem;
+		display: inline-block;
+		position: relative;
+		text-decoration: none;
+		color: $color-brand-2;
+		font-weight: 900;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: -1;
+			width: 110%;
+			height: 50%;
+			border-radius: 0.5rem 1rem 0.2rem 1rem;
+			background-color: mix($color-white, $color-brand-1, 40%);
+			transform: rotate(-1deg)
+		}
+
+		&:hover {
+			&:after {
+				background-color: mix($color-white, $color-brand-1, 20%);
+			}
 		}
 	}
 </style>

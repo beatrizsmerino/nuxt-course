@@ -32,10 +32,11 @@
 			/>
 			<Button
 				:href="postDetail.url"
+				class-type="link"
 				class="post-detail__button"
 				target="_blank"
 			>
-				Show more
+				Read more
 			</Button>
 			<div class="post-detail__feedback">
 				<p>
@@ -160,11 +161,11 @@
 		}
 
 		&__button {
-			margin-top: 3rem;
+			margin-top: 2rem;
 		}
 
 		&__feedback {
-			margin-top: 2rem;
+			margin-top: 3rem;
 			font-style: italic;
 
 			a {
