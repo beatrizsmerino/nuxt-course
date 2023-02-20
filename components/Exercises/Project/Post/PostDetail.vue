@@ -1,5 +1,5 @@
 <template>
-	<article class="posts-detail">
+	<article class="post-detail">
 		<div class="post-detail__image">
 			<span class="post-detail__index">
 				#{{ $route.params.id }}
@@ -51,18 +51,18 @@
 </template>
 
 <script>
-	import postsListData from "~/assets/data/data-posts-list.json";
+	import postListData from "~/assets/data/data-post-list.json";
 
 	export default {
 		"name": "PostDetail",
 		data() {
 			return {
-				"postsList": postsListData,
+				"postList": postListData,
 				"postDetail": [],
 			};
 		},
 		created() {
-			this.postDetail = this.postsList[this.$route.params.id];
+			this.postDetail = this.postList[this.$route.params.id];
 		},
 	};
 </script>

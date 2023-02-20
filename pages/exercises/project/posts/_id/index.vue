@@ -8,7 +8,7 @@
 
 <script>
 	import Layout from "@/components/Exercises/Project/Layout";
-	import PostDetail from "@/components/Exercises/Project/Posts/PostDetail";
+	import PostDetail from "@/components/Exercises/Project/Post/PostDetail";
 
 	export default {
 		"components": {

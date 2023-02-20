@@ -145,7 +145,7 @@
 			}
 		}
 
-		&--last-post {
+		&--last-post-list {
 			background-color: mix($color-white, $color-black, 20%) !important;
 
 			.post-preview {

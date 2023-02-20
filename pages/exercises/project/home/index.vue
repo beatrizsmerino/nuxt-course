@@ -4,8 +4,8 @@
 			Last Posts
 		</template>
 		<template #content>
-			<PostsList
-				:show-last-posts="true"
+			<PostList
+				:show-last-post-list="true"
 			/>
 		</template>
 	</Layout>
@@ -13,12 +13,12 @@
 
 <script>
 	import Layout from "@/components/Exercises/Project/Layout";
-	import PostsList from "@/components/Exercises/Project/Posts/PostsList";
+	import PostList from "@/components/Exercises/Project/Post/PostList";
 
 	export default {
 		"components": {
 			Layout,
-			PostsList,
+			PostList,
 		},
 		"layout": "exercises",
 	};

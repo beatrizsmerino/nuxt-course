@@ -1,5 +1,5 @@
 <template>
-	<article :class="`posts-list posts-list--${getCssModifier}`">
+	<article :class="`post-list post-list--${getCssModifier}`">
 		<ul>
 			<li
 				v-for="(item, index) in getPosts"
@@ -17,39 +17,39 @@
 
 <script>
 	import PostPreview from "./PostPreview";
-	import postsListData from "~/assets/data/data-posts-list.json";
+	import postListData from "~/assets/data/data-post-list.json";
 
 	export default {
-		"name": "PostsList",
+		"name": "PostList",
 		"components": {
 			PostPreview,
 		},
 		"props": {
-			"showLastPosts": {
+			"showLastPostList": {
 				"type": Boolean,
 				"default": false,
 			},
-			"maxPostsList": {
+			"maxPostList": {
 				"type": Number,
 				"default": 5,
 			},
 		},
 		data() {
 			return {
-				"postsList": postsListData,
+				"postList": postListData,
 			};
 		},
 		"computed": {
 			getPosts() {
-				if (this.showLastPosts) {
-					return this.postsList.slice(0, this.maxPostsList);
+				if (this.showLastPostList) {
+					return this.postList.slice(0, this.maxPostList);
 				}
 
-				return this.postsList;
+				return this.postList;
 			},
 			getCssModifier() {
-				if (this.showLastPosts) {
-					return "last-post";
+				if (this.showLastPostList) {
+					return "last-post-list";
 				}
 
 				return "";
@@ -59,7 +59,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.posts-list {
+	.post-list {
 		ul {
 			padding: 0;
 			list-style: none;
@@ -80,7 +80,7 @@
 			}
 		}
 
-		&--last-posts {
+		&--last-post-list {
 			ul {
 				justify-content: center;
 

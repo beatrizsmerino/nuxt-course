@@ -4,19 +4,19 @@
 			Posts
 		</template>
 		<template #content>
-			<PostsList />
+			<PostList />
 		</template>
 	</Layout>
 </template>
 
 <script>
 	import Layout from "@/components/Exercises/Project/Layout";
-	import PostsList from "@/components/Exercises/Project/Posts/PostsList";
+	import PostList from "@/components/Exercises/Project/Post/PostList";
 
 	export default {
 		"components": {
 			Layout,
-			PostsList,
+			PostList,
 		},
 		"layout": "exercises",
 	};
