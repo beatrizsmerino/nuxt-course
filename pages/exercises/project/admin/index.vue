@@ -4,7 +4,7 @@
 			Admin
 		</template>
 		<template #content>
-			<article>
+			<article class="layout-admin__button-list">
 				<Button to="/exercises/project/admin/posts/new">
 					Create new post
 				</Button>
@@ -31,9 +31,15 @@
 </script>
 
 <style lang="scss" scoped>
-	article {
-		&:not(:last-child) {
+	.layout-admin {
+		&__button-list {
 			margin-bottom: 3rem;
+			display: flex;
+			justify-content: flex-end;
+
+			:deep(.button) {
+				display: inline-block;
+			}
 		}
 	}
 </style>
