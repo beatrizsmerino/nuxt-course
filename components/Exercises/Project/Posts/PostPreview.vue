@@ -1,7 +1,6 @@
 <template>
 	<nuxt-link
-		class="post-preview"
-		:class="postModifier"
+		:class="`post-preview post-preview--${postModifier}`"
 		:to="`/exercises/project/posts/${postIndex}`"
 	>
 		<time
@@ -146,7 +145,7 @@
 			}
 		}
 
-		&.last-post {
+		&--last-post {
 			background-color: mix($color-white, $color-black, 20%) !important;
 
 			.post-preview {

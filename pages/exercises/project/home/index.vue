@@ -6,7 +6,6 @@
 		<template #content>
 			<PostsList
 				:show-last-posts="true"
-				class="last-posts"
 			/>
 		</template>
 	</Layout>

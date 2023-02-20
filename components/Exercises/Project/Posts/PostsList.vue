@@ -1,5 +1,5 @@
 <template>
-	<article class="posts-list">
+	<article :class="`posts-list posts-list--${getCssModifier}`">
 		<ul>
 			<li
 				v-for="(item, index) in getPosts"
@@ -79,21 +79,21 @@
 				}
 			}
 		}
-	}
 
-	.last-posts {
-		ul {
-			justify-content: center;
+		&--last-posts {
+			ul {
+				justify-content: center;
 
-			li {
-				width: calc(33.333% - 2rem) !important;
+				li {
+					width: calc(33.333% - 2rem) !important;
 
-				@include media("lg") {
-					width: calc(50% - 2rem) !important;
-				}
+					@include media("lg") {
+						width: calc(50% - 2rem) !important;
+					}
 
-				@include media("sm") {
-					width: 100% !important;
+					@include media("sm") {
+						width: 100% !important;
+					}
 				}
 			}
 		}
