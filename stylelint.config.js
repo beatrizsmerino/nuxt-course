@@ -5,7 +5,6 @@ module.exports = {
 	"extends": [
 		"stylelint-config-standard",
 		"stylelint-config-recommended-vue",
-		"stylelint-config-prettier",
 		"stylelint-config-sass-guidelines",
 		"stylelint-config-property-sort-order-smacss",
 	],
