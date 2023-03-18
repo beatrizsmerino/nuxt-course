@@ -61,22 +61,22 @@
 
 <style lang="scss" scoped>
 	.button {
-		padding: 1.2rem 2rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		text-decoration: none;
-		text-transform: capitalize;
-		font-size: 1.6rem;
-		font-weight: 900;
-		line-height: 110%;
-		color: $color-black;
+		padding: 1.2rem 2rem;
 		border: 0.2rem solid $color-black;
 		border-radius: 0.5rem;
 		outline: none;
 		background-color: transparent;
-		user-select: none;
+		color: $color-black;
+		font-size: 1.6rem;
+		font-weight: 900;
+		line-height: 110%;
+		text-decoration: none;
+		text-transform: capitalize;
 		cursor: pointer;
+		user-select: none;
 		appearance: none;
 
 		> * {
@@ -85,9 +85,9 @@
 
 		&.nuxt-link-active,
 		&:hover {
-			color: $color-white;
 			border-color: mix($color-white, $color-black, 20%);
 			background-color: mix($color-white, $color-black, 20%);
+			color: $color-white;
 		}
 
 		&--icon {
@@ -95,15 +95,15 @@
 			border: none;
 
 			&:hover {
-				color: $color-black;
 				background-color: transparent;
+				color: $color-black;
 			}
 		}
 
 		&--black {
-			color: $color-white;
 			border-color: $color-black;
 			background-color: $color-black;
+			color: $color-white;
 
 			&:hover {
 				border-color: mix($color-white, $color-black, 20%);
@@ -124,9 +124,9 @@
 			}
 
 			&:hover {
-				color: $color-white;
 				border-color: $color-brand-3;
 				background-color: $color-brand-3;
+				color: $color-white;
 
 				::v-deep {
 					.icon {
@@ -151,9 +151,9 @@
 			}
 
 			&:hover {
-				color: $color-white;
 				border-color: $color-brand-4;
 				background-color: $color-brand-4;
+				color: $color-white;
 
 				::v-deep {
 					.icon {
@@ -166,38 +166,38 @@
 		}
 
 		&--success {
-			color: $color-white;
 			border-color: $color-success;
 			background-color: $color-success;
+			color: $color-white;
 		}
 
 		&--error {
-			color: $color-white;
 			border-color: $color-error;
 			background-color: $color-error;
+			color: $color-white;
 		}
 	}
 
 	.link {
-		padding: 0 0.5rem;
 		display: inline-block;
 		position: relative;
-		text-decoration: none;
+		padding: 0 0.5rem;
 		color: $color-brand-2;
 		font-weight: 900;
+		text-decoration: none;
 
 		&:after {
-			content: '';
+			content: "";
 			display: inline-block;
 			position: absolute;
-			left: 0;
-			bottom: 0;
 			z-index: -1;
+			bottom: 0;
+			left: 0;
 			width: 110%;
 			height: 50%;
-			border-radius: 0.5rem 1rem 0.2rem 1rem;
+			transform: rotate(-1deg);
+			border-radius: 0.5rem 1rem 0.2rem;
 			background-color: mix($color-white, $color-brand-1, 40%);
-			transform: rotate(-1deg)
 		}
 
 		&:hover {

@@ -108,10 +108,10 @@
 			a {
 				width: 100%;
 				padding: 1.5rem;
-				text-decoration: none;
+				color: $color-brand-3;
 				font-size: 2rem;
 				font-weight: 600;
-				color: $color-brand-3;
+				text-decoration: none;
 			}
 
 			.icon {

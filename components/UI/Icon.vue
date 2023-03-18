@@ -40,16 +40,16 @@
 	.icon {
 		$icon-size: 1.6rem;
 
-		width: $icon-size;
-		height: $icon-size;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		width: $icon-size;
+		height: $icon-size;
 
 		&__svg {
+			display: inline-block;
 			width: 100%;
 			height: 100%;
-			display: inline-block;
 		}
 
 		&__use {

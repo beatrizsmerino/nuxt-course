@@ -33,9 +33,9 @@
 <style lang="scss" scoped>
 	.layout-admin {
 		&__button-list {
-			margin-bottom: 3rem;
 			display: flex;
 			justify-content: flex-end;
+			margin-bottom: 3rem;
 
 			:deep(.button) {
 				display: inline-block;

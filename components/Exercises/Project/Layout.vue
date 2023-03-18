@@ -33,22 +33,22 @@
 <style lang="scss" scoped>
 	.layout {
 		&__inner {
-			min-height: 100rem;
 			position: relative;
+			min-height: 100rem;
 
 			&:before {
 				content: "";
 				display: inline-block;
+				position: absolute;
+				z-index: -1;
+				top: 0;
 				width: 100%;
 				height: 100%;
-				position: absolute;
-				top: 0;
-				z-index: -1;
-				background-size: 50rem;
+				opacity: 0.5;
+				background-image: url("~assets/images/exercises/project/background.png");
 				background-repeat: no-repeat;
 				background-position: 95% 0;
-				background-image: url("~assets/images/exercises/project/background.png");
-				opacity: 0.5;
+				background-size: 50rem;
 			}
 		}
 

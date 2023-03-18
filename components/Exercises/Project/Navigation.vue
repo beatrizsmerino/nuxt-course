@@ -126,8 +126,8 @@
 			}
 
 			.button {
-				width: 100%;
 				align-items: center;
+				width: 100%;
 
 				&__icon {
 					width: 3rem;
@@ -153,10 +153,10 @@
 			}
 
 			ul {
-				padding: 0;
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-around;
+				padding: 0;
 				list-style: none;
 
 				li {
@@ -173,8 +173,8 @@
 		.slide-enter,
 		.slide-leave-to {
 			max-height: 0;
-			transition: max-height 0.15s ease-out;
 			overflow: hidden;
+			transition: max-height 0.15s ease-out;
 		}
 	}
 </style>

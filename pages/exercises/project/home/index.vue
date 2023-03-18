@@ -4,9 +4,7 @@
 			Last Posts
 		</template>
 		<template #content>
-			<PostList
-				:show-last-post-list="true"
-			/>
+			<PostList :show-last-post-list="true" />
 		</template>
 	</Layout>
 </template>

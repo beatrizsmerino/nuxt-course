@@ -9,25 +9,25 @@
 
 <style lang="scss" scoped>
 	.__nuxt-error-page {
-		width: 100%;
-		height: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
 		background-color: $color-error;
 
 		h1 {
 			margin-bottom: 2rem;
-			font-size: 4rem;
 			color: mix($color-white, $color-error, 50%);
+			font-size: 4rem;
 		}
 
 		a {
-			text-decoration: none;
+			color: mix($color-white, $color-error, 70%);
 			font-size: 2.5rem;
 			font-weight: bold;
-			color: mix($color-white, $color-error, 70%);
+			text-decoration: none;
 
 			&:hover {
 				text-decoration: undeline;

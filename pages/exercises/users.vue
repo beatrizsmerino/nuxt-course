@@ -71,8 +71,8 @@
 	.form-select-user {
 		.form {
 			&__group {
-				justify-content: flex-start;
 				align-items: flex-end;
+				justify-content: flex-start;
 
 				@include media("sm") {
 					flex-direction: row !important;

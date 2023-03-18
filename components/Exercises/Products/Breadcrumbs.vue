@@ -33,9 +33,9 @@
 <style lang="scss" scoped>
 	.breadcrumbs {
 		ul {
-			padding: 0;
 			display: flex;
 			align-items: center;
+			padding: 0;
 			list-style: none;
 
 			li {
@@ -43,13 +43,13 @@
 				align-items: center;
 
 				a {
-					text-decoration: none;
-					font-size: 2rem;
 					color: $color-brand-3;
+					font-size: 2rem;
+					text-decoration: none;
 
 					&:hover {
-						text-decoration: underline;
 						color: $color-brand-1;
+						text-decoration: underline;
 					}
 				}
 

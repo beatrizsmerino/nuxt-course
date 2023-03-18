@@ -59,32 +59,36 @@
 		&__field {
 			width: 100%;
 			padding: 1.2rem;
-			font-size: 1.6rem;
 			border: 0.2rem solid $color-brand-3;
 			border-radius: 0.5rem;
+			font-size: 1.6rem;
 
-			&::-webkit-input-placeholder {
+			&::input-placeholder {
+				color: $color-brand-3;
+
 				/* Chrome/Opera/Safari */
 				font-weight: 100;
-				color: $color-brand-3;
 			}
 
-			&::-moz-placeholder {
+			&::placeholder {
+				color: $color-brand-3;
+
 				/* Firefox 19+ */
 				font-weight: 100;
-				color: $color-brand-3;
 			}
 
-			&:-ms-input-placeholder {
+			&:input-placeholder {
+				color: $color-brand-3;
+
 				/* IE 10+ */
 				font-weight: 100;
-				color: $color-brand-3;
 			}
 
-			&:-moz-placeholder {
+			&:placeholder {
+				color: $color-brand-3;
+
 				/* Firefox 18- */
 				font-weight: 100;
-				color: $color-brand-3;
 			}
 
 			&:focus {
@@ -95,8 +99,8 @@
 
 	.textarea {
 		height: 16rem;
-		max-height: 29rem;
 		min-height: 16rem;
+		max-height: 29rem;
 		resize: vertical;
 	}
 </style>

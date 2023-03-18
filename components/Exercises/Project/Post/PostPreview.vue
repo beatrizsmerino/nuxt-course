@@ -12,7 +12,9 @@
 			</time>
 			<div class="post-preview__image">
 				<img
-					:src="require(`~/assets/images/exercises/project/posts/${postData.image}`)"
+					:src="
+						require(`~/assets/images/exercises/project/posts/${postData.image}`)
+					"
 					:alt="postData.title"
 				>
 			</div>
@@ -95,21 +97,21 @@
 
 <style lang="scss" scoped>
 	.post-preview {
-		width: 100%;
-		position: relative;
-		overflow: hidden;
 		display: flex;
+		position: relative;
 		flex-direction: column;
-		text-decoration: none;
+		width: 100%;
+		overflow: hidden;
 		border-radius: 2rem 0 2rem 2rem;
+		text-decoration: none;
 
 		&__time {
-			padding: 0.8rem;
 			display: inline-block;
-			text-align: right;
+			padding: 0.8rem;
 			font-size: 1.4rem;
-			font-weight: 500;
 			font-style: italic;
+			font-weight: 500;
+			text-align: right;
 		}
 
 		&__image {
@@ -124,44 +126,44 @@
 		}
 
 		&__title {
-			padding: 0.8rem 2rem;
 			display: flex;
 			align-items: center;
+			padding: 0.8rem 2rem;
 			font-size: 1.4rem;
 			font-weight: 600;
 			line-height: 120%;
 		}
 
 		&__description {
+			position: absolute;
 			width: 100%;
 			height: calc(100% - 6.5rem);
 			padding: 1.2rem;
-			position: absolute;
+			transition: opacity 0.4s ease-in-out 0s;
+			opacity: 0;
+			background-color: $color-brand-3;
+			color: $color-white;
 			font-size: 1.4rem;
 			line-height: 120%;
-			color: $color-white;
-			background-color: $color-brand-3;
-			opacity: 0;
-			transition: opacity 0.4s ease-in-out 0s;
 		}
 
 		&--expanded,
 		&--last-post-list {
 			.post-preview {
 				&__time {
-					width: 100%;
 					position: absolute;
 					top: 0;
 					left: 0;
-					color: $color-white;
+					width: 100%;
 					background-color: rgba($color-black, 0.5);
+					color: $color-white;
 				}
 
 				&__title {
-					height: 6.5rem;
 					justify-content: center;
-					text-align: center;
+					height: 6.5rem;
 					color: $color-brand-3;
+					text-align: center;
 				}
 			}
 		}
@@ -196,8 +198,8 @@
 
 				&__title {
 					width: calc(100% - 10rem);
-					text-align: left;
 					color: $color-brand-1;
+					text-align: left;
 				}
 			}
 

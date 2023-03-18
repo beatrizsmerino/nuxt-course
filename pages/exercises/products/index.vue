@@ -40,10 +40,10 @@
 		width: 100%;
 
 		ul {
-			width: 100%;
-			padding: 0;
 			display: flex;
 			justify-content: center;
+			width: 100%;
+			padding: 0;
 			list-style: none;
 
 			li {
@@ -51,17 +51,17 @@
 				margin: 1rem;
 
 				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
 					width: 100%;
 					height: 15rem;
 					padding: 2rem;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					text-decoration: none;
+					background-color: mix($color-white, $color-brand-2, 90%);
+					color: $color-brand-3;
 					font-size: 2rem;
 					font-weight: bold;
-					color: $color-brand-3;
-					background-color: mix($color-white, $color-brand-2, 90%);
+					text-decoration: none;
 
 					&:hover {
 						background-color: mix(

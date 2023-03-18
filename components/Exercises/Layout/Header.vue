@@ -27,16 +27,16 @@
 
 <style lang="scss" scoped>
 	.header {
+		display: flex;
+		position: fixed;
+		z-index: 999999;
+		top: 0;
+		left: 0;
+		align-items: center;
+		justify-content: space-between;
 		width: 100%;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 999999;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 		background-color: $color-brand-4;
 
 		&__logo {
@@ -51,14 +51,14 @@
 		}
 
 		ul {
-			list-style: none;
 			font-size: 2rem;
+			list-style: none;
 
 			a {
 				padding: 0.5rem;
-				text-decoration: none;
 				color: $color-white;
 				font-weight: bold;
+				text-decoration: none;
 
 				&:last-child {
 					padding-right: 0;

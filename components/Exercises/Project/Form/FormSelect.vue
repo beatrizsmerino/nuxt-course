@@ -151,8 +151,8 @@
 	.select {
 		&__wrapper {
 			display: flex;
-			align-items: center;
 			position: relative;
+			align-items: center;
 		}
 
 		&__label {
@@ -161,23 +161,23 @@
 		&__field {
 			width: 100%;
 			padding: 1.2rem 3rem 1.2rem 1.2rem;
-			font-size: 1.4rem;
-			font-weight: 400;
-			color: $color-black;
 			border: 0.2rem solid $color-black;
 			border-radius: 0.5rem;
-			background-color: transparent;
 			outline: none;
+			background-color: transparent;
+			color: $color-black;
+			font-size: 1.4rem;
+			font-weight: 400;
 			cursor: pointer;
 			appearance: none;
 		}
 
 		&__button {
-			margin: 0 1rem;
 			display: inline-block;
 			position: absolute;
 			top: 50%;
 			right: 0;
+			margin: 0 1rem;
 			transform: translate(0, -50%);
 			pointer-events: none;
 
@@ -198,10 +198,10 @@
 		&__label {
 			&--anim {
 				top: 0.8rem;
-				font-size: 1.2rem;
-				color: $color-brand-3;
 				transform: translate(0, 0);
 				transition: top 0.2s ease-in-out 0s;
+				color: $color-brand-3;
+				font-size: 1.2rem;
 			}
 		}
 

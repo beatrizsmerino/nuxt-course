@@ -12,11 +12,11 @@
 
 <style lang="scss" scoped>
 	.label {
+		display: block;
 		width: 100%;
 		margin-bottom: 1rem;
-		display: block;
 		color: $color-brand-3;
-		font-weight: bold;
 		font-size: 1.8rem;
+		font-weight: bold;
 	}
 </style>

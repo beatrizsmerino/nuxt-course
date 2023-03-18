@@ -11,7 +11,9 @@
 				<PostPreview
 					:post-data="item"
 					:post-index="index"
-					:post-modifier="getCssModifierList.map(item => `post-preview--${item}`)"
+					:post-modifier="
+						getCssModifierList.map(item => `post-preview--${item}`)
+					"
 				/>
 			</li>
 		</ul>
@@ -80,18 +82,18 @@
 <style lang="scss" scoped>
 	.post-list {
 		ul {
+			display: flex;
+			flex-wrap: wrap;
 			width: 100%;
 			padding: 0;
 			list-style: none;
-			display: flex;
-			flex-wrap: wrap;
 
 			li {
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				width: calc(100% - 2rem);
 				margin: 1rem;
-				display: flex;
-				justify-content: center;
-				align-items: center;
 			}
 		}
 
@@ -115,7 +117,7 @@
 
 				li {
 					width: calc(100% - 2rem);
-					margin-bottom: 0rem;
+					margin-bottom: 0;
 				}
 			}
 		}

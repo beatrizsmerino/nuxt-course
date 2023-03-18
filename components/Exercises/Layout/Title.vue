@@ -12,19 +12,19 @@
 
 <style lang="scss" scoped>
 	.title {
-		margin: 0 0 7rem;
-		font-size: 4.5rem;
 		position: relative;
+		margin: 0 0 7rem;
 		color: $color-brand-1;
+		font-size: 4.5rem;
 
 		&:after {
 			content: "";
 			display: inline-block;
+			position: absolute;
+			bottom: -1rem;
+			left: 0;
 			width: 15rem;
 			height: 0.4rem;
-			position: absolute;
-			left: 0;
-			bottom: -1rem;
 			background-color: $color-brand-2;
 		}
 	}

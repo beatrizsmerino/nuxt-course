@@ -70,27 +70,27 @@
 <style lang="scss" scoped>
 	.post-detail {
 		&__index {
+			display: flex;
+			position: absolute;
+			z-index: 9;
+			right: 0;
+			bottom: 0;
+			align-items: center;
+			justify-content: center;
 			width: 8rem;
 			height: 8rem;
 			padding: 2rem 0 0 2rem;
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			z-index: 9;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			border-radius: 8rem 0 0;
+			background-color: rgba($color-brand-2, 0.8);
+			color: $color-white;
 			font-size: 2rem;
 			font-weight: 500;
-			color: $color-white;
-			border-radius: 8rem 0 0 0rem;
-			background-color: rgba($color-brand-2, 0.8);
 		}
 
 		&__image {
+			position: relative;
 			height: 30rem;
 			margin-bottom: 2rem;
-			position: relative;
 			overflow: hidden;
 
 			img {
@@ -106,10 +106,10 @@
 
 		&__time,
 		&__author {
-			width: 100%;
 			display: inline-block;
-			font-weight: 300;
+			width: 100%;
 			font-style: italic;
+			font-weight: 300;
 		}
 
 		&__time {

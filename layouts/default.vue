@@ -21,11 +21,11 @@
 <style lang="scss">
 	// PARTIALS SASS
 	// =================================================
-	@import "~/assets/scss/components/components-form";
+	@import url("~/assets/scss/components/components-form");
 
 	html {
-		font-family: $font-main;
 		color: $color-brand-2;
+		font-family: $font-main;
 	}
 
 	html,
