@@ -1,15 +1,13 @@
 export default {
 
-	// Target (https://go.nuxtjs.dev/config-target)
-	"target": "static",
-
-	// Global page headers (https://go.nuxtjs.dev/config-head)
+	// Global page headers: https://go.nuxtjs.dev/config-head
 	"head": {
-		"title": "nuxt-app",
+		"title": "nuxt-exercises",
+		"htmlAttrs": {
+			"lang": "en",
+		},
 		"meta": [
-			{
-				"charset": "utf-8",
-			},
+			{ "charset": "utf-8" },
 			{
 				"name": "viewport",
 				"content": "width=device-width, initial-scale=1",
@@ -18,6 +16,10 @@ export default {
 				"hid": "description",
 				"name": "description",
 				"content": "",
+			},
+			{
+				"name": "format-detection",
+				"content": "telephone=no",
 			},
 		],
 		"link": [
@@ -33,49 +35,76 @@ export default {
 		],
 	},
 
-	// Global CSS (https://go.nuxtjs.dev/config-css)
+	// Global CSS: https://go.nuxtjs.dev/config-css
 	"css": [
 		"~/assets/css/styles.css",
 	],
 
-	// Global SCSS (abstracts: variables, functions, mixins)
-	"styleResources": {
-		"scss": [
-			"@/assets/scss/styles.scss",
-		],
-	},
-
-	// Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
+	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	"plugins": [
-		"~/plugins/import-global-components",
+		"@/plugins/import-global-components.js",
 	],
 
-	// Auto import components (https://go.nuxtjs.dev/config-components)
-	"components": true,
+	// Auto import components: https://go.nuxtjs.dev/config-components
+	"components": false,
 
-	// Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
+	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
 	"buildModules": [
-
-		// https://go.nuxtjs.dev/eslint
 		[
+
+			// https://go.nuxtjs.dev/eslint
 			"@nuxtjs/eslint-module",
 			{
 				"fix": true,
+				"cache": true,
+				"emitWarning": true,
+			},
+		],
+		[
+
+			// https://go.nuxtjs.dev/stylelint
+			"@nuxtjs/stylelint-module",
+			{
+				"fix": true,
+				"cache": true,
+				"emitWarning": true,
+			},
+		],
+		[
+
+			// https://www.npmjs.com/package/@nuxtjs/svg-sprite
+			"@nuxtjs/svg-sprite",
+			{
+
+				// Manipulate module options
+				"input": "~/assets/images/icons/",
 			},
 		],
 	],
-	"svgSprite": {
 
-		// Manipulate module options
-		"input": "~/assets/images/icons/",
-	},
-
-	// Modules (https://go.nuxtjs.dev/config-modules)
+	// Modules: https://go.nuxtjs.dev/config-modules
 	"modules": [
+		[
 
-		// https://go.nuxtjs.dev/axios
-		"@nuxtjs/axios",
-		"@nuxtjs/style-resources",
+			"@nuxtjs/axios",
+			{
+
+				// Axios module configuration: https://go.nuxtjs.dev/config-axios
+				// Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+				"baseURL": "/",
+			},
+		],
+		[
+
+			// Global SCSS (abstracts: variables, functions, mixins)
+			// https://www.npmjs.com/package/@nuxtjs/style-resources
+			"@nuxtjs/style-resources",
+			{
+				"scss": [
+					"@/assets/scss/styles.scss",
+				],
+			},
+		],
 		[
 			"nuxt-svg-sprite-module",
 			{
@@ -91,8 +120,16 @@ export default {
 		],
 	],
 
-	// Build Configuration (https://go.nuxtjs.dev/config-build)
+	// Build Configuration: https://go.nuxtjs.dev/config-build
 	"build": {
-		"postcss": null,
+		"postcss": {
+			"preset": {
+				"autoprefixer": {
+
+					// Use the `.browserslistrc` file
+					"browsers": false,
+				},
+			},
+		},
 	},
 };

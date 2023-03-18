@@ -6,8 +6,9 @@
 }
 
 html {
-	font-family: sans-serif;
+	font-family: Avenir, Helvetica, Arial, sans-serif;
 	font-size: 10px;
+	text-size-adjust: 100%;
 	word-spacing: 1px;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;

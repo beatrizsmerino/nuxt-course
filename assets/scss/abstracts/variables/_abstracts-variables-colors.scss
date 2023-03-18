@@ -1,4 +1,4 @@
-// ABSTRACTS VARIABLES
+// ABSTRACTS - VARIABLES
 // COLORS
 // =================================================
 
@@ -6,19 +6,36 @@
 /////////////////
 $color-white: #ffffff;
 $color-ghost: #f2f2f2;
-$color-light: #dcdfe3;
-$color-gray: #63666a;
-$color-dark: #353535;
+$color-light: #e1e1e1;
+$color-silver: #b2b2b2;
+$color-gray: #808080;
+$color-metal: #404040;
+$color-carbon: #2a2a2a;
+$color-dark: #1f1f1f;
 $color-black: #000000;
+
+// VUE
+/////////////////
+$color-vue-1: #42b983;
+$color-vue-2: #273849;
+$color-vue-3: #ffffff;
+$color-vue-4: #f3ec78;
+
+// NUXT
+/////////////////
+$color-nuxt-1: #00c58e;
+$color-nuxt-2: #2f495e;
+$color-nuxt-3: #108775;
+$color-nuxt-4: #2d3748;
 
 // BRAND
 /////////////////
-$color-brand-1: #00c58e;
-$color-brand-2: #2f495e;
-$color-brand-3: #108775;
-$color-brand-4: #2d3748;
+$color-brand-1: $color-nuxt-1;
+$color-brand-2: $color-nuxt-2;
+$color-brand-3: $color-nuxt-3;
+$color-brand-4: $color-nuxt-4;
 
 // STATUS
 /////////////////
-$color-error: #ce4606;
-$color-success: $color-brand-3;
+$color-error: #f58688;
+$color-success: #64bdbd;
