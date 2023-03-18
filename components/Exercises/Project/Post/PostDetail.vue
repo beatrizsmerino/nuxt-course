@@ -114,12 +114,6 @@
 
 		&__time {
 			margin-bottom: 0.5rem;
-
-			time {
-			}
-		}
-
-		&__author {
 		}
 
 		&__content {
@@ -140,9 +134,9 @@
 						margin-bottom: 1rem;
 					}
 
-					& + h4,
-					& + h5,
-					& + h6 {
+					+ h4,
+					+ h5,
+					+ h6 {
 						margin-top: 2rem;
 					}
 				}

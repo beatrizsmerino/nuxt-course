@@ -116,7 +116,19 @@ module.exports = {
 			},
 		],
 		"scss/at-rule-no-unknown": true,
-		"selector-class-pattern": null,
+		"scss/no-global-function-names": null,
+		"selector-class-pattern": [
+			"^([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?$",
+			{
+				"resolveNestedSelectors": true,
+			},
+		],
+		"selector-id-pattern": [
+			"error",
+			{
+				"format": "camelCase",
+			},
+		],
 		"selector-no-qualifying-type": [
 			true,
 			{

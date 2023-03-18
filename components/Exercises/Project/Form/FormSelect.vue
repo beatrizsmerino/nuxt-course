@@ -155,9 +155,6 @@
 			align-items: center;
 		}
 
-		&__label {
-		}
-
 		&__field {
 			width: 100%;
 			padding: 1.2rem 3rem 1.2rem 1.2rem;

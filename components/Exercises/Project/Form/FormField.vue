@@ -168,31 +168,8 @@
 			font-size: 1.4rem;
 			font-weight: 400;
 
-			&::input-placeholder {
-				color: $color-brand-3;
-
-				/* Chrome/Opera/Safari */
-				font-weight: 100;
-			}
-
 			&::placeholder {
 				color: $color-brand-3;
-
-				/* Firefox 19+ */
-				font-weight: 100;
-			}
-
-			&:input-placeholder {
-				color: $color-brand-3;
-
-				/* IE 10+ */
-				font-weight: 100;
-			}
-
-			&:placeholder {
-				color: $color-brand-3;
-
-				/* Firefox 18- */
 				font-weight: 100;
 			}
 

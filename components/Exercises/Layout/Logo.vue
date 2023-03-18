@@ -28,6 +28,7 @@
 </script>
 
 <style>
+	/* stylelint-disable selector-class-pattern */
 	.NuxtLogo {
 		margin: auto;
 		animation: 1s appear;

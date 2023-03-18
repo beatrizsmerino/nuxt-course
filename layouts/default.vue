@@ -30,11 +30,17 @@
 
 	html,
 	body,
-	#__nuxt,
-	#__layout,
 	.layout {
 		height: 100%;
 	}
+
+	/* stylelint-disable selector-id-pattern */
+	#__nuxt,
+	#__layout {
+		height: 100%;
+	}
+
+	/* stylelint-enable selector-id-pattern */
 
 	.page {
 		margin-top: 3.5rem;

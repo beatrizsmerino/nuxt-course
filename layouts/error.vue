@@ -8,6 +8,7 @@
 </template>
 
 <style lang="scss" scoped>
+	/* stylelint-disable selector-class-pattern */
 	.__nuxt-error-page {
 		display: flex;
 		flex-direction: column;

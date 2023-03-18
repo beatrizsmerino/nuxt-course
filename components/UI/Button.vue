@@ -92,7 +92,7 @@
 
 		&--icon {
 			padding: 1rem;
-			border: none;
+			border: 0;
 
 			&:hover {
 				background-color: transparent;
