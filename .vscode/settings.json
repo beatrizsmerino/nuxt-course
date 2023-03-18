@@ -82,7 +82,7 @@
 	},
 	"terminal.integrated.fontFamily": "'SourceCodePro+Powerline+Awesome Regular'",
 	"terminal.integrated.fontSize": 14,
-	"window.zoomLevel": 1,
+	"window.zoomLevel": 2,
 	"workbench.colorTheme": "Better Solarized Dark Italics",
 	"workbench.iconTheme": "material-icon-theme"
 }
