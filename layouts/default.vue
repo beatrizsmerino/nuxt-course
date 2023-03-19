@@ -21,7 +21,7 @@
 <style lang="scss">
 	// PARTIALS SASS
 	// =================================================
-	@import url("~/assets/scss/components/components-form");
+	@import "~/assets/scss/components/components-form";
 
 	html {
 		color: $color-brand-2;

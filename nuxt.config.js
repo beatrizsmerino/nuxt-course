@@ -123,6 +123,12 @@ export default {
 	"build": {
 		"postcss": {
 			"preset": {
+				"postcss-import": {
+					"path": [
+						"node_modules",
+						"assets/scss/**/*",
+					],
+				},
 				"autoprefixer": {
 
 					// Use the `.browserslistrc` file
