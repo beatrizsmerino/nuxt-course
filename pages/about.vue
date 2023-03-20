@@ -7,7 +7,21 @@
 				<h2 class="title">
 					nuxt-app
 				</h2>
-				<ButtonList :button-list="buttonList" />
+				<ul class="button-list">
+					<li
+						v-for="button in buttonList"
+						:key="button.id"
+						class="button-list__item"
+					>
+						<Button
+							:to="button.to"
+							:href="button.href"
+							:class-modifier="button.modifier"
+						>
+							{{ button.name }}
+						</Button>
+					</li>
+				</ul>
 			</article>
 		</section>
 	</div>
@@ -16,14 +30,12 @@
 <script>
 	import PageTitle from "@/components/Page/PageTitle";
 	import LogoList from "@/components/Logo/LogoList";
-	import ButtonList from "@/components/Button/ButtonList";
 
 	export default {
 		"name": "About",
 		"components": {
 			PageTitle,
 			LogoList,
-			ButtonList,
 		},
 		data() {
 			return {
@@ -43,19 +55,19 @@
 						"id": 1,
 						"name": "Documentation",
 						"path": "https://nuxtjs.org/",
-						"modifier": "button--green",
+						"modifier": "button--brand-1-dark-line",
 					},
 					{
 						"id": 2,
 						"name": "GitHub",
 						"path": "https://github.com/nuxt/nuxt.js",
-						"modifier": "button--grey",
+						"modifier": "button--brand-2-dark-line",
 					},
 					{
 						"id": 3,
 						"name": "Exercises",
 						"to": "/exercises",
-						"modifier": "button--grey",
+						"modifier": "button--black",
 					},
 				],
 			};
@@ -74,5 +86,20 @@
 		font-weight: 300;
 		letter-spacing: 0.1rem;
 		text-align: center;
+	}
+
+	.button-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		&__item {
+			&:not(:last-child) {
+				margin-right: 1.5rem;
+			}
+		}
 	}
 </style>

@@ -4,7 +4,9 @@
 		:href="href"
 		:to="to"
 		:value="value"
-		:class="classType"
+		:target="!to ? `_blank` : ''"
+		:rel="!to ? 'noopener noreferrer' : ''"
+		:class="[classType, classModifier]"
 		@click="buttonClick"
 	>
 		<slot />
@@ -36,6 +38,10 @@
 					].includes(value);
 				},
 				"default": "button",
+			},
+			"classModifier": {
+				"type": String,
+				"default": null,
 			},
 		},
 		"computed": {
