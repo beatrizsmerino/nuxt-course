@@ -31,11 +31,11 @@
 				"logoList": [
 					{
 						"id": 1,
-						"name": "logo-vue-js",
+						"name": "logo-vue-light-theme",
 					},
 					{
 						"id": 2,
-						"name": "logo-nuxt-js",
+						"name": "logo-nuxt-light-theme",
 					},
 				],
 				"buttonList": [
