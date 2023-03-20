@@ -52,7 +52,7 @@ export default {
 	"buildModules": [
 		[
 
-			// https://go.nuxtjs.dev/eslint
+			// eslint: https://go.nuxtjs.dev/eslint
 			"@nuxtjs/eslint-module",
 			{
 				"fix": true,
@@ -62,7 +62,7 @@ export default {
 		],
 		[
 
-			// https://go.nuxtjs.dev/stylelint
+			// stylelint: https://go.nuxtjs.dev/stylelint
 			"@nuxtjs/stylelint-module",
 			{
 				"fix": true,
@@ -72,7 +72,7 @@ export default {
 		],
 		[
 
-			// https://www.npmjs.com/package/@nuxtjs/svg-sprite
+			// svg-sprite: https://www.npmjs.com/package/@nuxtjs/svg-sprite
 			"@nuxtjs/svg-sprite",
 			{
 
@@ -85,36 +85,39 @@ export default {
 	// Modules: https://go.nuxtjs.dev/config-modules
 	"modules": [
 		[
+
+			// axios: https://go.nuxtjs.dev/config-axios
 			"@nuxtjs/axios",
 			{
 
-				// Axios module configuration: https://go.nuxtjs.dev/config-axios
 				// Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
 				"baseURL": "/",
 			},
 		],
 		[
 
-			// Global SCSS (abstracts: variables, functions, mixins)
-			// https://www.npmjs.com/package/@nuxtjs/style-resources
+			// style-resources: https://www.npmjs.com/package/@nuxtjs/style-resources
 			"@nuxtjs/style-resources",
 			{
 				"scss": [
+
+					// Global SCSS (abstracts: variables, functions, mixins)
 					"@/assets/scss/styles.scss",
 				],
 			},
 		],
 		[
+
+			// nuxt-svg-sprite-module: https://www.npmjs.com/package/nuxt-svg-sprite-module
 			"nuxt-svg-sprite-module",
 			{
 				"directory": "~/assets/images/icons",
 
 				// Optional template location: defaults to __dirname + /app.html
-				//     templateLocation: "src/app.html",
-				// "options": {
-				// Configuration options:
-				// https://github.com/jkphl/svg-sprite#configuration-basics
-				// },
+				"templateLocation": "src/app.html",
+
+				// Configuration options: https://github.com/jkphl/svg-sprite#configuration-basics
+				"options": {},
 			},
 		],
 	],
