@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-	<div class="tutorial bg-gray-100">
+	<section class="tutorial bg-gray-100">
 		<div
 			class="relative flex items-top justify-center sm:items-center sm:pt-0"
 		>
@@ -65,7 +65,7 @@
 				</article>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>
 
 <script>

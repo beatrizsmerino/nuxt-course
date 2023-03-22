@@ -1,9 +1,5 @@
 <template>
-	<div class="home">
-		<section>
-			<Tutorial class="page__container page__inner" />
-		</section>
-	</div>
+	<Tutorial class="page__container page__inner" />
 </template>
 
 <script>
@@ -13,6 +9,13 @@
 		"name": "Home",
 		"components": {
 			Tutorial,
+		},
+		head() {
+			return {
+				"htmlAttrs": {
+					"class": "page--home",
+				},
+			};
 		},
 	};
 </script>

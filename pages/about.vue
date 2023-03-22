@@ -1,30 +1,28 @@
 <template>
-	<div class="about">
-		<section class="page__container page__inner">
-			<PageTitle :page-title="pageTitle" />
-			<article>
-				<LogoList :logo-list="logoList" />
-				<h2 class="title">
-					nuxt-app
-				</h2>
-				<ul class="button-list">
-					<li
-						v-for="button in buttonList"
-						:key="button.id"
-						class="button-list__item"
+	<section class="page__container page__inner">
+		<PageTitle :page-title="pageTitle" />
+		<article>
+			<LogoList :logo-list="logoList" />
+			<h2 class="title">
+				nuxt-app
+			</h2>
+			<ul class="button-list">
+				<li
+					v-for="button in buttonList"
+					:key="button.id"
+					class="button-list__item"
+				>
+					<Button
+						:to="button.to"
+						:href="button.href"
+						:class-modifier="button.modifier"
 					>
-						<Button
-							:to="button.to"
-							:href="button.href"
-							:class-modifier="button.modifier"
-						>
-							{{ button.name }}
-						</Button>
-					</li>
-				</ul>
-			</article>
-		</section>
-	</div>
+						{{ button.name }}
+					</Button>
+				</li>
+			</ul>
+		</article>
+	</section>
 </template>
 
 <script>
@@ -70,6 +68,13 @@
 						"modifier": "button--black",
 					},
 				],
+			};
+		},
+		head() {
+			return {
+				"htmlAttrs": {
+					"class": "page--about",
+				},
 			};
 		},
 	};
