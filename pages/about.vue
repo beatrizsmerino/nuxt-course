@@ -73,7 +73,7 @@
 		head() {
 			return {
 				"htmlAttrs": {
-					"class": "page--about",
+					"class": "layout--default page--about",
 				},
 			};
 		},

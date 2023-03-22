@@ -13,7 +13,7 @@
 		head() {
 			return {
 				"htmlAttrs": {
-					"class": "page--home",
+					"class": "layout--default page--home",
 				},
 			};
 		},
