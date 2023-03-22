@@ -27,7 +27,7 @@
 	};
 </script>
 
-<style>
+<style scoped>
 	/* stylelint-disable selector-class-pattern */
 	.NuxtLogo {
 		margin: auto;
