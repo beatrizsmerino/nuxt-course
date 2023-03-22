@@ -1,5 +1,5 @@
 <template>
-	<div class="layout__inner container inner">
+	<div class="layout__inner page__container page__inner">
 		<Title>Project</Title>
 
 		<Navigation />

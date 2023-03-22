@@ -1,7 +1,7 @@
 <template>
-	<div class="layout">
+	<div class="page layout">
 		<PageHeader />
-		<main class="main">
+		<main class="page__main">
 			<Nuxt />
 		</main>
 	</div>
@@ -27,21 +27,23 @@
 <style lang="scss">
 	.layout {
 		&--exercises {
-			.container {
-				width: 100%;
-				max-width: 1200px;
-				margin: 0 auto;
-			}
+			.page {
+				&__container {
+					width: 100%;
+					max-width: 1200px;
+					margin: 0 auto;
+				}
 
-			.inner {
-				padding-right: 3rem;
-				padding-left: 3rem;
-			}
+				&__inner {
+					padding-right: 3rem;
+					padding-left: 3rem;
+				}
 
-			.main {
-				margin-top: 6rem;
-				padding: 5rem 0 8rem;
-				font-size: 1.6rem;
+				&__main {
+					margin-top: 6rem;
+					padding: 5rem 0 8rem;
+					font-size: 1.6rem;
+				}
 			}
 		}
 	}

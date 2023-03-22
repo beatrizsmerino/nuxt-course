@@ -1,5 +1,5 @@
 <template>
-	<div class="container inner">
+	<div class="page__container page__inner">
 		<Title>Products</Title>
 
 		<section>
