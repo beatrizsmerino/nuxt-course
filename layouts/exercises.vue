@@ -25,6 +25,10 @@
 </script>
 
 <style lang="scss">
+	// PARTIALS SASS
+	// =================================================
+	@import "~/assets/scss/components/components-form";
+
 	.layout {
 		&--exercises {
 			.page {

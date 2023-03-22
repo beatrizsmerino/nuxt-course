@@ -26,10 +26,6 @@
 </script>
 
 <style lang="scss">
-	// PARTIALS SASS
-	// =================================================
-	@import "~/assets/scss/components/components-form";
-
 	html {
 		color: $color-brand-2;
 		font-family: $font-main;
