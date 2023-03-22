@@ -126,9 +126,6 @@ export default {
 
 		// "extractCSS": true -> Causes duplicate css
 		"extractCSS": false,
-		"splitChunks": {
-			"layouts": true,
-		},
 		"postcss": {
 			"preset": {
 				"postcss-import": {
