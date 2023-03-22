@@ -34,6 +34,7 @@
 	html,
 	body,
 	.layout {
+		width: 100%;
 		height: 100%;
 	}
 
@@ -46,7 +47,9 @@
 	/* stylelint-enable selector-id-pattern */
 
 	.page {
-		margin-top: 3.5rem;
+		width: 100%;
+		height: 100%;
+		padding-top: 6rem;
 
 		&__container {
 			display: flex;
@@ -54,7 +57,6 @@
 			align-items: center;
 			justify-content: center;
 			width: 100%;
-			min-height: calc(100vh - 3.5rem);
 
 			> * {
 				&:not(:last-child) {
@@ -64,7 +66,18 @@
 		}
 
 		&__inner {
-			padding: 0 2rem;
+			padding: 0 3rem;
+		}
+
+		&__main {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			font-size: 1.6rem;
+
+			> * {
+				height: 100%;
+			}
 		}
 	}
 

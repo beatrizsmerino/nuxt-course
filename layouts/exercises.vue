@@ -33,20 +33,15 @@
 		&--exercises {
 			.page {
 				&__container {
-					width: 100%;
+					align-items: inherit;
+					justify-content: inherit;
 					max-width: 1200px;
 					margin: 0 auto;
 				}
 
-				&__inner {
-					padding-right: 3rem;
-					padding-left: 3rem;
-				}
-
 				&__main {
-					margin-top: 6rem;
+					min-height: calc(100vh - 6rem);
 					padding: 5rem 0 8rem;
-					font-size: 1.6rem;
 				}
 			}
 		}

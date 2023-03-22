@@ -1,5 +1,14 @@
 <template>
-	<header class="page-header">
+	<header class="page-header page__inner">
+		<nuxt-link
+			to="/"
+			class="page-header__logo"
+		>
+			<Icon
+				icon-id="icon-logo-nuxt-dark-theme"
+				icon-aria-label="Nuxt App"
+			/>
+		</nuxt-link>
 		<PageNav />
 	</header>
 </template>
@@ -19,14 +28,26 @@
 	.page-header {
 		display: flex;
 		position: fixed;
-		z-index: 999;
+		z-index: 999999;
 		top: 0;
 		left: 0;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
 		width: 100%;
-		height: 3.5rem;
-		padding: 0 2rem;
-		background-color: $color-brand-2;
+		height: 6rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		background-color: $color-brand-4;
+
+		&__logo {
+			.icon {
+				width: 4rem;
+				height: 4rem;
+
+				&__use {
+					fill: $color-white !important;
+				}
+			}
+		}
 	}
 </style>
