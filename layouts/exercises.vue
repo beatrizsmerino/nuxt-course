@@ -14,24 +14,35 @@
 		"components": {
 			Header,
 		},
+		head() {
+			return {
+				"htmlAttrs": {
+					"class": "layout--exercises",
+				},
+			};
+		},
 	};
 </script>
 
 <style lang="scss">
-	.container {
-		width: 100%;
-		max-width: 1200px;
-		margin: 0 auto;
-	}
+	.layout {
+		&--exercises {
+			.container {
+				width: 100%;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
 
-	.inner {
-		padding-right: 3rem;
-		padding-left: 3rem;
-	}
+			.inner {
+				padding-right: 3rem;
+				padding-left: 3rem;
+			}
 
-	.main {
-		margin-top: 6rem;
-		padding: 5rem 0 8rem;
-		font-size: 1.6rem;
+			.main {
+				margin-top: 6rem;
+				padding: 5rem 0 8rem;
+				font-size: 1.6rem;
+			}
+		}
 	}
 </style>

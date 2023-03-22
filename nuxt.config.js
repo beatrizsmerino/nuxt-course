@@ -123,6 +123,12 @@ export default {
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	"build": {
+
+		// "extractCSS": true -> Causes duplicate css
+		"extractCSS": false,
+		"splitChunks": {
+			"layouts": true,
+		},
 		"postcss": {
 			"preset": {
 				"postcss-import": {

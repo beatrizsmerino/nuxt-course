@@ -7,31 +7,47 @@
 	</div>
 </template>
 
+<script>
+	export default {
+		head() {
+			return {
+				"htmlAttrs": {
+					"class": "layout--error",
+				},
+			};
+		},
+	};
+</script>
+
 <style lang="scss" scoped>
-	/* stylelint-disable selector-class-pattern */
-	.__nuxt-error-page {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		background-color: $color-error;
+	.layout {
+		&--error {
+			/* stylelint-disable selector-class-pattern */
+			.__nuxt-error-page {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				background-color: $color-error;
 
-		h1 {
-			margin-bottom: 2rem;
-			color: mix($color-white, $color-error, 50%);
-			font-size: 4rem;
-		}
+				h1 {
+					margin-bottom: 2rem;
+					color: mix($color-white, $color-error, 50%);
+					font-size: 4rem;
+				}
 
-		a {
-			color: mix($color-white, $color-error, 70%);
-			font-size: 2.5rem;
-			font-weight: bold;
-			text-decoration: none;
+				a {
+					color: mix($color-white, $color-error, 70%);
+					font-size: 2.5rem;
+					font-weight: bold;
+					text-decoration: none;
 
-			&:hover {
-				text-decoration: undeline;
+					&:hover {
+						text-decoration: undeline;
+					}
+				}
 			}
 		}
 	}

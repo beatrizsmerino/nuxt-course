@@ -15,6 +15,13 @@
 		"components": {
 			PageHeader,
 		},
+		head() {
+			return {
+				"htmlAttrs": {
+					"class": "layout--default",
+				},
+			};
+		},
 	};
 </script>
 
