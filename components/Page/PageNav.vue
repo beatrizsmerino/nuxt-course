@@ -8,6 +8,7 @@
 			>
 				<nuxt-link
 					class="page-nav__link"
+					:exact="!link.activeSubPages"
 					:to="link.path"
 				>
 					{{ link.name }}
@@ -34,6 +35,7 @@
 					{
 						"name": "Exercises",
 						"path": "/exercises",
+						"activeSubPages": true,
 					},
 				],
 			};
@@ -74,7 +76,7 @@
 			font-weight: bold;
 			text-decoration: none;
 
-			&.nuxt-link-exact-active {
+			&.nuxt-link-active {
 				color: $color-white;
 			}
 
