@@ -1,6 +1,6 @@
 <template>
 	<div class="layout">
-		<Header />
+		<PageHeader />
 		<main class="main">
 			<Nuxt />
 		</main>
@@ -8,11 +8,11 @@
 </template>
 
 <script>
-	import Header from "@/components/Exercises/Layout/Header";
+	import PageHeader from "@/components/Page/PageHeader";
 
 	export default {
 		"components": {
-			Header,
+			PageHeader,
 		},
 		head() {
 			return {

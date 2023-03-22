@@ -31,6 +31,10 @@
 						"name": "About",
 						"path": "/about",
 					},
+					{
+						"name": "Exercises",
+						"path": "/exercises",
+					},
 				],
 			};
 		},
