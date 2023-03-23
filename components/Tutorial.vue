@@ -8,7 +8,7 @@
 				href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
 				rel="stylesheet"
 			>
-			<div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
+			<div class="max-w-8xl mx-auto sm:px-6 lg:px-8">
 				<a
 					class="flex justify-center pt-8 sm:pt-0"
 					href="https://nuxtjs.org"
@@ -17,12 +17,12 @@
 					<LogoNuxt logo-type="imagotype" />
 				</a>
 				<article
-					class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6"
+					class="mt-12 bg-white overflow-hidden shadow sm:rounded-lg p-10"
 				>
-					<h2 class="text-2xl leading-7 font-semibold">
+					<h2 class="text-4xl leading-10 font-semibold">
 						Welcome to your Nuxt Application
 					</h2>
-					<p class="mt-3 text-gray-600">
+					<p class="mt-6 text-gray-600">
 						We recommend you take a look at the
 						<a
 							href="https://nuxtjs.org"
@@ -37,11 +37,11 @@
 					</p>
 					<p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
 						To get started, remove
-						<code class="bg-gray-100 text-sm p-1 rounded border">
+						<code class="bg-gray-100 p-1 rounded border">
 							components/Tutorial.vue
 						</code>
 						and start coding in
-						<code class="bg-gray-100 text-sm p-1 rounded border">
+						<code class="bg-gray-100 p-1 rounded border">
 							pages/index.vue
 						</code>
 						. Have fun!
