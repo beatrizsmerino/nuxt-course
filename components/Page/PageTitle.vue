@@ -19,6 +19,7 @@
 
 <style lang="scss" scoped>
 	.page-title {
+		font-size: 2.4rem;
 		text-align: center;
 
 		:deep(.page-title__highlight) {
@@ -32,7 +33,7 @@
 			);
 			background-repeat: repeat;
 			background-size: 100%;
-			font-size: 4rem;
+			font-size: 2.8em;
 			font-weight: 900;
 			-webkit-text-fill-color: transparent;
 			-moz-text-fill-color: transparent;

@@ -32,8 +32,8 @@
 		list-style: none;
 
 		&:deep(.icon) {
-			width: 10rem;
-			height: 10rem;
+			width: 16rem;
+			height: 16rem;
 		}
 	}
 </style>

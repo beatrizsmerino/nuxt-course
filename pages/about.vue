@@ -82,12 +82,12 @@
 
 <style lang="scss" scoped>
 	.title {
-		margin-bottom: 1rem;
+		margin-bottom: 1.6rem;
 		color: $color-brand-1;
 		font-family: Quicksand, "Source Sans Pro", -apple-system,
 			BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
 			sans-serif;
-		font-size: 3.5rem;
+		font-size: 5.6rem;
 		font-weight: 300;
 		letter-spacing: 0.1rem;
 		text-align: center;
@@ -103,7 +103,11 @@
 
 		&__item {
 			&:not(:last-child) {
-				margin-right: 1.5rem;
+				margin-right: 2.4rem;
+			}
+
+			:deep(.button) {
+				border-width: 0.3rem;
 			}
 		}
 	}

@@ -60,7 +60,7 @@
 
 			> * {
 				&:not(:last-child) {
-					margin-bottom: 4rem;
+					margin-bottom: 6.4rem;
 				}
 			}
 		}
