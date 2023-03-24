@@ -7,7 +7,6 @@
 			<use
 				class="icon__use"
 				:xlink:href="`#${iconName}`"
-				:style="`${iconColor == '' ? '' : 'fill:' + iconColor};`"
 			/>
 		</svg>
 	</i>
@@ -24,10 +23,6 @@
 			"iconAriaLabel": {
 				"type": String,
 				"required": true,
-			},
-			"iconColor": {
-				"type": String,
-				"default": "",
 			},
 		},
 		data() {
