@@ -27,7 +27,7 @@
 
 <script>
 	import PageTitle from "@/components/Page/PageTitle";
-	import LogoList from "@/components/Logo/LogoList";
+	import LogoList from "@/components/UI/Logo/LogoList";
 
 	export default {
 		"name": "About",

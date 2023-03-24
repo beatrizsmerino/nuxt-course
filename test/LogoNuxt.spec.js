@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import LogoNuxt from "@/components/Logo/LogoNuxt.vue";
+import LogoNuxt from "@/components/UI/Logo/LogoNuxt.vue";
 
 describe("LogoNuxt", () => {
 	test("is a Vue instance", () => {
