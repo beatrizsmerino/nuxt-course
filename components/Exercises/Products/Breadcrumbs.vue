@@ -10,7 +10,7 @@
 				</nuxt-link>
 
 				<Icon
-					icon-name="icon-chevron-right"
+					icon-name="chevron-right"
 					icon-aria-label="Breadcrumb arrow"
 				/>
 			</li>

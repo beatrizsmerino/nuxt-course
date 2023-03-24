@@ -7,7 +7,7 @@
 			>
 				<span class="button__icon">
 					<Icon
-						icon-name="icon-menu"
+						icon-name="menu"
 						icon-aria-label="Navigation button"
 					/>
 				</span>

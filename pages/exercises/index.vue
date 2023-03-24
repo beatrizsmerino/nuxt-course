@@ -22,7 +22,7 @@
 							<transition name="rotate">
 								<Icon
 									:class="{ 'is-rotate': item.status }"
-									icon-name="icon-chevron-down"
+									icon-name="chevron-down"
 									icon-aria-label="Show more"
 								/>
 							</transition>
