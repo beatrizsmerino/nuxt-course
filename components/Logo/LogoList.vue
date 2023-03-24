@@ -5,7 +5,7 @@
 			:key="logo.id"
 			class="logo-list__item"
 		>
-			<svg-icon :name="logo.name" />
+			<Icon :icon-name="logo.name" />
 		</li>
 	</ul>
 </template>

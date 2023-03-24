@@ -3,12 +3,7 @@
 		:class="`${iconName} icon`"
 		:aria-label="iconAriaLabel"
 	>
-		<svg class="icon__svg">
-			<use
-				class="icon__use"
-				:xlink:href="`#${iconName}`"
-			/>
-		</svg>
+		<svg-icon :name="iconName" />
 	</i>
 </template>
 
