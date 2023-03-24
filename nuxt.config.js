@@ -105,20 +105,6 @@ export default {
 				],
 			},
 		],
-		[
-
-			// nuxt-svg-sprite-module: https://www.npmjs.com/package/nuxt-svg-sprite-module
-			"nuxt-svg-sprite-module",
-			{
-				"directory": "~/assets/images/icons",
-
-				// Optional template location: defaults to __dirname + /app.html
-				"templateLocation": "src/app.html",
-
-				// Configuration options: https://github.com/jkphl/svg-sprite#configuration-basics
-				"options": {},
-			},
-		],
 	],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
