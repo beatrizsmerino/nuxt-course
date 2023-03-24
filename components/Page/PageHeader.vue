@@ -5,7 +5,7 @@
 			class="page-header__logo"
 		>
 			<Icon
-				icon-id="icon-logo-nuxt-dark-theme"
+				icon-name="icon-logo-nuxt-dark-theme"
 				icon-aria-label="Nuxt App"
 			/>
 		</nuxt-link>

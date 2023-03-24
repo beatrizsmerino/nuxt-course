@@ -1,12 +1,12 @@
 <template>
 	<i
-		:class="`${iconId} icon`"
+		:class="`${iconName} icon`"
 		:aria-label="iconAriaLabel"
 	>
 		<svg class="icon__svg">
 			<use
 				class="icon__use"
-				:xlink:href="`#${iconId}`"
+				:xlink:href="`#${iconName}`"
 				:style="`${iconColor == '' ? '' : 'fill:' + iconColor};`"
 			/>
 		</svg>
@@ -17,7 +17,7 @@
 	export default {
 		"name": "Icon",
 		"props": {
-			"iconId": {
+			"iconName": {
 				"type": String,
 				"required": true,
 			},

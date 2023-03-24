@@ -44,7 +44,7 @@
 
 			<Button class="select__button button--icon">
 				<Icon
-					icon-id="icon-chevron-down"
+					icon-name="icon-chevron-down"
 					icon-aria-label="Show options"
 					class="select__icon"
 				/>
