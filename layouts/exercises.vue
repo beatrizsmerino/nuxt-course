@@ -31,7 +31,11 @@
 
 	.layout {
 		&--exercises {
+			height: inherit;
+
 			.page {
+				height: inherit;
+
 				&__container {
 					align-items: inherit;
 					justify-content: inherit;
@@ -40,6 +44,7 @@
 				}
 
 				&__main {
+					height: inherit;
 					min-height: calc(100vh - 6rem);
 					padding: 5rem 0 8rem;
 				}
