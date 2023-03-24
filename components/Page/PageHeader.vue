@@ -43,10 +43,7 @@
 			.icon {
 				width: 4rem;
 				height: 4rem;
-
-				&__use {
-					fill: $color-white !important;
-				}
+				fill: $color-white !important;
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 <template>
 	<i
-		:class="`${iconName} icon`"
+		:class="`icon-${iconName} icon`"
 		:aria-label="iconAriaLabel"
 	>
 		<svg-icon :name="iconName" />

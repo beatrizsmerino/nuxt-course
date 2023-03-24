@@ -77,6 +77,7 @@ export default {
 
 				// Manipulate module options
 				"input": "~/assets/images/icons/",
+				"elementClass": "icon__svg",
 			},
 		],
 	],

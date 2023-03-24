@@ -55,10 +55,7 @@
 
 				.icon {
 					margin: 0 1rem;
-
-					&__use {
-						fill: $color-brand-1 !important;
-					}
+					fill: $color-brand-1 !important;
 				}
 			}
 		}

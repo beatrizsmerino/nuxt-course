@@ -182,10 +182,7 @@
 				.icon {
 					width: 2rem;
 					height: 2rem;
-
-					&__use {
-						fill: $color-black;
-					}
+					fill: $color-black;
 				}
 			}
 		}
@@ -232,9 +229,7 @@
 					&__button {
 						::v-deep {
 							.icon {
-								&__use {
-									fill: $color-brand-3 !important;
-								}
+								fill: $color-brand-3 !important;
 							}
 						}
 					}
@@ -261,9 +256,7 @@
 					&__button {
 						::v-deep {
 							.icon {
-								&__use {
-									fill: $color-error;
-								}
+								fill: $color-error;
 							}
 						}
 					}

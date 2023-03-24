@@ -123,9 +123,7 @@
 
 			::v-deep {
 				.icon {
-					&__use {
-						fill: $color-brand-3;
-					}
+					fill: $color-brand-3;
 				}
 			}
 
@@ -136,9 +134,7 @@
 
 				::v-deep {
 					.icon {
-						&__use {
-							fill: $color-white;
-						}
+						fill: $color-white;
 					}
 				}
 			}
@@ -150,9 +146,7 @@
 
 			::v-deep {
 				.icon {
-					&__use {
-						fill: $color-brand-4;
-					}
+					fill: $color-brand-4;
 				}
 			}
 
@@ -163,9 +157,7 @@
 
 				::v-deep {
 					.icon {
-						&__use {
-							fill: $color-white;
-						}
+						fill: $color-white;
 					}
 				}
 			}

@@ -118,10 +118,7 @@
 				width: 3rem;
 				height: 3rem;
 				transition: transform 0.5s ease-in-out 0s;
-
-				&__use {
-					fill: $color-brand-2 !important;
-				}
+				fill: $color-brand-2 !important;
 
 				&.is-rotate {
 					transform: rotate(180deg);
