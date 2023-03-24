@@ -5,7 +5,10 @@
 			:key="logo.id"
 			class="logo-list__item"
 		>
-			<Icon :icon-name="logo.name" />
+			<Icon
+				:icon-name="logo.name"
+				:icon-aria-label="logo.title"
+			/>
 		</li>
 	</ul>
 </template>

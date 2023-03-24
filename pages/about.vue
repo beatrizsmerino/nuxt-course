@@ -42,10 +42,12 @@
 					{
 						"id": 1,
 						"name": "logo-vue-light-theme",
+						"title": "Vue logo",
 					},
 					{
 						"id": 2,
 						"name": "logo-nuxt-light-theme",
+						"title": "Nuxt logo",
 					},
 				],
 				"buttonList": [
