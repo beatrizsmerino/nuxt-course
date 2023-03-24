@@ -4,7 +4,7 @@
 		<article>
 			<LogoList :logo-list="logoList" />
 			<h2 class="title">
-				nuxt-exercises
+				nuxt-course
 			</h2>
 			<ul class="button-list">
 				<li
