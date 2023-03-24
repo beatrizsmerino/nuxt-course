@@ -3,7 +3,10 @@
 		:class="`icon-${iconName} icon`"
 		:aria-label="iconAriaLabel"
 	>
-		<svg-icon :name="iconName" />
+		<svg-icon
+			:name="iconName"
+			:title="iconAriaLabel"
+		/>
 	</i>
 </template>
 
