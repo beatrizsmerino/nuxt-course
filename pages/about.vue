@@ -66,7 +66,7 @@
 					{
 						"id": 3,
 						"name": "Exercises",
-						"to": "/exercises",
+						"to": "/nuxt2/exercises",
 						"modifier": "button--black",
 					},
 				],
