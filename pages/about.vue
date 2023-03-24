@@ -54,13 +54,13 @@
 					{
 						"id": 1,
 						"name": "Documentation",
-						"path": "https://nuxtjs.org/",
+						"href": "https://nuxtjs.org/",
 						"modifier": "button--brand-1-dark-line",
 					},
 					{
 						"id": 2,
 						"name": "GitHub",
-						"path": "https://github.com/nuxt/nuxt.js",
+						"href": "https://github.com/nuxt/nuxt.js",
 						"modifier": "button--brand-2-dark-line",
 					},
 					{
