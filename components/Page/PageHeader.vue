@@ -6,7 +6,7 @@
 		>
 			<Icon
 				icon-name="logo-nuxt-dark-theme"
-				icon-aria-label="Nuxt App"
+				icon-aria-label="Nuxt Exercises"
 			/>
 		</nuxt-link>
 		<PageNav />
