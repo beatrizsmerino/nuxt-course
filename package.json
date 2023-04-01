@@ -18,7 +18,7 @@
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.13.6",
-		"@nuxtjs/svg-sprite": "^0.5.2",
+		"@nuxtjs/svg-sprite": "^1.0.2",
 		"core-js": "^3.29.1",
 		"nuxt": "^2.16.0",
 		"vue": "^2.7.14",
