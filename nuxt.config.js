@@ -2,7 +2,7 @@ export default {
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	"head": {
-		"title": "nuxt-exercises",
+		"title": "nuxt-course",
 		"htmlAttrs": {
 			"lang": "en",
 		},
