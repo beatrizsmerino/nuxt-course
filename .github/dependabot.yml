@@ -4,8 +4,10 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: daily
-      time: '00:00'
+      interval: monthly
+      day: "saturday"
+      time: "09:00"
+      timezone: "Europe/Madrid"
     open-pull-requests-limit: 10
     reviewers:
       - beatriz sopeña merino
@@ -19,8 +21,10 @@ updates:
   - package-ecosystem: github-actions
     directory: '/'
     schedule:
-      interval: daily
-      time: '00:00'
+      interval: monthly
+      day: "saturday"
+      time: "09:00"
+      timezone: "Europe/Madrid"
     open-pull-requests-limit: 10
     reviewers:
       - beatriz sopeña merino

@@ -1,11 +1,11 @@
-# Nuxt exercises
+# Nuxt course
 
-![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/nuxt-exercises)
+![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/nuxt-course)
 ![GitHub dependabot](https://img.shields.io/badge/dependabot-enabled-025e8c?logo=Dependabot)  
-![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/nuxt-exercises)
-![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/nuxt-exercises)
-![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/nuxt-exercises)
-![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/nuxt-exercises)
+![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/nuxt-course)
+![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/nuxt-course)
+![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/nuxt-course)
+![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/nuxt-course)
 
 ## Build Setup
 

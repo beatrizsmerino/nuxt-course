@@ -62,7 +62,7 @@
 
 			&:not(:last-child) {
 				&:after {
-					content: '|';
+					content: "|";
 					display: inline-block;
 					margin: 0 0.5rem;
 				}
