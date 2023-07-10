@@ -8,6 +8,9 @@
 		"source.fixAll.stylelint": true
 	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"editor.detectIndentation": false,
 	"editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
 	"editor.fontLigatures": true,
