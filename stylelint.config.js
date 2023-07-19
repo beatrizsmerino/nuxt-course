@@ -1,5 +1,3 @@
-// https://stylelint.io/user-guide/configuration
-
 module.exports = {
 	"customSyntax": "postcss-html",
 	"extends": [
@@ -119,6 +117,8 @@ module.exports = {
 		"scss/at-rule-no-unknown": true,
 		"scss/no-global-function-names": null,
 		"selector-class-pattern": null,
+		"selector-max-compound-selectors": null,
+		"selector-max-id": 1,
 		"selector-no-qualifying-type": [
 			true,
 			{
@@ -128,8 +128,6 @@ module.exports = {
 				],
 			},
 		],
-		"selector-max-compound-selectors": null,
-		"selector-max-id": 1,
 		"selector-pseudo-class-no-unknown": [
 			true,
 			{

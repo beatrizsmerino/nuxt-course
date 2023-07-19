@@ -6,17 +6,6 @@
 	"htmlWhitespaceSensitivity": "ignore",
 	"insertPragma": false,
 	"jsxSingleQuote": false,
-	"printWidth": 80,
-	"proseWrap": "always",
-	"quoteProps": "preserve",
-	"requirePragma": false,
-	"semi": true,
-	"singleAttributePerLine": true,
-	"singleQuote": false,
-	"tabWidth": 4,
-	"trailingComma": "all",
-	"useTabs": true,
-	"vueIndentScriptAndStyle": true,
 	"overrides": [
 		{
 			"files": [".prettierrc"],
@@ -30,5 +19,16 @@
 				"printWidth": 0
 			}
 		}
-	]
+	],
+	"printWidth": 80,
+	"proseWrap": "always",
+	"quoteProps": "preserve",
+	"requirePragma": false,
+	"semi": true,
+	"singleAttributePerLine": true,
+	"singleQuote": false,
+	"tabWidth": 4,
+	"trailingComma": "all",
+	"useTabs": true,
+	"vueIndentScriptAndStyle": true
 }
