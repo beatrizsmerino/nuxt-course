@@ -2,6 +2,7 @@
 	"version": "1.0.0",
 	"private": true,
 	"name": "nuxt-course",
+	"description": "Udemy course on Nuxt Framework.",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
 		"preinstall": "npm run install:clean && npm install --ignore-scripts && npx npm-force-resolutions",
