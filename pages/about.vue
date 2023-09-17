@@ -61,8 +61,16 @@
 	.title {
 		margin-bottom: 1rem;
 		color: $color-brand-1;
-		font-family: Quicksand, "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-			"Helvetica Neue", Arial, sans-serif;
+		font-family:
+			Quicksand,
+			"Source Sans Pro",
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			Roboto,
+			"Helvetica Neue",
+			Arial,
+			sans-serif;
 		font-size: 3.5rem;
 		font-weight: 300;
 		letter-spacing: 0.1rem;
