@@ -23,7 +23,7 @@
 		"@nuxtjs/svg-sprite": "^0.5.2",
 		"core-js": "^3.35.0",
 		"nuxt": "^2.16.0",
-		"vue": "^2.7.14",
+		"vue": "^3.4.15",
 		"vue-server-renderer": "^2.7.16",
 		"vue-template-compiler": "^2.7.16",
 		"vuex": "^3.1.3"
