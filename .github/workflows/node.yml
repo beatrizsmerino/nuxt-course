@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [ main, master ]
 jobs:
-  ci:
+  check-node-build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
