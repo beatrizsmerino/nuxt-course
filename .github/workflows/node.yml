@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
-      - name: 🛠️ Cache node_modules
+      - name: 🛠️ Storing 'node_modules' in cache
         uses: actions/cache@v4.0.0
         with:
           path: ~/.npm
