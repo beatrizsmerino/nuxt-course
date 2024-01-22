@@ -12,8 +12,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest]
-        node: [20.x]
+        os: [ ubuntu-latest ]
+        node: [ 20.x ]
     steps:
       - name: 🔀 Checkout code from repository
         uses: actions/checkout@master
