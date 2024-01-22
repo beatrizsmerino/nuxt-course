@@ -15,25 +15,25 @@ jobs:
         os: [ubuntu-latest]
         node: [20.x]
     steps:
-      - name: 🛎 Checkout code from repository
+      - name: 🔀 Checkout code from repository
         uses: actions/checkout@master
-      - name: 🏗 Setup Node version ${{ matrix.node }}
+      - name: 🛠️ Setup Node version ${{ matrix.node }}
         uses: actions/setup-node@v4.0.1
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
-      - name: 📦 Cache node_modules
+      - name: 🛠️ Cache node_modules
         uses: actions/cache@v4.0.0
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: 👨🏻‍💻 Install dependencies
+      - name: 📦 Install dependencies
         run: npm install
       - name: 👀 Run NPM script to lint
         run: npm run lint --if-present
       - name: 🧪 Run NPM script to test
         run: npm run test --if-present
-      - name: 🚀 Run NPM script to build
+      - name: 🏗️ Run NPM script to build
         run: npm run build --if-present
