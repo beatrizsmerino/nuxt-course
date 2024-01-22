@@ -1,18 +1,8 @@
 module.exports = {
-	"root": true,
 	"env": {
 		"browser": true,
 		"jest/globals": true,
 		"node": true,
-	},
-	"parserOptions": {
-		"parser": "@babel/eslint-parser",
-		"ecmaFeatures": {
-			"jsx": true,
-		},
-		"ecmaVersion": "latest",
-		"sourceType": "module",
-		"requireConfigFile": false,
 	},
 	"extends": [
 		"@nuxtjs",
@@ -20,22 +10,59 @@ module.exports = {
 		"eslint:recommended",
 		"plugin:vue/recommended",
 		"plugin:nuxt/recommended",
-		"plugin:json/recommended",
+		"plugin:jsonc/recommended-with-json",
 	],
+	"overrides": [
+		{
+			"files": [
+				"*.vue",
+			],
+			"rules": {
+				"indent": "off",
+			},
+		},
+		{
+			"files": [
+				"*.json",
+			],
+			"rules": {
+				"jsonc/comma-dangle": "off",
+			},
+		},
+		{
+			"files": [
+				"package-lock.json",
+				".eslintrc.js",
+			],
+			"rules": {
+				"max-lines": "off",
+			},
+		},
+	],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true,
+		},
+		"ecmaVersion": "latest",
+		"parser": "@babel/eslint-parser",
+		"requireConfigFile": false,
+		"sourceType": "module",
+	},
 	"plugins": [
 		"vue",
 		"nuxt",
 		"prettier",
-		"json",
+		"jsonc",
 		"jest",
 	],
+	"root": true,
 	"rules": {
 		"accessor-pairs": 2,
 		"array-bracket-newline": [
 			2,
 			{
-				"multiline": true,
 				"minItems": 1,
+				"multiline": true,
 			},
 		],
 		"array-bracket-spacing": [
@@ -46,8 +73,8 @@ module.exports = {
 		"array-element-newline": [
 			2,
 			{
-				"multiline": true,
 				"minItems": 1,
+				"multiline": true,
 			},
 		],
 		"arrow-body-style": [
@@ -63,9 +90,9 @@ module.exports = {
 		"camelcase": [
 			2,
 			{
-				"properties": "always",
 				"ignoreDestructuring": true,
 				"ignoreImports": false,
+				"properties": "always",
 			},
 		],
 		"capitalized-comments": 0,
@@ -146,8 +173,8 @@ module.exports = {
 			1,
 			{
 				"max": 500,
-				"skipComments": true,
 				"skipBlankLines": true,
+				"skipComments": true,
 			},
 		],
 		"max-lines-per-function": [
@@ -178,8 +205,8 @@ module.exports = {
 		"new-cap": [
 			2,
 			{
-				"newIsCap": true,
 				"capIsNew": true,
+				"newIsCap": true,
 			},
 		],
 		"new-parens": 2,
@@ -296,8 +323,8 @@ module.exports = {
 		"no-use-before-define": [
 			2,
 			{
-				"functions": false,
 				"classes": true,
+				"functions": false,
 			},
 		],
 		"no-useless-call": 1,
@@ -311,11 +338,12 @@ module.exports = {
 		"no-warning-comments": 2,
 		"no-whitespace-before-property": 2,
 		"nonblock-statement-body-position": 2,
+		"nuxt/no-cjs-in-config": 1,
 		"object-curly-newline": [
 			2,
 			{
-				"multiline": false,
 				"consistent": true,
+				"multiline": false,
 			},
 		],
 		"object-curly-spacing": [
@@ -365,8 +393,8 @@ module.exports = {
 			2,
 			"double",
 			{
-				"avoidEscape": true,
 				"allowTemplateLiterals": true,
+				"avoidEscape": true,
 			},
 		],
 		"radix": [
@@ -391,8 +419,8 @@ module.exports = {
 			2,
 			{
 				"anonymous": "never",
-				"named": "never",
 				"asyncArrow": "always",
+				"named": "never",
 			},
 		],
 		"space-in-parens": 2,
@@ -409,11 +437,6 @@ module.exports = {
 			"never",
 		],
 		"vars-on-top": 2,
-		"wrap-iife": 2,
-		"wrap-regex": 2,
-		"yield-star-spacing": 2,
-		"yoda": 2,
-		"nuxt/no-cjs-in-config": 1,
 		"vue/component-name-in-template-casing": [
 			2,
 			"PascalCase",
@@ -421,8 +444,8 @@ module.exports = {
 		"vue/html-closing-bracket-newline": [
 			2,
 			{
-				"singleline": "never",
 				"multiline": "always",
+				"singleline": "never",
 			},
 		],
 		"vue/html-closing-bracket-spacing": 0,
@@ -430,20 +453,20 @@ module.exports = {
 			2,
 			"tab",
 			{
+				"alignAttributesVertically": true,
 				"attribute": 1,
 				"baseIndent": 1,
 				"closeBracket": 0,
-				"alignAttributesVertically": true,
 				"ignores": [],
 			},
 		],
 		"vue/max-attributes-per-line": [
 			2,
 			{
-				"singleline": {
+				"multiline": {
 					"max": 1,
 				},
-				"multiline": {
+				"singleline": {
 					"max": 1,
 				},
 			},
@@ -452,45 +475,40 @@ module.exports = {
 		"vue/multiline-html-element-content-newline": [
 			2,
 			{
-				"ignoreWhenEmpty": true,
+				"allowEmptyLines": false,
 				"ignores": [
 					"pre",
 					"textarea",
 				],
-				"allowEmptyLines": false,
+				"ignoreWhenEmpty": true,
 			},
 		],
 		"vue/no-reserved-component-names": 0,
 		"vue/no-side-effects-in-computed-properties": 0,
 		"vue/no-v-html": 0,
+		"vue/order-in-components": 2,
 		"vue/require-default-prop": 0,
 		"vue/script-indent": [
 			2,
 			"tab",
 			{
 				"baseIndent": 1,
-				"switchCase": 0,
 				"ignores": [],
+				"switchCase": 0,
 			},
 		],
 		"vue/singleline-html-element-content-newline": [
 			2,
 			{
-				"ignoreWhenEmpty": true,
 				"ignores": [
 					"pre",
 				],
+				"ignoreWhenEmpty": true,
 			},
 		],
+		"wrap-iife": 2,
+		"wrap-regex": 2,
+		"yield-star-spacing": 2,
+		"yoda": 2,
 	},
-	"overrides": [
-		{
-			"files": [
-				"*.vue",
-			],
-			"rules": {
-				"indent": "off",
-			},
-		},
-	],
 };

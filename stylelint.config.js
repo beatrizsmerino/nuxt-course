@@ -1,5 +1,3 @@
-// https://stylelint.io/user-guide/configuration
-
 module.exports = {
 	"customSyntax": "postcss-html",
 	"extends": [
@@ -91,6 +89,7 @@ module.exports = {
 				],
 			},
 		],
+		"import-notation": null,
 		"keyframe-declaration-no-important": true,
 		"length-zero-no-unit": true,
 		"max-nesting-depth": null,
@@ -116,7 +115,21 @@ module.exports = {
 			},
 		],
 		"scss/at-rule-no-unknown": true,
-		"selector-class-pattern": null,
+		"scss/no-global-function-names": null,
+		"selector-class-pattern": [
+			"^([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?$",
+			{
+				"resolveNestedSelectors": true,
+			},
+		],
+		"selector-id-pattern": [
+			"error",
+			{
+				"format": "camelCase",
+			},
+		],
+		"selector-max-compound-selectors": null,
+		"selector-max-id": 1,
 		"selector-no-qualifying-type": [
 			true,
 			{
@@ -126,8 +139,6 @@ module.exports = {
 				],
 			},
 		],
-		"selector-max-compound-selectors": null,
-		"selector-max-id": 1,
 		"selector-pseudo-class-no-unknown": [
 			true,
 			{

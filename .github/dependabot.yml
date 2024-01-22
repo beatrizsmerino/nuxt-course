@@ -8,11 +8,10 @@ updates:
       day: "saturday"
       time: "09:00"
       timezone: "Europe/Madrid"
-    open-pull-requests-limit: 10
     reviewers:
-      - beatriz sopeña merino
+      - beatrizsmerino
     assignees:
-      - beatriz sopeña merino
+      - beatrizsmerino
     commit-message:
       prefix: fix
       prefix-development: chore
@@ -25,11 +24,10 @@ updates:
       day: "saturday"
       time: "09:00"
       timezone: "Europe/Madrid"
-    open-pull-requests-limit: 10
     reviewers:
-      - beatriz sopeña merino
+      - beatrizsmerino
     assignees:
-      - beatriz sopeña merino
+      - beatrizsmerino
     commit-message:
       prefix: fix
       prefix-development: chore

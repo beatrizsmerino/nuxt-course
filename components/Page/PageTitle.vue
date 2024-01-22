@@ -24,12 +24,7 @@
 		:deep(.page-title__highlight) {
 			background-clip: text;
 			background-color: $color-brand-1;
-			background-image: linear-gradient(
-				45deg,
-				$color-brand-2,
-				$color-brand-1,
-				$color-brand-3
-			);
+			background-image: linear-gradient(45deg, $color-brand-2, $color-brand-1, $color-brand-3);
 			background-repeat: repeat;
 			background-size: 100%;
 			font-size: 4rem;
