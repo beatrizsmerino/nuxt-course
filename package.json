@@ -8,6 +8,7 @@
 		"dependencies:fix": "npm install --ignore-scripts && npx npm-force-resolutions",
 		"preinstall": "npm run install:clean && npm run dependencies:fix",
 		"postinstall": "npm run lint",
+		"prepare": "husky install",
 		"dev": "nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
