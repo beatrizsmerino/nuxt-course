@@ -15,13 +15,13 @@
 $ npm install
 ```
 
-### Serve with hot reload at localhost:3000
+### Launch the development server with hot reload
 
 ```bash
 $ npm run dev
 ```
 
-### Build for production and launch server
+### Build project and start server for production
 
 ```bash
 $ npm run build
