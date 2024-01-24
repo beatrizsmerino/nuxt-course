@@ -7,7 +7,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/nuxt-course)
 ![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/nuxt-course)
 
-## Build Setup
+## Commands
 
 ### Install dependencies
 
