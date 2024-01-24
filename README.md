@@ -7,13 +7,13 @@
 ![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/nuxt-course)
 ![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/nuxt-course)
 
-## Description
+## 🎯 Description
 
 This repository serves as a complete learning and practice platform for mastering `Nuxt 2`, building on the knowledge gained in the Udemy course ["Nuxt.js 2 - Vue.js on Steroids"](https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/learn/lecture/9172330#overview) taught by [Maximilian Schwarzmüller](https://www.udemy.com/user/academind/).
 
 Designed for both beginners and seasoned developers alike, the course provides an in-depth exploration of `Nuxt 2`, enhancing the capabilities of `Vue.js` through practical, real-world applications. This repository contains my personal coding exercises, project work, and key learnings, reflecting my journey through the course and my progression in mastering the powerful features of `Nuxt 2`.
 
-## Commands
+## 🚀 Commands
 
 ### Install dependencies
 
@@ -42,7 +42,7 @@ npm run generate
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-## Special Directories
+## 📁 Special Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
 
