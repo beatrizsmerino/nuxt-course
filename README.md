@@ -1,7 +1,7 @@
 # Nuxt course
 
+![GitHub dependabot](https://img.shields.io/badge/dependabot-enabled-025e8c?logo=Dependabot)
 ![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/nuxt-course)
-![GitHub dependabot](https://img.shields.io/badge/dependabot-enabled-025e8c?logo=Dependabot)  
 ![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/nuxt-course)
 ![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/nuxt-course)
 ![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/nuxt-course)
