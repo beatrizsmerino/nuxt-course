@@ -12,26 +12,26 @@
 ### Install dependencies
 
 ```bash
-$ npm install
+npm install
 ```
 
 ### Launch the development server with hot reload
 
 ```bash
-$ npm run dev
+npm run dev
 ```
 
 ### Build project and start server for production
 
 ```bash
-$ npm run build
-$ npm run start
+npm run build
+npm run start
 ```
 
 ### Generate static project
 
 ```bash
-$ npm run generate
+npm run generate
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
