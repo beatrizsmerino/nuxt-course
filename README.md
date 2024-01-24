@@ -9,24 +9,28 @@
 
 ## Build Setup
 
+### Install dependencies
+
 ```bash
-# install dependencies
 $ npm install
 ```
 
+### Serve with hot reload at localhost:3000
+
 ```bash
-# serve with hot reload at localhost:3000
 $ npm run dev
 ```
 
+### Build for production and launch server
+
 ```bash
-# build for production and launch server
 $ npm run build
 $ npm run start
 ```
 
+### Generate static project
+
 ```bash
-# generate static project
 $ npm run generate
 ```
 
