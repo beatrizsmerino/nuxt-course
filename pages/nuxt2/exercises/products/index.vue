@@ -64,11 +64,7 @@
 					text-decoration: none;
 
 					&:hover {
-						background-color: mix(
-							$color-white,
-							$color-brand-2,
-							80%
-						);
+						background-color: mix($color-white, $color-brand-2, 80%);
 					}
 				}
 			}

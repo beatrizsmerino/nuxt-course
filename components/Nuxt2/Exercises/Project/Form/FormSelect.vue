@@ -217,10 +217,7 @@
 					&__field {
 						&--anim {
 							border-color: $color-brand-3 !important;
-							background-color: rgba(
-								$color-brand-3,
-								0.2
-							) !important;
+							background-color: rgba($color-brand-3, 0.2) !important;
 						}
 					}
 				}

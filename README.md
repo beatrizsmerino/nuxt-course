@@ -1,32 +1,48 @@
 # Nuxt course
 
+![GitHub dependabot](https://img.shields.io/badge/dependabot-enabled-025e8c?logo=Dependabot)
 ![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/nuxt-course)
-![GitHub dependabot](https://img.shields.io/badge/dependabot-enabled-025e8c?logo=Dependabot)  
 ![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/nuxt-course)
 ![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/nuxt-course)
 ![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/nuxt-course)
 ![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/nuxt-course)
 
-## Build Setup
+## 🎯 Description
+
+This repository serves as a complete learning and practice platform for mastering `Nuxt 2`, building on the knowledge gained in the Udemy course ["Nuxt.js 2 - Vue.js on Steroids"](https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/learn/lecture/9172330#overview) taught by [Maximilian Schwarzmüller](https://www.udemy.com/user/academind/).
+
+Designed for both beginners and seasoned developers alike, the course provides an in-depth exploration of `Nuxt 2`, enhancing the capabilities of `Vue.js` through practical, real-world applications. This repository contains my personal coding exercises, project work, and key learnings, reflecting my journey through the course and my progression in mastering the powerful features of `Nuxt 2`.
+
+## 🚀 Commands
+
+### Install dependencies
 
 ```bash
-# install dependencies
-$ npm install
+npm install
+```
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+### Launch the development server with hot reload
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+```bash
+npm run dev
+```
 
-# generate static project
-$ npm run generate
+### Build project and start server for production
+
+```bash
+npm run build
+npm run start
+```
+
+### Generate static project
+
+```bash
+npm run generate
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-## Special Directories
+## 📁 Special Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
 
@@ -73,3 +89,11 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+## 🚧 Status
+
+The current status of the project is under construction.
+
+## 🔗 References
+
+- Udemy: ["Nuxt.js 2 - Vue.js on Steroids" by Maximilian Schwarzmüller](https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/learn/lecture/9172330#overview)

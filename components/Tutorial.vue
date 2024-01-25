@@ -1,9 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
 	<section class="tutorial bg-gray-100">
-		<div
-			class="relative flex items-top justify-center sm:items-center sm:pt-0"
-		>
+		<div class="relative flex items-top justify-center sm:items-center sm:pt-0">
 			<link
 				href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
 				rel="stylesheet"
@@ -16,9 +14,7 @@
 				>
 					<LogoNuxt logo-type="imagotype" />
 				</a>
-				<article
-					class="mt-12 bg-white overflow-hidden shadow sm:rounded-lg p-10"
-				>
+				<article class="mt-12 bg-white overflow-hidden shadow sm:rounded-lg p-10">
 					<h2 class="text-4xl leading-10 font-semibold">
 						Welcome to your Nuxt Application
 					</h2>
@@ -31,8 +27,7 @@
 						>
 							Nuxt Documentation
 						</a>
-						, whether you are new or have previous experience with
-						the framework.
+						, whether you are new or have previous experience with the framework.
 						<br >
 					</p>
 					<p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
@@ -58,9 +53,7 @@
 						href="https://twitter.com/nuxt_js"
 						target="_blank"
 					>
-						<LogoTwitter
-							class="text-gray-600 hover:text-gray-800"
-						/>
+						<LogoTwitter class="text-gray-600 hover:text-gray-800" />
 					</a>
 				</article>
 			</div>

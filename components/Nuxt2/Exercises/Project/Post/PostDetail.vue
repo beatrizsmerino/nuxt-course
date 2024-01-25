@@ -5,9 +5,7 @@
 				#{{ $route.params.id }}
 			</span>
 			<img
-				:src="
-					require(`~/assets/images/nuxt2/exercises/project/posts/${postDetail.image}`)
-				"
+				:src="require(`~/assets/images/nuxt2/exercises/project/posts/${postDetail.image}`)"
 				:alt="postDetail.title"
 			>
 		</div>

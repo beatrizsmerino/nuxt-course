@@ -11,9 +11,7 @@
 				<PostPreview
 					:post-data="item"
 					:post-index="index"
-					:post-modifier="
-						getCssModifierList.map(item => `post-preview--${item}`)
-					"
+					:post-modifier="getCssModifierList.map(item => `post-preview--${item}`)"
 				/>
 			</li>
 		</ul>
