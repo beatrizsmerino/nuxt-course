@@ -93,3 +93,7 @@ More information about the usage of this directory in [the documentation](https:
 ## 🚧 Status
 
 The current status of the project is under construction.
+
+## 🔗 References
+
+- Udemy: ["Nuxt.js 2 - Vue.js on Steroids" by Maximilian Schwarzmüller](https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/learn/lecture/9172330#overview)
