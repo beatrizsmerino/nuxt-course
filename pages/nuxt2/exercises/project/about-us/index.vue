@@ -26,6 +26,7 @@
 	import Layout from "@/components/Nuxt2/Exercises/Project/Layout";
 
 	export default {
+		"name": "ProjectAbout",
 		"components": {
 			Layout,
 		},

@@ -14,6 +14,7 @@
 	import PostList from "@/components/Nuxt2/Exercises/Project/Post/PostList";
 
 	export default {
+		"name": "ProjectHome",
 		"components": {
 			Layout,
 			PostList,
