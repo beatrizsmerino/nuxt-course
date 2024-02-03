@@ -11,6 +11,7 @@
 	import PageHeader from "@/components/Page/PageHeader";
 
 	export default {
+		"name": "Exercises",
 		"components": {
 			PageHeader,
 		},
