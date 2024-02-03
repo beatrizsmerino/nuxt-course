@@ -17,11 +17,11 @@
 		<div class="select__wrapper">
 			<select
 				:id="selectId"
-				ref="field"
 				:name="selectId"
 				:class="formFieldModifier"
 				class="select__field form__field"
 				:required="selectRequired ? true : false"
+				@input="updateData($event.target.value)"
 				@focus="onFocus"
 				@blur="onBlur"
 			>
@@ -78,6 +78,10 @@
 				"type": String,
 				"default": "",
 			},
+			"value": {
+				"type": String,
+				"default": "",
+			},
 			"selectRequired": {
 				"type": Boolean,
 				"default": false,
@@ -87,7 +91,6 @@
 			return {
 				"formLabelModifier": "",
 				"formFieldModifier": "",
-				"fieldValue": "",
 				"isEmpty": false,
 				"isFocus": false,
 				"isError": false,
@@ -104,12 +107,12 @@
 					this.formFieldModifier = `form__field--${this.selectModifier}`;
 				}
 			},
-			updateValue() {
-				this.fieldValue = this.$refs.field.value;
+			updateData(newValue) {
+				this.$emit("input", newValue);
 			},
 			checkEmpty() {
-				console.log(this.fieldValue);
-				if (this.fieldValue == 0) {
+				console.log(this.value);
+				if (this.value == 0) {
 					this.isEmpty = true;
 				} else {
 					this.isEmpty = false;
@@ -129,13 +132,11 @@
 				}
 			},
 			onFocus() {
-				this.updateValue();
 				this.checkEmpty();
 				this.addFocus();
 				this.checkError();
 			},
 			onBlur() {
-				this.updateValue();
 				this.checkEmpty();
 				this.removeFocus();
 				this.checkError();

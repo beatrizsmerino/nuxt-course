@@ -14,6 +14,7 @@
 					<div class="form__group">
 						<div class="form__column">
 							<FormField
+								v-model="newPost.form.title"
 								field-id="newPostTitle"
 								field-label="Title"
 								field-type="text"
@@ -23,6 +24,7 @@
 						</div>
 						<div class="form__column">
 							<FormField
+								v-model="newPost.form.author"
 								field-id="newPostAuthor"
 								field-label="Author"
 								field-type="text"
@@ -31,19 +33,22 @@
 						</div>
 					</div>
 					<FormField
+						v-model="newPost.form.link"
 						field-id="newPostLink"
 						field-label="Link"
 						field-type="url"
 						field-modifier="anim"
 					/>
 					<FormSelect
+						v-model="newPost.form.category"
 						select-label="Category"
 						select-id="newPostCategory"
-						:select-options="categoriesList"
+						:select-options="newPost.data.categoriesList"
 						select-modifier="anim"
 						:select-required="true"
 					/>
 					<FormField
+						v-model="newPost.form.description"
 						field-id="newPostDescription"
 						field-label="Description"
 						field-tag="textarea"
@@ -51,6 +56,7 @@
 						:field-required="true"
 					/>
 					<FormField
+						v-model="newPost.form.text"
 						field-id="newPostText"
 						field-label="Text"
 						field-tag="textarea"
@@ -85,19 +91,31 @@
 		"layout": "exercises",
 		data() {
 			return {
-				"categoriesList": [
-					"Without",
-					"Frontend",
-					"Backend",
-					"Big Data",
-					"Cibersecurity",
-					"IT",
-					"Social media",
-					"Robotics",
-					"Technology",
-					"Mobile",
-					"Legal",
-				],
+				"newPost": {
+					"form": {
+						"title": "",
+						"author": "",
+						"link": "",
+						"category": "",
+						"description": "",
+						"text": "",
+					},
+					"data": {
+						"categoriesList": [
+							"Without",
+							"Frontend",
+							"Backend",
+							"Big Data",
+							"Cibersecurity",
+							"IT",
+							"Social media",
+							"Robotics",
+							"Technology",
+							"Mobile",
+							"Legal",
+						],
+					},
+				},
 			};
 		},
 	};

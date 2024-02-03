@@ -12,14 +12,14 @@
 		<component
 			:is="checkTag"
 			:id="fieldId"
-			ref="field"
 			:class="`${fieldTag} ${formFieldModifier}`"
 			class="form__field"
 			:name="fieldId"
 			:type="fieldType"
-			:value="fieldValue"
+			:value="value"
 			:placeholder="fieldPlaceholder"
 			:required="fieldRequired ? true : false"
+			@input="updateData($event.target.value)"
 			@focus="onFocus"
 			@blur="onBlur"
 			@keypress="onKeyPress"
@@ -56,6 +56,10 @@
 				"type": String,
 				"default": "",
 			},
+			"value": {
+				"type": String,
+				"default": "",
+			},
 			"fieldPlaceholder": {
 				"type": String,
 				"default": "",
@@ -70,7 +74,6 @@
 				"formItemModifier": "",
 				"formLabelModifier": "",
 				"formFieldModifier": "",
-				"fieldValue": "",
 				"isEmpty": false,
 				"isFocus": false,
 				"isError": false,
@@ -100,12 +103,12 @@
 					this.formItemModifier = "form__item--textarea";
 				}
 			},
-			updateValue() {
-				this.fieldValue = this.$refs.field.value;
+			updateData(newValue) {
+				this.$emit("input", newValue);
 			},
 			checkEmpty() {
-				// console.log(this.fieldValue);
-				if (this.fieldValue === "") {
+				// console.log(this.value);
+				if (this.value === "") {
 					this.isEmpty = true;
 				} else {
 					this.isEmpty = false;
@@ -125,19 +128,16 @@
 				}
 			},
 			onFocus() {
-				this.updateValue();
 				this.checkEmpty();
 				this.addFocus();
 				this.checkError();
 			},
 			onBlur() {
-				this.updateValue();
 				this.checkEmpty();
 				this.removeFocus();
 				this.checkError();
 			},
 			onKeyPress() {
-				this.updateValue();
 				this.checkEmpty();
 				this.checkError();
 			},
