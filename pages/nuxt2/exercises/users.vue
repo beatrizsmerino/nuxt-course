@@ -13,10 +13,10 @@
 					<div class="form__group">
 						<div class="form__column">
 							<div class="form__item">
-								<Label for="userId">
+								<FormLabel for="userId">
 									Show the user with the id:
-								</Label>
-								<Field
+								</FormLabel>
+								<FormField
 									id="userId"
 									v-model="user.id"
 									name="userId"
@@ -40,16 +40,16 @@
 </template>
 
 <script>
-	import Field from "@/components/Nuxt2/Exercises/Users/Form/FormField";
-	import Label from "@/components/Nuxt2/Exercises/Users/Form/FormLabel";
+	import FormField from "@/components/Nuxt2/Exercises/Users/Form/FormField";
+	import FormLabel from "@/components/Nuxt2/Exercises/Users/Form/FormLabel";
 	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
 
 	export default {
 		"name": "ViewUsers",
 		"components": {
 			Title,
-			Label,
-			Field,
+			FormLabel,
+			FormField,
 		},
 		"layout": "exercises",
 		data() {
