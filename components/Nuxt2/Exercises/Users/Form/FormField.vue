@@ -2,7 +2,6 @@
 	<component
 		:is="checkTag"
 		:class="`form__field ${checkTag}`"
-		:value="getFieldValue"
 		@input="updateData($event.target.value)"
 	>
 		<slot />
