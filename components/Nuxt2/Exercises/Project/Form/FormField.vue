@@ -60,10 +60,6 @@
 				"type": String,
 				"default": "",
 			},
-			"fieldModel": {
-				"type": String,
-				"default": "",
-			},
 			"fieldRequired": {
 				"type": Boolean,
 				"default": false,
