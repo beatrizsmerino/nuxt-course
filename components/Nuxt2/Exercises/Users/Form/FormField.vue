@@ -4,7 +4,7 @@
 		ref="field"
 		:class="`form__field ${checkTag}`"
 		:value="getFieldValue"
-		@input="updateDate()"
+		@input="updateData()"
 	>
 		<slot />
 	</component>
@@ -46,7 +46,7 @@
 			},
 		},
 		"methods": {
-			updateDate() {
+			updateData() {
 				const fieldValue = this.$refs.field.value;
 				this.$emit("input", fieldValue);
 			},
