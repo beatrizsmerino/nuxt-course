@@ -2,7 +2,7 @@
 	<section class="page__container page__inner">
 		<PageTitle :page-title="pageTitle" />
 		<article>
-			<LogoList :logo-list="logoList" />
+			<UILogoList :logo-list="logoList" />
 			<h2 class="title">
 				nuxt-course
 			</h2>
@@ -12,13 +12,13 @@
 					:key="button.id"
 					class="button-list__item"
 				>
-					<Button
+					<UIButton
 						:to="button.to"
 						:href="button.href"
 						:class-modifier="button.modifier"
 					>
 						{{ button.name }}
-					</Button>
+					</UIButton>
 				</li>
 			</ul>
 		</article>
@@ -27,13 +27,13 @@
 
 <script>
 	import PageTitle from "@/components/Page/PageTitle";
-	import LogoList from "@/components/UI/Logo/LogoList";
+	import UILogoList from "@/components/UI/Logo/UILogoList";
 
 	export default {
-		"name": "About",
+		"name": "ViewAbout",
 		"components": {
 			PageTitle,
-			LogoList,
+			UILogoList,
 		},
 		data() {
 			return {

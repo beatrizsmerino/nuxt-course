@@ -53,7 +53,7 @@
 
 <script>
 	export default {
-		"name": "LogoNuxt",
+		"name": "UILogoNuxt",
 		"props": {
 			"logoType": {
 				"type": String,

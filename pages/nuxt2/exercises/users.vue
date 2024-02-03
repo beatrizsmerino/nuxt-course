@@ -7,17 +7,16 @@
 				<form
 					id="formSelectUser"
 					class="form-select-user form"
-					action=""
 					novalidate="true"
 					@submit.prevent
 				>
 					<div class="form__group">
 						<div class="form__column">
 							<div class="form__item">
-								<Label for="userId">
+								<FormLabel for="userId">
 									Show the user with the id:
-								</Label>
-								<Field
+								</FormLabel>
+								<FormField
 									id="userId"
 									v-model="user.id"
 									name="userId"
@@ -28,9 +27,9 @@
 							</div>
 						</div>
 						<div class="form__column">
-							<Button @button-click="loadUser">
+							<UIButton @button-click="loadUser">
 								Show user {{ user.id }}
-							</Button>
+							</UIButton>
 						</div>
 					</div>
 				</form>
@@ -41,15 +40,16 @@
 </template>
 
 <script>
-	import Field from "@/components/Nuxt2/Exercises/Users/Form/FormField";
-	import Label from "@/components/Nuxt2/Exercises/Users/Form/FormLabel";
+	import FormField from "@/components/Nuxt2/Exercises/Users/Form/FormField";
+	import FormLabel from "@/components/Nuxt2/Exercises/Users/Form/FormLabel";
 	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
 
 	export default {
+		"name": "ViewUsers",
 		"components": {
 			Title,
-			Label,
-			Field,
+			FormLabel,
+			FormField,
 		},
 		"layout": "exercises",
 		data() {
@@ -61,7 +61,7 @@
 		},
 		"methods": {
 			loadUser() {
-				this.$router.push(`nuxt-2/exercises/users/${this.user.id}`);
+				this.$router.push(`/nuxt2/exercises/users/${this.user.id}`);
 			},
 		},
 	};

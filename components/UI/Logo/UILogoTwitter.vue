@@ -20,7 +20,7 @@
 
 <script>
 	export default {
-		"name": "LogoTwitter",
+		"name": "UILogoTwitter",
 		"props": {
 			"logoType": {
 				"type": String,

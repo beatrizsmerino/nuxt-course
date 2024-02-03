@@ -5,7 +5,7 @@
 			:key="logo.id"
 			class="logo-list__item"
 		>
-			<Icon
+			<UIIcon
 				:icon-name="logo.name"
 				:icon-aria-label="logo.title"
 			/>
@@ -15,7 +15,7 @@
 
 <script>
 	export default {
-		"name": "LogoList",
+		"name": "UILogoList",
 		"props": {
 			"logoList": {
 				"type": Array,

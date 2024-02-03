@@ -1,12 +1,12 @@
 <template>
 	<nav class="navigation">
 		<span class="navigation__button">
-			<Button
+			<UIButton
 				class="button--brand-1-dark-line"
 				@button-click="toggleNavigation"
 			>
 				<span class="button__icon">
-					<Icon
+					<UIIcon
 						icon-name="menu"
 						icon-aria-label="Navigation button"
 					/>
@@ -15,7 +15,7 @@
 				<span class="button__text">
 					Navigation
 				</span>
-			</Button>
+			</UIButton>
 		</span>
 		<transition name="slide">
 			<div
@@ -27,9 +27,9 @@
 						v-for="(item, index) in navigationList"
 						:key="`navigation-link-${index}`"
 					>
-						<Button :to="item.url">
+						<UIButton :to="item.url">
 							{{ item.name }}
-						</Button>
+						</UIButton>
 					</li>
 				</ul>
 			</div>

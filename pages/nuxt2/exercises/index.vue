@@ -15,18 +15,18 @@
 							{{ item.name }}
 						</nuxt-link>
 
-						<Button
+						<UIButton
 							class="button--icon"
 							@button-click="showMore(index)"
 						>
 							<transition name="rotate">
-								<Icon
+								<UIIcon
 									:class="{ 'is-rotate': item.status }"
 									icon-name="chevron-down"
 									icon-aria-label="Show more"
 								/>
 							</transition>
-						</Button>
+						</UIButton>
 					</div>
 					<div
 						class="exercise__content"
@@ -42,6 +42,7 @@
 	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
 
 	export default {
+		"name": "ViewExercises",
 		"components": {
 			Title,
 		},

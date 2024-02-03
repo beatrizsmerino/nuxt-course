@@ -1,16 +1,16 @@
 import Vue from "vue";
-import Icon from "@/components/UI/Icon";
-import Button from "@/components/UI/Button";
-import LogoNuxt from "@/components/UI/Logo/LogoNuxt";
-import LogoGithub from "@/components/UI/Logo/LogoGithub";
-import LogoTwitter from "@/components/UI/Logo/LogoTwitter";
+import UIIcon from "@/components/UI/UIIcon";
+import UIButton from "@/components/UI/UIButton";
+import UILogoNuxt from "@/components/UI/Logo/UILogoNuxt";
+import UILogoGithub from "@/components/UI/Logo/UILogoGithub";
+import UILogoTwitter from "@/components/UI/Logo/UILogoTwitter";
 
 const components = {
-	Icon,
-	Button,
-	LogoNuxt,
-	LogoGithub,
-	LogoTwitter,
+	UIIcon,
+	UIButton,
+	UILogoNuxt,
+	UILogoGithub,
+	UILogoTwitter,
 };
 
 Object.entries(components).forEach(([

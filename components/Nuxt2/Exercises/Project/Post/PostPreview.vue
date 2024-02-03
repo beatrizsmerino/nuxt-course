@@ -1,7 +1,7 @@
 <template>
 	<nuxt-link
 		:class="`post-preview ${postModifier.join(' ')}`"
-		:to="`nuxt-2/exercises/project/posts/${postIndex}`"
+		:to="`/nuxt2/exercises/project/posts/${postIndex}`"
 	>
 		<template v-if="checkCssModifier === 'expanded'">
 			<time

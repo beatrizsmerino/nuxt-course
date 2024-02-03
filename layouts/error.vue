@@ -9,6 +9,7 @@
 
 <script>
 	export default {
+		"name": "Error",
 		head() {
 			return {
 				"htmlAttrs": {
