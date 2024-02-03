@@ -60,7 +60,7 @@
 		},
 		"methods": {
 			loadUser() {
-				this.$router.push(`nuxt-2/exercises/users/${this.user.id}`);
+				this.$router.push(`/nuxt2/exercises/users/${this.user.id}`);
 			},
 		},
 	};
