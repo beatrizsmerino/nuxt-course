@@ -14,7 +14,7 @@
 	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
 
 	export default {
-		"name": "ProductsDetail",
+		"name": "ViewProductsDetail",
 		"components": {
 			Title,
 			Subtitle,

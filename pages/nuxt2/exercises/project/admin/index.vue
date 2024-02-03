@@ -22,7 +22,7 @@
 	import PostList from "@/components/Nuxt2/Exercises/Project/Post/PostList";
 
 	export default {
-		"name": "ProjectAdmin",
+		"name": "ViewProjectAdmin",
 		"components": {
 			Layout,
 			PostList,

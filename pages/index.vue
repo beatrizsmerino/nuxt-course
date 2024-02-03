@@ -6,7 +6,7 @@
 	import Tutorial from "@/components/Tutorial";
 
 	export default {
-		"name": "Home",
+		"name": "ViewHome",
 		"components": {
 			Tutorial,
 		},

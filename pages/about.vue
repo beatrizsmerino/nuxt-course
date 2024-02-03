@@ -30,7 +30,7 @@
 	import LogoList from "@/components/UI/Logo/LogoList";
 
 	export default {
-		"name": "About",
+		"name": "ViewAbout",
 		"components": {
 			PageTitle,
 			LogoList,

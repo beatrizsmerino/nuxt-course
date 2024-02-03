@@ -11,7 +11,7 @@
 	import PostDetail from "@/components/Nuxt2/Exercises/Project/Post/PostDetail";
 
 	export default {
-		"name": "ProjectPostsDetail",
+		"name": "ViewProjectPostsDetail",
 		"components": {
 			Layout,
 			PostDetail,

@@ -10,7 +10,7 @@
 	import Subtitle from "@/components/Nuxt2/Exercises/Layout/Subtitle";
 
 	export default {
-		"name": "UsersDetail",
+		"name": "ViewUsersDetail",
 		"components": {
 			Subtitle,
 		},

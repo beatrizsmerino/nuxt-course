@@ -42,7 +42,7 @@
 	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
 
 	export default {
-		"name": "Exercises",
+		"name": "ViewExercises",
 		"components": {
 			Title,
 		},

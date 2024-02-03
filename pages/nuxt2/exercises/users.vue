@@ -45,7 +45,7 @@
 	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
 
 	export default {
-		"name": "Users",
+		"name": "ViewUsers",
 		"components": {
 			Title,
 			Label,
