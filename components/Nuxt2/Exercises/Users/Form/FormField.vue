@@ -1,10 +1,9 @@
 <template>
 	<component
 		:is="checkTag"
-		ref="field"
 		:class="`form__field ${checkTag}`"
 		:value="getFieldValue"
-		@input="updateData()"
+		@input="updateData($event.target.value)"
 	>
 		<slot />
 	</component>
@@ -18,18 +17,12 @@
 				"type": String,
 				"default": null,
 			},
-		},
-		data() {
-			return {
-				"localValue": "",
-			};
+			"value": {
+				"type": String,
+				"default": "",
+			},
 		},
 		"computed": {
-			getFieldValue() {
-				const fieldValue = this.localValue;
-
-				return fieldValue;
-			},
 			checkTag() {
 				if (this.fieldTag === "textarea") {
 					return "textarea";
@@ -40,15 +33,9 @@
 				return "input";
 			},
 		},
-		"watch": {
-			localValue(newValue) {
-				this.$emit("input", newValue);
-			},
-		},
 		"methods": {
-			updateData() {
-				const fieldValue = this.$refs.field.value;
-				this.$emit("input", fieldValue);
+			updateData(newValue) {
+				this.$emit("input", newValue);
 			},
 		},
 	};
