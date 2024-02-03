@@ -28,14 +28,14 @@
 				class="post-detail__text"
 				v-html="postDetail.text"
 			/>
-			<Button
+			<UIButton
 				:href="postDetail.url"
 				class-type="link"
 				class="post-detail__button"
 				target="_blank"
 			>
 				Read more
-			</Button>
+			</UIButton>
 			<div class="post-detail__feedback">
 				<p>
 					Let me know that you think about the post, send a email to

@@ -20,7 +20,7 @@
 
 <script>
 	export default {
-		"name": "LogoGithub",
+		"name": "UILogoGithub",
 		"props": {
 			"logoType": {
 				"type": String,

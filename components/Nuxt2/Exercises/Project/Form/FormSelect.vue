@@ -42,13 +42,13 @@
 				</option>
 			</select>
 
-			<Button class="select__button button--icon">
-				<Icon
+			<UIButton class="select__button button--icon">
+				<UIIcon
 					icon-name="chevron-down"
 					icon-aria-label="Show options"
 					class="select__icon"
 				/>
-			</Button>
+			</UIButton>
 		</div>
 	</div>
 </template>

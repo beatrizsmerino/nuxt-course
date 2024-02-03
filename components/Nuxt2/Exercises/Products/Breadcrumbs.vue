@@ -9,7 +9,7 @@
 					{{ item.name }}
 				</nuxt-link>
 
-				<Icon
+				<UIIcon
 					icon-name="chevron-right"
 					icon-aria-label="Breadcrumb arrow"
 				/>

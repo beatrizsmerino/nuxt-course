@@ -4,7 +4,7 @@
 			to="/"
 			class="page-header__logo"
 		>
-			<Icon
+			<UIIcon
 				icon-name="logo-nuxt-dark-theme"
 				icon-aria-label="Nuxt course"
 			/>

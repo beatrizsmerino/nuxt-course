@@ -47,13 +47,13 @@
 						href="https://github.com/nuxt/nuxt.js"
 						target="_blank"
 					>
-						<LogoGithub class="text-gray-600 hover:text-gray-800" />
+						<UILogoGithub class="text-gray-600 hover:text-gray-800" />
 					</a>
 					<a
 						href="https://twitter.com/nuxt_js"
 						target="_blank"
 					>
-						<LogoTwitter class="text-gray-600 hover:text-gray-800" />
+						<UILogoTwitter class="text-gray-600 hover:text-gray-800" />
 					</a>
 				</article>
 			</div>

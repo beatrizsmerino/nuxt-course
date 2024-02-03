@@ -5,9 +5,9 @@
 		</template>
 		<template #content>
 			<article class="layout-admin__button-list">
-				<Button to="/nuxt2/exercises/project/admin/posts/new">
+				<UIButton to="/nuxt2/exercises/project/admin/posts/new">
 					Create new post
-				</Button>
+				</UIButton>
 			</article>
 			<article>
 				<h2>Posts created</h2>

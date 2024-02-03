@@ -27,9 +27,9 @@
 							</div>
 						</div>
 						<div class="form__column">
-							<Button @button-click="loadUser">
+							<UIButton @button-click="loadUser">
 								Show user {{ user.id }}
-							</Button>
+							</UIButton>
 						</div>
 					</div>
 				</form>

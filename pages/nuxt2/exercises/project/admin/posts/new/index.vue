@@ -57,12 +57,12 @@
 						field-modifier="anim"
 					/>
 					<div class="form__button-list">
-						<Button class="button--success">
+						<UIButton class="button--success">
 							Save
-						</Button>
-						<Button class="button--error">
+						</UIButton>
+						<UIButton class="button--error">
 							Cancel
-						</Button>
+						</UIButton>
 					</div>
 				</form>
 			</article>
