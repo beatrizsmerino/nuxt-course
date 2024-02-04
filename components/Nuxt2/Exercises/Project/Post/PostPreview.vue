@@ -144,6 +144,8 @@
 
 		&--expanded,
 		&--last-post-list {
+			background-color: mix($color-white, $color-brand-1, 40%);
+
 			.post-preview {
 				&__time {
 					position: absolute;
@@ -161,10 +163,6 @@
 					text-align: center;
 				}
 			}
-		}
-
-		&--expanded {
-			background-color: mix($color-white, $color-brand-1, 40%);
 
 			&:hover {
 				background-color: mix($color-white, $color-brand-1, 20%);
@@ -211,14 +209,8 @@
 		}
 
 		&--last-post-list {
-			background-color: mix($color-white, $color-black, 20%);
-
 			&:hover {
 				.post-preview {
-					&__title {
-						color: $color-white;
-					}
-
 					&__description {
 						display: none;
 					}
