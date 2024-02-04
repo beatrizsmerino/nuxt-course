@@ -1,25 +1,23 @@
 <template>
 	<Layout class="layout-admin">
 		<template #title>
-			Create a new post
+			Edit post #{{ $route.params.id }}
 		</template>
 		<template #content>
-			<article class="create-new-post">
-				<PostNew />
-			</article>
+			<PostForm />
 		</template>
 	</Layout>
 </template>
 
 <script>
 	import Layout from "@/components/Nuxt2/Exercises/Project/Layout";
-	import PostNew from "@/components/Nuxt2/Exercises/Project/Post/PostNew";
+	import PostForm from "@/components/Nuxt2/Exercises/Project/Post/PostForm";
 
 	export default {
-		"name": "ViewProjectAdminNewPost",
+		"name": "ViewProjectAdminPostEdit",
 		"components": {
 			Layout,
-			PostNew,
+			PostForm,
 		},
 		"layout": "exercises",
 	};

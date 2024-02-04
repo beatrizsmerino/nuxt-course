@@ -8,7 +8,7 @@
 				<PostList css-modifier="compacted" />
 			</article>
 			<article class="layout-admin__button-list">
-				<UIButton to="/nuxt2/exercises/project/admin/posts/new">
+				<UIButton to="/nuxt2/exercises/project/admin/post/create">
 					Create new post
 				</UIButton>
 			</article>
