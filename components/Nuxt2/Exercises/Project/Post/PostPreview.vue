@@ -1,7 +1,7 @@
 <template>
 	<nuxt-link
 		:class="`post-preview ${postModifier.join(' ')}`"
-		:to="`/nuxt2/exercises/project/posts/${postIndex}`"
+		:to="`/nuxt2/exercises/project/posts/${postData.id}`"
 	>
 		<template v-if="checkCssModifier === 'expanded'">
 			<time
@@ -43,10 +43,6 @@
 		"props": {
 			"postData": {
 				"type": Object,
-				"required": true,
-			},
-			"postIndex": {
-				"type": Number,
 				"required": true,
 			},
 			"postModifier": {
