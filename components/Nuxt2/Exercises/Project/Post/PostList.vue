@@ -55,7 +55,9 @@
 		"computed": {
 			getPosts() {
 				if (this.showLastPostList) {
-					return this.postList.slice(0, this.maxPostList);
+					const postListSorted = this.postList.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+					return postListSorted.slice(0, this.maxPostList);
 				}
 
 				return this.postList;
