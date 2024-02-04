@@ -1,7 +1,7 @@
 <template>
 	<Layout class="layout-admin">
 		<template #title>
-			Admin
+			Create a new post
 		</template>
 		<template #content>
 			<h3>Create a new post</h3>
