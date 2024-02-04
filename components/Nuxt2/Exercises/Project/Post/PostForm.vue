@@ -40,6 +40,7 @@
 			select-label="Category"
 			select-id="postFormCategory"
 			:select-options="data.categoriesList"
+			select-placeholder="Choose the kingdom of your creation"
 			select-modifier="anim"
 			:select-required="true"
 		/>
