@@ -89,16 +89,24 @@
 			FormField,
 			FormSelect,
 		},
+		"props": {
+			"postData": {
+				"type": Object,
+				"required": false,
+			},
+		},
 		data() {
 			return {
-				"form": {
-					"title": "",
-					"author": "",
-					"link": "",
-					"category": "",
-					"shortDescription": "",
-					"longDescription": "",
-				},
+				"form": this.postData
+					? { ...this.postData }
+					: {
+						"title": "",
+						"author": "",
+						"link": "",
+						"category": "",
+						"shortDescription": "",
+						"longDescription": "",
+					},
 				"data": {
 					"categoriesList": [
 						"Without",
