@@ -1,14 +1,14 @@
 <template>
 	<form
-		id="formNewPost"
-		class="form-new-post form"
+		id="postForm"
+		class="post-form form"
 		action=""
 	>
 		<div class="form__group">
 			<div class="form__column">
 				<FormField
-					v-model="newPost.form.title"
-					field-id="newPostTitle"
+					v-model="form.title"
+					field-id="postFormTitle"
 					field-label="Title"
 					field-type="text"
 					field-modifier="anim"
@@ -17,8 +17,8 @@
 			</div>
 			<div class="form__column">
 				<FormField
-					v-model="newPost.form.author"
-					field-id="newPostAuthor"
+					v-model="form.author"
+					field-id="postFormAuthor"
 					field-label="Author"
 					field-type="text"
 					field-modifier="anim"
@@ -26,31 +26,31 @@
 			</div>
 		</div>
 		<FormField
-			v-model="newPost.form.link"
-			field-id="newPostLink"
+			v-model="form.link"
+			field-id="postFormLink"
 			field-label="Link"
 			field-type="url"
 			field-modifier="anim"
 		/>
 		<FormSelect
-			v-model="newPost.form.category"
+			v-model="form.category"
 			select-label="Category"
-			select-id="newPostCategory"
-			:select-options="newPost.data.categoriesList"
+			select-id="postFormCategory"
+			:select-options="data.categoriesList"
 			select-modifier="anim"
 			:select-required="true"
 		/>
 		<FormField
-			v-model="newPost.form.description"
-			field-id="newPostDescription"
+			v-model="form.description"
+			field-id="postFormDescription"
 			field-label="Description"
 			field-tag="textarea"
 			field-modifier="anim"
 			:field-required="true"
 		/>
 		<FormField
-			v-model="newPost.form.text"
-			field-id="newPostText"
+			v-model="form.text"
+			field-id="postFormText"
 			field-label="Text"
 			field-tag="textarea"
 			field-modifier="anim"
@@ -71,37 +71,35 @@
 	import FormSelect from "@/components/Nuxt2/Exercises/Project/Form/FormSelect";
 
 	export default {
-		"name": "PostNew",
+		"name": "PostForm",
 		"components": {
 			FormField,
 			FormSelect,
 		},
 		data() {
 			return {
-				"newPost": {
-					"form": {
-						"title": "",
-						"author": "",
-						"link": "",
-						"category": "",
-						"description": "",
-						"text": "",
-					},
-					"data": {
-						"categoriesList": [
-							"Without",
-							"Frontend",
-							"Backend",
-							"Big Data",
-							"Cibersecurity",
-							"IT",
-							"Social media",
-							"Robotics",
-							"Technology",
-							"Mobile",
-							"Legal",
-						],
-					},
+				"form": {
+					"title": "",
+					"author": "",
+					"link": "",
+					"category": "",
+					"description": "",
+					"text": "",
+				},
+				"data": {
+					"categoriesList": [
+						"Without",
+						"Frontend",
+						"Backend",
+						"Big Data",
+						"Cibersecurity",
+						"IT",
+						"Social media",
+						"Robotics",
+						"Technology",
+						"Mobile",
+						"Legal",
+					],
 				},
 			};
 		},

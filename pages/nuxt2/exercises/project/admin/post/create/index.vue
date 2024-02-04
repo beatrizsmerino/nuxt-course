@@ -5,7 +5,7 @@
 		</template>
 		<template #content>
 			<article class="create-new-post">
-				<PostNew />
+				<PostForm />
 			</article>
 		</template>
 	</Layout>
@@ -13,13 +13,13 @@
 
 <script>
 	import Layout from "@/components/Nuxt2/Exercises/Project/Layout";
-	import PostNew from "@/components/Nuxt2/Exercises/Project/Post/PostNew";
+	import PostForm from "@/components/Nuxt2/Exercises/Project/Post/PostForm";
 
 	export default {
 		"name": "ViewProjectAdminNewPost",
 		"components": {
 			Layout,
-			PostNew,
+			PostForm,
 		},
 		"layout": "exercises",
 	};
