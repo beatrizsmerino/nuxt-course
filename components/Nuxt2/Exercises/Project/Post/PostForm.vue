@@ -44,17 +44,17 @@
 			:select-required="true"
 		/>
 		<FormField
-			v-model="form.description"
-			field-id="postFormDescription"
-			field-label="Description"
+			v-model="form.shortDescription"
+			field-id="postFormShortDescription"
+			field-label="Short description"
 			field-tag="textarea"
 			field-modifier="anim"
 			:field-required="true"
 		/>
 		<FormField
-			v-model="form.text"
-			field-id="postFormText"
-			field-label="Text"
+			v-model="form.longDescription"
+			field-id="postFormLongDescription"
+			field-label="Long description"
 			field-tag="textarea"
 			field-modifier="anim"
 		/>
@@ -86,8 +86,8 @@
 					"author": "",
 					"link": "",
 					"category": "",
-					"description": "",
-					"text": "",
+					"shortDescription": "",
+					"longDescription": "",
 				},
 				"data": {
 					"categoriesList": [
