@@ -2,6 +2,7 @@
 	<form
 		id="postForm"
 		class="post-form form"
+		@submit.prevent="onSave"
 	>
 		<div class="form__group">
 			<div class="form__column">
@@ -60,10 +61,18 @@
 			field-modifier="anim"
 		/>
 		<div class="form__button-list">
-			<UIButton class="button--success">
+			<UIButton
+				class="button--success"
+				type="button"
+				@button-click="onSave"
+			>
 				Save
 			</UIButton>
-			<UIButton class="button--error">
+			<UIButton
+				class="button--error"
+				type="button"
+				@button-click="onCancel"
+			>
 				Cancel
 			</UIButton>
 		</div>
@@ -106,6 +115,14 @@
 					],
 				},
 			};
+		},
+		"methods": {
+			onSave() {
+				console.log(this.form);
+			},
+			onCancel() {
+				this.$router.push("/nuxt2/exercises/project/admin");
+			},
 		},
 	};
 </script>
