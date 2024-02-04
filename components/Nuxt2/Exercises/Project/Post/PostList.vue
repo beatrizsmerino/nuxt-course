@@ -9,6 +9,7 @@
 				:key="`post-${index}`"
 			>
 				<PostPreview
+					:is-admin="isAdmin"
 					:post-data="item"
 					:post-modifier="getCssModifierList.map(item => `post-preview--${item}`)"
 				/>
@@ -27,6 +28,10 @@
 			PostPreview,
 		},
 		"props": {
+			"isAdmin": {
+				"type": Boolean,
+				"default": false,
+			},
 			"showLastPostList": {
 				"type": Boolean,
 				"default": false,
