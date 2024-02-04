@@ -1,7 +1,7 @@
 <template>
 	<Layout class="layout-about">
 		<template #title>
-			About us
+			Description
 		</template>
 		<template #content>
 			<article>

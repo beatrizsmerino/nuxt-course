@@ -1,7 +1,7 @@
 <template>
 	<Layout class="layout-admin">
 		<template #title>
-			Admin
+			Posts created
 		</template>
 		<template #content>
 			<article class="layout-admin__button-list">

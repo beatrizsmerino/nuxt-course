@@ -1,7 +1,7 @@
 <template>
 	<Layout class="layout-posts">
 		<template #title>
-			Posts
+			All Posts
 		</template>
 		<template #content>
 			<PostList />
