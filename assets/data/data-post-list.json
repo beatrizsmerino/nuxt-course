@@ -1,5 +1,6 @@
 [
 	{
+		"id": 1,
 		"title": "Are you a true frontend ninja?",
 		"date": "2014-08-03",
 		"author": "Alber Pedraza",
@@ -10,6 +11,7 @@
 		"url": "https://desarrollofrontend.com/eres-un-verdadero-ninja-frontend/"
 	},
 	{
+		"id": 2,
 		"title": "Digital Services Law (DSA): the great European regulation that can change the internet as we know it",
 		"date": "2020-10-30",
 		"author": "Enrrique Perez",
@@ -20,6 +22,7 @@
 		"url": "https://www.xataka.com/legislacion-y-derechos/ley-servicios-digitales-dsa-que-sabemos-gran-proyecto-europeo-que-puede-cambiar-internet-tal-como-conocemos"
 	},
 	{
+		"id": 3,
 		"title": "Nikola, who was running as the most promising electric vehicle maker since Tesla, cancels his Badger pickup",
 		"date": "2020-12-01",
 		"author": "Cristian Rus",
@@ -30,6 +33,7 @@
 		"url": "https://www.xataka.com/vehiculos/nikola-que-se-postulaba-como-fabricante-vehiculos-electricos-prometedor-tesla-cancela-su-pickup-badger"
 	},
 	{
+		"id": 4,
 		"title": "What is cybersecurity and what is it for?",
 		"date": "2020-05-09",
 		"author": "Francisco Rubio",
@@ -40,6 +44,7 @@
 		"url": "https://www.expacioweb.com/que-es-y-para-que-sirve-la-ciberseguridad/"
 	},
 	{
+		"id": 5,
 		"title": "After the arrival of 5G, do fiber networks and WiFi make sense?",
 		"date": "2019-06-25",
 		"author": "Ramon Peco",
@@ -50,6 +55,7 @@
 		"url": "https://www.lavanguardia.com/tecnologia/20190625/463060610394/redes-5g-4g-fibra-cable-router-velocidad-cambio-tarifa-plana.html"
 	},
 	{
+		"id": 6,
 		"title": "What does a social media do and how to become one?",
 		"date": "2019-25-07",
 		"author": "Hotmart",
@@ -60,6 +66,7 @@
 		"url": "https://blog.hotmart.com/es/social-media/"
 	},
 	{
+		"id": 7,
 		"title": "Robotics in the classroom: Spanish schools set out to train the «engineers of the future»",
 		"date": "2017-12-18",
 		"author": "Patricia García",
@@ -70,6 +77,7 @@
 		"url": "https://www.abc.es/familia/educacion/abci-robotica-aulas-colegios-espanoles-lanzan-formar-ingenieros-futuro-201712150205_noticia.html?ref=https:%2F%2Fwww.google.com%2F"
 	},
 	{
+		"id": 8,
 		"title": "Do androids dream of silicon poetry? The great challenge of teaching machines human language",
 		"date": "2020-10-21",
 		"author": "Santiago Sánchez-Migallón",
@@ -80,6 +88,7 @@
 		"url": "https://www.xataka.com/robotica-e-ia/suenan-androides-poesias-silicio-gran-reto-ensenar-a-maquinas-lenguaje-humano"
 	},
 	{
+		"id": 9,
 		"title": "Big data: what is it and what is it for?",
 		"date": "2019-06-03",
 		"author": "Drafting APD",
@@ -90,6 +99,7 @@
 		"url": "https://www.apd.es/big-data-que-es-y-para-que-sirve/"
 	},
 	{
+		"id": 10,
 		"title": "What is a database?",
 		"date": "2020-09-30",
 		"author": "Edgar F. Codd",
