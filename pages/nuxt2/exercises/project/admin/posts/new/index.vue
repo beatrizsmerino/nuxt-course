@@ -122,8 +122,6 @@
 
 <style lang="scss" scoped>
 	.create-new-post {
-		margin-top: 4rem;
-
 		.form {
 			&__column {
 				width: calc(50% - 1rem);
