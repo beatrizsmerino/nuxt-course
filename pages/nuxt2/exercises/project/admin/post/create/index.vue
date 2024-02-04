@@ -16,7 +16,7 @@
 	import PostForm from "@/components/Nuxt2/Exercises/Project/Post/PostForm";
 
 	export default {
-		"name": "ViewProjectAdminNewPost",
+		"name": "ViewProjectAdminPostCreate",
 		"components": {
 			Layout,
 			PostForm,
