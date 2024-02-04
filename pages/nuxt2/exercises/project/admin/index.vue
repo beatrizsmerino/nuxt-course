@@ -4,13 +4,13 @@
 			Posts created
 		</template>
 		<template #content>
+			<article>
+				<PostList css-modifier="compacted" />
+			</article>
 			<article class="layout-admin__button-list">
 				<UIButton to="/nuxt2/exercises/project/admin/posts/new">
 					Create new post
 				</UIButton>
-			</article>
-			<article>
-				<PostList css-modifier="compacted" />
 			</article>
 		</template>
 	</Layout>
@@ -35,7 +35,7 @@
 		&__button-list {
 			display: flex;
 			justify-content: flex-end;
-			margin-bottom: 3rem;
+			margin-top: 3rem;
 
 			:deep(.button) {
 				display: inline-block;
