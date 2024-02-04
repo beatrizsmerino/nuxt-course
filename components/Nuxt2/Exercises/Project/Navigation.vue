@@ -155,16 +155,16 @@
 			ul {
 				display: flex;
 				flex-wrap: wrap;
+				gap: 1rem;
 				justify-content: space-around;
 				padding: 0;
 				list-style: none;
 
 				li {
-					width: calc(25% - 2rem);
-					margin: 1rem;
+					width: calc(25% - 1rem);
 
 					@include media("md") {
-						width: calc(50% - 2rem);
+						width: calc(50% - 1rem);
 					}
 				}
 			}
