@@ -8,6 +8,7 @@
 				icon-name="logo-nuxt-dark-theme"
 				icon-aria-label="Nuxt course"
 			/>
+			<span>Nuxt Course</span>
 		</nuxt-link>
 		<PageNav />
 	</header>
@@ -40,6 +41,13 @@
 		background-color: $color-brand-4;
 
 		&__logo {
+			display: flex;
+			align-items: center;
+			color: $color-brand-1 !important;
+			font-size: 2.5rem;
+			text-decoration: none;
+			gap: 2rem;
+
 			.icon {
 				width: 4rem;
 				height: 4rem;
