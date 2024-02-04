@@ -4,9 +4,7 @@
 			Create a new post
 		</template>
 		<template #content>
-			<article class="create-new-post">
-				<PostForm />
-			</article>
+			<PostForm />
 		</template>
 	</Layout>
 </template>
