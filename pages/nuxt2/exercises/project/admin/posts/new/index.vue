@@ -1,10 +1,9 @@
 <template>
 	<Layout class="layout-admin">
 		<template #title>
-			Admin
+			Create a new post
 		</template>
 		<template #content>
-			<h3>Create a new post</h3>
 			<article class="create-new-post">
 				<form
 					id="formNewPost"
@@ -123,8 +122,6 @@
 
 <style lang="scss" scoped>
 	.create-new-post {
-		margin-top: 4rem;
-
 		.form {
 			&__column {
 				width: calc(50% - 1rem);

@@ -1,7 +1,7 @@
 <template>
 	<Layout class="layout-admin">
 		<template #title>
-			Admin
+			Auth
 		</template>
 		<template #content />
 	</Layout>
