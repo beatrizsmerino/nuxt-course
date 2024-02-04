@@ -107,7 +107,6 @@
 				this.$emit("input", newValue);
 			},
 			checkEmpty() {
-				// console.log(this.value);
 				if (this.value === "") {
 					this.isEmpty = true;
 				} else {
