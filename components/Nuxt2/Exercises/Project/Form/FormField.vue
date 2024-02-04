@@ -234,6 +234,18 @@
 				}
 			}
 
+			&:not(.is-focus) {
+				.form {
+					&__field {
+						&--anim {
+							&::placeholder {
+								color: transparent !important;
+							}
+						}
+					}
+				}
+			}
+
 			&.is-empty {
 				.form {
 					&__field {
