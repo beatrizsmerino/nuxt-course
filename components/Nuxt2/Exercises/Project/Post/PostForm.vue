@@ -11,7 +11,7 @@
 					field-id="postFormTitle"
 					field-label="Title"
 					field-type="text"
-					field-placeholder="Awesome title"
+					field-placeholder="The hook that captures glances"
 					field-modifier="anim"
 					:field-required="true"
 				/>
@@ -22,7 +22,7 @@
 					field-id="postFormAuthor"
 					field-label="Author"
 					field-type="text"
-					field-placeholder="Jhon Doe"
+					field-placeholder="Who is the genius behind the work?"
 					field-modifier="anim"
 				/>
 			</div>
@@ -32,7 +32,7 @@
 			field-id="postFormLink"
 			field-label="Link"
 			field-type="url"
-			field-placeholder="@"
+			field-placeholder="Paste the link to your source of inspiration"
 			field-modifier="anim"
 		/>
 		<FormSelect
@@ -48,6 +48,7 @@
 			field-id="postFormShortDescription"
 			field-label="Short description"
 			field-tag="textarea"
+			field-placeholder="Capture the essence in a sentence"
 			field-modifier="anim"
 			:field-required="true"
 		/>
