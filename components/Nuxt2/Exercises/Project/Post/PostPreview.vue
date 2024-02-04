@@ -183,7 +183,8 @@
 
 		&--compacted {
 			flex-direction: row-reverse;
-			background-color: $color-light;
+			border: 0.1rem solid mix($color-white, $color-black, 20%);
+			background-color: $color-white;
 
 			.post-preview {
 				&__time {
@@ -199,7 +200,7 @@
 			}
 
 			&:hover {
-				background-color: mix($color-black, $color-light, 10%);
+				background-color: $color-light;
 
 				.post-preview {
 					&__title {
