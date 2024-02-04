@@ -8,7 +8,7 @@
 				icon-name="logo-nuxt-dark-theme"
 				:icon-aria-label="getRepoName()"
 			/>
-			<span>
+			<span class="page-header__title">
 				{{ getRepoName() }}
 			</span>
 		</nuxt-link>
@@ -50,7 +50,6 @@
 			display: flex;
 			align-items: center;
 			color: $color-brand-1 !important;
-			font-size: 2.5rem;
 			text-decoration: none;
 			gap: 2rem;
 
@@ -58,6 +57,14 @@
 				width: 4rem;
 				height: 4rem;
 				fill: $color-white !important;
+			}
+		}
+
+		&__title {
+			font-size: 2.5rem;
+
+			@include media("sm") {
+				display: none;
 			}
 		}
 	}
