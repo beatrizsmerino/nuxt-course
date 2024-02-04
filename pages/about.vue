@@ -4,7 +4,7 @@
 		<article>
 			<UILogoList :logo-list="logoList" />
 			<h2 class="title">
-				nuxt-course
+				Nuxt Course
 			</h2>
 			<ul class="button-list">
 				<li
