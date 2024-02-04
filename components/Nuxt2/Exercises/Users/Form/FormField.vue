@@ -14,7 +14,7 @@
 		"props": {
 			"fieldTag": {
 				"type": String,
-				"default": null,
+				"default": "input",
 			},
 			"value": {
 				"type": String,

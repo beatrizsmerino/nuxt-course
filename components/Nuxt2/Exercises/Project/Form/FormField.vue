@@ -38,7 +38,7 @@
 		"props": {
 			"fieldTag": {
 				"type": String,
-				"default": "",
+				"default": "input",
 			},
 			"fieldId": {
 				"type": String,
