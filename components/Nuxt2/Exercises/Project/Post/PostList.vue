@@ -80,60 +80,46 @@
 <style lang="scss" scoped>
 	.post-list {
 		ul {
-			display: flex;
-			flex-wrap: wrap;
-			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(calc(100% - 2rem), 1fr));
+			margin: 0;
 			padding: 0;
 			list-style: none;
+			gap: 2rem;
 
 			li {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: calc(100% - 2rem);
-				margin: 1rem;
+				display: grid;
+				place-items: center;
 			}
 		}
 
 		&--expanded {
 			ul {
-				align-items: center;
+				grid-template-columns: repeat(auto-fill, minmax(calc(50% - 2rem), 1fr));
 
-				li {
-					width: calc(50% - 2rem);
-
-					@include media("md") {
-						width: calc(100% - 2rem);
-					}
+				@include media("md") {
+					grid-template-columns: repeat(auto-fill, minmax(calc(100% - 2rem), 1fr));
 				}
 			}
 		}
 
 		&--compacted {
 			ul {
-				flex-direction: column;
-
-				li {
-					width: calc(100% - 2rem);
-					margin-bottom: 0;
-				}
+				gap: 1rem;
+				grid-template-columns: repeat(auto-fill, minmax(calc(100% - 2rem), 1fr));
 			}
 		}
 
 		&--last-post-list {
 			ul {
-				justify-content: center;
+				grid-template-columns: repeat(auto-fill, minmax(calc(33.333% - 2rem), 1fr));
 
-				li {
-					width: calc(33.333% - 2rem) !important;
+				@include media("lg") {
+					grid-template-columns: repeat(auto-fill, minmax(calc(50% - 2rem), 1fr));
+				}
 
-					@include media("lg") {
-						width: calc(50% - 2rem) !important;
-					}
-
-					@include media("sm") {
-						width: 100% !important;
-					}
+				@include media("sm") {
+					grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 				}
 			}
 		}
