@@ -4,7 +4,7 @@
 		<article>
 			<UILogoList :logo-list="logoList" />
 			<h2 class="title">
-				nuxt-course
+				{{ getRepoName() }}
 			</h2>
 			<ul class="button-list">
 				<li
@@ -26,6 +26,7 @@
 </template>
 
 <script>
+	import { getRepoName } from "@/mixins/repo-mixins.js";
 	import PageTitle from "@/components/Page/PageTitle";
 	import UILogoList from "@/components/UI/Logo/UILogoList";
 
@@ -78,6 +79,9 @@
 					"class": "layout--default page--about",
 				},
 			};
+		},
+		"methods": {
+			getRepoName,
 		},
 	};
 </script>
