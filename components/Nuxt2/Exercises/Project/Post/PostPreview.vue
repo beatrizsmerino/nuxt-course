@@ -144,6 +144,8 @@
 
 		&--expanded,
 		&--last-post-list {
+			background-color: mix($color-white, $color-brand-1, 40%);
+
 			.post-preview {
 				&__time {
 					position: absolute;
@@ -161,10 +163,6 @@
 					text-align: center;
 				}
 			}
-		}
-
-		&--expanded {
-			background-color: mix($color-white, $color-brand-1, 40%);
 
 			&:hover {
 				background-color: mix($color-white, $color-brand-1, 20%);
@@ -183,7 +181,8 @@
 
 		&--compacted {
 			flex-direction: row-reverse;
-			background-color: $color-light;
+			border: 0.1rem solid mix($color-white, $color-black, 20%);
+			background-color: $color-white;
 
 			.post-preview {
 				&__time {
@@ -199,7 +198,7 @@
 			}
 
 			&:hover {
-				background-color: mix($color-black, $color-light, 10%);
+				background-color: $color-light;
 
 				.post-preview {
 					&__title {
@@ -210,14 +209,8 @@
 		}
 
 		&--last-post-list {
-			background-color: mix($color-white, $color-black, 20%);
-
 			&:hover {
 				.post-preview {
-					&__title {
-						color: $color-white;
-					}
-
 					&__description {
 						display: none;
 					}

@@ -94,6 +94,12 @@
 			border-color: mix($color-white, $color-black, 20%);
 			background-color: mix($color-white, $color-black, 20%);
 			color: $color-white;
+
+			::v-deep {
+				.icon {
+					fill: $color-white;
+				}
+			}
 		}
 
 		&--icon {
