@@ -1,4 +1,6 @@
 import dotenv from "dotenv";
+import { getRepoName } from "./mixins/repo-mixins.js";
+
 dotenv.config();
 
 export default {
@@ -10,7 +12,7 @@ export default {
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	"head": {
-		"title": "Nuxt Course",
+		"title": getRepoName(),
 		"htmlAttrs": {
 			"lang": "en",
 		},

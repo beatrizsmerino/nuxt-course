@@ -6,21 +6,27 @@
 		>
 			<UIIcon
 				icon-name="logo-nuxt-dark-theme"
-				icon-aria-label="Nuxt course"
+				:icon-aria-label="getRepoName()"
 			/>
-			<span>Nuxt Course</span>
+			<span>
+				{{ getRepoName() }}
+			</span>
 		</nuxt-link>
 		<PageNav />
 	</header>
 </template>
 
 <script>
+	import { getRepoName } from "@/mixins/repo-mixins.js";
 	import PageNav from "@/components/Page/PageNav";
 
 	export default {
 		"name": "PageHeader",
 		"components": {
 			PageNav,
+		},
+		"methods": {
+			getRepoName,
 		},
 	};
 </script>
