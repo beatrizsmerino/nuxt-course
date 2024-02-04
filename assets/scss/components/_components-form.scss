@@ -69,6 +69,7 @@
 
 	&__button-list {
 		display: flex;
+		justify-content: flex-end;
 
 		@include media('md') {
 			justify-content: space-between;
