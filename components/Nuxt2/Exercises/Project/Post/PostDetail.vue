@@ -25,8 +25,8 @@
 		</div>
 		<div class="post-detail__content">
 			<div
-				class="post-detail__text"
-				v-html="postDetail.text"
+				class="post-detail__long-description"
+				v-html="postDetail.longDescription"
 			/>
 			<UIButton
 				:href="postDetail.url"
@@ -118,7 +118,7 @@
 			margin-top: 2rem;
 		}
 
-		&__text {
+		&__long-description {
 			::v-deep {
 				h4,
 				h5,

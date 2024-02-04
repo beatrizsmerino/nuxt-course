@@ -38,7 +38,7 @@
 		"props": {
 			"fieldTag": {
 				"type": String,
-				"default": "",
+				"default": "input",
 			},
 			"fieldId": {
 				"type": String,
@@ -62,7 +62,7 @@
 			},
 			"fieldPlaceholder": {
 				"type": String,
-				"default": "",
+				"default": "...",
 			},
 			"fieldRequired": {
 				"type": Boolean,
@@ -234,6 +234,18 @@
 				}
 			}
 
+			&:not(.is-focus) {
+				.form {
+					&__field {
+						&--anim {
+							&::placeholder {
+								color: transparent !important;
+							}
+						}
+					}
+				}
+			}
+
 			&.is-empty {
 				.form {
 					&__field {
@@ -289,5 +301,9 @@
 		min-height: 16rem;
 		max-height: 29rem;
 		resize: vertical;
+
+		&::placeholder {
+			font-weight: 400 !important;
+		}
 	}
 </style>

@@ -11,6 +11,7 @@
 					field-id="postFormTitle"
 					field-label="Title"
 					field-type="text"
+					field-placeholder="The hook that captures glances"
 					field-modifier="anim"
 					:field-required="true"
 				/>
@@ -21,6 +22,7 @@
 					field-id="postFormAuthor"
 					field-label="Author"
 					field-type="text"
+					field-placeholder="Who is the genius behind the work?"
 					field-modifier="anim"
 				/>
 			</div>
@@ -30,6 +32,7 @@
 			field-id="postFormLink"
 			field-label="Link"
 			field-type="url"
+			field-placeholder="Paste the link to your source of inspiration"
 			field-modifier="anim"
 		/>
 		<FormSelect
@@ -37,21 +40,23 @@
 			select-label="Category"
 			select-id="postFormCategory"
 			:select-options="data.categoriesList"
+			select-placeholder="Choose the kingdom of your creation"
 			select-modifier="anim"
 			:select-required="true"
 		/>
 		<FormField
-			v-model="form.description"
-			field-id="postFormDescription"
-			field-label="Description"
+			v-model="form.shortDescription"
+			field-id="postFormShortDescription"
+			field-label="Short description"
 			field-tag="textarea"
+			field-placeholder="Capture the essence in a sentence"
 			field-modifier="anim"
 			:field-required="true"
 		/>
 		<FormField
-			v-model="form.text"
-			field-id="postFormText"
-			field-label="Text"
+			v-model="form.longDescription"
+			field-id="postFormLongDescription"
+			field-label="Long description"
 			field-tag="textarea"
 			field-modifier="anim"
 		/>
@@ -83,8 +88,8 @@
 					"author": "",
 					"link": "",
 					"category": "",
-					"description": "",
-					"text": "",
+					"shortDescription": "",
+					"longDescription": "",
 				},
 				"data": {
 					"categoriesList": [

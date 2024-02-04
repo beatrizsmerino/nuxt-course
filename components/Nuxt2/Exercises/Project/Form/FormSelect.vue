@@ -31,7 +31,7 @@
 					disabled
 					hidden
 				>
-					Select one option
+					{{ selectPlaceholder }}
 				</option>
 				<option
 					v-for="(item, index) in selectOptions"
@@ -81,6 +81,10 @@
 			"value": {
 				"type": String,
 				"default": "",
+			},
+			"selectPlaceholder": {
+				"type": String,
+				"default": "Select one option",
 			},
 			"selectRequired": {
 				"type": Boolean,

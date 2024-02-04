@@ -57,6 +57,10 @@
 			font-family: $font-ubuntu;
 		}
 
+		textarea {
+			font-family: $font-ubuntu;
+		}
+
 		&__title {
 			margin: 5rem 0 2.5rem;
 		}

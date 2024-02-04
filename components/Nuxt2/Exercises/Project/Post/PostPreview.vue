@@ -19,7 +19,7 @@
 			<h3 class="post-preview__title">
 				{{ postData.title }}
 			</h3>
-			<div class="post-preview__description">
+			<div class="post-preview__short-description">
 				{{ shortDescription }}
 			</div>
 		</template>
@@ -129,7 +129,7 @@
 			line-height: 120%;
 		}
 
-		&__description {
+		&__short-description {
 			position: absolute;
 			width: 100%;
 			height: calc(100% - 6.5rem);
@@ -172,7 +172,7 @@
 						color: mix($color-white, $color-black, 15%);
 					}
 
-					&__description {
+					&__short-description {
 						opacity: 1;
 					}
 				}
@@ -211,7 +211,7 @@
 		&--last-post-list {
 			&:hover {
 				.post-preview {
-					&__description {
+					&__short-description {
 						display: none;
 					}
 				}

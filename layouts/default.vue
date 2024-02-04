@@ -31,6 +31,10 @@
 		font-family: $font-main;
 	}
 
+	textarea {
+		font-family: $font-main;
+	}
+
 	html,
 	body,
 	.layout {

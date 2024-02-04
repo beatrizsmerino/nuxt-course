@@ -14,7 +14,7 @@
 		"props": {
 			"fieldTag": {
 				"type": String,
-				"default": null,
+				"default": "input",
 			},
 			"value": {
 				"type": String,
@@ -65,5 +65,9 @@
 		min-height: 16rem;
 		max-height: 29rem;
 		resize: vertical;
+
+		&::placeholder {
+			font-weight: 400 !important;
+		}
 	}
 </style>
