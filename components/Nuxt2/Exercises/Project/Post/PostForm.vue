@@ -2,7 +2,6 @@
 	<form
 		id="postForm"
 		class="post-form form"
-		action=""
 	>
 		<div class="form__group">
 			<div class="form__column">
