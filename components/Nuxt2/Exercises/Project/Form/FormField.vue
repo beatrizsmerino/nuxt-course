@@ -62,7 +62,7 @@
 			},
 			"fieldPlaceholder": {
 				"type": String,
-				"default": "",
+				"default": "...",
 			},
 			"fieldRequired": {
 				"type": Boolean,
