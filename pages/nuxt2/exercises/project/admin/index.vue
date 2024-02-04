@@ -10,7 +10,6 @@
 				</UIButton>
 			</article>
 			<article>
-				<h2>Posts created</h2>
 				<PostList css-modifier="compacted" />
 			</article>
 		</template>
