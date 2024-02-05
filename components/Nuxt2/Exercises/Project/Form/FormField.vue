@@ -105,7 +105,7 @@
 					return this.fieldValue;
 				},
 				set(newValue) {
-					this.$emit("input", newValue);
+					this.$emit("update:fieldValue", newValue);
 				},
 			},
 		},
