@@ -14,6 +14,7 @@
 					field-placeholder="The hook that captures glances"
 					field-modifier="anim"
 					:field-required="true"
+					@update:fieldValue="value => (form.title = value)"
 				/>
 			</div>
 			<div class="form__column">
@@ -24,6 +25,7 @@
 					field-type="text"
 					field-placeholder="Who is the genius behind the work?"
 					field-modifier="anim"
+					@update:fieldValue="value => (form.author = value)"
 				/>
 			</div>
 		</div>
@@ -34,6 +36,7 @@
 			field-type="url"
 			field-placeholder="Paste the link to your source of inspiration"
 			field-modifier="anim"
+			@update:fieldValue="value => (form.link = value)"
 		/>
 		<FormSelect
 			:select-value="form.category"
@@ -43,6 +46,7 @@
 			select-placeholder="Choose the kingdom of your creation"
 			select-modifier="anim"
 			:select-required="true"
+			@update:selectValue="value => (form.category = value)"
 		/>
 		<FormField
 			:field-value="form.shortDescription"
@@ -52,6 +56,7 @@
 			field-placeholder="Capture the essence in a sentence"
 			field-modifier="anim"
 			:field-required="true"
+			@update:fieldValue="value => (form.shortDescription = value)"
 		/>
 		<FormField
 			:field-value="form.longDescription"
@@ -59,6 +64,7 @@
 			field-label="Long description"
 			field-tag="textarea"
 			field-modifier="anim"
+			@update:fieldValue="value => (form.longDescription = value)"
 		/>
 		<div class="form__button-list">
 			<UIButton

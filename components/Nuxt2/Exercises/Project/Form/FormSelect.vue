@@ -106,7 +106,7 @@
 					return this.selectValue;
 				},
 				set(newValue) {
-					this.$emit("input", newValue);
+					this.$emit("update:selectValue", newValue);
 				},
 			},
 		},

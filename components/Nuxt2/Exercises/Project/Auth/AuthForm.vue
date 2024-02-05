@@ -11,6 +11,7 @@
 			field-type="text"
 			field-modifier="anim"
 			:field-required="true"
+			@update:fieldValue="value => (form.username = value)"
 		/>
 		<FormField
 			:field-value="form.password"
@@ -19,6 +20,7 @@
 			field-type="password"
 			field-modifier="anim"
 			:field-required="true"
+			@update:fieldValue="value => (form.password = value)"
 		/>
 		<div class="form__button-list">
 			<UIButton
