@@ -2,12 +2,12 @@
 	<form
 		id="postForm"
 		class="post-form form"
-		action=""
+		@submit.prevent="onSave"
 	>
 		<div class="form__group">
 			<div class="form__column">
 				<FormField
-					v-model="form.title"
+					:field-value="form.title"
 					field-id="postFormTitle"
 					field-label="Title"
 					field-type="text"
@@ -18,7 +18,7 @@
 			</div>
 			<div class="form__column">
 				<FormField
-					v-model="form.author"
+					:field-value="form.author"
 					field-id="postFormAuthor"
 					field-label="Author"
 					field-type="text"
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 		<FormField
-			v-model="form.link"
+			:field-value="form.link"
 			field-id="postFormLink"
 			field-label="Link"
 			field-type="url"
@@ -36,7 +36,7 @@
 			field-modifier="anim"
 		/>
 		<FormSelect
-			v-model="form.category"
+			:select-value="form.category"
 			select-label="Category"
 			select-id="postFormCategory"
 			:select-options="data.categoriesList"
@@ -45,7 +45,7 @@
 			:select-required="true"
 		/>
 		<FormField
-			v-model="form.shortDescription"
+			:field-value="form.shortDescription"
 			field-id="postFormShortDescription"
 			field-label="Short description"
 			field-tag="textarea"
@@ -54,17 +54,25 @@
 			:field-required="true"
 		/>
 		<FormField
-			v-model="form.longDescription"
+			:field-value="form.longDescription"
 			field-id="postFormLongDescription"
 			field-label="Long description"
 			field-tag="textarea"
 			field-modifier="anim"
 		/>
 		<div class="form__button-list">
-			<UIButton class="button--success">
+			<UIButton
+				class="button--success"
+				type="button"
+				@button-click="onSave"
+			>
 				Save
 			</UIButton>
-			<UIButton class="button--error">
+			<UIButton
+				class="button--error"
+				type="button"
+				@button-click="onCancel"
+			>
 				Cancel
 			</UIButton>
 		</div>
@@ -81,16 +89,24 @@
 			FormField,
 			FormSelect,
 		},
+		"props": {
+			"postData": {
+				"type": Object,
+				"required": false,
+			},
+		},
 		data() {
 			return {
-				"form": {
-					"title": "",
-					"author": "",
-					"link": "",
-					"category": "",
-					"shortDescription": "",
-					"longDescription": "",
-				},
+				"form": this.postData
+					? { ...this.postData }
+					: {
+						"title": "",
+						"author": "",
+						"link": "",
+						"category": "",
+						"shortDescription": "",
+						"longDescription": "",
+					},
 				"data": {
 					"categoriesList": [
 						"Without",
@@ -107,6 +123,14 @@
 					],
 				},
 			};
+		},
+		"methods": {
+			onSave() {
+				console.log(this.form);
+			},
+			onCancel() {
+				this.$router.push("/nuxt2/exercises/project/admin");
+			},
 		},
 	};
 </script>

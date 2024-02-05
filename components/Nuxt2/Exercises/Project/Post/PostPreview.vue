@@ -1,7 +1,7 @@
 <template>
 	<nuxt-link
 		:class="`post-preview ${postModifier.join(' ')}`"
-		:to="`/nuxt2/exercises/project/posts/${postIndex}`"
+		:to="postNuxtLink"
 	>
 		<template v-if="checkCssModifier === 'expanded'">
 			<time
@@ -41,12 +41,12 @@
 	export default {
 		"name": "PostPreview",
 		"props": {
-			"postData": {
-				"type": Object,
+			"isAdmin": {
+				"type": Boolean,
 				"required": true,
 			},
-			"postIndex": {
-				"type": Number,
+			"postData": {
+				"type": Object,
 				"required": true,
 			},
 			"postModifier": {
@@ -60,6 +60,11 @@
 			};
 		},
 		"computed": {
+			postNuxtLink() {
+				return this.isAdmin
+					? `/nuxt2/exercises/project/admin/post/edit/${this.postData.id}`
+					: `/nuxt2/exercises/project/posts/${this.postData.id}`;
+			},
 			shortDescription() {
 				return this.ellipsize(this.postData.description);
 			},

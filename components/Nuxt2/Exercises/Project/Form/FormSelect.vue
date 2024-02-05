@@ -17,11 +17,11 @@
 		<div class="select__wrapper">
 			<select
 				:id="selectId"
+				v-model="updateSelectValue"
 				:name="selectId"
 				:class="formFieldModifier"
 				class="select__field form__field"
 				:required="selectRequired ? true : false"
-				@input="updateData($event.target.value)"
 				@focus="onFocus"
 				@blur="onBlur"
 			>
@@ -78,7 +78,7 @@
 				"type": String,
 				"default": "",
 			},
-			"value": {
+			"selectValue": {
 				"type": String,
 				"default": "",
 			},
@@ -100,6 +100,16 @@
 				"isError": false,
 			};
 		},
+		"computed": {
+			"updateSelectValue": {
+				get() {
+					return this.selectValue;
+				},
+				set(newValue) {
+					this.$emit("input", newValue);
+				},
+			},
+		},
 		created() {
 			this.createdCSSModifier();
 			this.onCreated();
@@ -111,12 +121,8 @@
 					this.formFieldModifier = `form__field--${this.selectModifier}`;
 				}
 			},
-			updateData(newValue) {
-				this.$emit("input", newValue);
-			},
 			checkEmpty() {
-				console.log(this.value);
-				if (this.value == 0) {
+				if (this.selectValue == 0) {
 					this.isEmpty = true;
 				} else {
 					this.isEmpty = false;

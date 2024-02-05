@@ -29,7 +29,7 @@
 				v-html="postDetail.longDescription"
 			/>
 			<UIButton
-				:href="postDetail.url"
+				:href="postDetail.link"
 				class-type="link"
 				class="post-detail__button"
 				target="_blank"

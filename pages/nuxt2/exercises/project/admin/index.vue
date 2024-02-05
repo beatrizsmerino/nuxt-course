@@ -5,7 +5,10 @@
 		</template>
 		<template #content>
 			<article>
-				<PostList css-modifier="compacted" />
+				<PostList
+					is-admin
+					css-modifier="compacted"
+				/>
 			</article>
 			<article class="layout-admin__button-list">
 				<UIButton to="/nuxt2/exercises/project/admin/post/create">
