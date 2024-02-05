@@ -9,17 +9,30 @@
 			:label-text="fieldLabel"
 			:class="{ 'form__label--required': fieldRequired }"
 		/>
-		<component
-			:is="checkTag"
+		<input
+			v-if="checkTag == 'input'"
 			:id="fieldId"
+			v-model="updateFieldValue"
 			:class="`${fieldTag} ${formFieldModifier}`"
 			class="form__field"
 			:name="fieldId"
 			:type="fieldType"
-			:value="value"
 			:placeholder="fieldPlaceholder"
 			:required="fieldRequired ? true : false"
-			@input="updateData($event.target.value)"
+			@focus="onFocus"
+			@blur="onBlur"
+			@keypress="onKeyPress"
+		>
+		<textarea
+			v-if="checkTag == 'textarea'"
+			:id="fieldId"
+			v-model="updateFieldValue"
+			:class="`${fieldTag} ${formFieldModifier}`"
+			class="form__field"
+			:name="fieldId"
+			:type="fieldType"
+			:placeholder="fieldPlaceholder"
+			:required="fieldRequired ? true : false"
 			@focus="onFocus"
 			@blur="onBlur"
 			@keypress="onKeyPress"
@@ -56,7 +69,7 @@
 				"type": String,
 				"default": "",
 			},
-			"value": {
+			"fieldValue": {
 				"type": String,
 				"default": "",
 			},
@@ -87,6 +100,14 @@
 
 				return "input";
 			},
+			"updateFieldValue": {
+				get() {
+					return this.fieldValue;
+				},
+				set(newValue) {
+					this.$emit("input", newValue);
+				},
+			},
 		},
 		created() {
 			this.createdCSSModifier();
@@ -103,11 +124,8 @@
 					this.formItemModifier = "form__item--textarea";
 				}
 			},
-			updateData(newValue) {
-				this.$emit("input", newValue);
-			},
 			checkEmpty() {
-				if (this.value === "") {
+				if (this.fieldValue === "") {
 					this.isEmpty = true;
 				} else {
 					this.isEmpty = false;
