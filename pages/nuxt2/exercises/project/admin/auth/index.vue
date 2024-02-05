@@ -3,17 +3,21 @@
 		<template #title>
 			Auth
 		</template>
-		<template #content />
+		<template #content>
+			<AuthForm />
+		</template>
 	</Layout>
 </template>
 
 <script>
 	import Layout from "@/components/Nuxt2/Exercises/Project/Layout";
+	import AuthForm from "@/components/Nuxt2/Exercises/Project/Auth/AuthForm";
 
 	export default {
 		"name": "ViewProjectAdminAuth",
 		"components": {
 			Layout,
+			AuthForm,
 		},
 		"layout": "exercises",
 	};
