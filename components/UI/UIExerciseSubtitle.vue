@@ -6,7 +6,7 @@
 
 <script>
 	export default {
-		"name": "LayoutSubtitle",
+		"name": "UIExerciseSubtitle",
 	};
 </script>
 
