@@ -1,18 +1,21 @@
 <template>
-	<div class="user-detail">
-		<LayoutSubtitle>User</LayoutSubtitle>
-
-		<p>User ID: {{ $route.params.id }}</p>
-	</div>
+	<Layout class="layout-user-detail">
+		<template #title>
+			User
+		</template>
+		<template #content>
+			<p>User ID: {{ $route.params.id }}</p>
+		</template>
+	</Layout>
 </template>
 
 <script>
-	import LayoutSubtitle from "@/components/Layout/LayoutSubtitle";
+	import Layout from "@/components/Layout/Layout";
 
 	export default {
 		"name": "ViewUsersDetail",
 		"components": {
-			LayoutSubtitle,
+			Layout,
 		},
 		validate(data) {
 			console.log(data);

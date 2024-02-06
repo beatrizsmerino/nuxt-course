@@ -1,8 +1,9 @@
 <template>
-	<div class="page__container page__inner">
-		<LayoutTitle>Products</LayoutTitle>
-
-		<section>
+	<Layout class="layout-products">
+		<template #title>
+			Products
+		</template>
+		<template #content>
 			<article class="products-list">
 				<ul>
 					<li>
@@ -17,17 +18,17 @@
 					</li>
 				</ul>
 			</article>
-		</section>
-	</div>
+		</template>
+	</Layout>
 </template>
 
 <script>
-	import LayoutTitle from "@/components/Layout/LayoutTitle";
+	import Layout from "@/components/Layout/Layout";
 
 	export default {
 		"name": "ViewProducts",
 		"components": {
-			LayoutTitle,
+			Layout,
 		},
 		"layout": "exercises",
 		data() {
