@@ -10,7 +10,7 @@
 						:key="product.id"
 					>
 						<nuxt-link :to="product.url">
-							{{ product.name }}
+							{{ product.title }}
 						</nuxt-link>
 					</li>
 				</ul>
@@ -30,19 +30,25 @@
 		"layout": "exercises",
 		data() {
 			return {
-				"productList": [
-					{
-						"id": "1",
-						"name": "Product 1",
-						"url": "/nuxt2/exercises/products/1",
-					},
-					{
-						"id": "2",
-						"name": "Product 2",
-						"url": "/nuxt2/exercises/products/2",
-					},
-				],
+				"productList": [],
 			};
+		},
+		created() {
+			this.getProducts();
+		},
+		"methods": {
+			async getProducts() {
+				try {
+					const response = await fetch("https://fakestoreapi.com/products");
+					const json = await response.json();
+					json.map(product => (product.url = `/nuxt2/exercises/products/${product.id}`));
+					this.productList = json;
+
+					// console.log(json);
+				} catch (error) {
+					console.error("Error fetching products:", error);
+				}
+			},
 		},
 	};
 </script>
@@ -53,6 +59,7 @@
 
 		ul {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 			width: 100%;
 			padding: 0;
