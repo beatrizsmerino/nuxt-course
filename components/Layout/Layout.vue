@@ -4,7 +4,10 @@
 			<slot name="title" />
 		</LayoutTitle>
 
-		<LayoutNavigation v-if="layoutNavigation" />
+		<LayoutNavigation
+			v-if="layoutNavigation"
+			class="layout__navigation"
+		/>
 
 		<LayoutSubtitle
 			v-if="layoutSubtitle"
