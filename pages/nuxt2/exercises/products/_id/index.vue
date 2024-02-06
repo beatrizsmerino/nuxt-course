@@ -4,7 +4,9 @@
 
 		<Breadcrumbs :breadcrumbs-list-data="breadcrumbsListData" />
 
-		<LayoutSubtitle>Product ID: {{ $route.params.id }}</LayoutSubtitle>
+		<LayoutSubtitle>Product</LayoutSubtitle>
+
+		<p>Product ID: {{ $route.params.id }}</p>
 	</div>
 </template>
 
