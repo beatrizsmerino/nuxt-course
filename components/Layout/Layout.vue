@@ -9,6 +9,11 @@
 			class="layout__navigation"
 		/>
 
+		<slot
+			name="breadcrumbs"
+			class="layout__breadcrumbs"
+		/>
+
 		<LayoutSubtitle
 			v-if="layoutSubtitle"
 			class="layout__subtitle"

@@ -3,7 +3,9 @@
 		<template #title>
 			Products
 		</template>
-		<Breadcrumbs :breadcrumbs-list-data="breadcrumbsListData" />
+		<template #breadcrumbs>
+			<Breadcrumbs :breadcrumbs-list-data="breadcrumbsListData" />
+		</template>
 		<template #content>
 			<p>Product ID: {{ $route.params.id }}</p>
 		</template>
