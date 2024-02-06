@@ -14,6 +14,7 @@
 				</nuxt-link>
 
 				<UIIcon
+					v-if="index + 1 != breadcrumbsListData.length"
 					class="breadcrumbs__icon"
 					icon-name="chevron-right"
 					icon-aria-label="Breadcrumb arrow"
