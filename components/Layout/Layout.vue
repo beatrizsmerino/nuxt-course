@@ -4,9 +4,12 @@
 			<slot name="title" />
 		</LayoutTitle>
 
-		<LayoutNavigation />
+		<LayoutNavigation v-if="layoutNavigation" />
 
-		<LayoutSubtitle class="layout__subtitle">
+		<LayoutSubtitle
+			v-if="layoutSubtitle"
+			class="layout__subtitle"
+		>
 			<slot name="subtitle" />
 		</LayoutSubtitle>
 
@@ -29,6 +32,16 @@
 			LayoutSubtitle,
 		},
 		"layout": "exercises",
+		"props": {
+			"layoutSubtitle": {
+				"type": Boolean,
+				"default": false,
+			},
+			"layoutNavigation": {
+				"type": Boolean,
+				"default": false,
+			},
+		},
 	};
 </script>
 

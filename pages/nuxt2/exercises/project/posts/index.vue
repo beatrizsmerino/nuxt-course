@@ -1,5 +1,9 @@
 <template>
-	<Layout class="layout-posts">
+	<Layout
+		class="layout-posts"
+		:layout-subtitle="true"
+		:layout-navigation="true"
+	>
 		<template #title>
 			Project
 		</template>

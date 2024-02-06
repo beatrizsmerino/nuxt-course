@@ -1,5 +1,9 @@
 <template>
-	<Layout class="layout-about">
+	<Layout
+		class="layout-about"
+		:layout-subtitle="true"
+		:layout-navigation="true"
+	>
 		<template #title>
 			Project
 		</template>
