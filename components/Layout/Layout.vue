@@ -1,5 +1,5 @@
 <template>
-	<div class="layout__inner page__container page__inner">
+	<div class="layout page__container page__inner">
 		<LayoutTitle clas="layout__title">
 			<slot name="title" />
 		</LayoutTitle>
@@ -47,24 +47,22 @@
 
 <style lang="scss" scoped>
 	.layout {
-		&__inner {
-			position: relative;
-			min-height: 100rem;
+		position: relative;
+		min-height: 100rem;
 
-			&:before {
-				content: "";
-				display: inline-block;
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				opacity: 0.5;
-				background-image: url("~assets/images/nuxt2/exercises/project/background.png");
-				background-repeat: no-repeat;
-				background-position: 95% 0;
-				background-size: 50rem;
-			}
+		&:before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.5;
+			background-image: url("~assets/images/nuxt2/exercises/project/background.png");
+			background-repeat: no-repeat;
+			background-position: 95% 0;
+			background-size: 50rem;
 		}
 
 		&__title,
