@@ -1,15 +1,19 @@
 <template>
 	<div class="page__container page__inner">
-		<LayoutTitle>Products</LayoutTitle>
+		<UIExerciseTitle>Products</UIExerciseTitle>
 
 		<section>
 			<article class="products-list">
 				<ul>
 					<li>
-						<nuxt-link to="/nuxt2/exercises/products/1">Product 1</nuxt-link>
+						<nuxt-link to="/nuxt2/exercises/products/1">
+							Product 1
+						</nuxt-link>
 					</li>
 					<li>
-						<nuxt-link to="/nuxt2/exercises/products/2">Product 2</nuxt-link>
+						<nuxt-link to="/nuxt2/exercises/products/2">
+							Product 2
+						</nuxt-link>
 					</li>
 				</ul>
 			</article>
@@ -18,12 +22,12 @@
 </template>
 
 <script>
-	import LayoutTitle from "@/components/UI/LayoutTitle";
+	import UIExerciseTitle from "@/components/UI/UIExerciseTitle";
 
 	export default {
 		"name": "ViewProducts",
 		"components": {
-			LayoutTitle,
+			UIExerciseTitle,
 		},
 		"layout": "exercises",
 		data() {

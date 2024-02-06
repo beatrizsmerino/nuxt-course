@@ -1,14 +1,14 @@
 <template>
 	<div class="layout page__container page__inner">
-		<LayoutTitle clas="layout__title">
+		<UIExerciseTitle clas="layout__title">
 			<slot name="title" />
-		</LayoutTitle>
+		</UIExerciseTitle>
 
 		<LayoutNavigation class="layout__navigation" />
 
-		<LayoutSubtitle class="layout__subtitle">
+		<UIExerciseSubtitle class="layout__subtitle">
 			<slot name="subtitle" />
-		</LayoutSubtitle>
+		</UIExerciseSubtitle>
 
 		<section class="layout__content">
 			<slot name="content" />
@@ -18,15 +18,15 @@
 
 <script>
 	import LayoutNavigation from "@/components/Nuxt2/Exercises/Project/Layout/LayoutNavigation";
-	import LayoutSubtitle from "@/components/UI/LayoutSubtitle";
-	import LayoutTitle from "@/components/UI/LayoutTitle";
+	import UIExerciseTitle from "@/components/UI/UIExerciseTitle";
+	import UIExerciseSubtitle from "@/components/UI/UIExerciseSubtitle";
 
 	export default {
 		"name": "Layout",
 		"components": {
-			LayoutTitle,
+			UIExerciseTitle,
 			LayoutNavigation,
-			LayoutSubtitle,
+			UIExerciseSubtitle,
 		},
 		"layout": "exercises",
 	};

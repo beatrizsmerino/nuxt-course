@@ -1,18 +1,18 @@
 <template>
 	<div class="user-detail">
-		<LayoutSubtitle>User</LayoutSubtitle>
+		<UIExerciseSubtitle>User</UIExerciseSubtitle>
 
 		<p>User ID: {{ $route.params.id }}</p>
 	</div>
 </template>
 
 <script>
-	import LayoutSubtitle from "@/components/UI/LayoutSubtitle";
+	import UIExerciseSubtitle from "@/components/UI/UIExerciseSubtitle";
 
 	export default {
 		"name": "ViewUsersDetail",
 		"components": {
-			LayoutSubtitle,
+			UIExerciseSubtitle,
 		},
 		validate(data) {
 			console.log(data);
@@ -22,7 +22,7 @@
 
 			// return equalTo1;
 
-			const equalToNumber = (/^\d+$/u).test(data.params.id);
+			const equalToNumber = /^\d+$/u.test(data.params.id);
 
 			return equalToNumber;
 		},
