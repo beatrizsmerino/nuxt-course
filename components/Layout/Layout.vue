@@ -1,11 +1,13 @@
 <template>
 	<div class="layout__inner page__container page__inner">
-		<LayoutTitle>Project</LayoutTitle>
+		<LayoutTitle clas="layout__title">
+			<slot name="title" />
+		</LayoutTitle>
 
 		<LayoutNavigation />
 
-		<LayoutSubtitle class="layout__title">
-			<slot name="title" />
+		<LayoutSubtitle class="layout__subtitle">
+			<slot name="subtitle" />
 		</LayoutSubtitle>
 
 		<section class="layout__content">
@@ -53,6 +55,7 @@
 		}
 
 		&__title,
+		&__subtitle,
 		&__content {
 			font-family: $font-ubuntu;
 		}
