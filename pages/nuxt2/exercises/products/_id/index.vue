@@ -12,8 +12,8 @@
 
 <script>
 	import Breadcrumbs from "@/components/Nuxt2/Exercises/Products/Breadcrumbs";
-	import LayoutSubtitle from "@/components/Layout/LayoutSubtitle";
-	import LayoutTitle from "@/components/Layout/LayoutTitle";
+	import LayoutSubtitle from "@/components/Nuxt2/Exercises/Project/Layout/LayoutSubtitle";
+	import LayoutTitle from "@/components/Nuxt2/Exercises/Project/Layout/LayoutTitle";
 
 	export default {
 		"name": "ViewProductsDetail",

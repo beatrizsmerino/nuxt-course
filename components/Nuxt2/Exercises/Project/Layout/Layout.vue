@@ -17,9 +17,9 @@
 </template>
 
 <script>
-	import LayoutNavigation from "@/components/Layout/LayoutNavigation";
-	import LayoutSubtitle from "@/components/Layout/LayoutSubtitle";
-	import LayoutTitle from "@/components/Layout/LayoutTitle";
+	import LayoutNavigation from "@/components/Nuxt2/Exercises/Project/Layout/LayoutNavigation";
+	import LayoutSubtitle from "@/components/Nuxt2/Exercises/Project/Layout/LayoutSubtitle";
+	import LayoutTitle from "@/components/Nuxt2/Exercises/Project/Layout/LayoutTitle";
 
 	export default {
 		"name": "Layout",

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-	import Layout from "@/components/Layout/Layout";
+	import Layout from "@/components/Nuxt2/Exercises/Project/Layout/Layout";
 	import PostForm from "@/components/Nuxt2/Exercises/Project/Post/PostForm";
 
 	export default {

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-	import Layout from "@/components/Layout/Layout";
+	import Layout from "@/components/Nuxt2/Exercises/Project/Layout/Layout";
 	import PostList from "@/components/Nuxt2/Exercises/Project/Post/PostList";
 
 	export default {
