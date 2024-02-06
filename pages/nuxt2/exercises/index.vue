@@ -49,7 +49,7 @@
 		"layout": "exercises",
 		data() {
 			return {
-				"pageTitle": "Exercises",
+				"pageTitle": `<span class="page-title__highlight">Exercises</span> made with <span class="page-title__highlight">Nuxt 2</span>`,
 				"exercisesList": [
 					{
 						"url": "/nuxt2/exercises/users",
