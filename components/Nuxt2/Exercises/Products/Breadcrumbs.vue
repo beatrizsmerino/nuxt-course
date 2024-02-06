@@ -7,11 +7,18 @@
 				class="breadcrumbs__item"
 			>
 				<nuxt-link
+					v-if="item.url"
 					class="breadcrumbs__link"
 					:to="item.url"
 				>
 					{{ item.name }}
 				</nuxt-link>
+				<span
+					v-else
+					class="breadcrumbs__link breadcrumbs__link--current"
+				>
+					{{ item.name }}
+				</span>
 
 				<UIIcon
 					v-if="index + 1 != breadcrumbsListData.length"
@@ -57,6 +64,11 @@
 
 			&:hover {
 				color: $color-brand-1;
+				text-decoration: underline;
+			}
+
+			&--current {
+				font-weight: bold;
 				text-decoration: underline;
 			}
 		}

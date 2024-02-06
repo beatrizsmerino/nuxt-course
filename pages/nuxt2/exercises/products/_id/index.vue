@@ -30,6 +30,10 @@
 						"url": "/nuxt2/exercises/products",
 						"name": "Products",
 					},
+					{
+						"url": null,
+						"name": "Product",
+					},
 				],
 			};
 		},
