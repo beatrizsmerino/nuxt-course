@@ -1,5 +1,5 @@
 <template>
-	<Layout class="layout-users">
+	<Layout>
 		<template #title>
 			Users
 		</template>

@@ -1,6 +1,5 @@
 <template>
 	<Layout
-		class="layout-home"
 		:layout-subtitle="true"
 		:layout-navigation="true"
 	>

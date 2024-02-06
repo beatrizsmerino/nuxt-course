@@ -1,5 +1,5 @@
 <template>
-	<Layout class="layout-products">
+	<Layout>
 		<template #title>
 			Products
 		</template>

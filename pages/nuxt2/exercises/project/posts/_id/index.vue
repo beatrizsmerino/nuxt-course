@@ -1,8 +1,5 @@
 <template>
-	<Layout
-		class="layout-post"
-		:layout-navigation="true"
-	>
+	<Layout :layout-navigation="true">
 		<template #title>
 			Project
 		</template>

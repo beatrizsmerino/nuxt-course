@@ -1,6 +1,5 @@
 <template>
 	<Layout
-		class="layout-admin"
 		:layout-subtitle="true"
 		:layout-navigation="true"
 	>
@@ -17,7 +16,7 @@
 					css-modifier="compacted"
 				/>
 			</article>
-			<article class="layout-admin__button-list">
+			<article class="button-list">
 				<UIButton to="/nuxt2/exercises/project/admin/post/create">
 					Create new post
 				</UIButton>
@@ -41,15 +40,13 @@
 </script>
 
 <style lang="scss" scoped>
-	.layout-admin {
-		&__button-list {
-			display: flex;
-			justify-content: flex-end;
-			margin-top: 3rem;
+	.button-list {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 3rem;
 
-			:deep(.button) {
-				display: inline-block;
-			}
+		:deep(.button) {
+			display: inline-block;
 		}
 	}
 </style>
