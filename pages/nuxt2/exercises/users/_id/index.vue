@@ -22,7 +22,7 @@
 
 			// return equalTo1;
 
-			const equalToNumber = /^\d+$/u.test(data.params.id);
+			const equalToNumber = (/^\d+$/u).test(data.params.id);
 
 			return equalToNumber;
 		},

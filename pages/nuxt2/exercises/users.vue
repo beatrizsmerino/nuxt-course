@@ -13,7 +13,9 @@
 					<div class="form__group">
 						<div class="form__column">
 							<div class="form__item">
-								<FormLabel for="userId">Show the user with the id:</FormLabel>
+								<FormLabel for="userId">
+									Show the user with the id:
+								</FormLabel>
 								<FormField
 									id="userId"
 									v-model="user.id"
@@ -25,7 +27,9 @@
 							</div>
 						</div>
 						<div class="form__column">
-							<UIButton @button-click="loadUser">Show user {{ user.id }}</UIButton>
+							<UIButton @button-click="loadUser">
+								Show user {{ user.id }}
+							</UIButton>
 						</div>
 					</div>
 				</form>
