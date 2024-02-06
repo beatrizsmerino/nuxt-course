@@ -2,7 +2,11 @@
 	<div class="user-detail">
 		<UIExerciseSubtitle>User</UIExerciseSubtitle>
 
-		<p>User ID: {{ $route.params.id }}</p>
+		<section>
+			<article>
+				<p>User ID: {{ $route.params.id }}</p>
+			</article>
+		</section>
 	</div>
 </template>
 

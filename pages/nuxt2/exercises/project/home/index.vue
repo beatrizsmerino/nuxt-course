@@ -7,7 +7,9 @@
 			Last Posts
 		</template>
 		<template #content>
-			<PostList :show-last-post-list="true" />
+			<article>
+				<PostList :show-last-post-list="true" />
+			</article>
 		</template>
 	</Layout>
 </template>

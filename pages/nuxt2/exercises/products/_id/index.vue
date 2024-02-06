@@ -6,7 +6,11 @@
 
 		<UIExerciseSubtitle>Product</UIExerciseSubtitle>
 
-		<p>Product ID: {{ $route.params.id }}</p>
+		<section>
+			<article>
+				<p>Product ID: {{ $route.params.id }}</p>
+			</article>
+		</section>
 	</div>
 </template>
 

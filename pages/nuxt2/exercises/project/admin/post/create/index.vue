@@ -7,7 +7,9 @@
 			Create a new post
 		</template>
 		<template #content>
-			<PostForm />
+			<article>
+				<PostForm />
+			</article>
 		</template>
 	</Layout>
 </template>

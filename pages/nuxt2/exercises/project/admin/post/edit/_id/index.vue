@@ -7,7 +7,9 @@
 			Edit post #{{ $route.params.id }}
 		</template>
 		<template #content>
-			<PostForm :post-data="getPostSelected" />
+			<article>
+				<PostForm :post-data="getPostSelected" />
+			</article>
 		</template>
 	</Layout>
 </template>

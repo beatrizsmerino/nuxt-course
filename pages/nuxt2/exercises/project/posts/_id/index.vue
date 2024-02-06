@@ -4,7 +4,9 @@
 			Project
 		</template>
 		<template #content>
-			<PostDetail />
+			<article>
+				<PostDetail />
+			</article>
 		</template>
 	</Layout>
 </template>

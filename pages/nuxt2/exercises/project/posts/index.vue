@@ -7,7 +7,9 @@
 			All Posts
 		</template>
 		<template #content>
-			<PostList />
+			<article>
+				<PostList />
+			</article>
 		</template>
 	</Layout>
 </template>
