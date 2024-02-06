@@ -49,6 +49,7 @@
 	.layout {
 		position: relative;
 		min-height: 100rem;
+		font-family: $font-ubuntu;
 
 		&:before {
 			content: "";
@@ -63,12 +64,6 @@
 			background-repeat: no-repeat;
 			background-position: 95% 0;
 			background-size: 50rem;
-		}
-
-		&__title,
-		&__subtitle,
-		&__content {
-			font-family: $font-ubuntu;
 		}
 
 		textarea {
