@@ -73,10 +73,6 @@
 			font-family: $font-ubuntu;
 		}
 
-		&__title {
-			margin: 5rem 0 2.5rem;
-		}
-
 		&__content {
 			font-size: 1.8rem;
 

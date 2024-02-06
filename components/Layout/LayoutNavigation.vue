@@ -116,7 +116,7 @@
 	.layout-navigation {
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 0;
+		margin: 2rem 0;
 
 		&__button {
 			display: none;
