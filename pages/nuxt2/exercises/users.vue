@@ -1,51 +1,53 @@
 <template>
-	<Layout>
-		<template #title>
-			Users
-		</template>
-		<template #content>
-			<form
-				id="formSelectUser"
-				class="form-select-user form"
-				novalidate="true"
-				@submit.prevent
-			>
-				<div class="form__group">
-					<div class="form__column">
-						<div class="form__item">
-							<FormLabel for="userId">
-								Show the user with the id:
-							</FormLabel>
-							<FormField
-								id="userId"
-								v-model="user.id"
-								name="userId"
-								type="text"
-								number
-								placeholder="Write id user"
-							/>
+	<div class="page__container page__inner">
+		<LayoutTitle>Users</LayoutTitle>
+
+		<section>
+			<article>
+				<form
+					id="formSelectUser"
+					class="form-select-user form"
+					novalidate="true"
+					@submit.prevent
+				>
+					<div class="form__group">
+						<div class="form__column">
+							<div class="form__item">
+								<FormLabel for="userId">
+									Show the user with the id:
+								</FormLabel>
+								<FormField
+									id="userId"
+									v-model="user.id"
+									name="userId"
+									type="text"
+									number
+									placeholder="Write id user"
+								/>
+							</div>
+						</div>
+						<div class="form__column">
+							<UIButton @button-click="loadUser">
+								Show user {{ user.id }}
+							</UIButton>
 						</div>
 					</div>
-					<div class="form__column">
-						<UIButton @button-click="loadUser">
-							Show user {{ user.id }}
-						</UIButton>
-					</div>
-				</div>
-			</form>
-		</template>
-	</Layout>
+				</form>
+				<nuxt-child />
+			</article>
+		</section>
+	</div>
 </template>
 
 <script>
-	import Layout from "@/components/Layout/Layout";
 	import FormField from "@/components/Nuxt2/Exercises/Users/Form/FormField";
 	import FormLabel from "@/components/Nuxt2/Exercises/Users/Form/FormLabel";
+	import LayoutTitle from "@/components/Layout/LayoutTitle";
 
 	export default {
 		"name": "ViewUsers",
 		"components": {
-			Layout,
+			LayoutTitle,
 			FormLabel,
 			FormField,
 		},
