@@ -1,15 +1,20 @@
 <template>
 	<div class="breadcrumbs">
-		<ul>
+		<ul class="breadcrumbs__list">
 			<li
 				v-for="(item, index) in breadcrumbsListData"
 				:key="`breadcrumb-${index}`"
+				class="breadcrumbs__item"
 			>
-				<nuxt-link :to="item.url">
+				<nuxt-link
+					class="breadcrumbs__link"
+					:to="item.url"
+				>
 					{{ item.name }}
 				</nuxt-link>
 
 				<UIIcon
+					class="breadcrumbs__icon"
 					icon-name="chevron-right"
 					icon-aria-label="Breadcrumb arrow"
 				/>
@@ -32,31 +37,33 @@
 
 <style lang="scss" scoped>
 	.breadcrumbs {
-		ul {
+		&__list {
 			display: flex;
 			align-items: center;
 			padding: 0;
 			list-style: none;
+		}
 
-			li {
-				display: flex;
-				align-items: center;
+		&__item {
+			display: flex;
+			align-items: center;
+		}
 
-				a {
-					color: $color-brand-3;
-					font-size: 2rem;
-					text-decoration: none;
+		&__link {
+			color: $color-brand-3;
+			font-size: 2rem;
+			text-decoration: none;
 
-					&:hover {
-						color: $color-brand-1;
-						text-decoration: underline;
-					}
-				}
+			&:hover {
+				color: $color-brand-1;
+				text-decoration: underline;
+			}
+		}
 
-				.icon {
-					margin: 0 1rem;
-					fill: $color-brand-1 !important;
-				}
+		&__icon {
+			.icon {
+				margin: 0 1rem;
+				fill: $color-brand-1 !important;
 			}
 		}
 	}
