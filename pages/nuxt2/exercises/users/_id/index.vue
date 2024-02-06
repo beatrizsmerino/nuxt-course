@@ -1,18 +1,22 @@
 <template>
 	<div class="user-detail">
-		<Subtitle>User</Subtitle>
+		<UIExerciseSubtitle>User</UIExerciseSubtitle>
 
-		<p>User ID: {{ $route.params.id }}</p>
+		<section>
+			<article>
+				<p>User ID: {{ $route.params.id }}</p>
+			</article>
+		</section>
 	</div>
 </template>
 
 <script>
-	import Subtitle from "@/components/Nuxt2/Exercises/Layout/Subtitle";
+	import UIExerciseSubtitle from "@/components/UI/UIExerciseSubtitle";
 
 	export default {
 		"name": "ViewUsersDetail",
 		"components": {
-			Subtitle,
+			UIExerciseSubtitle,
 		},
 		validate(data) {
 			console.log(data);
@@ -22,17 +26,9 @@
 
 			// return equalTo1;
 
-			const equalToNumber = (/^\d+$/u).test(data.params.id);
+			const equalToNumber = /^\d+$/u.test(data.params.id);
 
 			return equalToNumber;
 		},
 	};
 </script>
-
-<style lang="scss">
-	.user-detail {
-		.subtitle {
-			margin-bottom: 2rem !important;
-		}
-	}
-</style>

@@ -1,6 +1,6 @@
 <template>
-	<nav class="navigation">
-		<span class="navigation__button">
+	<nav class="layout-navigation">
+		<span class="layout-navigation__button">
 			<UIButton
 				class="button--brand-1-dark-line"
 				@button-click="toggleNavigation"
@@ -20,7 +20,7 @@
 		<transition name="slide">
 			<div
 				v-if="changeOpenNavigation"
-				class="navigation__list"
+				class="layout-navigation__list"
 			>
 				<ul>
 					<li
@@ -39,7 +39,7 @@
 
 <script>
 	export default {
-		"name": "Navigation",
+		"name": "LayoutNavigation",
 		"layout": "exercises",
 		data() {
 			return {
@@ -113,10 +113,10 @@
 </script>
 
 <style lang="scss" scoped>
-	.navigation {
+	.layout-navigation {
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 0;
+		margin: 2rem 0;
 
 		&__button {
 			display: none;

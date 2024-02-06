@@ -12,7 +12,7 @@
 					href="https://nuxtjs.org"
 					target="_blank"
 				>
-					<LogoNuxt logo-type="imagotype" />
+					<UILogoNuxt logo-type="imagotype" />
 				</a>
 				<article class="mt-12 bg-white overflow-hidden shadow sm:rounded-lg p-10">
 					<h2 class="text-4xl leading-10 font-semibold">

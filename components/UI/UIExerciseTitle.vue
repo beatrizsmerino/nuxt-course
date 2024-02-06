@@ -1,17 +1,17 @@
 <template>
-	<h1 class="title">
+	<h1 class="exercise-title">
 		<slot />
 	</h1>
 </template>
 
 <script>
 	export default {
-		"name": "Title",
+		"name": "UIExerciseTitle",
 	};
 </script>
 
 <style lang="scss" scoped>
-	.title {
+	.exercise-title {
 		position: relative;
 		margin: 0 0 7rem;
 		color: $color-brand-1;

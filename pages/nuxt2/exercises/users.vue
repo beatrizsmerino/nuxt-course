@@ -1,6 +1,6 @@
 <template>
 	<div class="page__container page__inner">
-		<Title>Users</Title>
+		<UIExerciseTitle>Users</UIExerciseTitle>
 
 		<section>
 			<article>
@@ -42,12 +42,12 @@
 <script>
 	import FormField from "@/components/Nuxt2/Exercises/Users/Form/FormField";
 	import FormLabel from "@/components/Nuxt2/Exercises/Users/Form/FormLabel";
-	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
+	import UIExerciseTitle from "@/components/UI/UIExerciseTitle";
 
 	export default {
 		"name": "ViewUsers",
 		"components": {
-			Title,
+			UIExerciseTitle,
 			FormLabel,
 			FormField,
 		},

@@ -33,7 +33,7 @@
 						"path": "/about",
 					},
 					{
-						"name": "Nuxt 2",
+						"name": "Exercises",
 						"path": "/nuxt2/exercises",
 						"activeSubPages": true,
 					},

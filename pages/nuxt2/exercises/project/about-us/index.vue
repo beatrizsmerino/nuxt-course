@@ -1,6 +1,9 @@
 <template>
-	<Layout class="layout-about">
+	<Layout>
 		<template #title>
+			Project
+		</template>
+		<template #subtitle>
 			Description
 		</template>
 		<template #content>
@@ -23,7 +26,7 @@
 </template>
 
 <script>
-	import Layout from "@/components/Nuxt2/Exercises/Project/Layout";
+	import Layout from "@/components/Nuxt2/Exercises/Project/Layout/Layout";
 
 	export default {
 		"name": "ViewProjectAbout",
@@ -33,5 +36,3 @@
 		"layout": "exercises",
 	};
 </script>
-
-<style lang="scss"></style>

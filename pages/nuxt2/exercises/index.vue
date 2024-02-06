@@ -1,6 +1,6 @@
 <template>
 	<div class="page__container page__inner">
-		<Title>Exercises</Title>
+		<PageTitle :page-title="pageTitle" />
 
 		<div class="exercises-list">
 			<ul>
@@ -39,16 +39,17 @@
 </template>
 
 <script>
-	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
+	import PageTitle from "@/components/Page/PageTitle";
 
 	export default {
 		"name": "ViewExercises",
 		"components": {
-			Title,
+			PageTitle,
 		},
 		"layout": "exercises",
 		data() {
 			return {
+				"pageTitle": `<span class="page-title__highlight">Exercises</span></br>made with</br><span class="page-title__highlight">Nuxt 2</span>`,
 				"exercisesList": [
 					{
 						"url": "/nuxt2/exercises/users",

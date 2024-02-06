@@ -1,16 +1,21 @@
 <template>
-	<Layout class="layout-home">
+	<Layout>
 		<template #title>
+			Project
+		</template>
+		<template #subtitle>
 			Last Posts
 		</template>
 		<template #content>
-			<PostList :show-last-post-list="true" />
+			<article>
+				<PostList :show-last-post-list="true" />
+			</article>
 		</template>
 	</Layout>
 </template>
 
 <script>
-	import Layout from "@/components/Nuxt2/Exercises/Project/Layout";
+	import Layout from "@/components/Nuxt2/Exercises/Project/Layout/Layout";
 	import PostList from "@/components/Nuxt2/Exercises/Project/Post/PostList";
 
 	export default {
@@ -22,5 +27,3 @@
 		"layout": "exercises",
 	};
 </script>
-
-<style lang="scss"></style>

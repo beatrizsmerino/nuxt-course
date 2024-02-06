@@ -1,17 +1,22 @@
 <template>
-	<Layout class="layout-admin">
+	<Layout>
 		<template #title>
+			Project
+		</template>
+		<template #subtitle>
 			Edit post #{{ $route.params.id }}
 		</template>
 		<template #content>
-			<PostForm :post-data="getPostSelected" />
+			<article>
+				<PostForm :post-data="getPostSelected" />
+			</article>
 		</template>
 	</Layout>
 </template>
 
 <script>
 	import postListData from "~/assets/data/data-post-list.json";
-	import Layout from "@/components/Nuxt2/Exercises/Project/Layout";
+	import Layout from "@/components/Nuxt2/Exercises/Project/Layout/Layout";
 	import PostForm from "@/components/Nuxt2/Exercises/Project/Post/PostForm";
 
 	export default {
