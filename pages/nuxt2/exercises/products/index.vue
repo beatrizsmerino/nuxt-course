@@ -5,14 +5,12 @@
 		<section>
 			<article class="products-list">
 				<ul>
-					<li>
-						<nuxt-link to="/nuxt2/exercises/products/1">
-							Product 1
-						</nuxt-link>
-					</li>
-					<li>
-						<nuxt-link to="/nuxt2/exercises/products/2">
-							Product 2
+					<li
+						v-for="product in productList"
+						:key="product.id"
+					>
+						<nuxt-link :to="product.url">
+							{{ product.name }}
 						</nuxt-link>
 					</li>
 				</ul>
@@ -31,7 +29,20 @@
 		},
 		"layout": "exercises",
 		data() {
-			return {};
+			return {
+				"productList": [
+					{
+						"id": "1",
+						"name": "Product 1",
+						"url": "/nuxt2/exercises/products/1",
+					},
+					{
+						"id": "2",
+						"name": "Product 2",
+						"url": "/nuxt2/exercises/products/2",
+					},
+				],
+			};
 		},
 	};
 </script>
