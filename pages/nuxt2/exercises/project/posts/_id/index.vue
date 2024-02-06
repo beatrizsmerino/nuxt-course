@@ -1,5 +1,5 @@
 <template>
-	<Layout :layout-navigation="true">
+	<Layout>
 		<template #title>
 			Project
 		</template>
