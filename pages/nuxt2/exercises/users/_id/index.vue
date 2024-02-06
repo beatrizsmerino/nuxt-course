@@ -28,11 +28,3 @@
 		},
 	};
 </script>
-
-<style lang="scss">
-	.user-detail {
-		.subtitle {
-			margin-bottom: 2rem !important;
-		}
-	}
-</style>
