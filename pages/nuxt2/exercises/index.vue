@@ -1,6 +1,6 @@
 <template>
 	<div class="page__container page__inner">
-		<Title>Exercises</Title>
+		<LayoutTitle>Exercises</LayoutTitle>
 
 		<div class="exercises-list">
 			<ul>
@@ -39,12 +39,12 @@
 </template>
 
 <script>
-	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
+	import LayoutTitle from "@/components/Nuxt2/Exercises/Layout/LayoutTitle";
 
 	export default {
 		"name": "ViewExercises",
 		"components": {
-			Title,
+			LayoutTitle,
 		},
 		"layout": "exercises",
 		data() {

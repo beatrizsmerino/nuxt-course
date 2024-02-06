@@ -1,23 +1,23 @@
 <template>
 	<div class="page__container page__inner">
-		<Title>Product</Title>
+		<LayoutTitle>Product</LayoutTitle>
 
 		<Breadcrumbs :breadcrumbs-list-data="breadcrumbsListData" />
 
-		<Subtitle>Product ID: {{ $route.params.id }}</Subtitle>
+		<LayoutSubtitle>Product ID: {{ $route.params.id }}</LayoutSubtitle>
 	</div>
 </template>
 
 <script>
 	import Breadcrumbs from "@/components/Nuxt2/Exercises/Products/Breadcrumbs";
-	import Subtitle from "@/components/Nuxt2/Exercises/Layout/Subtitle";
-	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
+	import LayoutSubtitle from "@/components/Nuxt2/Exercises/Layout/LayoutSubtitle";
+	import LayoutTitle from "@/components/Nuxt2/Exercises/Layout/LayoutTitle";
 
 	export default {
 		"name": "ViewProductsDetail",
 		"components": {
-			Title,
-			Subtitle,
+			LayoutTitle,
+			LayoutSubtitle,
 			Breadcrumbs,
 		},
 		"layout": "exercises",

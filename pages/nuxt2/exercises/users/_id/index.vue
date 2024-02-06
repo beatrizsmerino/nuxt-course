@@ -1,18 +1,18 @@
 <template>
 	<div class="user-detail">
-		<Subtitle>User</Subtitle>
+		<LayoutSubtitle>User</LayoutSubtitle>
 
 		<p>User ID: {{ $route.params.id }}</p>
 	</div>
 </template>
 
 <script>
-	import Subtitle from "@/components/Nuxt2/Exercises/Layout/Subtitle";
+	import LayoutSubtitle from "@/components/Nuxt2/Exercises/Layout/LayoutSubtitle";
 
 	export default {
 		"name": "ViewUsersDetail",
 		"components": {
-			Subtitle,
+			LayoutSubtitle,
 		},
 		validate(data) {
 			console.log(data);

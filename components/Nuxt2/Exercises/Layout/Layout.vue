@@ -1,12 +1,12 @@
 <template>
 	<div class="layout__inner page__container page__inner">
-		<Title>Project</Title>
+		<LayoutTitle>Project</LayoutTitle>
 
-		<Navigation />
+		<LayoutNavigation />
 
-		<Subtitle class="layout__title">
+		<LayoutSubtitle class="layout__title">
 			<slot name="title" />
-		</Subtitle>
+		</LayoutSubtitle>
 
 		<section class="layout__content">
 			<slot name="content" />
@@ -15,16 +15,16 @@
 </template>
 
 <script>
-	import Navigation from "@/components/Nuxt2/Exercises/Layout/Navigation";
-	import Subtitle from "@/components/Nuxt2/Exercises/Layout/Subtitle";
-	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
+	import LayoutNavigation from "@/components/Nuxt2/Exercises/Layout/LayoutNavigation";
+	import LayoutSubtitle from "@/components/Nuxt2/Exercises/Layout/LayoutSubtitle";
+	import LayoutTitle from "@/components/Nuxt2/Exercises/Layout/LayoutTitle";
 
 	export default {
 		"name": "Layout",
 		"components": {
-			Title,
-			Navigation,
-			Subtitle,
+			LayoutTitle,
+			LayoutNavigation,
+			LayoutSubtitle,
 		},
 		"layout": "exercises",
 	};
