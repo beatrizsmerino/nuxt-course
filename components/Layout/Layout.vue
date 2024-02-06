@@ -6,11 +6,6 @@
 
 		<LayoutNavigation class="layout__navigation" />
 
-		<slot
-			name="breadcrumbs"
-			class="layout__breadcrumbs"
-		/>
-
 		<LayoutSubtitle class="layout__subtitle">
 			<slot name="subtitle" />
 		</LayoutSubtitle>
