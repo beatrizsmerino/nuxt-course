@@ -10,5 +10,3 @@
 		"layout": "exercises",
 	};
 </script>
-
-<style lang="scss"></style>

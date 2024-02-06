@@ -22,5 +22,3 @@
 		"layout": "exercises",
 	};
 </script>
-
-<style lang="scss" scoped></style>
