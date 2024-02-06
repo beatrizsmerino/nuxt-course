@@ -1,5 +1,5 @@
 <template>
-	<h1 class="layout-title">
+	<h1 class="exercise-title">
 		<slot />
 	</h1>
 </template>
@@ -11,7 +11,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.layout-title {
+	.exercise-title {
 		position: relative;
 		margin: 0 0 7rem;
 		color: $color-brand-1;
