@@ -7,7 +7,7 @@
 </template>
 
 <script>
-	import Layout from "@/components/Nuxt2/Exercises/Project/Layout";
+	import Layout from "@/components/Nuxt2/Exercises/Layout/Layout";
 	import PostDetail from "@/components/Nuxt2/Exercises/Project/Post/PostDetail";
 
 	export default {

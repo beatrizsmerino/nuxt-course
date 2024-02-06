@@ -15,7 +15,7 @@
 </template>
 
 <script>
-	import Navigation from "@/components/Nuxt2/Exercises/Project/Navigation";
+	import Navigation from "@/components/Nuxt2/Exercises/Layout/Navigation";
 	import Subtitle from "@/components/Nuxt2/Exercises/Layout/Subtitle";
 	import Title from "@/components/Nuxt2/Exercises/Layout/Title";
 
