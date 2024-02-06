@@ -1,6 +1,9 @@
 <template>
 	<Layout class="layout-admin">
 		<template #title>
+			Project
+		</template>
+		<template #subtitle>
 			Create a new post
 		</template>
 		<template #content>

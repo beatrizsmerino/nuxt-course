@@ -1,6 +1,9 @@
 <template>
 	<Layout class="layout-admin">
 		<template #title>
+			Project
+		</template>
+		<template #subtitle>
 			Auth
 		</template>
 		<template #content>

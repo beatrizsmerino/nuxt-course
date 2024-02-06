@@ -1,5 +1,8 @@
 <template>
 	<Layout class="layout-post">
+		<template #title>
+			Project
+		</template>
 		<template #content>
 			<PostDetail />
 		</template>

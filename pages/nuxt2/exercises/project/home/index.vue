@@ -1,6 +1,9 @@
 <template>
 	<Layout class="layout-home">
 		<template #title>
+			Project
+		</template>
+		<template #subtitle>
 			Last Posts
 		</template>
 		<template #content>

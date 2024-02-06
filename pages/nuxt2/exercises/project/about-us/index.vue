@@ -1,6 +1,9 @@
 <template>
 	<Layout class="layout-about">
 		<template #title>
+			Project
+		</template>
+		<template #subtitle>
 			Description
 		</template>
 		<template #content>
