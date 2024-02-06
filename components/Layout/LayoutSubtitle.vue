@@ -1,5 +1,5 @@
 <template>
-	<h2 class="subtitle">
+	<h2 class="layout-subtitle">
 		<slot />
 	</h2>
 </template>
@@ -11,7 +11,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.subtitle {
+	.layout-subtitle {
 		position: relative;
 		margin: 3rem 0 5rem;
 		color: $color-brand-2;
