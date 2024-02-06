@@ -6,14 +6,10 @@
 			<article class="products-list">
 				<ul>
 					<li>
-						<nuxt-link to="/nuxt2/exercises/products/1">
-							Product 1
-						</nuxt-link>
+						<nuxt-link to="/nuxt2/exercises/products/1">Product 1</nuxt-link>
 					</li>
 					<li>
-						<nuxt-link to="/nuxt2/exercises/products/2">
-							Product 2
-						</nuxt-link>
+						<nuxt-link to="/nuxt2/exercises/products/2">Product 2</nuxt-link>
 					</li>
 				</ul>
 			</article>
@@ -22,7 +18,7 @@
 </template>
 
 <script>
-	import LayoutTitle from "@/components/Nuxt2/Exercises/Project/Layout/LayoutTitle";
+	import LayoutTitle from "@/components/UI/LayoutTitle";
 
 	export default {
 		"name": "ViewProducts",

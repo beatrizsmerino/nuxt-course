@@ -18,8 +18,8 @@
 
 <script>
 	import LayoutNavigation from "@/components/Nuxt2/Exercises/Project/Layout/LayoutNavigation";
-	import LayoutSubtitle from "@/components/Nuxt2/Exercises/Project/Layout/LayoutSubtitle";
-	import LayoutTitle from "@/components/Nuxt2/Exercises/Project/Layout/LayoutTitle";
+	import LayoutSubtitle from "@/components/UI/LayoutSubtitle";
+	import LayoutTitle from "@/components/UI/LayoutTitle";
 
 	export default {
 		"name": "Layout",

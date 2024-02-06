@@ -7,7 +7,7 @@
 </template>
 
 <script>
-	import LayoutSubtitle from "@/components/Nuxt2/Exercises/Project/Layout/LayoutSubtitle";
+	import LayoutSubtitle from "@/components/UI/LayoutSubtitle";
 
 	export default {
 		"name": "ViewUsersDetail",
