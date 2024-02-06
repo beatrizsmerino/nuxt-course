@@ -39,7 +39,7 @@
 
 <script>
 	export default {
-		"name": "Navigation",
+		"name": "LayoutNavigation",
 		"layout": "exercises",
 		data() {
 			return {
