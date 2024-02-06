@@ -11,7 +11,7 @@
 
 <script>
 	import postListData from "~/assets/data/data-post-list.json";
-	import Layout from "@/components/Nuxt2/Exercises/Layout/Layout";
+	import Layout from "@/components/Layout/Layout";
 	import PostForm from "@/components/Nuxt2/Exercises/Project/Post/PostForm";
 
 	export default {

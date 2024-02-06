@@ -42,7 +42,7 @@
 <script>
 	import FormField from "@/components/Nuxt2/Exercises/Users/Form/FormField";
 	import FormLabel from "@/components/Nuxt2/Exercises/Users/Form/FormLabel";
-	import LayoutTitle from "@/components/Nuxt2/Exercises/Layout/LayoutTitle";
+	import LayoutTitle from "@/components/Layout/LayoutTitle";
 
 	export default {
 		"name": "ViewUsers",

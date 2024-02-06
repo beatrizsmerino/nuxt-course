@@ -22,7 +22,7 @@
 </template>
 
 <script>
-	import LayoutTitle from "@/components/Nuxt2/Exercises/Layout/LayoutTitle";
+	import LayoutTitle from "@/components/Layout/LayoutTitle";
 
 	export default {
 		"name": "ViewProducts",
