@@ -28,29 +28,12 @@
 			UIExerciseTitle,
 		},
 		"layout": "exercises",
-		data() {
-			return {
-				"productList": [],
-			};
-		},
-		created() {
-			this.getProducts();
-		},
-		"methods": {
-			getProducts() {
-				try {
-					setTimeout(async () => {
-						const response = await fetch("https://fakestoreapi.com/products");
-						const json = await response.json();
-						json.map(product => (product.url = `/nuxt2/exercises/products/${product.id}`));
-						this.productList = json;
+		async asyncData() {
+			const response = await fetch("https://fakestoreapi.com/products");
+			const products = await response.json();
+			products.forEach(product => (product.url = `/nuxt2/exercises/products/${product.id}`));
 
-						// console.log(json);
-					}, 10000);
-				} catch (error) {
-					console.error("Error fetching products:", error);
-				}
-			},
+			return { "productList": products };
 		},
 	};
 </script>
