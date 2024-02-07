@@ -28,14 +28,26 @@
 			UIExerciseTitle,
 		},
 		"layout": "exercises",
-		async asyncData() {
+		asyncData(context, callback) {
+			console.log("asyncData is executed!");
+			console.log(context);
 			// eslint-disable-next-line nuxt/no-timing-in-fetch-data
-			await new Promise(resolve => setTimeout(resolve, 10000));
-			const response = await fetch("https://fakestoreapi.com/products");
-			const products = await response.json();
-			products.forEach(product => (product.url = `/nuxt2/exercises/products/${product.id}`));
-
-			return { "productList": products };
+			setTimeout(() => {
+				callback(null, {
+					"productList": [
+						{
+							"id": "1",
+							"title": "Product 1",
+							"url": "/nuxt2/exercises/products/1",
+						},
+						{
+							"id": "2",
+							"title": "Product 2",
+							"url": "/nuxt2/exercises/products/2",
+						},
+					],
+				});
+			}, 10000);
 		},
 	};
 </script>
