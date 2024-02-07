@@ -28,14 +28,8 @@
 			UIExerciseTitle,
 		},
 		"layout": "exercises",
-		// eslint-disable-next-line consistent-return, max-statements, complexity
+		// eslint-disable-next-line consistent-return, complexity
 		async asyncData(context) {
-			console.log(context);
-			await new Promise(resolve => {
-				// eslint-disable-next-line nuxt/no-timing-in-fetch-data
-				setTimeout(resolve, 10000);
-			});
-
 			try {
 				const response = await fetch("https://fakestoreapi.com/products");
 				if (!response.ok) {
