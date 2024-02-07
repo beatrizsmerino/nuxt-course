@@ -28,6 +28,7 @@
 			UIExerciseTitle,
 		},
 		"layout": "exercises",
+		// eslint-disable-next-line consistent-return, max-statements, complexity
 		async asyncData(context) {
 			console.log(context);
 			await new Promise(resolve => {
@@ -35,14 +36,26 @@
 				setTimeout(resolve, 10000);
 			});
 
-			const response = await fetch("https://fakestoreapi.com/products");
-			const products = await response.json();
+			try {
+				const response = await fetch("https://fakestoreapi.com/products");
+				if (!response.ok) {
+					throw new Error("Error fetching products");
+				}
+				const products = await response.json();
 
-			products.forEach(product => {
-				product.url = `${context.route.path}/${product.id}`;
-			});
+				products.forEach(product => {
+					product.url = `${context.route.path}/${product.id}`;
+				});
 
-			return { "productList": products };
+				return { "productList": products };
+			} catch (error) {
+				const message =
+					error.response && error.response.data && error.response.data.message
+						? error.response.data.message
+						: "Error fetching products";
+				context.error({ "statusCode": 404,
+					message });
+			}
 		},
 	};
 </script>
