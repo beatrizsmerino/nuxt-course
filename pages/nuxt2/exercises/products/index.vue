@@ -37,14 +37,16 @@
 			this.getProducts();
 		},
 		"methods": {
-			async getProducts() {
+			getProducts() {
 				try {
-					const response = await fetch("https://fakestoreapi.com/products");
-					const json = await response.json();
-					json.map(product => (product.url = `/nuxt2/exercises/products/${product.id}`));
-					this.productList = json;
+					setTimeout(async () => {
+						const response = await fetch("https://fakestoreapi.com/products");
+						const json = await response.json();
+						json.map(product => (product.url = `/nuxt2/exercises/products/${product.id}`));
+						this.productList = json;
 
-					// console.log(json);
+						// console.log(json);
+					}, 10000);
 				} catch (error) {
 					console.error("Error fetching products:", error);
 				}
