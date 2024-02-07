@@ -29,6 +29,8 @@
 		},
 		"layout": "exercises",
 		async asyncData() {
+			// eslint-disable-next-line nuxt/no-timing-in-fetch-data
+			await new Promise(resolve => setTimeout(resolve, 10000));
 			const response = await fetch("https://fakestoreapi.com/products");
 			const products = await response.json();
 			products.forEach(product => (product.url = `/nuxt2/exercises/products/${product.id}`));
