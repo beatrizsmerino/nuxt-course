@@ -5,14 +5,12 @@
 		<section>
 			<article class="products-list">
 				<ul>
-					<li>
-						<nuxt-link to="/nuxt2/exercises/products/1">
-							Product 1
-						</nuxt-link>
-					</li>
-					<li>
-						<nuxt-link to="/nuxt2/exercises/products/2">
-							Product 2
+					<li
+						v-for="product in productList"
+						:key="product.id"
+					>
+						<nuxt-link :to="product.url">
+							{{ product.title }}
 						</nuxt-link>
 					</li>
 				</ul>
@@ -30,8 +28,28 @@
 			UIExerciseTitle,
 		},
 		"layout": "exercises",
-		data() {
-			return {};
+		// eslint-disable-next-line consistent-return, complexity
+		async asyncData(context) {
+			try {
+				const response = await fetch("https://fakestoreapi.com/products");
+				if (!response.ok) {
+					throw new Error("Error fetching products");
+				}
+				const products = await response.json();
+
+				products.forEach(product => {
+					product.url = `${context.route.path}/${product.id}`;
+				});
+
+				return { "productList": products };
+			} catch (error) {
+				const message =
+					error.response && error.response.data && error.response.data.message
+						? error.response.data.message
+						: "Error fetching products";
+				context.error({ "statusCode": 404,
+					message });
+			}
 		},
 	};
 </script>
@@ -42,6 +60,7 @@
 
 		ul {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 			width: 100%;
 			padding: 0;
