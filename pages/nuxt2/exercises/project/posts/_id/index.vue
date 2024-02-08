@@ -5,7 +5,16 @@
 		</template>
 		<template #content>
 			<article>
-				<PostDetail :post-data="getPost" />
+				<p v-if="isLoading">
+					Cargando datos...
+				</p>
+				<p v-else-if="isError">
+					Error al cargar los datos
+				</p>
+				<PostDetail
+					v-else
+					:post-data="getPost"
+				/>
 			</article>
 		</template>
 	</Layout>
@@ -28,6 +37,12 @@
 			},
 			getPost() {
 				return this.getPostList[this.$route.params.id];
+			},
+			isLoading() {
+				return this.$store.state.isLoading;
+			},
+			isError() {
+				return this.$store.state.isError;
 			},
 		},
 	};

@@ -8,7 +8,14 @@
 		</template>
 		<template #content>
 			<article>
+				<p v-if="isLoading">
+					Cargando datos...
+				</p>
+				<p v-else-if="isError">
+					Error al cargar los datos
+				</p>
 				<PostList
+					v-else
 					:post-list-data="getPostList"
 					:show-last-post-list="true"
 				/>
@@ -31,6 +38,12 @@
 		"computed": {
 			getPostList() {
 				return this.$store.getters.getPostList;
+			},
+			isLoading() {
+				return this.$store.state.isLoading;
+			},
+			isError() {
+				return this.$store.state.isError;
 			},
 		},
 	};

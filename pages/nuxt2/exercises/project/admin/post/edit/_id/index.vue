@@ -8,7 +8,16 @@
 		</template>
 		<template #content>
 			<article>
-				<PostForm :post-data="getPostSelected" />
+				<p v-if="isLoading">
+					Cargando datos...
+				</p>
+				<p v-else-if="isError">
+					Error al cargar los datos
+				</p>
+				<PostForm
+					v-else
+					:post-data="getPostSelected"
+				/>
 			</article>
 		</template>
 	</Layout>
@@ -31,6 +40,12 @@
 			},
 			getPostSelected() {
 				return this.getPostList.filter(item => item.id == this.$route.params.id)[0];
+			},
+			isLoading() {
+				return this.$store.state.isLoading;
+			},
+			isError() {
+				return this.$store.state.isError;
 			},
 		},
 	};
