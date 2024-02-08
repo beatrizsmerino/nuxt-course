@@ -32,7 +32,6 @@ const createStore = () => new Vuex.Store({
 				}, 1000);
 			})
 				.catch(error => {
-					context.error(error);
 					vuexContext.commit("setError", error);
 					vuexContext.commit("setLoading", false);
 				});
