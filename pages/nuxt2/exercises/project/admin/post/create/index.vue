@@ -8,7 +8,7 @@
 		</template>
 		<template #content>
 			<article>
-				<PostForm />
+				<PostForm @save-post="createPost" />
 			</article>
 		</template>
 	</Layout>
@@ -25,5 +25,10 @@
 			PostForm,
 		},
 		"layout": "exercises",
+		"methods": {
+			createPost(postData) {
+				console.log("Data of createPost", postData);
+			},
+		},
 	};
 </script>
