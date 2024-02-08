@@ -6,7 +6,7 @@
 		<template #content>
 			<article>
 				<p v-if="isError">
-					Error al cargar los datos
+					Error loading data
 				</p>
 				<PostDetail
 					v-else
