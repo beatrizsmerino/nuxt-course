@@ -95,6 +95,7 @@
 			return {
 				"formLabelModifier": "",
 				"formFieldModifier": "",
+				"userInteracted": false,
 				"isFocus": false,
 			};
 		},
@@ -111,7 +112,7 @@
 				return this.selectValue === "";
 			},
 			isError() {
-				return this.selectRequired && this.isEmpty;
+				return this.selectRequired && this.isEmpty && this.userInteracted;
 			},
 		},
 		created() {
@@ -126,9 +127,11 @@
 			},
 			onFocus() {
 				this.isFocus = true;
+				this.userInteracted = true;
 			},
 			onBlur() {
 				this.isFocus = false;
+				this.userInteracted = true;
 			},
 		},
 	};
