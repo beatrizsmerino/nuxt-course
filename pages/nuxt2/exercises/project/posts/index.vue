@@ -40,5 +40,9 @@
 					context.error(error);
 				});
 		},
+		created() {
+			this.$store.dispatch("setPostList", this.postList);
+			console.log(this.$store.getters.postList);
+		},
 	};
 </script>
