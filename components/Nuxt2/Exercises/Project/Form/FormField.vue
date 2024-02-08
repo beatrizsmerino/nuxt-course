@@ -21,7 +21,6 @@
 			:required="fieldRequired"
 			@focus="onFocus"
 			@blur="onBlur"
-			@keypress="onKeyPress"
 		>
 		<textarea
 			v-if="checkTag == 'textarea'"
@@ -35,7 +34,6 @@
 			:required="fieldRequired"
 			@focus="onFocus"
 			@blur="onBlur"
-			@keypress="onKeyPress"
 		/>
 	</div>
 </template>
@@ -87,9 +85,7 @@
 				"formItemModifier": "",
 				"formLabelModifier": "",
 				"formFieldModifier": "",
-				"isEmpty": false,
 				"isFocus": false,
-				"isError": false,
 			};
 		},
 		"computed": {
@@ -104,10 +100,15 @@
 					this.$emit("update:fieldValue", newValue);
 				},
 			},
+			isEmpty() {
+				return this.fieldValue === "";
+			},
+			isError() {
+				return this.fieldRequired && this.isEmpty;
+			},
 		},
 		created() {
 			this.createdCSSModifier();
-			this.onCreated();
 		},
 		"methods": {
 			createdCSSModifier() {
@@ -120,36 +121,11 @@
 					this.formItemModifier = "form__item--textarea";
 				}
 			},
-			checkEmpty() {
-				if (this.fieldValue === "") {
-					this.isEmpty = true;
-				} else {
-					this.isEmpty = false;
-				}
-			},
-			checkError() {
-				if (this.fieldRequired && this.isEmpty) {
-					this.isError = true;
-				} else {
-					this.isError = false;
-				}
-			},
 			onFocus() {
-				this.checkEmpty();
 				this.isFocus = true;
-				this.checkError();
 			},
 			onBlur() {
-				this.checkEmpty();
 				this.isFocus = false;
-				this.checkError();
-			},
-			onKeyPress() {
-				this.checkEmpty();
-				this.checkError();
-			},
-			onCreated() {
-				this.checkEmpty();
 			},
 		},
 	};

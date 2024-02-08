@@ -95,9 +95,7 @@
 			return {
 				"formLabelModifier": "",
 				"formFieldModifier": "",
-				"isEmpty": false,
 				"isFocus": false,
-				"isError": false,
 			};
 		},
 		"computed": {
@@ -109,10 +107,15 @@
 					this.$emit("update:selectValue", newValue);
 				},
 			},
+			isEmpty() {
+				return this.selectValue === "";
+			},
+			isError() {
+				return this.selectRequired && this.isEmpty;
+			},
 		},
 		created() {
 			this.createdCSSModifier();
-			this.onCreated();
 		},
 		"methods": {
 			createdCSSModifier() {
@@ -121,32 +124,11 @@
 					this.formFieldModifier = `form__field--${this.selectModifier}`;
 				}
 			},
-			checkEmpty() {
-				if (this.selectValue == 0) {
-					this.isEmpty = true;
-				} else {
-					this.isEmpty = false;
-				}
-			},
-			checkError() {
-				if (this.selectRequired && this.isEmpty) {
-					this.isError = true;
-				} else {
-					this.isError = false;
-				}
-			},
 			onFocus() {
-				this.checkEmpty();
 				this.isFocus = true;
-				this.checkError();
 			},
 			onBlur() {
-				this.checkEmpty();
 				this.isFocus = false;
-				this.checkError();
-			},
-			onCreated() {
-				this.checkEmpty();
 			},
 		},
 	};
