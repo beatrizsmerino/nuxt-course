@@ -14,6 +14,7 @@
 				<PostForm
 					v-else
 					:post-data="getPostSelected"
+					@save-post="editPost"
 				/>
 			</article>
 		</template>
@@ -40,6 +41,11 @@
 			},
 			isError() {
 				return this.$store.state.isError;
+			},
+		},
+		"methods": {
+			editPost(postData) {
+				console.log("Data of editPost", postData);
 			},
 		},
 	};

@@ -132,7 +132,8 @@
 		},
 		"methods": {
 			onSave() {
-				console.log(this.form);
+				console.log("Data of PostForm", this.form);
+				this.$emit("save-post", this.form);
 			},
 			onCancel() {
 				this.$router.push("/nuxt2/exercises/project/admin");
