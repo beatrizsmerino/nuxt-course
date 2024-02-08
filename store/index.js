@@ -12,7 +12,7 @@ const createStore = () => new Vuex.Store({
 		},
 	},
 	"actions": {
-		fetchPostList(vuexContext, context) {
+		nuxtServerInit(vuexContext, context) {
 			return new Promise((resolve, reject) => {
 				setTimeout(() => {
 					vuexContext.commit("setPostList", postListData);
