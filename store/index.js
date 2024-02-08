@@ -1,7 +1,7 @@
-import Vuex from "vuex";
+import { Store } from "vuex";
 import postListData from "~/assets/data/data-post-list.json";
 
-const createStore = () => new Vuex.Store({
+const createStore = () => new Store({
 	"state": {
 		"postList": [],
 		"isError": null,
