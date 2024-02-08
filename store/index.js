@@ -16,7 +16,7 @@ const createStore = () => new Vuex.Store({
 		},
 	},
 	"getters": {
-		postList(state) {
+		getPostList(state) {
 			return state.postList;
 		},
 	},

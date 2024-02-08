@@ -8,7 +8,7 @@
 		</template>
 		<template #content>
 			<article>
-				<PostList :post-list-data="postList" />
+				<PostList :post-list-data="getPostList" />
 			</article>
 		</template>
 	</Layout>
@@ -26,7 +26,11 @@
 			PostList,
 		},
 		"layout": "exercises",
-		asyncData(context) {
+		fetch(context) {
+			if (context.store.state.postList.length > 0) {
+				return null;
+			}
+
 			return new Promise((resolve, reject) => {
 				// eslint-disable-next-line nuxt/no-timing-in-fetch-data
 				setTimeout(() => {
@@ -35,14 +39,17 @@
 					});
 				}, 1000);
 			})
-				.then(data => data)
+				.then(data => {
+					context.store.commit("setPostList", data.postList);
+				})
 				.catch(error => {
 					context.error(error);
 				});
 		},
-		created() {
-			this.$store.dispatch("setPostList", this.postList);
-			console.log(this.$store.getters.postList);
+		"computed": {
+			getPostList() {
+				return this.$store.getters.getPostList;
+			},
 		},
 	};
 </script>
