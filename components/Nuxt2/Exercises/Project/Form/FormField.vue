@@ -18,7 +18,7 @@
 			:name="fieldId"
 			:type="fieldType"
 			:placeholder="fieldPlaceholder"
-			:required="fieldRequired ? true : false"
+			:required="fieldRequired"
 			@focus="onFocus"
 			@blur="onBlur"
 			@keypress="onKeyPress"
@@ -32,7 +32,7 @@
 			:name="fieldId"
 			:type="fieldType"
 			:placeholder="fieldPlaceholder"
-			:required="fieldRequired ? true : false"
+			:required="fieldRequired"
 			@focus="onFocus"
 			@blur="onBlur"
 			@keypress="onKeyPress"
@@ -94,11 +94,7 @@
 		},
 		"computed": {
 			checkTag() {
-				if (this.fieldTag === "textarea") {
-					return "textarea";
-				}
-
-				return "input";
+				return this.fieldTag === "textarea" ? "textarea" : "input";
 			},
 			"updateFieldValue": {
 				get() {
@@ -115,7 +111,7 @@
 		},
 		"methods": {
 			createdCSSModifier() {
-				if (this.fieldModifier !== "") {
+				if (this.fieldModifier) {
 					this.formLabelModifier = `form__label--${this.fieldModifier}`;
 					this.formFieldModifier = `form__field--${this.fieldModifier}`;
 				}
@@ -131,12 +127,6 @@
 					this.isEmpty = false;
 				}
 			},
-			addFocus() {
-				this.isFocus = true;
-			},
-			removeFocus() {
-				this.isFocus = false;
-			},
 			checkError() {
 				if (this.fieldRequired && this.isEmpty) {
 					this.isError = true;
@@ -146,12 +136,12 @@
 			},
 			onFocus() {
 				this.checkEmpty();
-				this.addFocus();
+				this.isFocus = true;
 				this.checkError();
 			},
 			onBlur() {
 				this.checkEmpty();
-				this.removeFocus();
+				this.isFocus = false;
 				this.checkError();
 			},
 			onKeyPress() {

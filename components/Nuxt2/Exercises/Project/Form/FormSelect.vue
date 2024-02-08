@@ -21,7 +21,7 @@
 				:name="selectId"
 				:class="formFieldModifier"
 				class="select__field form__field"
-				:required="selectRequired ? true : false"
+				:required="selectRequired"
 				@focus="onFocus"
 				@blur="onBlur"
 			>
@@ -116,7 +116,7 @@
 		},
 		"methods": {
 			createdCSSModifier() {
-				if (this.selectModifier !== "") {
+				if (this.selectModifier) {
 					this.formLabelModifier = `form__label--${this.selectModifier}`;
 					this.formFieldModifier = `form__field--${this.selectModifier}`;
 				}
@@ -128,12 +128,6 @@
 					this.isEmpty = false;
 				}
 			},
-			addFocus() {
-				this.isFocus = true;
-			},
-			removeFocus() {
-				this.isFocus = false;
-			},
 			checkError() {
 				if (this.selectRequired && this.isEmpty) {
 					this.isError = true;
@@ -143,12 +137,12 @@
 			},
 			onFocus() {
 				this.checkEmpty();
-				this.addFocus();
+				this.isFocus = true;
 				this.checkError();
 			},
 			onBlur() {
 				this.checkEmpty();
-				this.removeFocus();
+				this.isFocus = false;
 				this.checkError();
 			},
 			onCreated() {
