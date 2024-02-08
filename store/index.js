@@ -31,9 +31,6 @@ const createStore = () => new Vuex.Store({
 					resolve();
 				}, 1000);
 			})
-				.then(data => {
-					context.store.commit("setPostList", data.postList);
-				})
 				.catch(error => {
 					context.error(error);
 					vuexContext.commit("setError", error);
