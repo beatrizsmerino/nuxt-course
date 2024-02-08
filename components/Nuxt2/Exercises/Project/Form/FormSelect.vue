@@ -164,7 +164,6 @@
 			position: absolute;
 			top: 50%;
 			right: 0;
-			margin: 0 1rem;
 			transform: translate(0, -50%);
 			pointer-events: none;
 
@@ -191,7 +190,7 @@
 
 		&__field {
 			&--anim {
-				padding: 2rem 3rem 0.5rem 1.2rem;
+				padding: 2rem 3rem 0.4rem 1.2rem;
 			}
 		}
 
