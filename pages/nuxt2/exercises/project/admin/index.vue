@@ -9,6 +9,7 @@
 		<template #content>
 			<article>
 				<PostList
+					:post-list-data="getPostList"
 					is-admin
 					css-modifier="compacted"
 				/>
@@ -33,6 +34,11 @@
 			PostList,
 		},
 		"layout": "exercises",
+		"computed": {
+			getPostList() {
+				return this.$store.getters.getPostList;
+			},
+		},
 	};
 </script>
 

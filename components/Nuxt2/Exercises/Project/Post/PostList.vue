@@ -20,7 +20,6 @@
 
 <script>
 	import PostPreview from "./PostPreview";
-	import postListData from "~/assets/data/data-post-list.json";
 
 	export default {
 		"name": "PostList",
@@ -31,6 +30,10 @@
 			"isAdmin": {
 				"type": Boolean,
 				"default": false,
+			},
+			"postListData": {
+				"type": Array,
+				"required": true,
 			},
 			"showLastPostList": {
 				"type": Boolean,
@@ -53,7 +56,7 @@
 		},
 		data() {
 			return {
-				"postList": postListData,
+				"postList": this.postListData,
 			};
 		},
 		"computed": {

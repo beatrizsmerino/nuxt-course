@@ -5,7 +5,7 @@
 		</template>
 		<template #content>
 			<article>
-				<PostDetail />
+				<PostDetail :post-data="getPost" />
 			</article>
 		</template>
 	</Layout>
@@ -22,5 +22,13 @@
 			PostDetail,
 		},
 		"layout": "exercises",
+		"computed": {
+			getPostList() {
+				return this.$store.getters.getPostList;
+			},
+			getPost() {
+				return this.getPostList[this.$route.params.id];
+			},
+		},
 	};
 </script>

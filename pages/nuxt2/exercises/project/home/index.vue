@@ -8,7 +8,10 @@
 		</template>
 		<template #content>
 			<article>
-				<PostList :show-last-post-list="true" />
+				<PostList
+					:post-list-data="getPostList"
+					:show-last-post-list="true"
+				/>
 			</article>
 		</template>
 	</Layout>
@@ -25,5 +28,10 @@
 			PostList,
 		},
 		"layout": "exercises",
+		"computed": {
+			getPostList() {
+				return this.$store.getters.getPostList;
+			},
+		},
 	};
 </script>

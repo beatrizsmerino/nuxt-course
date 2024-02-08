@@ -5,31 +5,31 @@
 				#{{ $route.params.id }}
 			</span>
 			<img
-				:src="require(`~/assets/images/nuxt2/exercises/project/posts/${postDetail.image}`)"
-				:alt="postDetail.title"
+				:src="require(`~/assets/images/nuxt2/exercises/project/posts/${postData.image}`)"
+				:alt="postData.title"
 			>
 		</div>
 		<div class="post-detail__header">
 			<h2 class="post-detail__title">
-				{{ postDetail.title }}
+				{{ postData.title }}
 			</h2>
 			<span class="post-detail__time">
 				Last updated on:
-				<time :datetime="postDetail.date">
-					{{ postDetail.date }}
+				<time :datetime="postData.date">
+					{{ postData.date }}
 				</time>
 			</span>
 			<span class="post-detail__author">
-				Written by {{ postDetail.author }}
+				Written by {{ postData.author }}
 			</span>
 		</div>
 		<div class="post-detail__content">
 			<div
 				class="post-detail__long-description"
-				v-html="postDetail.longDescription"
+				v-html="postData.longDescription"
 			/>
 			<UIButton
-				:href="postDetail.link"
+				:href="postData.link"
 				class-type="link"
 				class="post-detail__button"
 				target="_blank"
@@ -49,18 +49,13 @@
 </template>
 
 <script>
-	import postListData from "~/assets/data/data-post-list.json";
-
 	export default {
-		"name": "PostDetail",
-		data() {
-			return {
-				"postList": postListData,
-				"postDetail": [],
-			};
-		},
-		created() {
-			this.postDetail = this.postList[this.$route.params.id];
+		"name": "PostData",
+		"props": {
+			"postData": {
+				"type": Object,
+				"required": true,
+			},
 		},
 	};
 </script>
