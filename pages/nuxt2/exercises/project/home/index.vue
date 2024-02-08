@@ -29,10 +29,19 @@
 			PostList,
 		},
 		"layout": "exercises",
-		data() {
-			return {
-				"postList": postListData,
-			};
+		asyncData(context) {
+			return new Promise((resolve, reject) => {
+				// eslint-disable-next-line nuxt/no-timing-in-fetch-data
+				setTimeout(() => {
+					resolve({
+						"postList": postListData,
+					});
+				}, 1000);
+			})
+				.then(data => data)
+				.catch(error => {
+					context.error(error);
+				});
 		},
 	};
 </script>
