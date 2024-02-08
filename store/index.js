@@ -1,7 +1,6 @@
 import Vuex from "vuex";
 import postListData from "~/assets/data/data-post-list.json";
 
-// eslint-disable-next-line import/no-named-as-default-member
 const createStore = () => new Vuex.Store({
 	"state": {
 		"postList": [],
@@ -22,10 +21,9 @@ const createStore = () => new Vuex.Store({
 			return new Promise((resolve, reject) => {
 				vuexContext.commit("setPostList", postListData);
 				resolve();
-			})
-				.catch(error => {
-					vuexContext.commit("setError", error);
-				});
+			}).catch(error => {
+				vuexContext.commit("setError", error);
+			});
 		},
 		setPostList(vuexContext, data) {
 			vuexContext.commit("setPostList", data);
