@@ -5,25 +5,26 @@ import postListData from "~/assets/data/data-post-list.json";
 const createStore = () => new Vuex.Store({
 	"state": {
 		"postList": [],
+		"isError": null,
 	},
 	"mutations": {
 		setPostList(state, data) {
 			state.postList = data;
 		},
+		setError(state, error) {
+			state.isError = error;
+		},
 	},
 	"actions": {
 		nuxtServerInit(vuexContext, context) {
+			vuexContext.commit("setError", null);
+
 			return new Promise((resolve, reject) => {
-				setTimeout(() => {
-					vuexContext.commit("setPostList", postListData);
-					resolve();
-				}, 1000);
+				vuexContext.commit("setPostList", postListData);
+				resolve();
 			})
-				.then(data => {
-					context.store.commit("setPostList", data.postList);
-				})
 				.catch(error => {
-					context.error(error);
+					vuexContext.commit("setError", error);
 				});
 		},
 		setPostList(vuexContext, data) {

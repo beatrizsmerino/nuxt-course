@@ -5,7 +5,13 @@
 		</template>
 		<template #content>
 			<article>
-				<PostDetail :post-data="getPost" />
+				<p v-if="isError">
+					Error loading data
+				</p>
+				<PostDetail
+					v-else
+					:post-data="getPost"
+				/>
 			</article>
 		</template>
 	</Layout>
@@ -28,6 +34,9 @@
 			},
 			getPost() {
 				return this.getPostList[this.$route.params.id];
+			},
+			isError() {
+				return this.$store.state.isError;
 			},
 		},
 	};

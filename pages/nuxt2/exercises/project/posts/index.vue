@@ -8,7 +8,13 @@
 		</template>
 		<template #content>
 			<article>
-				<PostList :post-list-data="getPostList" />
+				<p v-if="isError">
+					Error loading data
+				</p>
+				<PostList
+					v-else
+					:post-list-data="getPostList"
+				/>
 			</article>
 		</template>
 	</Layout>
@@ -28,6 +34,9 @@
 		"computed": {
 			getPostList() {
 				return this.$store.getters.getPostList;
+			},
+			isError() {
+				return this.$store.state.isError;
 			},
 		},
 	};
