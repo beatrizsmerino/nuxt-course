@@ -9,6 +9,7 @@
 		<template #content>
 			<article>
 				<PostList
+					:post-list-data="postList"
 					is-admin
 					css-modifier="compacted"
 				/>
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+	import postListData from "~/assets/data/data-post-list.json";
 	import Layout from "@/components/Nuxt2/Exercises/Project/Layout/Layout";
 	import PostList from "@/components/Nuxt2/Exercises/Project/Post/PostList";
 
@@ -33,6 +35,11 @@
 			PostList,
 		},
 		"layout": "exercises",
+		data() {
+			return {
+				"postList": postListData,
+			};
+		},
 	};
 </script>
 

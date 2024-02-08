@@ -8,13 +8,17 @@
 		</template>
 		<template #content>
 			<article>
-				<PostList :show-last-post-list="true" />
+				<PostList
+					:post-list-data="postList"
+					:show-last-post-list="true"
+				/>
 			</article>
 		</template>
 	</Layout>
 </template>
 
 <script>
+	import postListData from "~/assets/data/data-post-list.json";
 	import Layout from "@/components/Nuxt2/Exercises/Project/Layout/Layout";
 	import PostList from "@/components/Nuxt2/Exercises/Project/Post/PostList";
 
@@ -25,5 +29,10 @@
 			PostList,
 		},
 		"layout": "exercises",
+		data() {
+			return {
+				"postList": postListData,
+			};
+		},
 	};
 </script>
