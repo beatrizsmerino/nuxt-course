@@ -180,11 +180,7 @@
 	.form {
 		&__label {
 			&--anim {
-				top: 0.8rem;
-				transform: translate(0, 0);
-				transition: top 0.2s ease-in-out 0s;
 				color: $color-brand-3;
-				font-size: 1.2rem;
 			}
 		}
 
@@ -217,6 +213,37 @@
 							.icon {
 								fill: $color-brand-3 !important;
 							}
+						}
+					}
+				}
+			}
+
+			&.is-empty {
+				.form {
+					&__field {
+						&--anim {
+							padding: 1.2rem;
+						}
+					}
+				}
+			}
+
+			&:not(.is-empty),
+			&.is-focus {
+				.form {
+					&__label {
+						&--anim {
+							top: 0.8rem;
+							transform: translate(0, 0);
+							transition: top 0.2s ease-in-out 0s;
+							color: $color-brand-3;
+							font-size: 1.2rem;
+						}
+					}
+
+					&__field {
+						&--anim {
+							padding: 2rem 1.2rem 0.4rem !important;
 						}
 					}
 				}
