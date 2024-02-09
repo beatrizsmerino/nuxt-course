@@ -21,7 +21,7 @@
 			:id="fieldId"
 			v-model="updateFieldValue"
 			:class="`${fieldTag} ${formFieldModifier}`"
-			class="form__field form-item__field"
+			class="form__field form-field"
 			:name="fieldId"
 			:type="fieldType"
 			:placeholder="fieldPlaceholder"
@@ -34,7 +34,7 @@
 			:id="fieldId"
 			v-model="updateFieldValue"
 			:class="`${fieldTag} ${formFieldModifier}`"
-			class="form__field form-item__field"
+			class="form__field form-field"
 			:name="fieldId"
 			:type="fieldType"
 			:placeholder="fieldPlaceholder"
@@ -44,14 +44,14 @@
 		/>
 		<div
 			v-if="fieldTag == 'select'"
-			class="form-item__wrapper"
+			class="form-field__wrapper"
 		>
 			<select
 				:id="fieldId"
 				v-model="updateFieldValue"
 				:name="fieldId"
 				:class="formFieldModifier"
-				class="form__field form-item__field"
+				class="form__field form-field"
 				:required="fieldRequired"
 				@focus="onFocus"
 				@blur="onBlur"
@@ -72,11 +72,11 @@
 				</option>
 			</select>
 
-			<UIButton class="button--icon form-item__button">
+			<UIButton class="button--icon form-field__button">
 				<UIIcon
 					icon-name="chevron-down"
 					icon-aria-label="Show options"
-					class="form-item__icon"
+					class="form-field__icon"
 				/>
 			</UIButton>
 		</div>
@@ -160,7 +160,7 @@
 			createdCSSModifier() {
 				if (this.fieldModifier) {
 					this.formLabelModifier = `form-label--${this.fieldModifier}`;
-					this.formFieldModifier = `form-item__field--${this.fieldModifier}`;
+					this.formFieldModifier = `form-field--${this.fieldModifier}`;
 				}
 			},
 			onFocus() {
@@ -177,7 +177,7 @@
 
 <style lang="scss" scoped>
 	.form-item {
-		&__field {
+		.form-field {
 			width: 100%;
 			padding: 1.2rem;
 			border: 0.2rem solid $color-black;
@@ -212,20 +212,18 @@
 				}
 			}
 
-			.form-item {
-				&__field {
-					height: 16rem;
-					min-height: 16rem;
-					max-height: 29rem;
-					resize: vertical;
+			.form-field {
+				height: 16rem;
+				min-height: 16rem;
+				max-height: 29rem;
+				resize: vertical;
 
-					&::placeholder {
-						font-weight: 400 !important;
-					}
+				&::placeholder {
+					font-weight: 400 !important;
+				}
 
-					&--anim {
-						padding: 2.4rem 1.2rem 1.2rem !important;
-					}
+				&--anim {
+					padding: 2.4rem 1.2rem 1.2rem !important;
 				}
 			}
 
@@ -236,32 +234,28 @@
 					}
 				}
 
-				.form-item {
-					&__field {
-						&--anim {
-							padding: 2.4rem 1.2rem 1.2rem !important;
-						}
+				.form-field {
+					&--anim {
+						padding: 2.4rem 1.2rem 1.2rem !important;
 					}
 				}
 			}
 		}
 
 		&--select {
-			.form-item {
+			.form-field {
+				padding: 1.2rem 3rem 1.2rem 1.2rem;
+				cursor: pointer;
+				appearance: none;
+
+				&--anim {
+					padding: 2rem 3rem 0.5rem 1.2rem;
+				}
+
 				&__wrapper {
 					display: flex;
 					position: relative;
 					align-items: center;
-				}
-
-				&__field {
-					padding: 1.2rem 3rem 1.2rem 1.2rem;
-					cursor: pointer;
-					appearance: none;
-
-					&--anim {
-						padding: 2rem 3rem 0.5rem 1.2rem;
-					}
 				}
 
 				&__button {
@@ -290,12 +284,10 @@
 				}
 			}
 
-			.form-item {
-				&__field {
-					&--anim {
-						border-color: $color-brand-3 !important;
-						background-color: rgba($color-brand-3, 0.2) !important;
-					}
+			.form-field {
+				&--anim {
+					border-color: $color-brand-3 !important;
+					background-color: rgba($color-brand-3, 0.2) !important;
 				}
 
 				&__button {
@@ -309,12 +301,10 @@
 		}
 
 		&:not(.is-focus) {
-			.form-item {
-				&__field {
-					&--anim {
-						&::placeholder {
-							color: transparent !important;
-						}
+			.form-field {
+				&--anim {
+					&::placeholder {
+						color: transparent !important;
 					}
 				}
 			}
@@ -322,20 +312,16 @@
 
 		&.is-empty {
 			.form-item {
-				.form-item {
-					&__field {
-						&--anim {
-							padding: 1.2rem;
-						}
+				.form-field {
+					&--anim {
+						padding: 1.2rem;
 					}
 				}
 
 				&--select {
-					.form-item {
-						&__field {
-							&--anim {
-								padding: 1.2rem 3rem 1.2rem 1.2rem;
-							}
+					.form-field {
+						&--anim {
+							padding: 1.2rem 3rem 1.2rem 1.2rem;
 						}
 					}
 				}
@@ -354,11 +340,9 @@
 				}
 			}
 
-			.form-item {
-				&__field {
-					&--anim {
-						padding: 2rem 1.2rem 0.5rem !important;
-					}
+			.form-field {
+				&--anim {
+					padding: 2rem 1.2rem 0.5rem !important;
 				}
 			}
 		}
@@ -370,12 +354,10 @@
 				}
 			}
 
-			.form-item {
-				&__field {
-					&--anim {
-						border-color: $color-error;
-						background-color: rgba($color-error, 0.2);
-					}
+			.form-field {
+				&--anim {
+					border-color: $color-error;
+					background-color: rgba($color-error, 0.2);
 				}
 
 				&__button {
