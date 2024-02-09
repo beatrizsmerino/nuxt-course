@@ -87,7 +87,7 @@
 	import FormLabel from "@/components/Nuxt2/Exercises/Project/Form/FormLabel";
 
 	export default {
-		"name": "FormField",
+		"name": "FormItem",
 		"components": {
 			FormLabel,
 		},
