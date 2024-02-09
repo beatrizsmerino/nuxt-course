@@ -52,7 +52,6 @@
 			:field-value="form.shortDescription"
 			field-id="postFormShortDescription"
 			field-label="Short description"
-			field-tag="textarea"
 			field-placeholder="Capture the essence in a sentence"
 			field-modifier="anim"
 			:field-required="true"
