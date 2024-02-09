@@ -168,6 +168,8 @@
 					this.formItemModifier = "form-item--textarea";
 				} else if (this.fieldTag === "select") {
 					this.formItemModifier = "form-item--select";
+				} else {
+					this.formItemModifier = "form-item--input";
 				}
 			},
 			onFocus() {
