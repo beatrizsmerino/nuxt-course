@@ -26,8 +26,7 @@
 				@blur="onBlur"
 			>
 				<option
-					value="0"
-					selected
+					:value="isFocus && isEmpty ? '' : 'Select one option'"
 					disabled
 					hidden
 				>
