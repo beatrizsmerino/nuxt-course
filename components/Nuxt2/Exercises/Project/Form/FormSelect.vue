@@ -190,7 +190,7 @@
 
 		&__field {
 			&--anim {
-				padding: 2rem 3rem 0.4rem 1.2rem;
+				padding: 2rem 3rem 0.5rem 1.2rem;
 			}
 		}
 

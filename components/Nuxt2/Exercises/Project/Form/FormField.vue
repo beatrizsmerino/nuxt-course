@@ -159,7 +159,7 @@
 			}
 
 			&--anim {
-				padding: 2rem 1.2rem 0.4rem;
+				padding: 2rem 1.2rem 0.5rem;
 			}
 		}
 
@@ -257,7 +257,7 @@
 
 					&__field {
 						&--anim {
-							padding: 2rem 1.2rem 0.4rem !important;
+							padding: 2rem 1.2rem 0.5rem !important;
 						}
 					}
 				}
