@@ -17,7 +17,7 @@
 			:class="{ 'form__label--required': fieldRequired }"
 		/>
 		<input
-			v-if="checkTag == 'input'"
+			v-if="fieldTag == 'input'"
 			:id="fieldId"
 			v-model="updateFieldValue"
 			:class="`${fieldTag} ${formFieldModifier}`"
@@ -30,7 +30,7 @@
 			@blur="onBlur"
 		>
 		<textarea
-			v-if="checkTag == 'textarea'"
+			v-if="fieldTag == 'textarea'"
 			:id="fieldId"
 			v-model="updateFieldValue"
 			:class="`${fieldTag} ${formFieldModifier}`"
@@ -42,6 +42,44 @@
 			@focus="onFocus"
 			@blur="onBlur"
 		/>
+		<div
+			v-if="fieldTag == 'select'"
+			class="form__wrapper"
+		>
+			<select
+				:id="fieldId"
+				v-model="updateFieldValue"
+				:name="fieldId"
+				:class="formFieldModifier"
+				class="form__field"
+				:required="fieldRequired"
+				@focus="onFocus"
+				@blur="onBlur"
+			>
+				<option
+					:value="isFocus && isEmpty ? '' : 'Select one option'"
+					disabled
+					hidden
+				>
+					{{ fieldPlaceholder || "Select one option" }}
+				</option>
+				<option
+					v-for="(item, index) in fieldList"
+					:key="`option-${index}`"
+					:value="item"
+				>
+					{{ item }}
+				</option>
+			</select>
+
+			<UIButton class="form__button button--icon">
+				<UIIcon
+					icon-name="chevron-down"
+					icon-aria-label="Show options"
+					class="form__icon"
+				/>
+			</UIButton>
+		</div>
 	</div>
 </template>
 
@@ -78,6 +116,10 @@
 				"type": String,
 				"default": "",
 			},
+			"fieldList": {
+				"type": Array,
+				"default": () => [],
+			},
 			"fieldPlaceholder": {
 				"type": String,
 				"default": "...",
@@ -97,9 +139,6 @@
 			};
 		},
 		"computed": {
-			checkTag() {
-				return this.fieldTag === "textarea" ? "textarea" : "input";
-			},
 			"updateFieldValue": {
 				get() {
 					return this.fieldValue;
@@ -127,6 +166,8 @@
 
 				if (this.fieldTag === "textarea") {
 					this.formItemModifier = "form__item--textarea";
+				} else if (this.fieldTag === "select") {
+					this.formItemModifier = "form__item--select";
 				}
 			},
 			onFocus() {
@@ -187,6 +228,15 @@
 					}
 
 					&__field {
+						height: 16rem;
+						min-height: 16rem;
+						max-height: 29rem;
+						resize: vertical;
+
+						&::placeholder {
+							font-weight: 400 !important;
+						}
+
 						&--anim {
 							padding: 2.4rem 1.2rem 1.2rem !important;
 						}
@@ -210,6 +260,43 @@
 				}
 			}
 
+			&--select {
+				.form {
+					&__wrapper {
+						display: flex;
+						position: relative;
+						align-items: center;
+					}
+
+					&__field {
+						padding: 1.2rem 3rem 1.2rem 1.2rem;
+						cursor: pointer;
+						appearance: none;
+
+						&--anim {
+							padding: 2rem 3rem 0.5rem 1.2rem;
+						}
+					}
+
+					&__button {
+						display: inline-block;
+						position: absolute;
+						top: 50%;
+						right: 0;
+						transform: translate(0, -50%);
+						pointer-events: none;
+
+						::v-deep {
+							.icon {
+								width: 2rem;
+								height: 2rem;
+								fill: $color-black;
+							}
+						}
+					}
+				}
+			}
+
 			&.is-focus {
 				.form {
 					&__label {
@@ -222,6 +309,14 @@
 						&--anim {
 							border-color: $color-brand-3 !important;
 							background-color: rgba($color-brand-3, 0.2) !important;
+						}
+					}
+
+					&__button {
+						::v-deep {
+							.icon {
+								fill: $color-brand-3 !important;
+							}
 						}
 					}
 				}
@@ -241,9 +336,23 @@
 
 			&.is-empty {
 				.form {
-					&__field {
-						&--anim {
-							padding: 1.2rem;
+					&__item {
+						.form {
+							&__field {
+								&--anim {
+									padding: 1.2rem;
+								}
+							}
+						}
+
+						&--select {
+							.form {
+								&__field {
+									&--anim {
+										padding: 1.2rem 3rem 1.2rem 1.2rem;
+									}
+								}
+							}
 						}
 					}
 				}
@@ -284,19 +393,16 @@
 							background-color: rgba($color-error, 0.2);
 						}
 					}
+
+					&__button {
+						::v-deep {
+							.icon {
+								fill: $color-error;
+							}
+						}
+					}
 				}
 			}
-		}
-	}
-
-	.textarea {
-		height: 16rem;
-		min-height: 16rem;
-		max-height: 29rem;
-		resize: vertical;
-
-		&::placeholder {
-			font-weight: 400 !important;
 		}
 	}
 </style>

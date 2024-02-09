@@ -38,15 +38,16 @@
 			field-modifier="anim"
 			@update:fieldValue="value => (form.link = value)"
 		/>
-		<FormSelect
-			:select-value="form.category"
-			select-label="Category"
-			select-id="postFormCategory"
-			:select-options="data.categoriesList"
-			select-placeholder="Choose the kingdom of your creation"
-			select-modifier="anim"
-			:select-required="true"
-			@update:selectValue="value => (form.category = value)"
+		<FormField
+			:field-value="form.category"
+			field-label="Category"
+			field-id="postFormCategory"
+			field-tag="select"
+			:field-list="data.categoriesList"
+			field-placeholder="Choose the kingdom of your creation"
+			field-modifier="anim"
+			:field-required="true"
+			@update:fieldValue="value => (form.category = value)"
 		/>
 		<FormField
 			:field-value="form.shortDescription"
@@ -86,13 +87,11 @@
 
 <script>
 	import FormField from "@/components/Nuxt2/Exercises/Project/Form/FormField";
-	import FormSelect from "@/components/Nuxt2/Exercises/Project/Form/FormSelect";
 
 	export default {
 		"name": "PostForm",
 		"components": {
 			FormField,
-			FormSelect,
 		},
 		"props": {
 			"postData": {
