@@ -1,7 +1,14 @@
 <template>
 	<div
 		class="form__item"
-		:class="[formItemModifier, { 'is-empty': isEmpty, 'is-focus': isFocus, 'is-error': isError }]"
+		:class="[
+			formItemModifier,
+			{
+				'is-empty': isEmpty,
+				'is-focus': isFocus,
+				'is-error': isError,
+			},
+		]"
 	>
 		<FormLabel
 			:label-id="fieldId"
