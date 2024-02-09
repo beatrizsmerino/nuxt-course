@@ -14,7 +14,7 @@
 			:label-id="fieldId"
 			:label-modifier="formLabelModifier"
 			:label-text="fieldLabel"
-			:class="{ 'form__label--required': fieldRequired }"
+			:class="{ 'form-label--required': fieldRequired }"
 		/>
 		<input
 			v-if="fieldTag == 'input'"
@@ -160,7 +160,7 @@
 		"methods": {
 			createdCSSModifier() {
 				if (this.fieldModifier) {
-					this.formLabelModifier = `form__label--${this.fieldModifier}`;
+					this.formLabelModifier = `form-label--${this.fieldModifier}`;
 					this.formFieldModifier = `form__field--${this.fieldModifier}`;
 				}
 
@@ -211,7 +211,7 @@
 			}
 		}
 
-		&__label {
+		&-label {
 			&--anim {
 				color: $color-brand-3;
 			}
@@ -220,7 +220,7 @@
 		&__item {
 			&--textarea {
 				.form {
-					&__label {
+					&-label {
 						&--anim {
 							top: 1.2rem;
 							transform: none;
@@ -245,7 +245,7 @@
 
 				&.is-focus {
 					.form {
-						&__label {
+						&-label {
 							&--anim {
 								top: 1rem;
 							}
@@ -299,7 +299,7 @@
 
 			&.is-focus {
 				.form {
-					&__label {
+					&-label {
 						&--anim {
 							color: $color-brand-3 !important;
 						}
@@ -361,7 +361,7 @@
 			&:not(.is-empty),
 			&.is-focus {
 				.form {
-					&__label {
+					&-label {
 						&--anim {
 							top: 0.8rem;
 							transform: translate(0, 0);
@@ -381,7 +381,7 @@
 
 			&.is-error {
 				.form {
-					&__label {
+					&-label {
 						&--anim {
 							color: $color-error;
 						}
