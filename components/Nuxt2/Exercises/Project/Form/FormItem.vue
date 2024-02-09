@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="form__item"
+		class="form__item form-item"
 		:class="[
 			formItemModifier,
 			{
@@ -21,7 +21,7 @@
 			:id="fieldId"
 			v-model="updateFieldValue"
 			:class="`${fieldTag} ${formFieldModifier}`"
-			class="form__field"
+			class="form__field form-item__field"
 			:name="fieldId"
 			:type="fieldType"
 			:placeholder="fieldPlaceholder"
@@ -34,7 +34,7 @@
 			:id="fieldId"
 			v-model="updateFieldValue"
 			:class="`${fieldTag} ${formFieldModifier}`"
-			class="form__field"
+			class="form-item__field"
 			:name="fieldId"
 			:type="fieldType"
 			:placeholder="fieldPlaceholder"
@@ -44,14 +44,14 @@
 		/>
 		<div
 			v-if="fieldTag == 'select'"
-			class="form__wrapper"
+			class="form-item__wrapper"
 		>
 			<select
 				:id="fieldId"
 				v-model="updateFieldValue"
 				:name="fieldId"
 				:class="formFieldModifier"
-				class="form__field"
+				class="form-item__field"
 				:required="fieldRequired"
 				@focus="onFocus"
 				@blur="onBlur"
@@ -72,11 +72,11 @@
 				</option>
 			</select>
 
-			<UIButton class="form__button button--icon">
+			<UIButton class="button--icon form-item__button">
 				<UIIcon
 					icon-name="chevron-down"
 					icon-aria-label="Show options"
-					class="form__icon"
+					class="form-item__icon"
 				/>
 			</UIButton>
 		</div>
@@ -161,13 +161,13 @@
 			createdCSSModifier() {
 				if (this.fieldModifier) {
 					this.formLabelModifier = `form-label--${this.fieldModifier}`;
-					this.formFieldModifier = `form__field--${this.fieldModifier}`;
+					this.formFieldModifier = `form-item__field--${this.fieldModifier}`;
 				}
 
 				if (this.fieldTag === "textarea") {
-					this.formItemModifier = "form__item--textarea";
+					this.formItemModifier = "form-item--textarea";
 				} else if (this.fieldTag === "select") {
-					this.formItemModifier = "form__item--select";
+					this.formItemModifier = "form-item--select";
 				}
 			},
 			onFocus() {
@@ -183,7 +183,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.form {
+	.form-item {
 		&__field {
 			width: 100%;
 			padding: 1.2rem;
@@ -211,194 +211,190 @@
 			}
 		}
 
-		&-label {
+		.form-label {
 			&--anim {
 				color: $color-brand-3;
 			}
 		}
 
-		&__item {
-			&--textarea {
-				.form {
-					&-label {
-						&--anim {
-							top: 1.2rem;
-							transform: none;
-						}
+		&--textarea {
+			.form-label {
+				&--anim {
+					top: 1.2rem;
+					transform: none;
+				}
+			}
+
+			.form-item {
+				&__field {
+					height: 16rem;
+					min-height: 16rem;
+					max-height: 29rem;
+					resize: vertical;
+
+					&::placeholder {
+						font-weight: 400 !important;
 					}
 
+					&--anim {
+						padding: 2.4rem 1.2rem 1.2rem !important;
+					}
+				}
+			}
+
+			&.is-focus {
+				.form-label {
+					&--anim {
+						top: 1rem;
+					}
+				}
+
+				.form-item {
 					&__field {
-						height: 16rem;
-						min-height: 16rem;
-						max-height: 29rem;
-						resize: vertical;
-
-						&::placeholder {
-							font-weight: 400 !important;
-						}
-
 						&--anim {
 							padding: 2.4rem 1.2rem 1.2rem !important;
 						}
 					}
 				}
+			}
+		}
 
-				&.is-focus {
-					.form {
-						&-label {
-							&--anim {
-								top: 1rem;
-							}
+		&--select {
+			.form-item {
+				&__wrapper {
+					display: flex;
+					position: relative;
+					align-items: center;
+				}
+
+				&__field {
+					padding: 1.2rem 3rem 1.2rem 1.2rem;
+					cursor: pointer;
+					appearance: none;
+
+					&--anim {
+						padding: 2rem 3rem 0.5rem 1.2rem;
+					}
+				}
+
+				&__button {
+					display: inline-block;
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translate(0, -50%);
+					pointer-events: none;
+
+					::v-deep {
+						.icon {
+							width: 2rem;
+							height: 2rem;
+							fill: $color-black;
 						}
+					}
+				}
+			}
+		}
 
+		&.is-focus {
+			.form-label {
+				&--anim {
+					color: $color-brand-3 !important;
+				}
+			}
+
+			.form-item {
+				&__field {
+					&--anim {
+						border-color: $color-brand-3 !important;
+						background-color: rgba($color-brand-3, 0.2) !important;
+					}
+				}
+
+				&__button {
+					::v-deep {
+						.icon {
+							fill: $color-brand-3 !important;
+						}
+					}
+				}
+			}
+		}
+
+		&:not(.is-focus) {
+			.form-item {
+				&__field {
+					&--anim {
+						&::placeholder {
+							color: transparent !important;
+						}
+					}
+				}
+			}
+		}
+
+		&.is-empty {
+			.form-item {
+				.form-item {
+					&__field {
+						&--anim {
+							padding: 1.2rem;
+						}
+					}
+				}
+
+				&--select {
+					.form-item {
 						&__field {
 							&--anim {
-								padding: 2.4rem 1.2rem 1.2rem !important;
+								padding: 1.2rem 3rem 1.2rem 1.2rem;
 							}
 						}
 					}
 				}
 			}
+		}
 
-			&--select {
-				.form {
-					&__wrapper {
-						display: flex;
-						position: relative;
-						align-items: center;
-					}
-
-					&__field {
-						padding: 1.2rem 3rem 1.2rem 1.2rem;
-						cursor: pointer;
-						appearance: none;
-
-						&--anim {
-							padding: 2rem 3rem 0.5rem 1.2rem;
-						}
-					}
-
-					&__button {
-						display: inline-block;
-						position: absolute;
-						top: 50%;
-						right: 0;
-						transform: translate(0, -50%);
-						pointer-events: none;
-
-						::v-deep {
-							.icon {
-								width: 2rem;
-								height: 2rem;
-								fill: $color-black;
-							}
-						}
-					}
+		&:not(.is-empty),
+		&.is-focus {
+			.form-label {
+				&--anim {
+					top: 0.8rem;
+					transform: translate(0, 0);
+					transition: top 0.2s ease-in-out 0s;
+					color: $color-brand-3;
+					font-size: 1.2rem;
 				}
 			}
 
-			&.is-focus {
-				.form {
-					&-label {
-						&--anim {
-							color: $color-brand-3 !important;
-						}
-					}
-
-					&__field {
-						&--anim {
-							border-color: $color-brand-3 !important;
-							background-color: rgba($color-brand-3, 0.2) !important;
-						}
-					}
-
-					&__button {
-						::v-deep {
-							.icon {
-								fill: $color-brand-3 !important;
-							}
-						}
+			.form-item {
+				&__field {
+					&--anim {
+						padding: 2rem 1.2rem 0.5rem !important;
 					}
 				}
 			}
+		}
 
-			&:not(.is-focus) {
-				.form {
-					&__field {
-						&--anim {
-							&::placeholder {
-								color: transparent !important;
-							}
-						}
-					}
+		&.is-error {
+			.form-label {
+				&--anim {
+					color: $color-error;
 				}
 			}
 
-			&.is-empty {
-				.form {
-					&__item {
-						.form {
-							&__field {
-								&--anim {
-									padding: 1.2rem;
-								}
-							}
-						}
-
-						&--select {
-							.form {
-								&__field {
-									&--anim {
-										padding: 1.2rem 3rem 1.2rem 1.2rem;
-									}
-								}
-							}
-						}
+			.form-item {
+				&__field {
+					&--anim {
+						border-color: $color-error;
+						background-color: rgba($color-error, 0.2);
 					}
 				}
-			}
 
-			&:not(.is-empty),
-			&.is-focus {
-				.form {
-					&-label {
-						&--anim {
-							top: 0.8rem;
-							transform: translate(0, 0);
-							transition: top 0.2s ease-in-out 0s;
-							color: $color-brand-3;
-							font-size: 1.2rem;
-						}
-					}
-
-					&__field {
-						&--anim {
-							padding: 2rem 1.2rem 0.5rem !important;
-						}
-					}
-				}
-			}
-
-			&.is-error {
-				.form {
-					&-label {
-						&--anim {
-							color: $color-error;
-						}
-					}
-
-					&__field {
-						&--anim {
-							border-color: $color-error;
-							background-color: rgba($color-error, 0.2);
-						}
-					}
-
-					&__button {
-						::v-deep {
-							.icon {
-								fill: $color-error;
-							}
+				&__button {
+					::v-deep {
+						.icon {
+							fill: $color-error;
 						}
 					}
 				}
