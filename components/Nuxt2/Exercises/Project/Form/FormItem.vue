@@ -202,12 +202,6 @@
 				font-weight: 100;
 			}
 
-			&--line {
-				border: 0.2rem solid $color-brand-3;
-				border-radius: 0.5rem;
-				background-color: transparent;
-			}
-
 			&--anim {
 				padding: 2rem 1.2rem 0.5rem;
 			}
