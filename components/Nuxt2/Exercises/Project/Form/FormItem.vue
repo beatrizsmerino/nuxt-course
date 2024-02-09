@@ -2,7 +2,7 @@
 	<div
 		class="form__item form-item"
 		:class="[
-			formItemModifier,
+			`form-item--${fieldTag}`,
 			{
 				'is-empty': isEmpty,
 				'is-focus': isFocus,
@@ -131,7 +131,6 @@
 		},
 		data() {
 			return {
-				"formItemModifier": "",
 				"formLabelModifier": "",
 				"formFieldModifier": "",
 				"userInteracted": false,
@@ -162,14 +161,6 @@
 				if (this.fieldModifier) {
 					this.formLabelModifier = `form-label--${this.fieldModifier}`;
 					this.formFieldModifier = `form-item__field--${this.fieldModifier}`;
-				}
-
-				if (this.fieldTag === "textarea") {
-					this.formItemModifier = "form-item--textarea";
-				} else if (this.fieldTag === "select") {
-					this.formItemModifier = "form-item--select";
-				} else {
-					this.formItemModifier = "form-item--input";
 				}
 			},
 			onFocus() {
