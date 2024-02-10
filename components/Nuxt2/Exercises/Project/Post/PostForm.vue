@@ -104,7 +104,9 @@
 				"form": this.postData
 					? { ...this.postData }
 					: {
+						"id": crypto.randomUUID(),
 						"title": "",
+						"date": new Date(),
 						"author": "",
 						"category": "",
 						"shortDescription": "",
