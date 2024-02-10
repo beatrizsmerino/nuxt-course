@@ -62,7 +62,7 @@
 		"computed": {
 			postNuxtLink() {
 				return this.isAdmin
-					? `/nuxt2/exercises/project/admin/post/edit/${this.postData.id}`
+					? `/nuxt2/exercises/project/admin/post/update/${this.postData.id}`
 					: `/nuxt2/exercises/project/posts/${this.postData.id}`;
 			},
 			shortDescription() {

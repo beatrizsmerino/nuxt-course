@@ -4,7 +4,7 @@
 			Project
 		</template>
 		<template #subtitle>
-			Edit post #{{ getPostSelected.id }}
+			Update post #{{ getPostSelected.id }}
 		</template>
 		<template #content>
 			<article>
@@ -14,7 +14,7 @@
 				<PostForm
 					v-else
 					:post-data="getPostSelected"
-					@save-post="editPost"
+					@save-post="updatePost"
 				/>
 			</article>
 		</template>
@@ -28,7 +28,7 @@
 	import PostForm from "@/components/Nuxt2/Exercises/Project/Post/PostForm";
 
 	export default {
-		"name": "ViewProjectAdminPostEdit",
+		"name": "ViewProjectAdminPostUpdate",
 		"components": {
 			Layout,
 			PostForm,
@@ -47,10 +47,10 @@
 			},
 		},
 		"methods": {
-			editPost(postData) {
-				console.log("Data of editPost", postData);
+			updatePost(postData) {
+				console.log("Data of updatePost", postData);
 
-				this.$store.dispatch("editPost", postData).then(() => {
+				this.$store.dispatch("updatePost", postData).then(() => {
 					this.$router.push("/nuxt2/exercises/project/admin");
 				});
 			},
