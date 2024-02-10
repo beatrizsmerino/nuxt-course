@@ -56,6 +56,7 @@
 					)
 					.then(result => {
 						console.log(result);
+						this.$router.push("/nuxt2/exercises/project/admin");
 					})
 					.catch(error => console.log(error));
 			},
