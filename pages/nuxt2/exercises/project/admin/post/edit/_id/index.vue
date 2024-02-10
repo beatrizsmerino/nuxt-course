@@ -49,6 +49,15 @@
 		"methods": {
 			editPost(postData) {
 				console.log("Data of editPost", postData);
+				axios
+					.put(
+						`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${this.$route.params.id}.json`,
+						postData,
+					)
+					.then(result => {
+						console.log(result);
+					})
+					.catch(error => console.log(error));
 			},
 		},
 	};
