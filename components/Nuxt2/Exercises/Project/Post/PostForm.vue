@@ -56,7 +56,7 @@
 				<FormItem
 					:field-value="form.image"
 					field-id="postFormImage"
-					field-label="Image"
+					field-label="Image link"
 					field-type="url"
 					field-placeholder="Paste the link of your awesome image"
 					field-modifier="anim"
