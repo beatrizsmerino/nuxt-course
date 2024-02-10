@@ -30,24 +30,6 @@
 			</div>
 		</div>
 		<FormItem
-			:field-value="form.link"
-			field-id="postFormLink"
-			field-label="Link"
-			field-type="url"
-			field-placeholder="Paste the link to your source of inspiration"
-			field-modifier="anim"
-			@update:fieldValue="value => (form.link = value)"
-		/>
-		<FormItem
-			:field-value="form.image"
-			field-id="postFormImage"
-			field-label="Image"
-			field-type="url"
-			field-placeholder="Paste the link of your awesome image"
-			field-modifier="anim"
-			@update:fieldValue="value => (form.image = value)"
-		/>
-		<FormItem
 			:field-value="form.category"
 			field-label="Category"
 			field-id="postFormCategory"
@@ -58,6 +40,31 @@
 			:field-required="true"
 			@update:fieldValue="value => (form.category = value)"
 		/>
+		<div class="form__group">
+			<div class="form__column">
+				<FormItem
+					:field-value="form.link"
+					field-id="postFormLink"
+					field-label="Link"
+					field-type="url"
+					field-placeholder="Paste the link to your source of inspiration"
+					field-modifier="anim"
+					@update:fieldValue="value => (form.link = value)"
+				/>
+			</div>
+			<div class="form__column">
+				<FormItem
+					:field-value="form.image"
+					field-id="postFormImage"
+					field-label="Image"
+					field-type="url"
+					field-placeholder="Paste the link of your awesome image"
+					field-modifier="anim"
+					@update:fieldValue="value => (form.image = value)"
+				/>
+			</div>
+		</div>
+
 		<FormItem
 			:field-value="form.shortDescription"
 			field-id="postFormShortDescription"
