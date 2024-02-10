@@ -3,6 +3,13 @@
 		:class="`post-preview ${postModifier.join(' ')}`"
 		:to="postNuxtLink"
 	>
+		<template v-if="isAdmin">
+			<div class="post-preview__actions">
+				<UIButton class="button--icon button--error">
+					Delete
+				</UIButton>
+			</div>
+		</template>
 		<template v-if="checkCssModifier === 'expanded'">
 			<time
 				:datetime="postData.date"
