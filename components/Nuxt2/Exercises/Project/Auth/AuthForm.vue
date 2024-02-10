@@ -4,7 +4,7 @@
 		class="auth-form form"
 		@submit.prevent="onLogin"
 	>
-		<FormField
+		<FormItem
 			:field-value="form.username"
 			field-id="authFormUsername"
 			field-label="Username"
@@ -13,7 +13,7 @@
 			:field-required="true"
 			@update:fieldValue="value => (form.username = value)"
 		/>
-		<FormField
+		<FormItem
 			:field-value="form.password"
 			field-id="authFormPassword"
 			field-label="Password"
@@ -42,12 +42,12 @@
 </template>
 
 <script>
-	import FormField from "@/components/Nuxt2/Exercises/Project/Form/FormField";
+	import FormItem from "@/components/Nuxt2/Exercises/Project/Form/FormItem";
 
 	export default {
 		"name": "AuthForm",
 		"components": {
-			FormField,
+			FormItem,
 		},
 		data() {
 			return {

@@ -1,7 +1,7 @@
 <template>
 	<label
 		:for="labelId"
-		class="form__label"
+		class="form-label"
 		:class="labelModifier"
 	>
 		{{ labelText }}
@@ -29,41 +29,37 @@
 </script>
 
 <style lang="scss" scoped>
-	.form {
-		&__label {
-			display: inline-block;
-			width: 100%;
-			margin-bottom: 0.5rem;
-			color: $color-brand-4;
-			font-size: 1.4rem;
-			font-weight: 500;
+	.form-label {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 0.5rem;
+		color: $color-brand-4;
+		font-size: 1.4rem;
+		font-weight: 500;
 
-			&--anim {
+		&--anim {
+			position: absolute;
+			top: 50%;
+			left: 1.2rem;
+			width: auto;
+			margin-bottom: 0;
+			transform: translate(0, -50%);
+		}
+
+		&--required {
+			position: relative;
+
+			&:after {
+				content: "*";
+				display: inline-block;
 				position: absolute;
-				top: 50%;
-				left: 1.2rem;
-				width: auto;
-				margin-bottom: 0;
-				transform: translate(0, -50%);
+				top: -0.2rem;
+				padding-left: 0.2rem;
 			}
 
-			&--required {
-				position: relative;
-
-				&:after {
-					content: "*";
-					display: inline-block;
+			&.form-label {
+				&--anim {
 					position: absolute;
-					top: -0.2rem;
-					padding-left: 0.2rem;
-				}
-
-				&.form {
-					&__label {
-						&--anim {
-							position: absolute;
-						}
-					}
 				}
 			}
 		}

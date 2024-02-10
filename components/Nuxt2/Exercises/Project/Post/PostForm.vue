@@ -6,7 +6,7 @@
 	>
 		<div class="form__group">
 			<div class="form__column">
-				<FormField
+				<FormItem
 					:field-value="form.title"
 					field-id="postFormTitle"
 					field-label="Title"
@@ -18,7 +18,7 @@
 				/>
 			</div>
 			<div class="form__column">
-				<FormField
+				<FormItem
 					:field-value="form.author"
 					field-id="postFormAuthor"
 					field-label="Author"
@@ -29,7 +29,7 @@
 				/>
 			</div>
 		</div>
-		<FormField
+		<FormItem
 			:field-value="form.link"
 			field-id="postFormLink"
 			field-label="Link"
@@ -38,27 +38,27 @@
 			field-modifier="anim"
 			@update:fieldValue="value => (form.link = value)"
 		/>
-		<FormSelect
-			:select-value="form.category"
-			select-label="Category"
-			select-id="postFormCategory"
-			:select-options="data.categoriesList"
-			select-placeholder="Choose the kingdom of your creation"
-			select-modifier="anim"
-			:select-required="true"
-			@update:selectValue="value => (form.category = value)"
+		<FormItem
+			:field-value="form.category"
+			field-label="Category"
+			field-id="postFormCategory"
+			field-tag="select"
+			:field-list="data.categoriesList"
+			field-placeholder="Choose the kingdom of your creation"
+			field-modifier="anim"
+			:field-required="true"
+			@update:fieldValue="value => (form.category = value)"
 		/>
-		<FormField
+		<FormItem
 			:field-value="form.shortDescription"
 			field-id="postFormShortDescription"
 			field-label="Short description"
-			field-tag="textarea"
 			field-placeholder="Capture the essence in a sentence"
 			field-modifier="anim"
 			:field-required="true"
 			@update:fieldValue="value => (form.shortDescription = value)"
 		/>
-		<FormField
+		<FormItem
 			:field-value="form.longDescription"
 			field-id="postFormLongDescription"
 			field-label="Long description"
@@ -86,14 +86,12 @@
 </template>
 
 <script>
-	import FormField from "@/components/Nuxt2/Exercises/Project/Form/FormField";
-	import FormSelect from "@/components/Nuxt2/Exercises/Project/Form/FormSelect";
+	import FormItem from "@/components/Nuxt2/Exercises/Project/Form/FormItem";
 
 	export default {
 		"name": "PostForm",
 		"components": {
-			FormField,
-			FormSelect,
+			FormItem,
 		},
 		"props": {
 			"postData": {
