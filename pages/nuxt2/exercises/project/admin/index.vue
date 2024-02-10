@@ -46,6 +46,11 @@
 				return this.$store.state.isError;
 			},
 		},
+		"methods": {
+			deletePost(postData) {
+				this.$store.dispatch("deletePost", postData.id);
+			},
+		},
 	};
 </script>
 

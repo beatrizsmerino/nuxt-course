@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { Store } from "vuex";
 import axios from "axios";
 
@@ -20,6 +21,9 @@ const createStore = () => new Store({
 		updatePost(state, data) {
 			const postIndex = state.postList.findIndex(post => post.id === data.id);
 			state.postList[postIndex] = data;
+		},
+		deletePost(state, id) {
+			state.postList = state.postList.filter(post => post.id !== id);
 		},
 		setError(state, error) {
 			state.isError = error;
@@ -88,6 +92,14 @@ const createStore = () => new Store({
 					vuexContext.commit("updatePost", data);
 				})
 				.catch(error => console.log(error));
+		},
+		deletePost(vuexContext, id) {
+			return axios
+				.delete(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${id}.json`)
+				.then(() => {
+					vuexContext.commit("deletePost", id);
+				})
+				.catch(error => console.error(error));
 		},
 	},
 	"getters": {
