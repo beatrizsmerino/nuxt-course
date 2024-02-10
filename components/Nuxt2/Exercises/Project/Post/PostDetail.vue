@@ -2,10 +2,10 @@
 	<article class="post-detail">
 		<div class="post-detail__image">
 			<span class="post-detail__index">
-				#{{ $route.params.id }}
+				#{{ postData.id }}
 			</span>
 			<img
-				:src="require(`~/assets/images/nuxt2/exercises/project/posts/${postData.image}`)"
+				:src="postData.image"
 				:alt="postData.title"
 			>
 		</div>
@@ -13,7 +13,7 @@
 			<h2 class="post-detail__title">
 				{{ postData.title }}
 			</h2>
-			<span class="post-detail__time">
+			<span class="post-detail__date">
 				Last updated on:
 				<time :datetime="postData.date">
 					{{ postData.date }}
@@ -97,7 +97,7 @@
 			margin-bottom: 2rem;
 		}
 
-		&__time,
+		&__date,
 		&__author {
 			display: inline-block;
 			width: 100%;
@@ -105,7 +105,7 @@
 			font-weight: 300;
 		}
 
-		&__time {
+		&__date {
 			margin-bottom: 0.5rem;
 		}
 

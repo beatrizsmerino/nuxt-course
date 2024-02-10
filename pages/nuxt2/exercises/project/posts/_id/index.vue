@@ -10,7 +10,7 @@
 				</p>
 				<PostDetail
 					v-else
-					:post-data="getPost"
+					:post-data="getPostSelected"
 				/>
 			</article>
 		</template>
@@ -28,12 +28,12 @@
 			PostDetail,
 		},
 		"layout": "exercises",
+		asyncData({ store, params }) {
+			return store.dispatch("setPostSelected", params.id);
+		},
 		"computed": {
-			getPostList() {
-				return this.$store.getters.getPostList;
-			},
-			getPost() {
-				return this.getPostList[this.$route.params.id];
+			getPostSelected() {
+				return this.$store.getters.getPostSelected;
 			},
 			isError() {
 				return this.$store.state.isError;

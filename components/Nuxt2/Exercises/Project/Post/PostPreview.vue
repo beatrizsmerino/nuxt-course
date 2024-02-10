@@ -6,13 +6,13 @@
 		<template v-if="checkCssModifier === 'expanded'">
 			<time
 				:datetime="postData.date"
-				class="post-preview__time"
+				class="post-preview__date"
 			>
 				{{ postData.date }}
 			</time>
 			<div class="post-preview__image">
 				<img
-					:src="require(`~/assets/images/nuxt2/exercises/project/posts/${postData.image}`)"
+					:src="postData.image"
 					:alt="postData.title"
 				>
 			</div>
@@ -20,13 +20,13 @@
 				{{ postData.title }}
 			</h3>
 			<div class="post-preview__short-description">
-				{{ shortDescription }}
+				{{ postData.shortDescription }}
 			</div>
 		</template>
 		<template v-if="checkCssModifier === 'compacted'">
 			<time
 				:datetime="postData.date"
-				class="post-preview__time"
+				class="post-preview__date"
 			>
 				{{ postData.date }}
 			</time>
@@ -62,7 +62,7 @@
 		"computed": {
 			postNuxtLink() {
 				return this.isAdmin
-					? `/nuxt2/exercises/project/admin/post/edit/${this.postData.id}`
+					? `/nuxt2/exercises/project/admin/post/update/${this.postData.id}`
 					: `/nuxt2/exercises/project/posts/${this.postData.id}`;
 			},
 			shortDescription() {
@@ -105,9 +105,9 @@
 		border-radius: 2rem 0 2rem 2rem;
 		text-decoration: none;
 
-		&__time {
+		&__date {
 			display: inline-block;
-			padding: 0.8rem;
+			padding: 0.8rem 2rem;
 			font-size: 1.4rem;
 			font-style: italic;
 			font-weight: 500;
@@ -152,7 +152,7 @@
 			background-color: mix($color-white, $color-brand-1, 40%);
 
 			.post-preview {
-				&__time {
+				&__date {
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -190,8 +190,8 @@
 			background-color: $color-white;
 
 			.post-preview {
-				&__time {
-					width: 10rem;
+				&__date {
+					width: 20rem;
 					color: $color-brand-2;
 				}
 
