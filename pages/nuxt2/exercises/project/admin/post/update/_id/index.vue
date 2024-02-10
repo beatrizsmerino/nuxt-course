@@ -32,6 +32,9 @@
 			PostForm,
 		},
 		"layout": "exercises",
+		asyncData({ store, params }) {
+			return store.dispatch("setPostSelected", params.id);
+		},
 		"computed": {
 			getPostSelected() {
 				return this.$store.getters.getPostSelected;
@@ -40,13 +43,7 @@
 				return this.$store.state.isError;
 			},
 		},
-		created() {
-			this.setPostSelected();
-		},
 		"methods": {
-			setPostSelected() {
-				this.$store.dispatch("setPostSelected", this.$route.params.id);
-			},
 			updatePost(postData) {
 				console.log("Data of updatePost", postData);
 
