@@ -39,6 +39,15 @@
 			@update:fieldValue="value => (form.link = value)"
 		/>
 		<FormItem
+			:field-value="form.image"
+			field-id="postFormImage"
+			field-label="Image"
+			field-type="url"
+			field-placeholder="Paste the link of your awesome image"
+			field-modifier="anim"
+			@update:fieldValue="value => (form.image = value)"
+		/>
+		<FormItem
 			:field-value="form.category"
 			field-label="Category"
 			field-id="postFormCategory"
@@ -111,6 +120,7 @@
 						"category": "",
 						"shortDescription": "",
 						"longDescription": "",
+						"image": "",
 						"link": "",
 					},
 				"data": {
