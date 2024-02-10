@@ -20,7 +20,7 @@
 				{{ postData.title }}
 			</h3>
 			<div class="post-preview__short-description">
-				{{ shortDescription }}
+				{{ postData.shortDescription }}
 			</div>
 		</template>
 		<template v-if="checkCssModifier === 'compacted'">
