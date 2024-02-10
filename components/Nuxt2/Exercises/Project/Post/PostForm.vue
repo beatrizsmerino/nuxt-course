@@ -123,7 +123,7 @@
 					: {
 						"id": "",
 						"title": "",
-						"date": getDate(),
+						"date": "",
 						"author": "",
 						"category": "",
 						"shortDescription": "",
@@ -157,8 +157,12 @@
 					this.form.id = crypto.randomUUID();
 				}
 			},
+			updateDate() {
+				this.form.date = getDate();
+			},
 			onSave() {
 				console.log("Data of PostForm", this.form);
+				this.updateDate();
 				this.$emit("save-post", this.form);
 			},
 			onCancel() {
