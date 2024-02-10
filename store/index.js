@@ -1,5 +1,5 @@
 import { Store } from "vuex";
-import postListData from "~/assets/data/data-post-list.json";
+import axios from "axios";
 
 const createStore = () => new Store({
 	"state": {
@@ -16,14 +16,22 @@ const createStore = () => new Store({
 	},
 	"actions": {
 		nuxtServerInit(vuexContext, context) {
-			vuexContext.commit("setError", null);
-
-			return new Promise((resolve, reject) => {
-				vuexContext.commit("setPostList", postListData);
-				resolve();
-			}).catch(error => {
-				vuexContext.commit("setError", error);
-			});
+			return axios
+				.get("https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts.json")
+				.then(response => {
+					const postList = [];
+					// eslint-disable-next-line guard-for-in
+					for (const key in response.data) {
+						postList.push({
+							...response.data[key],
+							"id": key,
+						});
+					}
+					vuexContext.commit("setPostList", postList);
+				})
+				.catch(error => {
+					vuexContext.commit("setError", error);
+				});
 		},
 		setPostList(vuexContext, data) {
 			vuexContext.commit("setPostList", data);
