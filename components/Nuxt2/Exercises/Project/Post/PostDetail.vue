@@ -2,7 +2,7 @@
 	<article class="post-detail">
 		<div class="post-detail__image">
 			<span class="post-detail__index">
-				#{{ $route.params.id }}
+				#{{ postData.id }}
 			</span>
 			<img
 				:src="postData.image"

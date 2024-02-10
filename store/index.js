@@ -24,7 +24,6 @@ const createStore = () => new Store({
 					for (const key in response.data) {
 						postList.push({
 							...response.data[key],
-							"id": key,
 						});
 					}
 					vuexContext.commit("setPostList", postList);

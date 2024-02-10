@@ -10,7 +10,7 @@
 				</p>
 				<PostDetail
 					v-else
-					:post-data="getPost"
+					:post-data="getPostSelected"
 				/>
 			</article>
 		</template>
@@ -32,8 +32,8 @@
 			getPostList() {
 				return this.$store.getters.getPostList;
 			},
-			getPost() {
-				return this.getPostList[this.$route.params.id];
+			getPostSelected() {
+				return this.getPostList.filter(item => item.id == this.$route.params.id)[0];
 			},
 			isError() {
 				return this.$store.state.isError;

@@ -4,7 +4,7 @@
 			Project
 		</template>
 		<template #subtitle>
-			Edit post #{{ $route.params.id }}
+			Edit post #{{ getPostSelected.id }}
 		</template>
 		<template #content>
 			<article>
