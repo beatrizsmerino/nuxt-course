@@ -120,7 +120,7 @@
 				"form": this.postData
 					? { ...this.postData }
 					: {
-						"id": crypto.randomUUID(),
+						"id": "",
 						"title": "",
 						"date": this.getDate(),
 						"author": "",
@@ -147,7 +147,15 @@
 				},
 			};
 		},
+		mounted() {
+			this.getId();
+		},
 		"methods": {
+			getId() {
+				if (!this.form.id) {
+					this.form.id = crypto.randomUUID();
+				}
+			},
 			// eslint-disable-next-line complexity, max-statements
 			getDate() {
 				const currentDate = new Date();
