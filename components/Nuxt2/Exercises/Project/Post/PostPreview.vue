@@ -107,7 +107,7 @@
 
 		&__time {
 			display: inline-block;
-			padding: 0.8rem;
+			padding: 0.8rem 2rem;
 			font-size: 1.4rem;
 			font-style: italic;
 			font-weight: 500;
@@ -191,7 +191,7 @@
 
 			.post-preview {
 				&__time {
-					width: 10rem;
+					width: 20rem;
 					color: $color-brand-2;
 				}
 
