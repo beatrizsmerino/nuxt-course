@@ -18,7 +18,6 @@
 </template>
 
 <script>
-	import axios from "axios";
 	import Layout from "@/components/Nuxt2/Exercises/Project/Layout/Layout";
 	import PostDetail from "@/components/Nuxt2/Exercises/Project/Post/PostDetail";
 
@@ -29,16 +28,20 @@
 			PostDetail,
 		},
 		"layout": "exercises",
-		asyncData(context) {
-			return axios
-				.get(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${context.params.id}.json`)
-				.then(response => ({
-					"getPostSelected": response.data,
-				}));
-		},
 		"computed": {
+			getPostSelected() {
+				return this.$store.getters.getPostSelected;
+			},
 			isError() {
 				return this.$store.state.isError;
+			},
+		},
+		created() {
+			this.setPostSelected();
+		},
+		"methods": {
+			setPostSelected() {
+				this.$store.dispatch("setPostSelected", this.$route.params.id);
 			},
 		},
 	};

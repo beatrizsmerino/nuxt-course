@@ -4,11 +4,15 @@ import axios from "axios";
 const createStore = () => new Store({
 	"state": {
 		"postList": [],
+		"postSelected": {},
 		"isError": null,
 	},
 	"mutations": {
 		setPostList(state, data) {
 			state.postList = data;
+		},
+		setPostSelected(state, data) {
+			state.postSelected = data;
 		},
 		createPost(state, data) {
 			state.postList.push(data);
@@ -41,6 +45,13 @@ const createStore = () => new Store({
 		},
 		setPostList(vuexContext, data) {
 			vuexContext.commit("setPostList", data);
+		},
+		setPostSelected(vuexContext, id) {
+			return axios
+				.get(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${id}.json`)
+				.then(result => {
+					vuexContext.commit("setPostSelected", result.data);
+				});
 		},
 		createPost(vuexContext, data) {
 			axios
@@ -82,6 +93,9 @@ const createStore = () => new Store({
 	"getters": {
 		getPostList(state) {
 			return state.postList;
+		},
+		getPostSelected(state) {
+			return state.postSelected;
 		},
 	},
 });
