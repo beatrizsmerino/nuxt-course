@@ -61,13 +61,13 @@
 		},
 		"computed": {
 			getPosts() {
-				if (this.showLastPostList) {
-					const postListSorted = this.postList.sort((a, b) => new Date(b.date) - new Date(a.date));
+				const postListSorted = this.postList.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+				if (this.showLastPostList) {
 					return postListSorted.slice(0, this.maxPostList);
 				}
 
-				return this.postList;
+				return postListSorted;
 			},
 			getCssModifierList() {
 				const classCss = [];
