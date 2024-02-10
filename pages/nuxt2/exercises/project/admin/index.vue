@@ -48,7 +48,10 @@
 		},
 		"methods": {
 			deletePost(postData) {
-				this.$store.dispatch("deletePost", postData.id);
+				// eslint-disable-next-line no-alert
+				if (window.confirm("Do you really want to delete this post?")) {
+					this.$store.dispatch("deletePost", postData.id);
+				}
 			},
 		},
 	};
