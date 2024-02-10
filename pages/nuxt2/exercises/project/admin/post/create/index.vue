@@ -32,7 +32,14 @@
 				console.log("Data of createPost", postData);
 				axios
 					.post("https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts.json", postData)
-					.then(result => console.log(result))
+					.then(result => {
+						const firebaseId = result.data.name;
+
+						return axios.patch(
+							`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${firebaseId}.json`,
+							{ "id": firebaseId },
+						);
+					})
 					.catch(error => console.log(error));
 			},
 		},
