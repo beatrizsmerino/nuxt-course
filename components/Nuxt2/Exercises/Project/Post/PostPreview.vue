@@ -6,7 +6,7 @@
 		<template v-if="checkCssModifier === 'expanded'">
 			<time
 				:datetime="postData.date"
-				class="post-preview__time"
+				class="post-preview__date"
 			>
 				{{ postData.date }}
 			</time>
@@ -26,7 +26,7 @@
 		<template v-if="checkCssModifier === 'compacted'">
 			<time
 				:datetime="postData.date"
-				class="post-preview__time"
+				class="post-preview__date"
 			>
 				{{ postData.date }}
 			</time>
@@ -105,7 +105,7 @@
 		border-radius: 2rem 0 2rem 2rem;
 		text-decoration: none;
 
-		&__time {
+		&__date {
 			display: inline-block;
 			padding: 0.8rem 2rem;
 			font-size: 1.4rem;
@@ -152,7 +152,7 @@
 			background-color: mix($color-white, $color-brand-1, 40%);
 
 			.post-preview {
-				&__time {
+				&__date {
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -190,7 +190,7 @@
 			background-color: $color-white;
 
 			.post-preview {
-				&__time {
+				&__date {
 					width: 20rem;
 					color: $color-brand-2;
 				}
