@@ -106,10 +106,10 @@
 					: {
 						"title": "",
 						"author": "",
-						"link": "",
 						"category": "",
 						"shortDescription": "",
 						"longDescription": "",
+						"link": "",
 					},
 				"data": {
 					"categoriesList": [
