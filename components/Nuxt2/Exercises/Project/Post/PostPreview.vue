@@ -5,8 +5,14 @@
 	>
 		<template v-if="isAdmin">
 			<div class="post-preview__actions">
-				<UIButton class="button--icon button--error">
-					Delete
+				<UIButton
+					class="button--icon button--error"
+					@button-click="onDelete"
+				>
+					<UIIcon
+						icon-name="trash"
+						icon-aria-label="Delete"
+					/>
 				</UIButton>
 			</div>
 		</template>
