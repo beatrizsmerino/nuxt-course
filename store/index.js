@@ -47,17 +47,17 @@ const createStore = () => new Store({
 					vuexContext.commit("setCreateError", error);
 				});
 		},
-		readPostList(vuexContext, data) {
+		fetchReadPostList(vuexContext, data) {
 			vuexContext.commit("setReadPostList", data);
 		},
-		readPostSelected(vuexContext, id) {
+		fetchReadPostSelected(vuexContext, id) {
 			return axios
 				.get(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${id}.json`)
 				.then(result => {
 					vuexContext.commit("setReadPostSelected", result.data);
 				});
 		},
-		createPost(vuexContext, data) {
+		fetchCreatePost(vuexContext, data) {
 			axios
 				.post("https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts.json", data)
 				.then(result => {
@@ -80,7 +80,7 @@ const createStore = () => new Store({
 				})
 				.catch(error => console.log(error));
 		},
-		updatePost(vuexContext, data) {
+		fetchUpdatePost(vuexContext, data) {
 			return axios
 				.put(
 					`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${data.id}.json`,
@@ -93,7 +93,7 @@ const createStore = () => new Store({
 				})
 				.catch(error => console.log(error));
 		},
-		deletePost(vuexContext, id) {
+		fetchDeletePost(vuexContext, id) {
 			return axios
 				.delete(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${id}.json`)
 				.then(() => {

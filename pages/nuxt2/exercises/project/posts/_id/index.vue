@@ -29,7 +29,7 @@
 		},
 		"layout": "exercises",
 		asyncData({ store, params }) {
-			return store.dispatch("readPostSelected", params.id);
+			return store.dispatch("fetchReadPostSelected", params.id);
 		},
 		"computed": {
 			getPostSelected() {

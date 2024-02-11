@@ -33,7 +33,7 @@
 		},
 		"layout": "exercises",
 		asyncData({ store, params }) {
-			return store.dispatch("readPostSelected", params.id);
+			return store.dispatch("fetchReadPostSelected", params.id);
 		},
 		"computed": {
 			getPostSelected() {
@@ -47,7 +47,7 @@
 			updatePost(postData) {
 				console.log("Data of updatePost", postData);
 
-				this.$store.dispatch("updatePost", postData).then(() => {
+				this.$store.dispatch("fetchUpdatePost", postData).then(() => {
 					this.$router.push("/nuxt2/exercises/project/admin");
 				});
 			},
