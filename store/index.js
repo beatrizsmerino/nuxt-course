@@ -67,8 +67,6 @@ const createStore = () => new Store({
 			axios
 				.post("https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts.json", data)
 				.then(result => {
-					console.log(result);
-
 					const firebaseId = result.data.name;
 
 					return axios
@@ -76,8 +74,6 @@ const createStore = () => new Store({
 							"id": firebaseId,
 						})
 						.then(resultUpdated => {
-							console.log(resultUpdated);
-
 							vuexContext.commit("setCreatePost", {
 								...data,
 								"id": firebaseId,
@@ -93,8 +89,6 @@ const createStore = () => new Store({
 					data,
 				)
 				.then(result => {
-					console.log(result);
-
 					vuexContext.commit("setUpdatePost", data);
 				})
 				.catch(error => console.log(error));
