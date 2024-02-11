@@ -138,6 +138,10 @@
 		&__image {
 			display: flex;
 			height: 15rem;
+			background-image: url("~/assets/images/default/default-placeholder.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
 
 			img {
 				width: 100%;

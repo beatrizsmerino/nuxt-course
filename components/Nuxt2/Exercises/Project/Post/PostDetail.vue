@@ -84,6 +84,10 @@
 			height: 30rem;
 			margin-bottom: 2rem;
 			overflow: hidden;
+			background-image: url("~/assets/images/default/default-placeholder.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
 
 			img {
 				width: 100%;
