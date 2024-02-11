@@ -7,9 +7,7 @@
 			Auth
 		</template>
 		<template #content>
-			<article>
-				<AuthForm />
-			</article>
+			<AuthForm />
 		</template>
 	</Layout>
 </template>
