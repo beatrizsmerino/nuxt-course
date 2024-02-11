@@ -36,6 +36,7 @@
 	.layout {
 		position: relative;
 		min-height: 100rem;
+		overflow: hidden;
 		font-family: $font-ubuntu;
 
 		&:before {
