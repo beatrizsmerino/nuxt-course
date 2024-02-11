@@ -44,14 +44,14 @@
 				return this.$store.getters.getPostList;
 			},
 			isError() {
-				return this.$store.state.isError;
+				return this.$store.getters.getIsError;
 			},
 		},
 		"methods": {
 			deletePost(postData) {
 				// eslint-disable-next-line no-alert
 				if (window.confirm("Do you really want to delete this post?")) {
-					this.$store.dispatch("deletePost", postData.id);
+					this.$store.dispatch("fetchDeletePost", postData.id);
 				}
 			},
 		},

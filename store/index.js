@@ -9,23 +9,26 @@ const createStore = () => new Store({
 		"isError": null,
 	},
 	"mutations": {
-		setPostList(state, data) {
+		setReadPostList(state, data) {
 			state.postList = data;
 		},
-		setPostSelected(state, data) {
+		setReadPostSelected(state, data) {
 			state.postSelected = data;
 		},
-		createPost(state, data) {
+		setDeletePostSelected(state) {
+			state.postSelected = {};
+		},
+		setCreatePost(state, data) {
 			state.postList.push(data);
 		},
-		updatePost(state, data) {
+		setUpdatePost(state, data) {
 			const postIndex = state.postList.findIndex(post => post.id === data.id);
 			state.postList[postIndex] = data;
 		},
-		deletePost(state, id) {
+		setDeletePost(state, id) {
 			state.postList = state.postList.filter(post => post.id !== id);
 		},
-		setError(state, error) {
+		setCreateError(state, error) {
 			state.isError = error;
 		},
 	},
@@ -41,23 +44,26 @@ const createStore = () => new Store({
 							...response.data[key],
 						});
 					}
-					vuexContext.commit("setPostList", postList);
+					vuexContext.commit("setReadPostList", postList);
 				})
 				.catch(error => {
-					vuexContext.commit("setError", error);
+					vuexContext.commit("setCreateError", error);
 				});
 		},
-		setPostList(vuexContext, data) {
-			vuexContext.commit("setPostList", data);
+		fetchReadPostList(vuexContext, data) {
+			vuexContext.commit("setReadPostList", data);
 		},
-		setPostSelected(vuexContext, id) {
+		fetchReadPostSelected(vuexContext, id) {
 			return axios
 				.get(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${id}.json`)
 				.then(result => {
-					vuexContext.commit("setPostSelected", result.data);
+					vuexContext.commit("setReadPostSelected", result.data);
 				});
 		},
-		createPost(vuexContext, data) {
+		fetchDeletePostSelected(vuexContext) {
+			vuexContext.commit("setDeletePostSelected");
+		},
+		fetchCreatePost(vuexContext, data) {
 			axios
 				.post("https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts.json", data)
 				.then(result => {
@@ -72,15 +78,15 @@ const createStore = () => new Store({
 						.then(resultUpdated => {
 							console.log(resultUpdated);
 
-							vuexContext.commit("createPost", {
+							vuexContext.commit("setCreatePost", {
 								...data,
-								"id": resultUpdated.data.name,
+								"id": firebaseId,
 							});
 						});
 				})
 				.catch(error => console.log(error));
 		},
-		updatePost(vuexContext, data) {
+		fetchUpdatePost(vuexContext, data) {
 			return axios
 				.put(
 					`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${data.id}.json`,
@@ -89,15 +95,15 @@ const createStore = () => new Store({
 				.then(result => {
 					console.log(result);
 
-					vuexContext.commit("updatePost", data);
+					vuexContext.commit("setUpdatePost", data);
 				})
 				.catch(error => console.log(error));
 		},
-		deletePost(vuexContext, id) {
+		fetchDeletePost(vuexContext, id) {
 			return axios
 				.delete(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${id}.json`)
 				.then(() => {
-					vuexContext.commit("deletePost", id);
+					vuexContext.commit("setDeletePost", id);
 				})
 				.catch(error => console.error(error));
 		},
@@ -108,6 +114,9 @@ const createStore = () => new Store({
 		},
 		getPostSelected(state) {
 			return state.postSelected;
+		},
+		getIsError(state) {
+			return state.isError;
 		},
 	},
 });

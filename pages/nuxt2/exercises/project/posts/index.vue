@@ -36,7 +36,7 @@
 				return this.$store.getters.getPostList;
 			},
 			isError() {
-				return this.$store.state.isError;
+				return this.$store.getters.getIsError;
 			},
 		},
 	};

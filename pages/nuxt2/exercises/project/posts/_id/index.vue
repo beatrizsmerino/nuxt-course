@@ -29,15 +29,18 @@
 		},
 		"layout": "exercises",
 		asyncData({ store, params }) {
-			return store.dispatch("setPostSelected", params.id);
+			return store.dispatch("fetchReadPostSelected", params.id);
 		},
 		"computed": {
 			getPostSelected() {
 				return this.$store.getters.getPostSelected;
 			},
 			isError() {
-				return this.$store.state.isError;
+				return this.$store.getters.getIsError;
 			},
+		},
+		beforeDestroy() {
+			this.$store.dispatch("fetchDeletePostSelected");
 		},
 	};
 </script>
