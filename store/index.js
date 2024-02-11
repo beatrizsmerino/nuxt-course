@@ -80,7 +80,7 @@ const createStore = () => new Store({
 
 							vuexContext.commit("setCreatePost", {
 								...data,
-								"id": resultUpdated.data.name,
+								"id": firebaseId,
 							});
 						});
 				})
