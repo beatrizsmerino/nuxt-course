@@ -34,7 +34,7 @@
 					},
 					{
 						"name": "Exercises",
-						"path": "/nuxt2/exercises",
+						"path": "/exercises",
 						"activeSubPages": true,
 					},
 				],
