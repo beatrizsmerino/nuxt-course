@@ -104,6 +104,9 @@
 
 				return `${text.slice(0, this.maxCharacters)}...`;
 			},
+			onDelete() {
+				this.$emit("delete-post", this.postData);
+			},
 		},
 	};
 </script>

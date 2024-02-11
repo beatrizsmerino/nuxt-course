@@ -16,6 +16,7 @@
 					:post-list-data="getPostList"
 					is-admin
 					css-modifier="compacted"
+					@delete-post="deletePost"
 				/>
 			</article>
 			<article class="button-list">
