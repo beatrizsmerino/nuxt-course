@@ -39,5 +39,8 @@
 				return this.$store.getters.getIsError;
 			},
 		},
+		beforeDestroy() {
+			this.$store.dispatch("fetchDeletePostSelected");
+		},
 	};
 </script>

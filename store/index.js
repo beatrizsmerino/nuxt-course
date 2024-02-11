@@ -15,6 +15,9 @@ const createStore = () => new Store({
 		setReadPostSelected(state, data) {
 			state.postSelected = data;
 		},
+		setDeletePostSelected(state) {
+			state.postSelected = {};
+		},
 		setCreatePost(state, data) {
 			state.postList.push(data);
 		},
@@ -56,6 +59,9 @@ const createStore = () => new Store({
 				.then(result => {
 					vuexContext.commit("setReadPostSelected", result.data);
 				});
+		},
+		fetchDeletePostSelected(vuexContext) {
+			vuexContext.commit("setDeletePostSelected");
 		},
 		fetchCreatePost(vuexContext, data) {
 			axios

@@ -43,6 +43,9 @@
 				return this.$store.getters.getIsError;
 			},
 		},
+		beforeDestroy() {
+			this.$store.dispatch("fetchDeletePostSelected");
+		},
 		"methods": {
 			updatePost(postData) {
 				console.log("Data of updatePost", postData);
