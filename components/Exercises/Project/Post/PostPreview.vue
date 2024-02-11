@@ -124,11 +124,14 @@
 		&__actions {
 			display: flex;
 			align-items: center;
+
+			.button {
+				padding: 0.4rem;
+			}
 		}
 
 		&__date {
 			display: inline-block;
-			padding: 0.8rem 2rem;
 			font-size: 1.4rem;
 			font-style: italic;
 			font-weight: 500;
@@ -163,7 +166,6 @@
 		&__title {
 			display: flex;
 			align-items: center;
-			padding: 0.8rem 2rem;
 			font-size: 1.4rem;
 			font-weight: 600;
 			line-height: 120%;
@@ -191,6 +193,7 @@
 					top: 0;
 					left: 0;
 					width: 100%;
+					padding: 0.8rem 2rem;
 					background-color: rgba($color-black, 0.5);
 					color: $color-white;
 				}
@@ -198,6 +201,7 @@
 				&__title {
 					justify-content: center;
 					height: 6.5rem;
+					padding: 0.8rem 2rem;
 					color: $color-brand-3;
 					text-align: center;
 				}
@@ -220,6 +224,9 @@
 
 		&--compacted {
 			flex-direction: row-reverse;
+			align-items: center;
+			gap: 2rem;
+			padding: 0.8rem 2rem;
 			border: 0.1rem solid mix($color-white, $color-black, 20%);
 			background-color: $color-white;
 
