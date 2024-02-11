@@ -161,7 +161,6 @@
 				this.form.date = getDate();
 			},
 			onSave() {
-				console.log("Data of PostForm", this.form);
 				this.updateDate();
 				this.$emit("save-post", this.form);
 			},

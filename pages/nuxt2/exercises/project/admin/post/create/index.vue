@@ -27,8 +27,6 @@
 		"layout": "exercises",
 		"methods": {
 			createPost(postData) {
-				console.log("Data of createPost", postData);
-
 				this.$store.dispatch("fetchCreatePost", postData).then(() => {
 					this.$router.push("/nuxt2/exercises/project/admin");
 				});

@@ -48,8 +48,6 @@
 		},
 		"methods": {
 			updatePost(postData) {
-				console.log("Data of updatePost", postData);
-
 				this.$store.dispatch("fetchUpdatePost", postData).then(() => {
 					this.$router.push("/nuxt2/exercises/project/admin");
 				});
