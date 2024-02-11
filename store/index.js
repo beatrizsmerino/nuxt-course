@@ -109,6 +109,9 @@ const createStore = () => new Store({
 		getPostSelected(state) {
 			return state.postSelected;
 		},
+		getIsError(state) {
+			return state.isError;
+		},
 	},
 });
 

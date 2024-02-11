@@ -40,7 +40,7 @@
 				return this.$store.getters.getPostSelected;
 			},
 			isError() {
-				return this.$store.state.isError;
+				return this.$store.getters.getIsError;
 			},
 		},
 		"methods": {
