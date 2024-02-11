@@ -12,6 +12,7 @@
 					:is-admin="isAdmin"
 					:post-data="item"
 					:post-modifier="getCssModifierList.map(item => `post-preview--${item}`)"
+					@delete-post="onDelete"
 				/>
 			</li>
 		</ul>
@@ -81,6 +82,16 @@
 				}
 
 				return classCss;
+			},
+		},
+		"watch": {
+			postListData(newValue) {
+				this.postList = newValue;
+			},
+		},
+		"methods": {
+			onDelete(postData) {
+				this.$emit("delete-post", postData);
 			},
 		},
 	};

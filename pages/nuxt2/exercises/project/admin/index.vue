@@ -16,6 +16,7 @@
 					:post-list-data="getPostList"
 					is-admin
 					css-modifier="compacted"
+					@delete-post="deletePost"
 				/>
 			</article>
 			<article class="button-list">
@@ -44,6 +45,14 @@
 			},
 			isError() {
 				return this.$store.state.isError;
+			},
+		},
+		"methods": {
+			deletePost(postData) {
+				// eslint-disable-next-line no-alert
+				if (window.confirm("Do you really want to delete this post?")) {
+					this.$store.dispatch("deletePost", postData.id);
+				}
 			},
 		},
 	};

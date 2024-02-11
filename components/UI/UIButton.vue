@@ -7,7 +7,7 @@
 		:target="!to ? `_blank` : ''"
 		:rel="!to ? 'noopener noreferrer' : ''"
 		:class="[classType, classModifier]"
-		@click="buttonClick"
+		@click.prevent.stop="buttonClick"
 	>
 		<slot />
 	</component>
@@ -109,6 +109,42 @@
 			&:hover {
 				background-color: transparent;
 				color: $color-black;
+			}
+
+			&.button {
+				background-color: transparent;
+
+				&--success {
+					::v-deep {
+						.icon {
+							fill: $color-success;
+						}
+					}
+
+					&:hover {
+						::v-deep {
+							.icon {
+								fill: $color-black;
+							}
+						}
+					}
+				}
+
+				&--error {
+					::v-deep {
+						.icon {
+							fill: $color-error;
+						}
+					}
+
+					&:hover {
+						::v-deep {
+							.icon {
+								fill: $color-black;
+							}
+						}
+					}
+				}
 			}
 		}
 

@@ -3,6 +3,19 @@
 		:class="`post-preview ${postModifier.join(' ')}`"
 		:to="postNuxtLink"
 	>
+		<template v-if="isAdmin">
+			<div class="post-preview__actions">
+				<UIButton
+					class="button--icon button--error"
+					@button-click="onDelete"
+				>
+					<UIIcon
+						icon-name="trash"
+						icon-aria-label="Delete"
+					/>
+				</UIButton>
+			</div>
+		</template>
 		<template v-if="checkCssModifier === 'expanded'">
 			<time
 				:datetime="postData.date"
@@ -91,6 +104,9 @@
 
 				return `${text.slice(0, this.maxCharacters)}...`;
 			},
+			onDelete() {
+				this.$emit("delete-post", this.postData);
+			},
 		},
 	};
 </script>
@@ -104,6 +120,11 @@
 		overflow: hidden;
 		border-radius: 2rem 0 2rem 2rem;
 		text-decoration: none;
+
+		&__actions {
+			display: flex;
+			align-items: center;
+		}
 
 		&__date {
 			display: inline-block;
