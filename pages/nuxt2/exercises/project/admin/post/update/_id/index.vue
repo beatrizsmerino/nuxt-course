@@ -8,11 +8,7 @@
 		</template>
 		<template #content>
 			<article>
-				<p v-if="isError">
-					Error loading data
-				</p>
 				<PostForm
-					v-else
 					:post-data="getPostSelected"
 					@save-post="updatePost"
 				/>
@@ -38,9 +34,6 @@
 		"computed": {
 			getPostSelected() {
 				return this.$store.getters.getPostSelected;
-			},
-			isError() {
-				return this.$store.getters.getIsError;
 			},
 		},
 		beforeDestroy() {

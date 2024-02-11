@@ -1,50 +1,55 @@
 <template>
 	<article class="post-detail">
-		<div class="post-detail__image">
-			<span class="post-detail__index">
-				#{{ postData.id }}
-			</span>
-			<img
-				:src="postData.image"
-				:alt="postData.title"
-			>
-		</div>
-		<div class="post-detail__header">
-			<h2 class="post-detail__title">
-				{{ postData.title }}
-			</h2>
-			<span class="post-detail__date">
-				Last updated on:
-				<time :datetime="postData.date">
-					{{ postData.date }}
-				</time>
-			</span>
-			<span class="post-detail__author">
-				Written by {{ postData.author }}
-			</span>
-		</div>
-		<div class="post-detail__content">
-			<div
-				class="post-detail__long-description"
-				v-html="postData.longDescription"
-			/>
-			<UIButton
-				:href="postData.link"
-				class-type="link"
-				class="post-detail__button"
-				target="_blank"
-			>
-				Read more
-			</UIButton>
-			<div class="post-detail__feedback">
-				<p>
-					Let me know that you think about the post, send a email to
-					<a href="mailto:feedback@project.com">
-						feedback@project.com
-					</a>
-				</p>
+		<p v-if="isError">
+			Error loading data
+		</p>
+		<template v-else>
+			<div class="post-detail__image">
+				<span class="post-detail__index">
+					#{{ postData.id }}
+				</span>
+				<img
+					:src="postData.image"
+					:alt="postData.title"
+				>
 			</div>
-		</div>
+			<div class="post-detail__header">
+				<h2 class="post-detail__title">
+					{{ postData.title }}
+				</h2>
+				<span class="post-detail__date">
+					Last updated on:
+					<time :datetime="postData.date">
+						{{ postData.date }}
+					</time>
+				</span>
+				<span class="post-detail__author">
+					Written by {{ postData.author }}
+				</span>
+			</div>
+			<div class="post-detail__content">
+				<div
+					class="post-detail__long-description"
+					v-html="postData.longDescription"
+				/>
+				<UIButton
+					:href="postData.link"
+					class-type="link"
+					class="post-detail__button"
+					target="_blank"
+				>
+					Read more
+				</UIButton>
+				<div class="post-detail__feedback">
+					<p>
+						Let me know that you think about the post, send a email to
+						<a href="mailto:feedback@project.com">
+							feedback@project.com
+						</a>
+					</p>
+				</div>
+			</div>
+		</template>
 	</article>
 </template>
 
@@ -55,6 +60,11 @@
 			"postData": {
 				"type": Object,
 				"required": true,
+			},
+		},
+		"computed": {
+			isError() {
+				return this.$store.getters.getIsError;
 			},
 		},
 	};

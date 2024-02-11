@@ -1,104 +1,110 @@
 <template>
-	<form
-		id="postForm"
-		class="post-form form"
-		@submit.prevent="onSave"
-	>
-		<div class="form__group">
-			<div class="form__column">
-				<FormItem
-					:field-value="form.title"
-					field-id="postFormTitle"
-					field-label="Title"
-					field-type="text"
-					field-placeholder="The hook that captures glances"
-					field-modifier="anim"
-					:field-required="true"
-					@update:fieldValue="value => (form.title = value)"
-				/>
+	<article>
+		<p v-if="isError">
+			Error loading data
+		</p>
+		<form
+			v-else
+			id="postForm"
+			class="post-form form"
+			@submit.prevent="onSave"
+		>
+			<div class="form__group">
+				<div class="form__column">
+					<FormItem
+						:field-value="form.title"
+						field-id="postFormTitle"
+						field-label="Title"
+						field-type="text"
+						field-placeholder="The hook that captures glances"
+						field-modifier="anim"
+						:field-required="true"
+						@update:fieldValue="value => (form.title = value)"
+					/>
+				</div>
+				<div class="form__column">
+					<FormItem
+						:field-value="form.author"
+						field-id="postFormAuthor"
+						field-label="Author"
+						field-type="text"
+						field-placeholder="Who is the genius behind the work?"
+						field-modifier="anim"
+						@update:fieldValue="value => (form.author = value)"
+					/>
+				</div>
 			</div>
-			<div class="form__column">
-				<FormItem
-					:field-value="form.author"
-					field-id="postFormAuthor"
-					field-label="Author"
-					field-type="text"
-					field-placeholder="Who is the genius behind the work?"
-					field-modifier="anim"
-					@update:fieldValue="value => (form.author = value)"
-				/>
+			<FormItem
+				:field-value="form.category"
+				field-label="Category"
+				field-id="postFormCategory"
+				field-tag="select"
+				:field-list="data.categoriesList"
+				field-placeholder="Choose the kingdom of your creation"
+				field-modifier="anim"
+				:field-required="true"
+				@update:fieldValue="value => (form.category = value)"
+			/>
+			<div class="form__group">
+				<div class="form__column">
+					<FormItem
+						:field-value="form.link"
+						field-id="postFormLink"
+						field-label="Link"
+						field-type="url"
+						field-placeholder="Paste the link to your source of inspiration"
+						field-modifier="anim"
+						@update:fieldValue="value => (form.link = value)"
+					/>
+				</div>
+				<div class="form__column">
+					<FormItem
+						:field-value="form.image"
+						field-id="postFormImage"
+						field-label="Image link"
+						field-type="url"
+						field-placeholder="Paste the link of your awesome image"
+						field-modifier="anim"
+						@update:fieldValue="value => (form.image = value)"
+					/>
+				</div>
 			</div>
-		</div>
-		<FormItem
-			:field-value="form.category"
-			field-label="Category"
-			field-id="postFormCategory"
-			field-tag="select"
-			:field-list="data.categoriesList"
-			field-placeholder="Choose the kingdom of your creation"
-			field-modifier="anim"
-			:field-required="true"
-			@update:fieldValue="value => (form.category = value)"
-		/>
-		<div class="form__group">
-			<div class="form__column">
-				<FormItem
-					:field-value="form.link"
-					field-id="postFormLink"
-					field-label="Link"
-					field-type="url"
-					field-placeholder="Paste the link to your source of inspiration"
-					field-modifier="anim"
-					@update:fieldValue="value => (form.link = value)"
-				/>
-			</div>
-			<div class="form__column">
-				<FormItem
-					:field-value="form.image"
-					field-id="postFormImage"
-					field-label="Image link"
-					field-type="url"
-					field-placeholder="Paste the link of your awesome image"
-					field-modifier="anim"
-					@update:fieldValue="value => (form.image = value)"
-				/>
-			</div>
-		</div>
 
-		<FormItem
-			:field-value="form.shortDescription"
-			field-id="postFormShortDescription"
-			field-label="Short description"
-			field-placeholder="Capture the essence in a sentence"
-			field-modifier="anim"
-			:field-required="true"
-			@update:fieldValue="value => (form.shortDescription = value)"
-		/>
-		<FormItem
-			:field-value="form.longDescription"
-			field-id="postFormLongDescription"
-			field-label="Long description"
-			field-tag="textarea"
-			field-modifier="anim"
-			@update:fieldValue="value => (form.longDescription = value)"
-		/>
-		<div class="form__button-list">
-			<UIButton
-				class="button--success"
-				type="button"
-				@button-click="onSave"
-			>
-				Save
-			</UIButton>
-			<UIButton
-				class="button--error"
-				type="button"
-				@button-click="onCancel"
-			>
-				Cancel
-			</UIButton>
-		</div>
-	</form>
+			<FormItem
+				:field-value="form.shortDescription"
+				field-id="postFormShortDescription"
+				field-label="Short description"
+				field-placeholder="Capture the essence in a sentence"
+				field-modifier="anim"
+				:field-required="true"
+				@update:fieldValue="value => (form.shortDescription = value)"
+			/>
+			<FormItem
+				:field-value="form.longDescription"
+				field-id="postFormLongDescription"
+				field-label="Long description"
+				field-tag="textarea"
+				field-modifier="anim"
+				@update:fieldValue="value => (form.longDescription = value)"
+			/>
+			<div class="form__button-list">
+				<UIButton
+					class="button--success"
+					type="button"
+					@button-click="onSave"
+				>
+					Save
+				</UIButton>
+				<UIButton
+					class="button--error"
+					type="button"
+					@button-click="onCancel"
+				>
+					Cancel
+				</UIButton>
+			</div>
+		</form>
+	</article>
 </template>
 
 <script>
@@ -147,6 +153,11 @@
 					],
 				},
 			};
+		},
+		"computed": {
+			isError() {
+				return this.$store.getters.getIsError;
+			},
 		},
 		mounted() {
 			this.getId();

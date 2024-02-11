@@ -3,7 +3,10 @@
 		class="post-list"
 		:class="getCssModifierList.map(item => `post-list--${item}`)"
 	>
-		<ul>
+		<p v-if="isError">
+			Error loading data
+		</p>
+		<ul v-else>
 			<li
 				v-for="(item, index) in getPosts"
 				:key="`post-${index}`"
@@ -82,6 +85,9 @@
 				}
 
 				return classCss;
+			},
+			isError() {
+				return this.$store.getters.getIsError;
 			},
 		},
 		"watch": {

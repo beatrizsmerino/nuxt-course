@@ -5,13 +5,7 @@
 		</template>
 		<template #content>
 			<article>
-				<p v-if="isError">
-					Error loading data
-				</p>
-				<PostDetail
-					v-else
-					:post-data="getPostSelected"
-				/>
+				<PostDetail :post-data="getPostSelected" />
 			</article>
 		</template>
 	</Layout>
@@ -34,9 +28,6 @@
 		"computed": {
 			getPostSelected() {
 				return this.$store.getters.getPostSelected;
-			},
-			isError() {
-				return this.$store.getters.getIsError;
 			},
 		},
 		beforeDestroy() {
