@@ -84,6 +84,11 @@
 				return classCss;
 			},
 		},
+		"watch": {
+			postListData(newValue) {
+				this.postList = newValue;
+			},
+		},
 		"methods": {
 			onDelete(postData) {
 				this.$emit("delete-post", postData);
