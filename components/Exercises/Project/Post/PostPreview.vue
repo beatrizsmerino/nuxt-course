@@ -182,8 +182,7 @@
 			line-height: 120%;
 		}
 
-		&--expanded,
-		&--last-post-list {
+		&--expanded {
 			background-color: mix($color-white, $color-brand-1, 40%);
 
 			.post-preview {
