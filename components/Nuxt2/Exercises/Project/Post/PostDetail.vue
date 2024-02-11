@@ -3,6 +3,9 @@
 		<p v-if="isError">
 			Error loading data
 		</p>
+		<p v-else-if="Object.keys(postData).some(key => postData[key] === null || postData[key] === '')">
+			There are no data here yet, start editing!
+		</p>
 		<template v-else>
 			<div class="post-detail__image">
 				<span class="post-detail__index">

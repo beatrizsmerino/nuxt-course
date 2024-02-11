@@ -6,6 +6,9 @@
 		<p v-if="isError">
 			Error loading data
 		</p>
+		<p v-else-if="getPosts.length === 0">
+			There are no items here yet, start adding!
+		</p>
 		<ul v-else>
 			<li
 				v-for="(item, index) in getPosts"
