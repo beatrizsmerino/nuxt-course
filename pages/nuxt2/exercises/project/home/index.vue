@@ -7,12 +7,10 @@
 			Last Posts
 		</template>
 		<template #content>
-			<article>
-				<PostList
-					:post-list-data="getPostList"
-					:show-last-post-list="true"
-				/>
-			</article>
+			<PostList
+				:post-list-data="getPostList"
+				:show-last-post-list="true"
+			/>
 		</template>
 	</Layout>
 </template>

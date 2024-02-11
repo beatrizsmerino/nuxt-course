@@ -7,12 +7,10 @@
 			Update post #{{ getPostSelected.id }}
 		</template>
 		<template #content>
-			<article>
-				<PostForm
-					:post-data="getPostSelected"
-					@save-post="updatePost"
-				/>
-			</article>
+			<PostForm
+				:post-data="getPostSelected"
+				@save-post="updatePost"
+			/>
 		</template>
 	</Layout>
 </template>

@@ -7,9 +7,7 @@
 			Create a new post
 		</template>
 		<template #content>
-			<article>
-				<PostForm @save-post="createPost" />
-			</article>
+			<PostForm @save-post="createPost" />
 		</template>
 	</Layout>
 </template>

@@ -7,9 +7,7 @@
 			All Posts
 		</template>
 		<template #content>
-			<article>
-				<PostList :post-list-data="getPostList" />
-			</article>
+			<PostList :post-list-data="getPostList" />
 		</template>
 	</Layout>
 </template>

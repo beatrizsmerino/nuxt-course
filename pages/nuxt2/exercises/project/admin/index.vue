@@ -7,14 +7,12 @@
 			Posts created
 		</template>
 		<template #content>
-			<article>
-				<PostList
-					:post-list-data="getPostList"
-					is-admin
-					css-modifier="compacted"
-					@delete-post="deletePost"
-				/>
-			</article>
+			<PostList
+				:post-list-data="getPostList"
+				is-admin
+				css-modifier="compacted"
+				@delete-post="deletePost"
+			/>
 			<article class="button-list">
 				<UIButton to="/nuxt2/exercises/project/admin/post/create">
 					Create new post

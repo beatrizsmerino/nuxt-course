@@ -4,9 +4,7 @@
 			Project
 		</template>
 		<template #content>
-			<article>
-				<PostDetail :post-data="getPostSelected" />
-			</article>
+			<PostDetail :post-data="getPostSelected" />
 		</template>
 	</Layout>
 </template>
