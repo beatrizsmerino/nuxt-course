@@ -7,7 +7,7 @@
 		:target="!to ? `_blank` : ''"
 		:rel="!to ? 'noopener noreferrer' : ''"
 		:class="[classType, classModifier]"
-		@click="buttonClick"
+		@click.prevent.stop="buttonClick"
 	>
 		<slot />
 	</component>
