@@ -1,8 +1,8 @@
 <template>
-	<article>
+	<article class="auth-form">
 		<form
 			id="authForm"
-			class="auth-form form"
+			class="form"
 			@submit.prevent="onLogin"
 		>
 			<FormItem

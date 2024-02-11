@@ -1,12 +1,12 @@
 <template>
-	<article>
+	<article class="post-form">
 		<p v-if="isError">
 			Error loading data
 		</p>
 		<form
 			v-else
 			id="postForm"
-			class="post-form form"
+			class="form"
 			@submit.prevent="onSave"
 		>
 			<div class="form__group">
