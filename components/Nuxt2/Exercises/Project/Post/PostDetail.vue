@@ -80,7 +80,10 @@
 		}
 
 		&__image {
+			display: flex;
 			position: relative;
+			align-items: center;
+			justify-content: center;
 			height: 30rem;
 			margin-bottom: 2rem;
 			overflow: hidden;
@@ -93,6 +96,14 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+
+				&[alt] {
+					color: $color-error;
+					font-weight: bold;
+					line-height: 15;
+					text-align: center;
+					text-shadow: -0.1rem -0.1rem $color-black;
+				}
 			}
 		}
 
