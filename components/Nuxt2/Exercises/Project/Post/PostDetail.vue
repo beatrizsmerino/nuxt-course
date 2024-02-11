@@ -70,10 +70,9 @@
 			bottom: 0;
 			align-items: center;
 			justify-content: center;
-			width: 8rem;
-			height: 8rem;
-			padding: 2rem 0 0 2rem;
-			border-radius: 8rem 0 0;
+			width: 100%;
+			height: max-content;
+			padding: 2rem 1rem;
 			background-color: rgba($color-brand-2, 0.8);
 			color: $color-white;
 			font-size: 2rem;
@@ -81,15 +80,30 @@
 		}
 
 		&__image {
+			display: flex;
 			position: relative;
+			align-items: center;
+			justify-content: center;
 			height: 30rem;
 			margin-bottom: 2rem;
 			overflow: hidden;
+			background-image: url("~/assets/images/default/default-placeholder.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
 
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+
+				&[alt] {
+					color: $color-error;
+					font-weight: bold;
+					line-height: 15;
+					text-align: center;
+					text-shadow: -0.1rem -0.1rem $color-black;
+				}
 			}
 		}
 

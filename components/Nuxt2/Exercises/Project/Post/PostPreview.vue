@@ -137,12 +137,26 @@
 
 		&__image {
 			display: flex;
+			align-items: center;
+			justify-content: center;
 			height: 15rem;
+			background-image: url("~/assets/images/default/default-placeholder.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
 
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+
+				&[alt] {
+					color: $color-error;
+					font-weight: bold;
+					line-height: 10;
+					text-align: center;
+					text-shadow: -0.1rem -0.1rem $color-black;
+				}
 			}
 		}
 
