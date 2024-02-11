@@ -121,6 +121,11 @@
 		border-radius: 2rem 0 2rem 2rem;
 		text-decoration: none;
 
+		&__actions {
+			display: flex;
+			align-items: center;
+		}
+
 		&__date {
 			display: inline-block;
 			padding: 0.8rem 2rem;
