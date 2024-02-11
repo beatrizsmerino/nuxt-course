@@ -33,7 +33,7 @@
 		},
 		"layout": "exercises",
 		asyncData({ store, params }) {
-			return store.dispatch("setPostSelected", params.id);
+			return store.dispatch("readPostSelected", params.id);
 		},
 		"computed": {
 			getPostSelected() {

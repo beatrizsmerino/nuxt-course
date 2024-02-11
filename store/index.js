@@ -9,10 +9,10 @@ const createStore = () => new Store({
 		"isError": null,
 	},
 	"mutations": {
-		setPostList(state, data) {
+		readPostList(state, data) {
 			state.postList = data;
 		},
-		setPostSelected(state, data) {
+		readPostSelected(state, data) {
 			state.postSelected = data;
 		},
 		createPost(state, data) {
@@ -25,7 +25,7 @@ const createStore = () => new Store({
 		deletePost(state, id) {
 			state.postList = state.postList.filter(post => post.id !== id);
 		},
-		setError(state, error) {
+		createError(state, error) {
 			state.isError = error;
 		},
 	},
@@ -41,20 +41,20 @@ const createStore = () => new Store({
 							...response.data[key],
 						});
 					}
-					vuexContext.commit("setPostList", postList);
+					vuexContext.commit("readPostList", postList);
 				})
 				.catch(error => {
-					vuexContext.commit("setError", error);
+					vuexContext.commit("createError", error);
 				});
 		},
-		setPostList(vuexContext, data) {
-			vuexContext.commit("setPostList", data);
+		readPostList(vuexContext, data) {
+			vuexContext.commit("readPostList", data);
 		},
-		setPostSelected(vuexContext, id) {
+		readPostSelected(vuexContext, id) {
 			return axios
 				.get(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${id}.json`)
 				.then(result => {
-					vuexContext.commit("setPostSelected", result.data);
+					vuexContext.commit("readPostSelected", result.data);
 				});
 		},
 		createPost(vuexContext, data) {
