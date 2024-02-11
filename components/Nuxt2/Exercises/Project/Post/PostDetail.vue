@@ -70,10 +70,9 @@
 			bottom: 0;
 			align-items: center;
 			justify-content: center;
-			width: 8rem;
-			height: 8rem;
-			padding: 2rem 0 0 2rem;
-			border-radius: 8rem 0 0;
+			width: 100%;
+			height: max-content;
+			padding: 2rem 1rem;
 			background-color: rgba($color-brand-2, 0.8);
 			color: $color-white;
 			font-size: 2rem;
