@@ -222,7 +222,6 @@
 				if (this.validateForm()) {
 					this.updateDate();
 					this.$emit("save-post", this.form);
-				} else {
 				}
 			},
 			onCancel() {
