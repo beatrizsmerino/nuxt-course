@@ -147,7 +147,7 @@
 			return {
 				"formLabelModifier": "",
 				"formFieldModifier": "",
-				"userInteracted": false,
+				"isInteracted": false,
 				"isFocus": false,
 			};
 		},
@@ -164,7 +164,7 @@
 				return this.fieldValue === "";
 			},
 			isError() {
-				return this.fieldRequired && this.isEmpty && this.userInteracted;
+				return this.fieldRequired && this.isEmpty && this.isInteracted;
 			},
 		},
 		created() {
@@ -179,11 +179,11 @@
 			},
 			onFocus() {
 				this.isFocus = true;
-				this.userInteracted = true;
+				this.isInteracted = true;
 			},
 			onBlur() {
 				this.isFocus = false;
-				this.userInteracted = true;
+				this.isInteracted = true;
 			},
 		},
 	};
