@@ -19,6 +19,7 @@
 						field-placeholder="The hook that captures glances"
 						field-modifier="anim"
 						:field-required="true"
+						:field-error="validationErrors.title"
 						@update:fieldValue="value => (form.title = value)"
 					/>
 				</div>
@@ -43,6 +44,7 @@
 				field-placeholder="Choose the kingdom of your creation"
 				field-modifier="anim"
 				:field-required="true"
+				:field-error="validationErrors.category"
 				@update:fieldValue="value => (form.category = value)"
 			/>
 			<div class="form__group">
@@ -77,6 +79,7 @@
 				field-placeholder="Capture the essence in a sentence"
 				field-modifier="anim"
 				:field-required="true"
+				:field-error="validationErrors.shortDescription"
 				@update:fieldValue="value => (form.shortDescription = value)"
 			/>
 			<FormItem
@@ -152,6 +155,8 @@
 						"Legal",
 					],
 				},
+				"isValid": true,
+				"validationErrors": {},
 			};
 		},
 		"computed": {
@@ -171,9 +176,31 @@
 			updateDate() {
 				this.form.date = getDate();
 			},
+			validateForm() {
+				this.isValid = true;
+				this.validationErrors = {};
+
+				const requiredFields = {
+					"title": "Title is required",
+					"category": "Category is required",
+					"shortDescription": "Short description is required",
+				};
+
+				Object.keys(requiredFields).forEach(field => {
+					if (!this.form[field].trim()) {
+						this.isValid = false;
+						this.validationErrors[field] = requiredFields[field];
+					}
+				});
+
+				return this.isValid;
+			},
 			onSave() {
-				this.updateDate();
-				this.$emit("save-post", this.form);
+				if (this.validateForm()) {
+					this.updateDate();
+					this.$emit("save-post", this.form);
+				} else {
+				}
 			},
 			onCancel() {
 				this.$router.push("/exercises/project/admin");

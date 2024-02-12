@@ -80,6 +80,11 @@
 				/>
 			</UIButton>
 		</div>
+		<div v-if="fieldError">
+			<p>
+				{{ fieldError }}
+			</p>
+		</div>
 	</div>
 </template>
 
@@ -127,6 +132,10 @@
 			"fieldRequired": {
 				"type": Boolean,
 				"default": false,
+			},
+			"fieldError": {
+				"type": String,
+				"default": "",
 			},
 		},
 		data() {
