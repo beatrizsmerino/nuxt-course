@@ -15,7 +15,7 @@
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
-		"prettier:fix": "prettier --write \"./**/*.{vue,js,json}\" ./.prettierrc",
+		"prettier:fix": "prettier --write \"./**/*.{css,scss,sass,vue,js,json}\" ./.prettierrc",
 		"eslint:fix": "eslint \"./**/*.{vue,js,json}\" --fix --ignore-path ./.eslintignore",
 		"stylelint:fix": "stylelint \"./**/*.{css,scss,sass,vue}\" --fix --ignore-path ./.stylelintignore",
 		"lint": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",

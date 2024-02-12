@@ -95,3 +95,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Assets folder
+assets/sprite
