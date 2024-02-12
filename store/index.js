@@ -84,10 +84,7 @@ const createStore = () => new Store({
 		},
 		fetchUpdatePost(vuexContext, data) {
 			return axios
-				.put(
-					`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${data.id}.json`,
-					data,
-				)
+				.put(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${data.id}.json`, data)
 				.then(result => {
 					vuexContext.commit("setUpdatePost", data);
 				})

@@ -11,7 +11,7 @@
 		justify-content: space-between;
 		flex-direction: row;
 
-		@include media('sm') {
+		@include media("sm") {
 			width: 100% !important;
 			flex-direction: column !important;
 		}
@@ -19,7 +19,7 @@
 		&:not(:last-child) {
 			margin-bottom: 2rem;
 
-			@include media('sm') {
+			@include media("sm") {
 				margin: 0 0 2rem !important;
 			}
 		}
@@ -32,7 +32,7 @@
 	}
 
 	&__column {
-		@include media('sm') {
+		@include media("sm") {
 			width: 100% !important;
 			flex-direction: column !important;
 		}
@@ -40,7 +40,7 @@
 		&:not(:last-child) {
 			margin-right: 2rem !important;
 
-			@include media('sm') {
+			@include media("sm") {
 				margin-right: 0 !important;
 				margin-bottom: 2rem !important;
 			}
@@ -71,7 +71,7 @@
 		display: flex;
 		justify-content: flex-end;
 
-		@include media('md') {
+		@include media("md") {
 			justify-content: space-between;
 		}
 
@@ -82,7 +82,7 @@
 				margin-right: 2rem;
 			}
 
-			@include media('md') {
+			@include media("md") {
 				width: calc(50% - 1rem);
 				min-width: auto;
 			}
