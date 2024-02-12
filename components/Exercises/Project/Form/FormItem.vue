@@ -82,7 +82,7 @@
 				</UIButton>
 			</div>
 		</div>
-		<FormError :error-text="fieldError" />
+		<FormError :error-text="fieldErrorText" />
 	</div>
 </template>
 
@@ -133,7 +133,7 @@
 				"type": Boolean,
 				"default": false,
 			},
-			"fieldError": {
+			"fieldErrorText": {
 				"type": String,
 				"default": "",
 			},

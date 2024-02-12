@@ -19,7 +19,7 @@
 						field-placeholder="The hook that captures glances"
 						field-modifier="anim"
 						:field-required="true"
-						:field-error="validationErrors.title"
+						:field-error-text="validationErrors.title"
 						@update:fieldValue="value => (form.title = value)"
 					/>
 				</div>
@@ -44,7 +44,7 @@
 				field-placeholder="Choose the kingdom of your creation"
 				field-modifier="anim"
 				:field-required="true"
-				:field-error="validationErrors.category"
+				:field-error-text="validationErrors.category"
 				@update:fieldValue="value => (form.category = value)"
 			/>
 			<div class="form__group">
@@ -79,7 +79,7 @@
 				field-placeholder="Capture the essence in a sentence"
 				field-modifier="anim"
 				:field-required="true"
-				:field-error="validationErrors.shortDescription"
+				:field-error-text="validationErrors.shortDescription"
 				@update:fieldValue="value => (form.shortDescription = value)"
 			/>
 			<FormItem
