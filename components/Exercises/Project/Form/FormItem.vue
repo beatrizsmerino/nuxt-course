@@ -10,75 +10,77 @@
 			},
 		]"
 	>
-		<FormLabel
-			:label-id="fieldId"
-			:label-modifier="formLabelModifier"
-			:label-text="fieldLabel"
-			:class="{ 'form-label--required': fieldRequired }"
-		/>
-		<input
-			v-if="fieldTag == 'input'"
-			:id="fieldId"
-			v-model="updateFieldValue"
-			:class="`${fieldTag} ${formFieldModifier}`"
-			class="form__field form-field"
-			:name="fieldId"
-			:type="fieldType"
-			:placeholder="fieldPlaceholder"
-			:required="fieldRequired"
-			@focus="onFocus"
-			@blur="onBlur"
-		>
-		<textarea
-			v-if="fieldTag == 'textarea'"
-			:id="fieldId"
-			v-model="updateFieldValue"
-			:class="`${fieldTag} ${formFieldModifier}`"
-			class="form__field form-field"
-			:name="fieldId"
-			:type="fieldType"
-			:placeholder="fieldPlaceholder"
-			:required="fieldRequired"
-			@focus="onFocus"
-			@blur="onBlur"
-		/>
-		<div
-			v-if="fieldTag == 'select'"
-			class="form-field__wrapper"
-		>
-			<select
+		<div class="form-item__inner">
+			<FormLabel
+				:label-id="fieldId"
+				:label-modifier="formLabelModifier"
+				:label-text="fieldLabel"
+				:class="{ 'form-label--required': fieldRequired }"
+			/>
+			<input
+				v-if="fieldTag == 'input'"
 				:id="fieldId"
 				v-model="updateFieldValue"
-				:name="fieldId"
-				:class="formFieldModifier"
+				:class="`${fieldTag} ${formFieldModifier}`"
 				class="form__field form-field"
+				:name="fieldId"
+				:type="fieldType"
+				:placeholder="fieldPlaceholder"
 				:required="fieldRequired"
 				@focus="onFocus"
 				@blur="onBlur"
 			>
-				<option
-					:value="isFocus && isEmpty ? '' : 'Select one option'"
-					disabled
-					hidden
+			<textarea
+				v-if="fieldTag == 'textarea'"
+				:id="fieldId"
+				v-model="updateFieldValue"
+				:class="`${fieldTag} ${formFieldModifier}`"
+				class="form__field form-field"
+				:name="fieldId"
+				:type="fieldType"
+				:placeholder="fieldPlaceholder"
+				:required="fieldRequired"
+				@focus="onFocus"
+				@blur="onBlur"
+			/>
+			<div
+				v-if="fieldTag == 'select'"
+				class="form-field__wrapper"
+			>
+				<select
+					:id="fieldId"
+					v-model="updateFieldValue"
+					:name="fieldId"
+					:class="formFieldModifier"
+					class="form__field form-field"
+					:required="fieldRequired"
+					@focus="onFocus"
+					@blur="onBlur"
 				>
-					{{ fieldPlaceholder || "Select one option" }}
-				</option>
-				<option
-					v-for="(item, index) in fieldList"
-					:key="`option-${index}`"
-					:value="item"
-				>
-					{{ item }}
-				</option>
-			</select>
+					<option
+						:value="isFocus && isEmpty ? '' : 'Select one option'"
+						disabled
+						hidden
+					>
+						{{ fieldPlaceholder || "Select one option" }}
+					</option>
+					<option
+						v-for="(item, index) in fieldList"
+						:key="`option-${index}`"
+						:value="item"
+					>
+						{{ item }}
+					</option>
+				</select>
 
-			<UIButton class="button--icon form-field__button">
-				<UIIcon
-					icon-name="chevron-down"
-					icon-aria-label="Show options"
-					class="form-field__icon"
-				/>
-			</UIButton>
+				<UIButton class="button--icon form-field__button">
+					<UIIcon
+						icon-name="chevron-down"
+						icon-aria-label="Show options"
+						class="form-field__icon"
+					/>
+				</UIButton>
+			</div>
 		</div>
 		<div v-if="fieldError">
 			<p>
@@ -186,6 +188,19 @@
 
 <style lang="scss" scoped>
 	.form-item {
+		display: flex;
+		flex-direction: column;
+
+		> * {
+			&:not(:last-child) {
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		&__inner {
+			position: relative;
+		}
+
 		.form-field {
 			width: 100%;
 			padding: 1.2rem;
