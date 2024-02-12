@@ -179,11 +179,7 @@
 			updateDate() {
 				this.form.date = getDate();
 			},
-			// eslint-disable-next-line max-statements, complexity
-			validateForm() {
-				this.isValid = true;
-				this.validationErrors = {};
-
+			validateFieldTitle() {
 				if (this.form.title && typeof this.form.title !== "string") {
 					this.isValid = false;
 					this.validationErrors.title = "Title must be a string";
@@ -191,7 +187,8 @@
 					this.isValid = false;
 					this.validationErrors.title = "Title cannot exceed 30 characters";
 				}
-
+			},
+			validateFieldShortDescription() {
 				if (this.form.shortDescription && typeof this.form.shortDescription !== "string") {
 					this.isValid = false;
 					this.validationErrors.shortDescription = "Short description must be a string";
@@ -199,7 +196,8 @@
 					this.isValid = false;
 					this.validationErrors.shortDescription = "Short description cannot exceed 285 characters";
 				}
-
+			},
+			validateFieldRequired() {
 				const requiredFields = {
 					"title": "Title is required",
 					"category": "Category is required",
@@ -212,6 +210,14 @@
 						this.validationErrors[field] = requiredFields[field];
 					}
 				});
+			},
+			validateForm() {
+				this.isValid = true;
+				this.validationErrors = {};
+
+				this.validateFieldTitle();
+				this.validateFieldShortDescription();
+				this.validateFieldRequired();
 
 				return this.isValid;
 			},
