@@ -82,7 +82,10 @@
 				</UIButton>
 			</div>
 		</div>
-		<div v-if="fieldError">
+		<div
+			v-if="fieldError"
+			class="form-item__error"
+		>
 			<p>
 				{{ fieldError }}
 			</p>
@@ -199,6 +202,12 @@
 
 		&__inner {
 			position: relative;
+		}
+
+		&__error {
+			color: $color-error;
+			font-size: 0.8em;
+			text-align: right;
 		}
 
 		.form-field {
