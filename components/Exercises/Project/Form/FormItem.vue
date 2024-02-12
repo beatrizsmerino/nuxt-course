@@ -82,24 +82,19 @@
 				</UIButton>
 			</div>
 		</div>
-		<div
-			v-if="fieldError"
-			class="form-item__error"
-		>
-			<p>
-				{{ fieldError }}
-			</p>
-		</div>
+		<FormError :error-text="fieldError" />
 	</div>
 </template>
 
 <script>
 	import FormLabel from "@/components/Exercises/Project/Form/FormLabel";
+	import FormError from "@/components/Exercises/Project/Form/FormError";
 
 	export default {
 		"name": "FormItem",
 		"components": {
 			FormLabel,
+			FormError,
 		},
 		"props": {
 			"fieldTag": {
@@ -202,12 +197,6 @@
 
 		&__inner {
 			position: relative;
-		}
-
-		&__error {
-			color: $color-error;
-			font-size: 0.8em;
-			text-align: right;
 		}
 
 		.form-field {
