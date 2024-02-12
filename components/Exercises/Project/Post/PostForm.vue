@@ -183,6 +183,14 @@
 				this.isValid = true;
 				this.validationErrors = {};
 
+				if (this.form.title && typeof this.form.title !== "string") {
+					this.isValid = false;
+					this.validationErrors.title = "Title must be a string";
+				} else if (this.form.title.length > 30) {
+					this.isValid = false;
+					this.validationErrors.title = "Title cannot exceed 30 characters";
+				}
+
 				const requiredFields = {
 					"title": "Title is required",
 					"category": "Category is required",
