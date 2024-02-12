@@ -19,7 +19,6 @@
 						field-placeholder="The hook that captures glances"
 						field-modifier="anim"
 						:field-required="true"
-						:field-error-status="!isValid"
 						:field-error-text="validationErrors.title"
 						@update:fieldValue="value => (form.title = value)"
 					/>
@@ -45,7 +44,6 @@
 				field-placeholder="Choose the kingdom of your creation"
 				field-modifier="anim"
 				:field-required="true"
-				:field-error-status="!isValid"
 				:field-error-text="validationErrors.category"
 				@update:fieldValue="value => (form.category = value)"
 			/>
@@ -81,7 +79,6 @@
 				field-placeholder="Capture the essence in a sentence"
 				field-modifier="anim"
 				:field-required="true"
-				:field-error-status="!isValid"
 				:field-error-text="validationErrors.shortDescription"
 				@update:fieldValue="value => (form.shortDescription = value)"
 			/>

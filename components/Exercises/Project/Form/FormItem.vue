@@ -133,10 +133,6 @@
 				"type": Boolean,
 				"default": false,
 			},
-			"fieldErrorStatus": {
-				"type": Boolean,
-				"default": false,
-			},
 			"fieldErrorText": {
 				"type": String,
 				"default": "",
@@ -163,7 +159,7 @@
 				return this.fieldValue === "";
 			},
 			isError() {
-				return this.fieldErrorStatus;
+				return this.fieldErrorText !== "";
 			},
 		},
 		created() {
