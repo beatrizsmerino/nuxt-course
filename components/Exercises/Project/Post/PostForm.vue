@@ -182,16 +182,12 @@
 				this.form.date = getDate();
 			},
 			validateFieldTitle() {
-				if (!isString(this.form.title)) {
-					this.validationErrors.title = "Title must be a string";
-				} else if (!isMaxLength(this.form.title, 30)) {
+				if (!isMaxLength(this.form.title, 30)) {
 					this.validationErrors.title = "Title cannot exceed 30 characters";
 				}
 			},
 			validateFieldAuthor() {
-				if (!isString(this.form.author)) {
-					this.validationErrors.author = "Author must be a string";
-				} else if (!isMaxLength(this.form.author, 50)) {
+				if (!isMaxLength(this.form.author, 50)) {
 					this.validationErrors.author = "Author cannot exceed 50 characters";
 				}
 			},
@@ -206,18 +202,28 @@
 				}
 			},
 			validateFieldShortDescription() {
-				if (!isString(this.form.shortDescription)) {
-					this.validationErrors.shortDescription = "Short description must be a string";
-				} else if (!isMaxLength(this.form.shortDescription, 285)) {
+				if (!isMaxLength(this.form.shortDescription, 285)) {
 					this.validationErrors.shortDescription = "Short description cannot exceed 285 characters";
 				}
 			},
 			validateFieldLongDescription() {
-				if (!isString(this.form.longDescription)) {
-					this.validationErrors.longDescription = "Long description must be a string";
-				} else if (!isMaxLength(this.form.longDescription, 2000)) {
+				if (!isMaxLength(this.form.longDescription, 2000)) {
 					this.validationErrors.longDescription = "Long description cannot exceed 2000 characters";
 				}
+			},
+			validateFieldString() {
+				const stringFields = {
+					"title": "Title must be a string",
+					"author": "Author must be a string",
+					"shortDescription": "Short description must be a string",
+					"longDescription": "Long description must be a string",
+				};
+
+				Object.keys(stringFields).forEach(field => {
+					if (!isString(this.form[field])) {
+						this.validationErrors[field] = stringFields[field];
+					}
+				});
 			},
 			validateFieldRequired() {
 				const requiredFields = {
@@ -242,6 +248,7 @@
 				this.validateFieldImage();
 				this.validateFieldShortDescription();
 				this.validateFieldLongDescription();
+				this.validateFieldString();
 				this.validateFieldRequired();
 
 				if (Object.keys(this.validationErrors)) {
