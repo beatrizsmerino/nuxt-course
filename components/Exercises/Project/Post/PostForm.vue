@@ -202,41 +202,41 @@
 				}
 			},
 			validateFieldUrl() {
-				const urlFields = {
+				const fieldList = {
 					"link": "Link must be a url",
 					"image": "Image must be a url",
 				};
 
-				Object.keys(urlFields).forEach(field => {
+				Object.keys(fieldList).forEach(field => {
 					if (!isUrl(this.form[field])) {
-						this.validationErrors[field] = urlFields[field];
+						this.validationErrors[field] = fieldList[field];
 					}
 				});
 			},
 			validateFieldString() {
-				const stringFields = {
+				const fieldList = {
 					"title": "Title must be a string",
 					"author": "Author must be a string",
 					"shortDescription": "Short description must be a string",
 					"longDescription": "Long description must be a string",
 				};
 
-				Object.keys(stringFields).forEach(field => {
+				Object.keys(fieldList).forEach(field => {
 					if (!isString(this.form[field])) {
-						this.validationErrors[field] = stringFields[field];
+						this.validationErrors[field] = fieldList[field];
 					}
 				});
 			},
 			validateFieldRequired() {
-				const requiredFields = {
+				const fieldList = {
 					"title": "Title is required",
 					"category": "Category is required",
 					"shortDescription": "Short description is required",
 				};
 
-				Object.keys(requiredFields).forEach(field => {
+				Object.keys(fieldList).forEach(field => {
 					if (isEmpty(this.form[field])) {
-						this.validationErrors[field] = requiredFields[field];
+						this.validationErrors[field] = fieldList[field];
 					}
 				});
 			},
