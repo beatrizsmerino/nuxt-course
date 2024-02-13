@@ -178,19 +178,15 @@
 			},
 			validateFieldTitle() {
 				if (this.form.title && typeof this.form.title !== "string") {
-					this.isValid = false;
 					this.validationErrors.title = "Title must be a string";
 				} else if (this.form.title.length > 30) {
-					this.isValid = false;
 					this.validationErrors.title = "Title cannot exceed 30 characters";
 				}
 			},
 			validateFieldShortDescription() {
 				if (this.form.shortDescription && typeof this.form.shortDescription !== "string") {
-					this.isValid = false;
 					this.validationErrors.shortDescription = "Short description must be a string";
 				} else if (this.form.shortDescription.length > 285) {
-					this.isValid = false;
 					this.validationErrors.shortDescription = "Short description cannot exceed 285 characters";
 				}
 			},
@@ -203,18 +199,22 @@
 
 				Object.keys(requiredFields).forEach(field => {
 					if (!this.form[field].trim()) {
-						this.isValid = false;
 						this.validationErrors[field] = requiredFields[field];
 					}
 				});
 			},
 			validateForm() {
-				this.isValid = true;
 				this.validationErrors = {};
 
 				this.validateFieldTitle();
 				this.validateFieldShortDescription();
 				this.validateFieldRequired();
+
+				if (Object.keys(this.validationErrors)) {
+					this.isValid = false;
+				} else {
+					this.isValid = true;
+				}
 
 				return this.isValid;
 			},
