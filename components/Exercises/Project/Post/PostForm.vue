@@ -209,41 +209,41 @@
 				});
 			},
 			validateFieldUrl() {
-				const fieldList = {
-					"link": "This field must be a url",
-					"image": "This field must be a url",
-				};
+				const fieldList = [
+					"link",
+					"image",
+				];
 
-				Object.keys(fieldList).forEach(field => {
+				fieldList.forEach(field => {
 					if (!isUrl(this.form[field])) {
-						this.validationErrors[field] = fieldList[field];
+						this.validationErrors[field] = "This field must be a url";
 					}
 				});
 			},
 			validateFieldString() {
-				const fieldList = {
-					"title": "This field must be a string",
-					"author": "This field must be a string",
-					"shortDescription": "This field must be a string",
-					"longDescription": "This field must be a string",
-				};
+				const fieldList = [
+					"title",
+					"author",
+					"shortDescription",
+					"longDescription",
+				];
 
-				Object.keys(fieldList).forEach(field => {
+				fieldList.forEach(field => {
 					if (!isString(this.form[field])) {
-						this.validationErrors[field] = fieldList[field];
+						this.validationErrors[field] = "This field must be a string";
 					}
 				});
 			},
 			validateFieldRequired() {
-				const fieldList = {
-					"title": "This field is required",
-					"category": "This field is required",
-					"shortDescription": "This field is required",
-				};
+				const fieldList = [
+					"title",
+					"category",
+					"shortDescription",
+				];
 
-				Object.keys(fieldList).forEach(field => {
+				fieldList.forEach(field => {
 					if (isEmpty(this.form[field])) {
-						this.validationErrors[field] = fieldList[field];
+						this.validationErrors[field] = "This field is required";
 					}
 				});
 			},
