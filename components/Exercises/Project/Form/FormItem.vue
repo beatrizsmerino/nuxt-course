@@ -179,6 +179,7 @@
 			onBlur() {
 				this.isFocus = false;
 				this.isInteracted = true;
+				this.$emit("blur");
 			},
 		},
 	};

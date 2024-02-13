@@ -20,6 +20,7 @@
 						field-modifier="anim"
 						:field-required="true"
 						:field-error-text="validationErrors.title"
+						@blur="validateTitle"
 						@update:fieldValue="value => (form.title = value)"
 					/>
 				</div>
@@ -32,6 +33,7 @@
 						field-placeholder="Who is the genius behind the work?"
 						field-modifier="anim"
 						:field-error-text="validationErrors.author"
+						@blur="validateAuthor"
 						@update:fieldValue="value => (form.author = value)"
 					/>
 				</div>
@@ -46,6 +48,7 @@
 				field-modifier="anim"
 				:field-required="true"
 				:field-error-text="validationErrors.category"
+				@blur="validateCategory"
 				@update:fieldValue="value => (form.category = value)"
 			/>
 			<div class="form__group">
@@ -58,6 +61,7 @@
 						field-placeholder="Paste the link to your source of inspiration"
 						field-modifier="anim"
 						:field-error-text="validationErrors.link"
+						@blur="validateLink"
 						@update:fieldValue="value => (form.link = value)"
 					/>
 				</div>
@@ -70,6 +74,7 @@
 						field-placeholder="Paste the link of your awesome image"
 						field-modifier="anim"
 						:field-error-text="validationErrors.image"
+						@blur="validateImage"
 						@update:fieldValue="value => (form.image = value)"
 					/>
 				</div>
@@ -83,6 +88,7 @@
 				field-modifier="anim"
 				:field-required="true"
 				:field-error-text="validationErrors.shortDescription"
+				@blur="validateShortDescription"
 				@update:fieldValue="value => (form.shortDescription = value)"
 			/>
 			<FormItem
@@ -92,6 +98,7 @@
 				field-tag="textarea"
 				field-modifier="anim"
 				:field-error-text="validationErrors.longDescription"
+				@blur="validateLongDescription"
 				@update:fieldValue="value => (form.longDescription = value)"
 			/>
 			<div class="form__button-list">
