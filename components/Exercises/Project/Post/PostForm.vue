@@ -31,6 +31,7 @@
 						field-type="text"
 						field-placeholder="Who is the genius behind the work?"
 						field-modifier="anim"
+						:field-error-text="validationErrors.author"
 						@update:fieldValue="value => (form.author = value)"
 					/>
 				</div>
@@ -183,6 +184,13 @@
 					this.validationErrors.title = "Title cannot exceed 30 characters";
 				}
 			},
+			validateFieldAuthor() {
+				if (this.form.author && typeof this.form.author !== "string") {
+					this.validationErrors.author = "Author must be a string";
+				} else if (this.form.author.length > 50) {
+					this.validationErrors.author = "Author cannot exceed 50 characters";
+				}
+			},
 			validateFieldShortDescription() {
 				if (this.form.shortDescription && typeof this.form.shortDescription !== "string") {
 					this.validationErrors.shortDescription = "Short description must be a string";
@@ -207,6 +215,7 @@
 				this.validationErrors = {};
 
 				this.validateFieldTitle();
+				this.validateFieldAuthor();
 				this.validateFieldShortDescription();
 				this.validateFieldRequired();
 
