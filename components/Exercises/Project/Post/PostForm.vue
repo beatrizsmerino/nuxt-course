@@ -113,6 +113,7 @@
 
 <script>
 	import { getDate } from "@/mixins/date-mixins.js";
+	import { isString, isEmpty, isMaxLength } from "@/mixins/validation-mixins.js";
 	import FormItem from "@/components/Exercises/Project/Form/FormItem";
 
 	export default {
@@ -178,23 +179,23 @@
 				this.form.date = getDate();
 			},
 			validateFieldTitle() {
-				if (this.form.title && typeof this.form.title !== "string") {
+				if (!isString(this.form.title)) {
 					this.validationErrors.title = "Title must be a string";
-				} else if (this.form.title.length > 30) {
+				} else if (!isMaxLength(this.form.title, 30)) {
 					this.validationErrors.title = "Title cannot exceed 30 characters";
 				}
 			},
 			validateFieldAuthor() {
-				if (this.form.author && typeof this.form.author !== "string") {
+				if (!isString(this.form.author)) {
 					this.validationErrors.author = "Author must be a string";
-				} else if (this.form.author.length > 50) {
+				} else if (!isMaxLength(this.form.author, 50)) {
 					this.validationErrors.author = "Author cannot exceed 50 characters";
 				}
 			},
 			validateFieldShortDescription() {
-				if (this.form.shortDescription && typeof this.form.shortDescription !== "string") {
+				if (!isString(this.form.shortDescription)) {
 					this.validationErrors.shortDescription = "Short description must be a string";
-				} else if (this.form.shortDescription.length > 285) {
+				} else if (!isMaxLength(this.form.shortDescription, 285)) {
 					this.validationErrors.shortDescription = "Short description cannot exceed 285 characters";
 				}
 			},
@@ -206,7 +207,7 @@
 				};
 
 				Object.keys(requiredFields).forEach(field => {
-					if (!this.form[field].trim()) {
+					if (isEmpty(this.form[field])) {
 						this.validationErrors[field] = requiredFields[field];
 					}
 				});
