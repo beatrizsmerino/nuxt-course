@@ -57,6 +57,7 @@
 						field-type="url"
 						field-placeholder="Paste the link to your source of inspiration"
 						field-modifier="anim"
+						:field-error-text="validationErrors.link"
 						@update:fieldValue="value => (form.link = value)"
 					/>
 				</div>
@@ -68,6 +69,7 @@
 						field-type="url"
 						field-placeholder="Paste the link of your awesome image"
 						field-modifier="anim"
+						:field-error-text="validationErrors.image"
 						@update:fieldValue="value => (form.image = value)"
 					/>
 				</div>
@@ -113,7 +115,7 @@
 
 <script>
 	import { getDate } from "@/mixins/date-mixins.js";
-	import { isString, isEmpty, isMaxLength } from "@/mixins/validation-mixins.js";
+	import { isString, isUrl, isEmpty, isMaxLength } from "@/mixins/validation-mixins.js";
 	import FormItem from "@/components/Exercises/Project/Form/FormItem";
 
 	export default {
@@ -192,6 +194,16 @@
 					this.validationErrors.author = "Author cannot exceed 50 characters";
 				}
 			},
+			validateFieldLink() {
+				if (!isUrl(this.form.link)) {
+					this.validationErrors.link = "Link must be a url";
+				}
+			},
+			validateFieldImage() {
+				if (!isUrl(this.form.image)) {
+					this.validationErrors.image = "Image must be a url";
+				}
+			},
 			validateFieldShortDescription() {
 				if (!isString(this.form.shortDescription)) {
 					this.validationErrors.shortDescription = "Short description must be a string";
@@ -212,11 +224,14 @@
 					}
 				});
 			},
+			// eslint-disable-next-line max-statements
 			validateForm() {
 				this.validationErrors = {};
 
 				this.validateFieldTitle();
 				this.validateFieldAuthor();
+				this.validateFieldLink();
+				this.validateFieldImage();
 				this.validateFieldShortDescription();
 				this.validateFieldRequired();
 
