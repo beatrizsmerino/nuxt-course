@@ -116,7 +116,12 @@
 
 <script>
 	import { getDate } from "@/mixins/date-mixins.js";
-	import { isString, isUrl, isEmpty, isMaxLength } from "@/mixins/validation-mixins.js";
+	import {
+		validateFieldString,
+		validateFieldUrl,
+		validateFieldRequired,
+		validateFieldMaxLength,
+	} from "@/mixins/validation-mixins.js";
 	import FormItem from "@/components/Exercises/Project/Form/FormItem";
 
 	export default {
@@ -160,13 +165,15 @@
 						"Legal",
 					],
 				},
-				"isValid": true,
 				"validationErrors": {},
 			};
 		},
 		"computed": {
 			isError() {
 				return this.$store.getters.getIsError;
+			},
+			isValid() {
+				return Object.keys(this.validationErrors).length === 0;
 			},
 		},
 		mounted() {
@@ -181,90 +188,70 @@
 			updateDate() {
 				this.form.date = getDate();
 			},
-			validateFieldMaxLength() {
-				const fieldMaxLengths = {
-					"title": {
-						"maxLength": 30,
-						"errorText": "This field cannot exceed 30 characters",
-					},
-					"author": {
-						"maxLength": 50,
-						"errorText": "This field cannot exceed 50 characters",
-					},
-					"shortDescription": {
-						"maxLength": 285,
-						"errorText": "This field cannot exceed 285 characters",
-					},
-					"longDescription": {
-						"maxLength": 2000,
-						"errorText": "This field cannot exceed 2000 characters",
-					},
-				};
-
-				Object.keys(fieldMaxLengths).forEach(field => {
-					const { maxLength, errorText } = fieldMaxLengths[field];
-					if (!isMaxLength(this.form[field], maxLength)) {
-						this.validationErrors[field] = errorText;
-					}
-				});
+			updateErrorText(fieldName, errorMessage) {
+				if (errorMessage) {
+					this.$set(this.validationErrors, fieldName, errorMessage);
+				} else {
+					this.$delete(this.validationErrors, fieldName);
+				}
 			},
-			validateFieldUrl() {
-				const fieldList = [
-					"link",
-					"image",
-				];
+			validateTitle() {
+				const errorText =
+					validateFieldMaxLength(this.form.title, 30) ||
+					validateFieldString(this.form.title) ||
+					validateFieldRequired(this.form.title);
 
-				fieldList.forEach(field => {
-					if (!isUrl(this.form[field])) {
-						this.validationErrors[field] = "This field must be a url";
-					}
-				});
+				this.updateErrorText("title", errorText);
 			},
-			validateFieldString() {
-				const fieldList = [
-					"title",
-					"author",
-					"shortDescription",
-					"longDescription",
-				];
+			validateAuthor() {
+				const errorText = validateFieldMaxLength(this.form.author, 50) || validateFieldString(this.form.author);
 
-				fieldList.forEach(field => {
-					if (!isString(this.form[field])) {
-						this.validationErrors[field] = "This field must be a string";
-					}
-				});
+				this.updateErrorText("author", errorText);
 			},
-			validateFieldRequired() {
-				const fieldList = [
-					"title",
-					"category",
-					"shortDescription",
-				];
+			validateCategory() {
+				const errorText = validateFieldRequired(this.form.category);
 
-				fieldList.forEach(field => {
-					if (isEmpty(this.form[field])) {
-						this.validationErrors[field] = "This field is required";
-					}
-				});
+				this.updateErrorText("category", errorText);
+			},
+			validateLink() {
+				const errorText = validateFieldUrl(this.form.link);
+
+				this.updateErrorText("link", errorText);
+			},
+			validateImage() {
+				const errorText = validateFieldUrl(this.form.image);
+
+				this.updateErrorText("image", errorText);
+			},
+			validateShortDescription() {
+				const errorText =
+					validateFieldMaxLength(this.form.shortDescription, 285) ||
+					validateFieldString(this.form.shortDescription) ||
+					validateFieldRequired(this.form.shortDescription);
+
+				this.updateErrorText("shortDescription", errorText);
+			},
+			validateLongDescription() {
+				const errorText =
+					validateFieldMaxLength(this.form.longDescription, 2000) ||
+					validateFieldString(this.form.longDescription);
+
+				this.updateErrorText("longDescription", errorText);
 			},
 			validateForm() {
 				this.validationErrors = {};
 
-				this.validateFieldMaxLength();
-				this.validateFieldString();
-				this.validateFieldUrl();
-				this.validateFieldRequired();
-
-				if (Object.keys(this.validationErrors)) {
-					this.isValid = false;
-				} else {
-					this.isValid = true;
-				}
-
-				return this.isValid;
+				this.validateTitle();
+				this.validateAuthor();
+				this.validateCategory();
+				this.validateLink();
+				this.validateImage();
+				this.validateShortDescription();
+				this.validateLongDescription();
 			},
 			onSave() {
-				if (this.validateForm()) {
+				this.validateForm();
+				if (this.isValid) {
 					this.updateDate();
 					this.$emit("save-post", this.form);
 				}

@@ -14,3 +14,35 @@ export const isUrl = (data) => {
 
 	return true;
 };
+
+export function validateFieldMaxLength(fieldValue, maxLength) {
+	if (!isMaxLength(fieldValue, maxLength)) {
+		return `This field cannot exceed ${maxLength} characters`;
+	}
+
+	return "";
+}
+
+export function validateFieldUrl(fieldValue) {
+	if (!isUrl(fieldValue)) {
+		return "This field must be a url";
+	}
+
+	return "";
+}
+
+export function validateFieldString(fieldValue) {
+	if (!isString(fieldValue)) {
+		return "This field must be a string";
+	}
+
+	return "";
+}
+
+export function validateFieldRequired(fieldValue) {
+	if (isEmpty(fieldValue)) {
+		return "This field is required";
+	}
+
+	return "";
+}
