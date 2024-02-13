@@ -91,6 +91,7 @@
 				field-label="Long description"
 				field-tag="textarea"
 				field-modifier="anim"
+				:field-error-text="validationErrors.longDescription"
 				@update:fieldValue="value => (form.longDescription = value)"
 			/>
 			<div class="form__button-list">
@@ -211,6 +212,13 @@
 					this.validationErrors.shortDescription = "Short description cannot exceed 285 characters";
 				}
 			},
+			validateFieldLongDescription() {
+				if (!isString(this.form.longDescription)) {
+					this.validationErrors.longDescription = "Long description must be a string";
+				} else if (!isMaxLength(this.form.longDescription, 2000)) {
+					this.validationErrors.longDescription = "Long description cannot exceed 2000 characters";
+				}
+			},
 			validateFieldRequired() {
 				const requiredFields = {
 					"title": "Title is required",
@@ -233,6 +241,7 @@
 				this.validateFieldLink();
 				this.validateFieldImage();
 				this.validateFieldShortDescription();
+				this.validateFieldLongDescription();
 				this.validateFieldRequired();
 
 				if (Object.keys(this.validationErrors)) {
