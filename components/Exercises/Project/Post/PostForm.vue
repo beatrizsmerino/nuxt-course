@@ -191,16 +191,6 @@
 					this.validationErrors.author = "Author cannot exceed 50 characters";
 				}
 			},
-			validateFieldLink() {
-				if (!isUrl(this.form.link)) {
-					this.validationErrors.link = "Link must be a url";
-				}
-			},
-			validateFieldImage() {
-				if (!isUrl(this.form.image)) {
-					this.validationErrors.image = "Image must be a url";
-				}
-			},
 			validateFieldShortDescription() {
 				if (!isMaxLength(this.form.shortDescription, 285)) {
 					this.validationErrors.shortDescription = "Short description cannot exceed 285 characters";
@@ -210,6 +200,18 @@
 				if (!isMaxLength(this.form.longDescription, 2000)) {
 					this.validationErrors.longDescription = "Long description cannot exceed 2000 characters";
 				}
+			},
+			validateFieldUrl() {
+				const urlFields = {
+					"link": "Link must be a url",
+					"image": "Image must be a url",
+				};
+
+				Object.keys(urlFields).forEach(field => {
+					if (!isUrl(this.form[field])) {
+						this.validationErrors[field] = urlFields[field];
+					}
+				});
 			},
 			validateFieldString() {
 				const stringFields = {
@@ -244,11 +246,10 @@
 
 				this.validateFieldTitle();
 				this.validateFieldAuthor();
-				this.validateFieldLink();
-				this.validateFieldImage();
 				this.validateFieldShortDescription();
 				this.validateFieldLongDescription();
 				this.validateFieldString();
+				this.validateFieldUrl();
 				this.validateFieldRequired();
 
 				if (Object.keys(this.validationErrors)) {
