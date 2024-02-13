@@ -185,19 +185,19 @@
 				const fieldMaxLengths = {
 					"title": {
 						"maxLength": 30,
-						"errorText": "Title cannot exceed 30 characters",
+						"errorText": "This field cannot exceed 30 characters",
 					},
 					"author": {
 						"maxLength": 50,
-						"errorText": "Author cannot exceed 50 characters",
+						"errorText": "This field cannot exceed 50 characters",
 					},
 					"shortDescription": {
 						"maxLength": 285,
-						"errorText": "Short description cannot exceed 285 characters",
+						"errorText": "This field cannot exceed 285 characters",
 					},
 					"longDescription": {
 						"maxLength": 2000,
-						"errorText": "Long description cannot exceed 2000 characters",
+						"errorText": "This field cannot exceed 2000 characters",
 					},
 				};
 
@@ -210,8 +210,8 @@
 			},
 			validateFieldUrl() {
 				const fieldList = {
-					"link": "Link must be a url",
-					"image": "Image must be a url",
+					"link": "This field must be a url",
+					"image": "This field must be a url",
 				};
 
 				Object.keys(fieldList).forEach(field => {
@@ -222,10 +222,10 @@
 			},
 			validateFieldString() {
 				const fieldList = {
-					"title": "Title must be a string",
-					"author": "Author must be a string",
-					"shortDescription": "Short description must be a string",
-					"longDescription": "Long description must be a string",
+					"title": "This field must be a string",
+					"author": "This field must be a string",
+					"shortDescription": "This field must be a string",
+					"longDescription": "This field must be a string",
 				};
 
 				Object.keys(fieldList).forEach(field => {
@@ -236,9 +236,9 @@
 			},
 			validateFieldRequired() {
 				const fieldList = {
-					"title": "Title is required",
-					"category": "Category is required",
-					"shortDescription": "Short description is required",
+					"title": "This field is required",
+					"category": "This field is required",
+					"shortDescription": "This field is required",
 				};
 
 				Object.keys(fieldList).forEach(field => {
