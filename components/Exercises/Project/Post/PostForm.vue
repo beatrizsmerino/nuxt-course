@@ -181,25 +181,32 @@
 			updateDate() {
 				this.form.date = getDate();
 			},
-			validateFieldTitle() {
-				if (!isMaxLength(this.form.title, 30)) {
-					this.validationErrors.title = "Title cannot exceed 30 characters";
-				}
-			},
-			validateFieldAuthor() {
-				if (!isMaxLength(this.form.author, 50)) {
-					this.validationErrors.author = "Author cannot exceed 50 characters";
-				}
-			},
-			validateFieldShortDescription() {
-				if (!isMaxLength(this.form.shortDescription, 285)) {
-					this.validationErrors.shortDescription = "Short description cannot exceed 285 characters";
-				}
-			},
-			validateFieldLongDescription() {
-				if (!isMaxLength(this.form.longDescription, 2000)) {
-					this.validationErrors.longDescription = "Long description cannot exceed 2000 characters";
-				}
+			validateFieldMaxLength() {
+				const fieldMaxLengths = {
+					"title": {
+						"maxLength": 30,
+						"errorText": "Title cannot exceed 30 characters",
+					},
+					"author": {
+						"maxLength": 50,
+						"errorText": "Author cannot exceed 50 characters",
+					},
+					"shortDescription": {
+						"maxLength": 285,
+						"errorText": "Short description cannot exceed 285 characters",
+					},
+					"longDescription": {
+						"maxLength": 2000,
+						"errorText": "Long description cannot exceed 2000 characters",
+					},
+				};
+
+				Object.keys(fieldMaxLengths).forEach(field => {
+					const { maxLength, errorText } = fieldMaxLengths[field];
+					if (!isMaxLength(this.form[field], maxLength)) {
+						this.validationErrors[field] = errorText;
+					}
+				});
 			},
 			validateFieldUrl() {
 				const fieldList = {
@@ -240,14 +247,10 @@
 					}
 				});
 			},
-			// eslint-disable-next-line max-statements
 			validateForm() {
 				this.validationErrors = {};
 
-				this.validateFieldTitle();
-				this.validateFieldAuthor();
-				this.validateFieldShortDescription();
-				this.validateFieldLongDescription();
+				this.validateFieldMaxLength();
 				this.validateFieldString();
 				this.validateFieldUrl();
 				this.validateFieldRequired();
