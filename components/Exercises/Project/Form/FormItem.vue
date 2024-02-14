@@ -233,69 +233,6 @@
 			}
 		}
 
-		&--textarea {
-			.form-label {
-				&--anim {
-					top: 1.2rem;
-					transform: none;
-				}
-			}
-
-			.form-field {
-				height: 16rem;
-				min-height: 16rem;
-				max-height: 29rem;
-				resize: vertical;
-
-				&::placeholder {
-					font-weight: 400 !important;
-				}
-
-				&--anim {
-					height: inherit;
-					max-height: inherit;
-					padding: 2.4rem 1.2rem 1.2rem !important;
-					overflow-y: hidden;
-					resize: none;
-				}
-			}
-		}
-
-		&--select {
-			.form-field {
-				padding: 1.2rem 3rem 1.2rem 1.2rem;
-				cursor: pointer;
-				appearance: none;
-
-				&--anim {
-					padding: 2rem 3rem 0.5rem 1.2rem;
-				}
-
-				&__wrapper {
-					display: flex;
-					position: relative;
-					align-items: center;
-				}
-
-				&__button {
-					display: inline-block;
-					position: absolute;
-					top: 50%;
-					right: 0;
-					transform: translate(0, -50%);
-					pointer-events: none;
-
-					::v-deep {
-						.icon {
-							width: 2rem;
-							height: 2rem;
-							fill: $color-black;
-						}
-					}
-				}
-			}
-		}
-
 		&.is-focus {
 			.form-label {
 				&--anim {
@@ -417,6 +354,69 @@
 					::v-deep {
 						.icon {
 							fill: $color-error;
+						}
+					}
+				}
+			}
+		}
+
+		&--textarea {
+			.form-label {
+				&--anim {
+					top: 1.2rem;
+					transform: none;
+				}
+			}
+
+			.form-field {
+				height: 16rem;
+				min-height: 16rem;
+				max-height: 29rem;
+				resize: vertical;
+
+				&::placeholder {
+					font-weight: 400 !important;
+				}
+
+				&--anim {
+					height: inherit;
+					max-height: inherit;
+					padding: 2.4rem 1.2rem 1.2rem !important;
+					overflow-y: hidden;
+					resize: none;
+				}
+			}
+		}
+
+		&--select {
+			.form-field {
+				padding: 1.2rem 3rem 1.2rem 1.2rem;
+				cursor: pointer;
+				appearance: none;
+
+				&--anim {
+					padding: 2rem 3rem 0.5rem 1.2rem;
+				}
+
+				&__wrapper {
+					display: flex;
+					position: relative;
+					align-items: center;
+				}
+
+				&__button {
+					display: inline-block;
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translate(0, -50%);
+					pointer-events: none;
+
+					::v-deep {
+						.icon {
+							width: 2rem;
+							height: 2rem;
+							fill: $color-black;
 						}
 					}
 				}
