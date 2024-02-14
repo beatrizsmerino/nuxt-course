@@ -221,10 +221,6 @@
 				color: $color-brand-3;
 				font-weight: 100;
 			}
-
-			&--anim {
-				padding: 2rem 1.2rem 0.5rem;
-			}
 		}
 
 		.form-label {
@@ -266,14 +262,6 @@
 			}
 		}
 
-		&.is-empty {
-			.form-field {
-				&--anim {
-					padding: 1.2rem;
-				}
-			}
-		}
-
 		&:not(.is-empty),
 		&.is-focus {
 			.form-label {
@@ -288,7 +276,8 @@
 
 			.form-field {
 				&--anim {
-					padding: 2rem 1.2rem 0.5rem;
+					padding-top: 2rem;
+					padding-bottom: 0.5rem;
 				}
 			}
 		}
@@ -341,39 +330,19 @@
 				&--anim {
 					height: inherit;
 					max-height: inherit;
-					padding: 2.4rem 1.2rem 1.2rem;
+					padding-top: 2.4rem !important;
+					padding-bottom: 1.5rem !important;
 					overflow-y: hidden;
 					resize: none;
-				}
-			}
-
-			&.is-focus {
-				.form-field {
-					&--anim {
-						padding: 2.4rem 1.2rem 1.2rem;
-					}
-				}
-			}
-
-			&:not(.is-empty),
-			&.is-focus {
-				.form-field {
-					&--anim {
-						padding: 2.4rem 1.2rem 1.5rem;
-					}
 				}
 			}
 		}
 
 		&--select {
 			.form-field {
-				padding: 1.2rem 3rem 1.2rem 1.2rem;
+				padding-right: 3rem;
 				cursor: pointer;
 				appearance: none;
-
-				&--anim {
-					padding: 2rem 3rem 0.5rem 1.2rem;
-				}
 
 				&__wrapper {
 					display: flex;
@@ -399,19 +368,12 @@
 				}
 			}
 
-			&.is-empty {
-				.form-field {
-					&--anim {
-						padding: 1.2rem 3rem 1.2rem 1.2rem;
-					}
-				}
-			}
-
 			&:not(.is-empty),
 			&.is-focus {
 				.form-field {
 					&--anim {
-						padding: 2rem 3rem 0.5rem 1.2rem;
+						padding-top: 2rem;
+						padding-bottom: 0.5rem;
 					}
 				}
 			}
