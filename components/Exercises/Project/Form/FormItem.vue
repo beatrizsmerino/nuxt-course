@@ -344,12 +344,6 @@
 			}
 
 			&.is-focus {
-				.form-label {
-					&--anim {
-						top: 1rem;
-					}
-				}
-
 				.form-field {
 					&--anim {
 						padding: 2.4rem 1.2rem 1.2rem !important;
