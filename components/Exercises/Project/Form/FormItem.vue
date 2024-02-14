@@ -296,20 +296,24 @@
 		&.is-error {
 			.form-label {
 				&--anim {
-					color: $color-error;
+					color: $color-error !important;
 				}
 			}
 
 			.form-field {
+				&::placeholder {
+					color: $color-error !important;
+				}
+
 				&--anim {
-					border-color: $color-error;
-					background-color: rgba($color-error, 0.2);
+					border-color: $color-error !important;
+					background-color: rgba($color-error, 0.2) !important;
 				}
 
 				&__button {
 					::v-deep {
 						.icon {
-							fill: $color-error;
+							fill: $color-error !important;
 						}
 					}
 				}
