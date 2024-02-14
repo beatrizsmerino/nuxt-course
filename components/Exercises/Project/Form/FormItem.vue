@@ -193,13 +193,8 @@
 <style lang="scss" scoped>
 	.form-item {
 		display: flex;
+		position: relative;
 		flex-direction: column;
-
-		> * {
-			&:not(:last-child) {
-				margin-bottom: 0.5rem;
-			}
-		}
 
 		&__inner {
 			position: relative;
@@ -360,10 +355,19 @@
 		&.is-focus {
 			.form-label {
 				&--anim {
+					color: $color-brand-3;
+				}
+			}
+		}
+
+		&:not(.is-empty),
+		&.is-error,
+		&.is-focus {
+			.form-label {
+				&--anim {
 					top: 0.8rem;
 					transform: translate(0, 0);
 					transition: top 0.2s ease-in-out 0s;
-					color: $color-brand-3;
 					font-size: 1.2rem;
 				}
 			}
@@ -371,6 +375,12 @@
 			.form-field {
 				&--anim {
 					padding: 2rem 1.2rem 0.5rem !important;
+				}
+			}
+
+			.form-error {
+				&--anim {
+					padding: 2rem 0 0.5rem !important;
 				}
 			}
 		}
@@ -394,6 +404,12 @@
 							fill: $color-error;
 						}
 					}
+				}
+			}
+
+			&.is-focus {
+				.form-error {
+					display: none;
 				}
 			}
 		}

@@ -30,5 +30,14 @@
 		color: $color-error;
 		font-size: 0.8em;
 		text-align: right;
+
+		&--anim {
+			position: absolute;
+			top: 50%;
+			left: 1.2rem;
+			width: auto;
+			margin-bottom: 0;
+			transform: translate(0, -50%);
+		}
 	}
 </style>
