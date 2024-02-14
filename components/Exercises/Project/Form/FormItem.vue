@@ -254,22 +254,6 @@
 					}
 				}
 			}
-
-			&.form-item {
-				&--textarea {
-					.form-label {
-						&--anim {
-							top: 1rem;
-						}
-					}
-
-					.form-field {
-						&--anim {
-							padding: 2.4rem 1.2rem 1.2rem !important;
-						}
-					}
-				}
-			}
 		}
 
 		&:not(.is-focus) {
@@ -286,16 +270,6 @@
 			.form-field {
 				&--anim {
 					padding: 1.2rem;
-				}
-			}
-
-			&.form-item {
-				&--select {
-					.form-field {
-						&--anim {
-							padding: 1.2rem 3rem 1.2rem 1.2rem;
-						}
-					}
 				}
 			}
 		}
@@ -315,24 +289,6 @@
 			.form-field {
 				&--anim {
 					padding: 2rem 1.2rem 0.5rem !important;
-				}
-			}
-
-			&.form-item {
-				&--textarea {
-					.form-field {
-						&--anim {
-							padding: 2.4rem 1.2rem 1.5rem !important;
-						}
-					}
-				}
-
-				&--select {
-					.form-field {
-						&--anim {
-							padding: 2rem 3rem 0.5rem 1.2rem !important;
-						}
-					}
 				}
 			}
 		}
@@ -386,6 +342,29 @@
 					resize: none;
 				}
 			}
+
+			&.is-focus {
+				.form-label {
+					&--anim {
+						top: 1rem;
+					}
+				}
+
+				.form-field {
+					&--anim {
+						padding: 2.4rem 1.2rem 1.2rem !important;
+					}
+				}
+			}
+
+			&:not(.is-empty),
+			&.is-focus {
+				.form-field {
+					&--anim {
+						padding: 2.4rem 1.2rem 1.5rem !important;
+					}
+				}
+			}
 		}
 
 		&--select {
@@ -418,6 +397,23 @@
 							height: 2rem;
 							fill: $color-black;
 						}
+					}
+				}
+			}
+
+			&.is-empty {
+				.form-field {
+					&--anim {
+						padding: 1.2rem 3rem 1.2rem 1.2rem;
+					}
+				}
+			}
+
+			&:not(.is-empty),
+			&.is-focus {
+				.form-field {
+					&--anim {
+						padding: 2rem 3rem 0.5rem 1.2rem !important;
 					}
 				}
 			}
