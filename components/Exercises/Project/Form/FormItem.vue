@@ -21,7 +21,7 @@
 				v-if="fieldTag == 'input'"
 				:id="fieldId"
 				v-model="updateFieldValue"
-				:class="`${fieldTag} ${formFieldModifier}`"
+				:class="formFieldModifier"
 				class="form__field form-field"
 				:name="fieldId"
 				:type="fieldType"
@@ -34,12 +34,13 @@
 				v-if="fieldTag == 'textarea'"
 				:id="fieldId"
 				v-model="updateFieldValue"
-				:class="`${fieldTag} ${formFieldModifier}`"
+				:class="formFieldModifier"
 				class="form__field form-field"
 				:name="fieldId"
 				:type="fieldType"
 				:placeholder="fieldPlaceholder"
 				:required="fieldRequired"
+				@input="autoGrow"
 				@focus="onFocus"
 				@blur="onBlur"
 			/>
@@ -82,7 +83,11 @@
 				</UIButton>
 			</div>
 		</div>
-		<FormError :error-text="fieldErrorText" />
+		<FormError
+			v-if="isError"
+			:error-text="fieldErrorText"
+			:error-modifier="formErrorModifier"
+		/>
 	</div>
 </template>
 
@@ -142,6 +147,7 @@
 			return {
 				"formLabelModifier": "",
 				"formFieldModifier": "",
+				"formErrorModifier": "",
 				"isInteracted": false,
 				"isFocus": false,
 			};
@@ -170,6 +176,7 @@
 				if (this.fieldModifier) {
 					this.formLabelModifier = `form-label--${this.fieldModifier}`;
 					this.formFieldModifier = `form-field--${this.fieldModifier}`;
+					this.formErrorModifier = `form-error--${this.fieldModifier}`;
 				}
 			},
 			onFocus() {
@@ -181,6 +188,11 @@
 				this.isInteracted = true;
 				this.$emit("blur");
 			},
+			autoGrow(event) {
+				const element = event.target;
+				element.style.height = "auto";
+				element.style.height = `${element.scrollHeight}px`;
+			},
 		},
 	};
 </script>
@@ -189,12 +201,6 @@
 	.form-item {
 		display: flex;
 		flex-direction: column;
-
-		> * {
-			&:not(:last-child) {
-				margin-bottom: 0.5rem;
-			}
-		}
 
 		&__inner {
 			position: relative;
@@ -215,15 +221,91 @@
 				color: $color-brand-3;
 				font-weight: 100;
 			}
-
-			&--anim {
-				padding: 2rem 1.2rem 0.5rem;
-			}
 		}
 
 		.form-label {
 			&--anim {
 				color: $color-brand-3;
+			}
+		}
+
+		&.is-focus {
+			.form-label {
+				&--anim {
+					color: $color-brand-3;
+				}
+			}
+
+			.form-field {
+				&--anim {
+					border-color: $color-brand-3;
+					background-color: rgba($color-brand-3, 0.2);
+				}
+
+				&__button {
+					::v-deep {
+						.icon {
+							fill: $color-brand-3;
+						}
+					}
+				}
+			}
+		}
+
+		&:not(.is-focus) {
+			.form-field {
+				&--anim {
+					&::placeholder {
+						color: transparent !important;
+					}
+				}
+			}
+		}
+
+		&:not(.is-empty),
+		&.is-focus {
+			.form-label {
+				&--anim {
+					top: 0.8rem;
+					transform: translate(0, 0);
+					transition: top 0.2s ease-in-out 0s;
+					color: $color-brand-3;
+					font-size: 1.2rem;
+				}
+			}
+
+			.form-field {
+				&--anim {
+					padding-top: 2rem;
+					padding-bottom: 0.5rem;
+				}
+			}
+		}
+
+		&.is-error {
+			.form-label {
+				&--anim {
+					color: $color-error;
+				}
+			}
+
+			.form-field {
+				&::placeholder {
+					color: $color-error;
+				}
+
+				&--anim {
+					border-color: $color-error;
+					background-color: rgba($color-error, 0.2);
+				}
+
+				&__button {
+					::v-deep {
+						.icon {
+							fill: $color-error;
+						}
+					}
+				}
 			}
 		}
 
@@ -242,38 +324,25 @@
 				resize: vertical;
 
 				&::placeholder {
-					font-weight: 400 !important;
+					font-weight: 400;
 				}
 
 				&--anim {
-					padding: 2.4rem 1.2rem 1.2rem !important;
-				}
-			}
-
-			&.is-focus {
-				.form-label {
-					&--anim {
-						top: 1rem;
-					}
-				}
-
-				.form-field {
-					&--anim {
-						padding: 2.4rem 1.2rem 1.2rem !important;
-					}
+					height: inherit;
+					max-height: inherit;
+					padding-top: 2.4rem !important;
+					padding-bottom: 1.5rem !important;
+					overflow-y: hidden;
+					resize: none;
 				}
 			}
 		}
 
 		&--select {
 			.form-field {
-				padding: 1.2rem 3rem 1.2rem 1.2rem;
+				padding-right: 3rem;
 				cursor: pointer;
 				appearance: none;
-
-				&--anim {
-					padding: 2rem 3rem 0.5rem 1.2rem;
-				}
 
 				&__wrapper {
 					display: flex;
@@ -298,96 +367,13 @@
 					}
 				}
 			}
-		}
 
-		&.is-focus {
-			.form-label {
-				&--anim {
-					color: $color-brand-3 !important;
-				}
-			}
-
-			.form-field {
-				&--anim {
-					border-color: $color-brand-3 !important;
-					background-color: rgba($color-brand-3, 0.2) !important;
-				}
-
-				&__button {
-					::v-deep {
-						.icon {
-							fill: $color-brand-3 !important;
-						}
-					}
-				}
-			}
-		}
-
-		&:not(.is-focus) {
-			.form-field {
-				&--anim {
-					&::placeholder {
-						color: transparent !important;
-					}
-				}
-			}
-		}
-
-		&.is-empty {
-			.form-item {
+			&:not(.is-empty),
+			&.is-focus {
 				.form-field {
 					&--anim {
-						padding: 1.2rem;
-					}
-				}
-
-				&--select {
-					.form-field {
-						&--anim {
-							padding: 1.2rem 3rem 1.2rem 1.2rem;
-						}
-					}
-				}
-			}
-		}
-
-		&:not(.is-empty),
-		&.is-focus {
-			.form-label {
-				&--anim {
-					top: 0.8rem;
-					transform: translate(0, 0);
-					transition: top 0.2s ease-in-out 0s;
-					color: $color-brand-3;
-					font-size: 1.2rem;
-				}
-			}
-
-			.form-field {
-				&--anim {
-					padding: 2rem 1.2rem 0.5rem !important;
-				}
-			}
-		}
-
-		&.is-error {
-			.form-label {
-				&--anim {
-					color: $color-error;
-				}
-			}
-
-			.form-field {
-				&--anim {
-					border-color: $color-error;
-					background-color: rgba($color-error, 0.2);
-				}
-
-				&__button {
-					::v-deep {
-						.icon {
-							fill: $color-error;
-						}
+						padding-top: 2rem;
+						padding-bottom: 0.5rem;
 					}
 				}
 			}
