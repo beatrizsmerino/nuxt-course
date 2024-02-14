@@ -380,6 +380,14 @@
 			}
 
 			&.form-item {
+				&--textarea {
+					.form-field {
+						&--anim {
+							padding: 2.4rem 1.2rem 1.5rem !important;
+						}
+					}
+				}
+
 				&--select {
 					.form-field {
 						&--anim {
