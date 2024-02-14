@@ -349,13 +349,13 @@
 		}
 
 		&.is-empty {
-			.form-item {
-				.form-field {
-					&--anim {
-						padding: 1.2rem;
-					}
+			.form-field {
+				&--anim {
+					padding: 1.2rem;
 				}
+			}
 
+			&.form-item {
 				&--select {
 					.form-field {
 						&--anim {
