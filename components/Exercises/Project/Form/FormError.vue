@@ -27,6 +27,7 @@
 
 <style lang="scss" scoped>
 	.form-error {
+		margin-top: 0.5rem;
 		color: $color-error;
 		font-size: 0.8em;
 		text-align: right;

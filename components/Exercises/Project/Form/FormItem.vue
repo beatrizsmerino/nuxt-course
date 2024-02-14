@@ -84,6 +84,7 @@
 			</div>
 		</div>
 		<FormError
+			v-if="isError"
 			:error-text="fieldErrorText"
 			:error-modifier="formErrorModifier"
 		/>
@@ -200,12 +201,6 @@
 	.form-item {
 		display: flex;
 		flex-direction: column;
-
-		> * {
-			&:not(:last-child) {
-				margin-bottom: 0.5rem;
-			}
-		}
 
 		&__inner {
 			position: relative;
