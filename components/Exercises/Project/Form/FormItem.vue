@@ -40,6 +40,7 @@
 				:type="fieldType"
 				:placeholder="fieldPlaceholder"
 				:required="fieldRequired"
+				@input="autoGrow"
 				@focus="onFocus"
 				@blur="onBlur"
 			/>
@@ -186,6 +187,11 @@
 				this.isInteracted = true;
 				this.$emit("blur");
 			},
+			autoGrow(event) {
+				const element = event.target;
+				element.style.height = "auto";
+				element.style.height = `${element.scrollHeight}px`;
+			},
 		},
 	};
 </script>
@@ -251,7 +257,11 @@
 				}
 
 				&--anim {
+					height: inherit;
+					max-height: inherit;
 					padding: 2.4rem 1.2rem 1.2rem !important;
+					overflow-y: hidden;
+					resize: none;
 				}
 			}
 
