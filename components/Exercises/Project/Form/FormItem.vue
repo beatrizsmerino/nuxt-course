@@ -383,6 +383,16 @@
 					padding: 2rem 1.2rem 0.5rem !important;
 				}
 			}
+
+			&.form-item {
+				&--select {
+					.form-field {
+						&--anim {
+							padding: 2rem 3rem 0.5rem 1.2rem !important;
+						}
+					}
+				}
+			}
 		}
 
 		&.is-error {
