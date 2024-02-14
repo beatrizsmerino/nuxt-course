@@ -82,7 +82,10 @@
 				</UIButton>
 			</div>
 		</div>
-		<FormError :error-text="fieldErrorText" />
+		<FormError
+			:error-text="fieldErrorText"
+			:error-modifier="formErrorModifier"
+		/>
 	</div>
 </template>
 
@@ -142,6 +145,7 @@
 			return {
 				"formLabelModifier": "",
 				"formFieldModifier": "",
+				"formErrorModifier": "",
 				"isInteracted": false,
 				"isFocus": false,
 			};
@@ -170,6 +174,7 @@
 				if (this.fieldModifier) {
 					this.formLabelModifier = `form-label--${this.fieldModifier}`;
 					this.formFieldModifier = `form-field--${this.fieldModifier}`;
+					this.formErrorModifier = `form-error--${this.fieldModifier}`;
 				}
 			},
 			onFocus() {

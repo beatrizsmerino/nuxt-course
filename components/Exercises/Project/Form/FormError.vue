@@ -1,5 +1,8 @@
 <template>
-	<div class="form-error">
+	<div
+		class="form-error"
+		:class="errorModifier"
+	>
 		<p>
 			{{ errorText }}
 		</p>
@@ -11,6 +14,10 @@
 		"name": "FormError",
 		"props": {
 			"errorText": {
+				"type": String,
+				"default": "",
+			},
+			"errorModifier": {
 				"type": String,
 				"default": "",
 			},
