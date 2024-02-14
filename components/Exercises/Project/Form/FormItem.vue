@@ -236,20 +236,20 @@
 		&.is-focus {
 			.form-label {
 				&--anim {
-					color: $color-brand-3 !important;
+					color: $color-brand-3;
 				}
 			}
 
 			.form-field {
 				&--anim {
-					border-color: $color-brand-3 !important;
-					background-color: rgba($color-brand-3, 0.2) !important;
+					border-color: $color-brand-3;
+					background-color: rgba($color-brand-3, 0.2);
 				}
 
 				&__button {
 					::v-deep {
 						.icon {
-							fill: $color-brand-3 !important;
+							fill: $color-brand-3;
 						}
 					}
 				}
@@ -288,7 +288,7 @@
 
 			.form-field {
 				&--anim {
-					padding: 2rem 1.2rem 0.5rem !important;
+					padding: 2rem 1.2rem 0.5rem;
 				}
 			}
 		}
@@ -296,24 +296,24 @@
 		&.is-error {
 			.form-label {
 				&--anim {
-					color: $color-error !important;
+					color: $color-error;
 				}
 			}
 
 			.form-field {
 				&::placeholder {
-					color: $color-error !important;
+					color: $color-error;
 				}
 
 				&--anim {
-					border-color: $color-error !important;
-					background-color: rgba($color-error, 0.2) !important;
+					border-color: $color-error;
+					background-color: rgba($color-error, 0.2);
 				}
 
 				&__button {
 					::v-deep {
 						.icon {
-							fill: $color-error !important;
+							fill: $color-error;
 						}
 					}
 				}
@@ -335,13 +335,13 @@
 				resize: vertical;
 
 				&::placeholder {
-					font-weight: 400 !important;
+					font-weight: 400;
 				}
 
 				&--anim {
 					height: inherit;
 					max-height: inherit;
-					padding: 2.4rem 1.2rem 1.2rem !important;
+					padding: 2.4rem 1.2rem 1.2rem;
 					overflow-y: hidden;
 					resize: none;
 				}
@@ -350,7 +350,7 @@
 			&.is-focus {
 				.form-field {
 					&--anim {
-						padding: 2.4rem 1.2rem 1.2rem !important;
+						padding: 2.4rem 1.2rem 1.2rem;
 					}
 				}
 			}
@@ -359,7 +359,7 @@
 			&.is-focus {
 				.form-field {
 					&--anim {
-						padding: 2.4rem 1.2rem 1.5rem !important;
+						padding: 2.4rem 1.2rem 1.5rem;
 					}
 				}
 			}
@@ -411,7 +411,7 @@
 			&.is-focus {
 				.form-field {
 					&--anim {
-						padding: 2rem 3rem 0.5rem 1.2rem !important;
+						padding: 2rem 3rem 0.5rem 1.2rem;
 					}
 				}
 			}
