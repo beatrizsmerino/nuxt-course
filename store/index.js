@@ -35,7 +35,7 @@ const createStore = () => new Store({
 	"actions": {
 		nuxtServerInit(vuexContext, context) {
 			return axios
-				.get("https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts.json")
+				.get(`${process.env.baseUrl}/posts.json`)
 				.then(response => {
 					const postList = [];
 					// eslint-disable-next-line guard-for-in
@@ -55,7 +55,7 @@ const createStore = () => new Store({
 		},
 		fetchReadPostSelected(vuexContext, id) {
 			return axios
-				.get(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${id}.json`)
+				.get(`${process.env.baseUrl}/posts/${id}.json`)
 				.then(result => {
 					vuexContext.commit("setReadPostSelected", result.data);
 				});
@@ -65,12 +65,12 @@ const createStore = () => new Store({
 		},
 		fetchCreatePost(vuexContext, data) {
 			axios
-				.post("https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts.json", data)
+				.post(`${process.env.baseUrl}/posts.json`, data)
 				.then(result => {
 					const firebaseId = result.data.name;
 
 					return axios
-						.patch(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${firebaseId}.json`, {
+						.patch(`${process.env.baseUrl}/posts/${firebaseId}.json`, {
 							"id": firebaseId,
 						})
 						.then(resultUpdated => {
@@ -84,7 +84,7 @@ const createStore = () => new Store({
 		},
 		fetchUpdatePost(vuexContext, data) {
 			return axios
-				.put(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${data.id}.json`, data)
+				.put(`${process.env.baseUrl}/posts/${data.id}.json`, data)
 				.then(result => {
 					vuexContext.commit("setUpdatePost", data);
 				})
@@ -92,7 +92,7 @@ const createStore = () => new Store({
 		},
 		fetchDeletePost(vuexContext, id) {
 			return axios
-				.delete(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${id}.json`)
+				.delete(`${process.env.baseUrl}/posts/${id}.json`)
 				.then(() => {
 					vuexContext.commit("setDeletePost", id);
 				})
