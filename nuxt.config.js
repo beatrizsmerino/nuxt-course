@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { getRepoName } from "./mixins/repo-mixins.js";
+import { getRepoName, getRepoDescription } from "./mixins/repo-mixins.js";
 
 dotenv.config();
 
@@ -26,7 +26,7 @@ export default {
 			{
 				"hid": "description",
 				"name": "description",
-				"content": "",
+				"content": getRepoDescription(),
 			},
 			{
 				"name": "format-detection",
