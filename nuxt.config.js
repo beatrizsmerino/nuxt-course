@@ -7,6 +7,7 @@ export default {
 	"ssr": true,
 	"target": "static",
 
+	// Customize progress bar: https://v2.nuxt.com/docs/features/loading/
 	"loading": {
 		"color": "#00c58e",
 		"failedColor": "#f58688",
