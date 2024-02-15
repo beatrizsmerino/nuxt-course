@@ -23,6 +23,9 @@
 			PostList,
 		},
 		"layout": "exercises",
+		"head": {
+			"title": "Post List | Project Exercise",
+		},
 		"computed": {
 			getPostList() {
 				return this.$store.getters.getPostList;

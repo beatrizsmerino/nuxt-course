@@ -23,6 +23,9 @@
 			PostForm,
 		},
 		"layout": "exercises",
+		"head": {
+			"title": "Create Post | Project Exercise",
+		},
 		"methods": {
 			createPost(postData) {
 				this.$store.dispatch("fetchCreatePost", postData).then(() => {

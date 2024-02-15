@@ -30,5 +30,8 @@
 
 			return equalToNumber;
 		},
+		"head": {
+			"title": "User Detail | Users Exercise",
+		},
 	};
 </script>

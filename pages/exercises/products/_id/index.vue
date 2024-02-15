@@ -41,5 +41,8 @@
 				],
 			};
 		},
+		"head": {
+			"title": "Product Detail | Products Exercise",
+		},
 	};
 </script>

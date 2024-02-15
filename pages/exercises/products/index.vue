@@ -51,6 +51,9 @@
 					message });
 			}
 		},
+		"head": {
+			"title": "Product List | Products Exercise",
+		},
 	};
 </script>
 

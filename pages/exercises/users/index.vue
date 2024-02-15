@@ -8,5 +8,8 @@
 	export default {
 		"name": "ViewUsersInfo",
 		"layout": "exercises",
+		"head": {
+			"title": "Info Form | Users Exercise",
+		},
 	};
 </script>
