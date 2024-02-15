@@ -30,6 +30,11 @@ export default {
 	// Define the workspace of Nuxt application: https://v2.nuxt.com/docs/configuration-glossary/configuration-rootdir/
 	"rootDir": "./",
 
+	// Customize vue router: https://v2.nuxt.com/docs/configuration-glossary/configuration-router#the-router-property
+	"router": {
+		"base": "/",
+	},
+
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	"head": {
 		"title": getRepoName(),
