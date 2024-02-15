@@ -39,6 +39,7 @@ export default {
 				"component": resolve(__dirname, "pages/index.vue"),
 			});
 		},
+		"linkActiveClass": "is-active",
 	},
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
