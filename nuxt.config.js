@@ -7,6 +7,14 @@ export default {
 	"ssr": true,
 	"target": "static",
 
+	"loading": {
+		"color": "#00c58e",
+		"failedColor": "#f58688",
+		"height": "4px",
+		"duration": 5000,
+		"throttle": 0,
+	},
+
 	"env": {
 		"NODE_ENV": process.env.NODE_ENV,
 	},
