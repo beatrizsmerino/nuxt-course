@@ -27,6 +27,9 @@ export default {
 		"baseUrl": process.env.BASE_URL || "https://nuxt-course-b5643-default-rtdb.firebaseio.com",
 	},
 
+	// Define the workspace of Nuxt application: https://v2.nuxt.com/docs/configuration-glossary/configuration-rootdir/
+	"rootDir": "./",
+
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	"head": {
 		"title": getRepoName(),
