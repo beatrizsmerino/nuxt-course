@@ -4,6 +4,8 @@ import { getRepoName, getRepoDescription } from "./mixins/repo-mixins.js";
 dotenv.config();
 
 export default {
+
+	// Rendering: https://v2.nuxt.com/docs/features/rendering-modes/ https://v2.nuxt.com/docs/configuration-glossary/configuration-target#the-target-property
 	"ssr": true,
 	"target": "static",
 
