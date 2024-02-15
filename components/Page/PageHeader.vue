@@ -35,7 +35,7 @@
 	.page-header {
 		display: flex;
 		position: fixed;
-		z-index: 999999;
+		z-index: 999;
 		top: 0;
 		left: 0;
 		align-items: center;
