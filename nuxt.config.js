@@ -9,6 +9,9 @@ export default {
 	"ssr": true,
 	"target": "static",
 
+	// Development or production mode: https://v2.nuxt.com/docs/configuration-glossary/configuration-dev/
+	"dev": true,
+
 	// Customize progress bar: https://v2.nuxt.com/docs/features/loading/
 	"loading": {
 		"color": "#00c58e",
