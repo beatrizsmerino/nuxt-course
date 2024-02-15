@@ -4,6 +4,7 @@ import { getRepoName } from "./mixins/repo-mixins.js";
 dotenv.config();
 
 export default {
+	"mode": "universal",
 	"target": "static",
 
 	"env": {
