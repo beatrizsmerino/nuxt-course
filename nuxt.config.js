@@ -33,6 +33,12 @@ export default {
 	// Customize vue router: https://v2.nuxt.com/docs/configuration-glossary/configuration-router#the-router-property
 	"router": {
 		"base": "/",
+		extendRoutes(routes, resolve) {
+			routes.push({
+				"path": "*",
+				"component": resolve(__dirname, "pages/index.vue"),
+			});
+		},
 	},
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
