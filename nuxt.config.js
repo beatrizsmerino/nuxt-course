@@ -58,6 +58,7 @@ export default {
 			});
 		},
 		"linkActiveClass": "is-active",
+		"middleware": "log",
 	},
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
