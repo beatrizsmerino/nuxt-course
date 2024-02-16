@@ -26,6 +26,9 @@
 </script>
 
 <style lang="scss">
+	@import "~/assets/scss/animations/animations-page";
+	@import "~/assets/scss/animations/animations-layout";
+
 	html {
 		color: $color-brand-2;
 		font-family: $font-main;

@@ -21,6 +21,24 @@ export default {
 		"throttle": 0,
 	},
 
+	// Animation transition between pages: https://v2.nuxt.com/docs/configuration-glossary/configuration-transition#the-pagetransition-property
+	"pageTransition": {
+		"name": "page",
+		"mode": "out-in",
+		beforeEnter(el) {
+			console.log("Add pageTransition before enter...");
+		},
+	},
+
+	// Animation transition between layouts: https://v2.nuxt.com/docs/configuration-glossary/configuration-transition#the-layouttransition-property
+	"layoutTransition": {
+		"name": "layout",
+		"mode": "out-in",
+		beforeEnter(el) {
+			console.log("Add layoutTransition before enter...");
+		},
+	},
+
 	// Enviroment variables: https://v2.nuxt.com/docs/configuration-glossary/configuration-env#the-env-property
 	"env": {
 		"NODE_ENV": process.env.NODE_ENV,

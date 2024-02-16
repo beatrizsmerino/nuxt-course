@@ -28,6 +28,8 @@
 <style lang="scss">
 	// PARTIALS SASS
 	// =================================================
+	@import "~/assets/scss/animations/animations-page";
+	@import "~/assets/scss/animations/animations-layout";
 	@import "~/assets/scss/components/components-form";
 
 	.layout {

@@ -21,6 +21,9 @@
 </script>
 
 <style lang="scss" scoped>
+	@import "~/assets/scss/animations/animations-page";
+	@import "~/assets/scss/animations/animations-layout";
+
 	.layout {
 		&--error {
 			/* stylelint-disable selector-class-pattern */
