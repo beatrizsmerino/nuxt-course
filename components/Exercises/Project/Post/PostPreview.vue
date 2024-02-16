@@ -21,7 +21,7 @@
 				:datetime="postData.date"
 				class="post-preview__date"
 			>
-				{{ postData.date }}
+				{{ postData.date | dateFormatted }}
 			</time>
 			<div class="post-preview__image">
 				<img
@@ -41,7 +41,7 @@
 				:datetime="postData.date"
 				class="post-preview__date"
 			>
-				{{ postData.date }}
+				{{ postData.date | dateFormatted }}
 			</time>
 			<h3 class="post-preview__title">
 				{{ postData.title }}

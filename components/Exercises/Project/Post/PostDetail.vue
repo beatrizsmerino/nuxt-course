@@ -23,7 +23,7 @@
 				<span class="post-detail__date">
 					Last updated on:
 					<time :datetime="postData.date">
-						{{ postData.date }}
+						{{ postData.date | dateFormatted }}
 					</time>
 				</span>
 				<span class="post-detail__author">

@@ -1,6 +1,6 @@
 // eslint-disable-next-line max-statements, complexity
-export const getDate = () => {
-	const currentDate = new Date();
+export const getDateFormatted = (date) => {
+	const currentDate = new Date(date);
 	const year = currentDate.getFullYear();
 	let month = currentDate.getMonth() + 1;
 	let day = currentDate.getDate();
