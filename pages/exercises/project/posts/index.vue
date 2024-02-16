@@ -23,7 +23,6 @@
 			PostList,
 		},
 		"layout": "exercises",
-		"middleware": "log",
 		"head": {
 			"title": "Post List | Project Exercise",
 		},

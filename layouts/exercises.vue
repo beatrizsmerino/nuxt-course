@@ -15,6 +15,7 @@
 		"components": {
 			PageHeader,
 		},
+		"middleware": "log",
 		head() {
 			return {
 				"htmlAttrs": {
