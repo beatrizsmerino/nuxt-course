@@ -34,5 +34,8 @@
 			Layout,
 		},
 		"layout": "exercises",
+		"head": {
+			"title": "About | Project Exercise",
+		},
 	};
 </script>

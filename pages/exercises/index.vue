@@ -74,6 +74,9 @@
 				],
 			};
 		},
+		"head": {
+			"title": "Exercises Nuxt 2",
+		},
 		"methods": {
 			showMore(exerciseId) {
 				this.exercisesList[exerciseId].status = !this.exercisesList[exerciseId].status;

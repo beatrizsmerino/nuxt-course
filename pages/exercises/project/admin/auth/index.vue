@@ -23,5 +23,8 @@
 			AuthForm,
 		},
 		"layout": "exercises",
+		"head": {
+			"title": "Auth | Project Exercise",
+		},
 	};
 </script>

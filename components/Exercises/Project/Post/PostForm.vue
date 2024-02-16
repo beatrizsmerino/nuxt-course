@@ -122,7 +122,6 @@
 </template>
 
 <script>
-	import { getDate } from "@/mixins/date-mixins.js";
 	import {
 		validateFieldString,
 		validateFieldUrl,
@@ -193,7 +192,7 @@
 				}
 			},
 			updateDate() {
-				this.form.date = getDate();
+				this.form.date = new Date();
 			},
 			updateErrorText(fieldName, errorMessage) {
 				if (errorMessage) {

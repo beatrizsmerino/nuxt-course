@@ -1,6 +1,5 @@
 /* eslint-disable max-lines-per-function */
 import { Store } from "vuex";
-import axios from "axios";
 
 const createStore = () => new Store({
 	"state": {
@@ -34,14 +33,14 @@ const createStore = () => new Store({
 	},
 	"actions": {
 		nuxtServerInit(vuexContext, context) {
-			return axios
-				.get("https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts.json")
+			return context.app.$axios
+				.$get(`/posts.json`)
 				.then(response => {
 					const postList = [];
 					// eslint-disable-next-line guard-for-in
-					for (const key in response.data) {
+					for (const key in response) {
 						postList.push({
-							...response.data[key],
+							...response[key],
 						});
 					}
 					vuexContext.commit("setReadPostList", postList);
@@ -54,23 +53,23 @@ const createStore = () => new Store({
 			vuexContext.commit("setReadPostList", data);
 		},
 		fetchReadPostSelected(vuexContext, id) {
-			return axios
-				.get(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${id}.json`)
+			return this.$axios
+				.$get(`/posts/${id}.json`)
 				.then(result => {
-					vuexContext.commit("setReadPostSelected", result.data);
+					vuexContext.commit("setReadPostSelected", result);
 				});
 		},
 		fetchDeletePostSelected(vuexContext) {
 			vuexContext.commit("setDeletePostSelected");
 		},
 		fetchCreatePost(vuexContext, data) {
-			axios
-				.post("https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts.json", data)
+			this.$axios
+				.$post(`/posts.json`, data)
 				.then(result => {
-					const firebaseId = result.data.name;
+					const firebaseId = result.name;
 
-					return axios
-						.patch(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${firebaseId}.json`, {
+					return this.$axios
+						.$patch(`/posts/${firebaseId}.json`, {
 							"id": firebaseId,
 						})
 						.then(resultUpdated => {
@@ -83,16 +82,16 @@ const createStore = () => new Store({
 				.catch(error => console.log(error));
 		},
 		fetchUpdatePost(vuexContext, data) {
-			return axios
-				.put(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${data.id}.json`, data)
+			return this.$axios
+				.$put(`/posts/${data.id}.json`, data)
 				.then(result => {
 					vuexContext.commit("setUpdatePost", data);
 				})
 				.catch(error => console.log(error));
 		},
 		fetchDeletePost(vuexContext, id) {
-			return axios
-				.delete(`https://nuxt-course-b5643-default-rtdb.firebaseio.com/posts/${id}.json`)
+			return this.$axios
+				.$delete(`/posts/${id}.json`)
 				.then(() => {
 					vuexContext.commit("setDeletePost", id);
 				})

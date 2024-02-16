@@ -23,6 +23,9 @@
 		asyncData({ store, params }) {
 			return store.dispatch("fetchReadPostSelected", params.id);
 		},
+		"head": {
+			"title": "Post Detail | Project Exercise",
+		},
 		"computed": {
 			getPostSelected() {
 				return this.$store.getters.getPostSelected;

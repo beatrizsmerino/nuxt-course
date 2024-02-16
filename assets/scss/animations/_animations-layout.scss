@@ -1,0 +1,15 @@
+// ANIMATIONS
+// LAYOUT
+// =================================================
+
+.layout-enter-active,
+.layout-leave-active {
+	transition:
+		opacity 0.5s,
+		transform 0.5s ease-in-out;
+}
+.layout-enter,
+.layout-leave-active {
+	transform: translateY(-10%);
+	opacity: 0;
+}

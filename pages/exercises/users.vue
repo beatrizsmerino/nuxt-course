@@ -59,6 +59,9 @@
 				},
 			};
 		},
+		"head": {
+			"title": "Users Form | Users Exercise",
+		},
 		"methods": {
 			loadUser() {
 				this.$router.push(`/exercises/users/${this.user.id}`);

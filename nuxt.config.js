@@ -1,13 +1,63 @@
 import dotenv from "dotenv";
-import { getRepoName } from "./mixins/repo-mixins.js";
+import { getRepoName, getRepoDescription } from "./mixins/repo-mixins.js";
 
 dotenv.config();
 
 export default {
+
+	// Rendering: https://v2.nuxt.com/docs/features/rendering-modes/ https://v2.nuxt.com/docs/configuration-glossary/configuration-target#the-target-property
+	"ssr": true,
 	"target": "static",
 
+	// Development or production mode: https://v2.nuxt.com/docs/configuration-glossary/configuration-dev/
+	"dev": true,
+
+	// Customize progress bar: https://v2.nuxt.com/docs/features/loading/
+	"loading": {
+		"color": "#00c58e",
+		"failedColor": "#f58688",
+		"height": "4px",
+		"duration": 5000,
+		"throttle": 0,
+	},
+
+	// Animation transition between pages: https://v2.nuxt.com/docs/configuration-glossary/configuration-transition#the-pagetransition-property
+	"pageTransition": {
+		"name": "page",
+		"mode": "out-in",
+		beforeEnter(el) {
+			console.log("Add pageTransition before enter...");
+		},
+	},
+
+	// Animation transition between layouts: https://v2.nuxt.com/docs/configuration-glossary/configuration-transition#the-layouttransition-property
+	"layoutTransition": {
+		"name": "layout",
+		"mode": "out-in",
+		beforeEnter(el) {
+			console.log("Add layoutTransition before enter...");
+		},
+	},
+
+	// Enviroment variables: https://v2.nuxt.com/docs/configuration-glossary/configuration-env#the-env-property
 	"env": {
 		"NODE_ENV": process.env.NODE_ENV,
+		"baseUrl": process.env.BASE_URL || "https://nuxt-course-b5643-default-rtdb.firebaseio.com",
+	},
+
+	// Define the workspace of Nuxt application: https://v2.nuxt.com/docs/configuration-glossary/configuration-rootdir/
+	"rootDir": "./",
+
+	// Customize vue router: https://v2.nuxt.com/docs/configuration-glossary/configuration-router#the-router-property
+	"router": {
+		"base": "/",
+		extendRoutes(routes, resolve) {
+			routes.push({
+				"path": "*",
+				"component": resolve(__dirname, "pages/index.vue"),
+			});
+		},
+		"linkActiveClass": "is-active",
 	},
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
@@ -25,7 +75,7 @@ export default {
 			{
 				"hid": "description",
 				"name": "description",
-				"content": "",
+				"content": getRepoDescription(),
 			},
 			{
 				"name": "format-detection",
@@ -53,6 +103,7 @@ export default {
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	"plugins": [
 		"@/plugins/import-global-components.js",
+		"@/plugins/date-filters.js",
 	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
@@ -101,7 +152,8 @@ export default {
 			{
 
 				// Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-				"baseURL": "/",
+				"baseURL": process.env.BASE_URL || "https://nuxt-course-b5643-default-rtdb.firebaseio.com",
+				"credentials": false,
 			},
 		],
 		[

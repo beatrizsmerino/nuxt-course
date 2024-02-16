@@ -89,7 +89,7 @@
 			pointer-events: none;
 		}
 
-		&.nuxt-link-active,
+		&.is-active,
 		&:hover {
 			border-color: mix($color-white, $color-black, 20%);
 			background-color: mix($color-white, $color-black, 20%);

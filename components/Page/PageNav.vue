@@ -76,7 +76,7 @@
 			font-weight: bold;
 			text-decoration: none;
 
-			&.nuxt-link-active {
+			&.is-active {
 				color: $color-white;
 			}
 
