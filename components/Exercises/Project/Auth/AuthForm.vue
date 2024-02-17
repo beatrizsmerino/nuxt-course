@@ -3,7 +3,7 @@
 		<form
 			id="authForm"
 			class="form"
-			@submit.prevent="onLogin"
+			@submit.prevent="onSubmit"
 		>
 			<FormItem
 				:field-value="form.username"
@@ -27,7 +27,7 @@
 				<UIButton
 					class="button--success"
 					type="submit"
-					@button-click="onLogin"
+					@button-click="onSubmit"
 				>
 					{{ isLogin ? "Login" : "Signup" }}
 				</UIButton>
@@ -61,7 +61,7 @@
 			};
 		},
 		"methods": {
-			onLogin() {
+			onSubmit() {
 				console.log(this.form);
 			},
 			onSwitch() {
