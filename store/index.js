@@ -68,12 +68,12 @@ const createStore = () => new Store({
 		},
 		fetchCreatePost(vuexContext, data) {
 			this.$axios
-				.$post(`/posts.json`, data)
+				.$post(`/posts.json?auth=${vuexContext.state.authToken}`, data)
 				.then(result => {
 					const firebaseId = result.name;
 
 					return this.$axios
-						.$patch(`/posts/${firebaseId}.json`, {
+						.$patch(`/posts/${firebaseId}.json?auth=${vuexContext.state.authToken}`, {
 							"id": firebaseId,
 						})
 						.then(resultUpdated => {
@@ -87,7 +87,7 @@ const createStore = () => new Store({
 		},
 		fetchUpdatePost(vuexContext, data) {
 			return this.$axios
-				.$put(`/posts/${data.id}.json`, data)
+				.$put(`/posts/${data.id}.json?auth=${vuexContext.state.authToken}`, data)
 				.then(result => {
 					vuexContext.commit("setUpdatePost", data);
 				})
@@ -95,7 +95,7 @@ const createStore = () => new Store({
 		},
 		fetchDeletePost(vuexContext, id) {
 			return this.$axios
-				.$delete(`/posts/${id}.json`)
+				.$delete(`/posts/${id}.json?auth=${vuexContext.state.authToken}`)
 				.then(() => {
 					vuexContext.commit("setDeletePost", id);
 				})
