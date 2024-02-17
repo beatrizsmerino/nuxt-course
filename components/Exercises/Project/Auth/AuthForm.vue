@@ -29,14 +29,14 @@
 					type="submit"
 					@button-click="onSubmit"
 				>
-					{{ isSignIn ? "Login" : "Signup" }}
+					{{ isSignIn ? "Signin" : "Signup" }}
 				</UIButton>
 				<UIButton
 					class="button--brand-2-dark-line"
 					type="button"
 					@button-click="onSwitch"
 				>
-					Switch to {{ isSignIn ? "Signup" : "Login" }}
+					Switch to {{ isSignIn ? "Signup" : "Signin" }}
 				</UIButton>
 			</div>
 		</form>
