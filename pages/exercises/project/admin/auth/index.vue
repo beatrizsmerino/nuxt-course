@@ -28,7 +28,6 @@
 		},
 		"methods": {
 			onAuth(userData) {
-				console.log("onAuth", userData);
 				this.$store.dispatch("fetchCreateAuthUser", userData).then(() => {
 					this.$router.push("/exercises/project/admin");
 				});

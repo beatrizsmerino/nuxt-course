@@ -62,7 +62,6 @@
 		},
 		"methods": {
 			onSubmit() {
-				console.log(this.form);
 				this.$emit("submit:auth", {
 					...this.form,
 					"isSignIn": this.isSignIn,
