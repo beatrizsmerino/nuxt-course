@@ -23,7 +23,10 @@
 			PostForm,
 		},
 		"layout": "exercises",
-		"middleware": "auth-redirect",
+		"middleware": [
+			"auth-check",
+			"auth-redirect",
+		],
 		"head": {
 			"title": "Create Post | Project Exercise",
 		},
