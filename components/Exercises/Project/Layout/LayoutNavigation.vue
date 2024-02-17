@@ -25,7 +25,7 @@
 				<ul>
 					<template v-for="(item, index) in navigationList">
 						<li
-							v-if="!(item.name === 'Admin' && !isAuthUser)"
+							v-if="!(item.name === 'Admin' && !isAuthUser) && !(item.name === 'Auth' && isAuthUser)"
 							:key="`navigation-link-${index}`"
 						>
 							<UIButton :to="item.url">
@@ -61,6 +61,10 @@
 					{
 						"name": "Admin",
 						"url": "/exercises/project/admin",
+					},
+					{
+						"name": "Auth",
+						"url": "/exercises/project/admin/auth",
 					},
 				],
 				"window": {
