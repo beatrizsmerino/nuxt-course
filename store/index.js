@@ -97,6 +97,21 @@ const createStore = () => new Store({
 				})
 				.catch(error => console.error(error));
 		},
+		fetchCreateAuthUser(vuexContext, data) {
+			const switchAuth = data.isSignIn ? `signInWithPassword` : `signUp`;
+
+			return this.$axios
+				.$post(
+					`https://identitytoolkit.googleapis.com/v1/accounts:${switchAuth}?key=${process.env.firebaseAPIKey}`,
+					{
+						"email": data.email,
+						"password": data.password,
+						"returnSecureToken": true,
+					},
+				)
+				.then(response => console.log(response))
+				.catch(error => console.log(error));
+		},
 	},
 	"getters": {
 		getPostList(state) {
