@@ -7,7 +7,7 @@
 			Auth
 		</template>
 		<template #content>
-			<AuthForm />
+			<AuthForm @submit:auth="onAuth" />
 		</template>
 	</Layout>
 </template>
@@ -25,6 +25,11 @@
 		"layout": "exercises",
 		"head": {
 			"title": "Auth | Project Exercise",
+		},
+		"methods": {
+			onAuth(userData) {
+				console.log("onAuth", userData);
+			},
 		},
 	};
 </script>
