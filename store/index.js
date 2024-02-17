@@ -6,6 +6,7 @@ const createStore = () => new Store({
 		"postList": [],
 		"postSelected": {},
 		"isError": null,
+		"authToken": null,
 	},
 	"mutations": {
 		setReadPostList(state, data) {
@@ -29,6 +30,9 @@ const createStore = () => new Store({
 		},
 		setCreateError(state, error) {
 			state.isError = error;
+		},
+		setCreateAuthToken(state, data) {
+			state.authToken = data;
 		},
 	},
 	"actions": {
@@ -109,7 +113,9 @@ const createStore = () => new Store({
 						"returnSecureToken": true,
 					},
 				)
-				.then(response => console.log(response))
+				.then(response => {
+					vuexContext.commit("setCreateAuthToken", response.idToken);
+				})
 				.catch(error => console.log(error));
 		},
 	},
