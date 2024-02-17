@@ -6,13 +6,13 @@
 			@submit.prevent="onSubmit"
 		>
 			<FormItem
-				:field-value="form.username"
-				field-id="authFormUsername"
-				field-label="Username"
+				:field-value="form.email"
+				field-id="authFormEmail"
+				field-label="Email"
 				field-type="text"
 				field-modifier="anim"
 				:field-required="true"
-				@update:fieldValue="value => (form.username = value)"
+				@update:fieldValue="value => (form.email = value)"
 			/>
 			<FormItem
 				:field-value="form.password"
@@ -55,7 +55,7 @@
 			return {
 				"isSignIn": true,
 				"form": {
-					"username": "",
+					"email": "",
 					"password": "",
 				},
 			};
