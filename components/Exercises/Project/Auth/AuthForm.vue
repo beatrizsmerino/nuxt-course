@@ -29,14 +29,14 @@
 					type="submit"
 					@button-click="onSubmit"
 				>
-					{{ isLogin ? "Login" : "Signup" }}
+					{{ isSignIn ? "Login" : "Signup" }}
 				</UIButton>
 				<UIButton
 					class="button--brand-2-dark-line"
 					type="button"
 					@button-click="onSwitch"
 				>
-					Switch to {{ isLogin ? "Signup" : "Login" }}
+					Switch to {{ isSignIn ? "Signup" : "Login" }}
 				</UIButton>
 			</div>
 		</form>
@@ -53,7 +53,7 @@
 		},
 		data() {
 			return {
-				"isLogin": true,
+				"isSignIn": true,
 				"form": {
 					"username": "",
 					"password": "",
@@ -65,7 +65,7 @@
 				console.log(this.form);
 			},
 			onSwitch() {
-				this.isLogin = !this.isLogin;
+				this.isSignIn = !this.isSignIn;
 			},
 		},
 	};
