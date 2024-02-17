@@ -129,6 +129,9 @@ const createStore = () => new Store({
 		getIsError(state) {
 			return state.isError;
 		},
+		getIsAuthUser(state) {
+			return state.authToken !== null;
+		},
 	},
 });
 

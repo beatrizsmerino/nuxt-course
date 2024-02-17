@@ -26,6 +26,7 @@
 			PostForm,
 		},
 		"layout": "exercises",
+		"middleware": "auth",
 		asyncData({ store, params }) {
 			return store.dispatch("fetchReadPostSelected", params.id);
 		},

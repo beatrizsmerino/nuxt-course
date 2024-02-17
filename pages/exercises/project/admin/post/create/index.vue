@@ -23,6 +23,7 @@
 			PostForm,
 		},
 		"layout": "exercises",
+		"middleware": "auth",
 		"head": {
 			"title": "Create Post | Project Exercise",
 		},

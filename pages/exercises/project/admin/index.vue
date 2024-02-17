@@ -33,6 +33,7 @@
 			PostList,
 		},
 		"layout": "exercises",
+		"middleware": "auth",
 		"head": {
 			"title": "Admin | Project Exercise",
 		},
