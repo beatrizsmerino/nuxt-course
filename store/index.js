@@ -34,6 +34,9 @@ const createStore = () => new Store({
 		setCreateAuthToken(state, data) {
 			state.authToken = data;
 		},
+		setDeleteAuthToken(state) {
+			state.authToken = null;
+		},
 	},
 	"actions": {
 		nuxtServerInit(vuexContext, context) {
@@ -115,8 +118,14 @@ const createStore = () => new Store({
 				)
 				.then(response => {
 					vuexContext.commit("setCreateAuthToken", response.idToken);
+					vuexContext.dispatch("fetchDeleteAuthUser", response.expiresIn * 1000);
 				})
 				.catch(error => console.log(error));
+		},
+		fetchDeleteAuthUser(vuexContext, duration) {
+			setTimeout(() => {
+				vuexContext.commit("setDeleteAuthToken");
+			}, duration);
 		},
 	},
 	"getters": {
