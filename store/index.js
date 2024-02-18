@@ -156,12 +156,21 @@ const createStore = () => new Store({
 
 			if (new Date().getTime() > Number(tokenExpire) || !tokenId) {
 				console.log("No authToken or invalid authToken");
-				vuexContext.commit("setDeleteAuthToken");
+				vuexContext.dispatch("fetchDeleteAuthUser");
 
 				return;
 			}
 
 			vuexContext.commit("setCreateAuthToken", tokenId);
+		},
+		fetchDeleteAuthUser(vuexContext) {
+			vuexContext.commit("setDeleteAuthToken");
+			if (process.client) {
+				localStorage.removeItem("authTokenId");
+				localStorage.removeItem("authTokenExpire");
+			}
+			Cookie.remove("authTokenId");
+			Cookie.remove("authTokenExpire");
 		},
 	},
 	"getters": {
