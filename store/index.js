@@ -122,17 +122,11 @@ const createStore = () => new Store({
 				.then(response => {
 					vuexContext.commit("setCreateAuthToken", response.idToken);
 					localStorage.setItem("authTokenId", response.idToken);
-					localStorage.setItem("authTokenExpire", new Date().getTime() + response.expiresIn * 1000);
+					localStorage.setItem("authTokenExpire", new Date().getTime() + Number(response.expiresIn) * 1000);
 					Cookie.set("authTokenId", response.idToken);
-					Cookie.set("authTokenExpire", new Date().getTime() + response.expiresIn * 1000);
-					vuexContext.dispatch("fetchDeleteAuthUser", response.expiresIn * 1000);
+					Cookie.set("authTokenExpire", new Date().getTime() + Number(response.expiresIn) * 1000);
 				})
 				.catch(error => console.log(error));
-		},
-		fetchDeleteAuthUser(vuexContext, duration) {
-			setTimeout(() => {
-				vuexContext.commit("setDeleteAuthToken");
-			}, duration);
 		},
 		fetchReadAuthUser(vuexContext, request) {
 			let tokenId = null;
@@ -158,13 +152,15 @@ const createStore = () => new Store({
 			} else {
 				tokenId = localStorage.getItem("authTokenId");
 				tokenExpire = localStorage.getItem("authTokenExpire");
-
-				if (new Date().getTime() > Number(tokenExpire) || !tokenId) {
-					return;
-				}
 			}
 
-			vuexContext.dispatch("fetchDeleteAuthUser", Number(tokenExpire) - new Date().getTime());
+			if (new Date().getTime() > Number(tokenExpire) || !tokenId) {
+				console.log("No authToken or invalid authToken");
+				vuexContext.commit("setDeleteAuthToken");
+
+				return;
+			}
+
 			vuexContext.commit("setCreateAuthToken", tokenId);
 		},
 	},
