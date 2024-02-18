@@ -125,6 +125,10 @@ const createStore = () => new Store({
 					localStorage.setItem("authTokenExpire", new Date().getTime() + Number(response.expiresIn) * 1000);
 					Cookie.set("authTokenId", response.idToken);
 					Cookie.set("authTokenExpire", new Date().getTime() + Number(response.expiresIn) * 1000);
+
+					return this.$axios.$post("http://localhost:3000/api/track-data", {
+						"data": "Authenticated!",
+					});
 				})
 				.catch(error => console.log(error));
 		},

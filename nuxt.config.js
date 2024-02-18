@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
 import { getRepoName, getRepoDescription } from "./mixins/repo-mixins.js";
 
 dotenv.config();
@@ -193,4 +194,10 @@ export default {
 			},
 		},
 	},
+
+	// Server-Side middleware: https://v2.nuxt.com/docs/configuration-glossary/configuration-servermiddleware/
+	"serverMiddleware": [
+		bodyParser.json(),
+		"~/api",
+	],
 };
