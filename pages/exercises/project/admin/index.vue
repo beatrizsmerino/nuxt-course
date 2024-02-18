@@ -17,6 +17,12 @@
 				<UIButton to="/exercises/project/admin/post/create">
 					Create new post
 				</UIButton>
+				<UIButton
+					class="button--error"
+					@button-click="onSignOut"
+				>
+					Sign out
+				</UIButton>
 			</article>
 		</template>
 	</Layout>
@@ -52,6 +58,10 @@
 					this.$store.dispatch("fetchDeletePost", postData.id);
 				}
 			},
+			onSignOut() {
+				this.$store.dispatch("fetchDeleteAuthUser");
+				this.$router.push("/exercises/project/admin/auth");
+			},
 		},
 	};
 </script>
@@ -61,6 +71,12 @@
 		display: flex;
 		justify-content: flex-end;
 		margin-top: 3rem;
+
+		> * {
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
+		}
 
 		:deep(.button) {
 			display: inline-block;
