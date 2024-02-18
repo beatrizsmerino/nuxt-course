@@ -1,5 +1,8 @@
+/* eslint-disable max-statements */
+/* eslint-disable complexity */
 /* eslint-disable max-lines-per-function */
 import { Store } from "vuex";
+import Cookie from "js-cookie";
 
 const createStore = () => new Store({
 	"state": {
@@ -120,6 +123,8 @@ const createStore = () => new Store({
 					vuexContext.commit("setCreateAuthToken", response.idToken);
 					localStorage.setItem("authTokenId", response.idToken);
 					localStorage.setItem("authTokenExpire", new Date().getTime() + response.expiresIn * 1000);
+					Cookie.set("authTokenId", response.idToken);
+					Cookie.set("authTokenExpire", new Date().getTime() + response.expiresIn * 1000);
 					vuexContext.dispatch("fetchDeleteAuthUser", response.expiresIn * 1000);
 				})
 				.catch(error => console.log(error));
@@ -129,12 +134,34 @@ const createStore = () => new Store({
 				vuexContext.commit("setDeleteAuthToken");
 			}, duration);
 		},
-		fetchReadAuthUser(vuexContext) {
-			const tokenId = localStorage.getItem("authTokenId");
-			const tokenExpire = localStorage.getItem("authTokenExpire");
+		fetchReadAuthUser(vuexContext, request) {
+			let tokenId = null;
+			let tokenExpire = null;
 
-			if (new Date().getTime() > Number(tokenExpire) || !tokenId) {
-				return;
+			if (request) {
+				if (!request.headers.cookie) {
+					return;
+				}
+
+				const jwtCookie = request.headers.cookie
+					.split(";")
+					.find(cookie => cookie.trim().startsWith("authTokenId="));
+				if (!jwtCookie) {
+					return;
+				}
+				tokenId = jwtCookie.split("=")[1];
+
+				tokenExpire = request.headers.cookie
+					.split(";")
+					.find(cookie => cookie.trim().startsWith("authTokenExpire="))
+					.split("=")[1];
+			} else {
+				tokenId = localStorage.getItem("authTokenId");
+				tokenExpire = localStorage.getItem("authTokenExpire");
+
+				if (new Date().getTime() > Number(tokenExpire) || !tokenId) {
+					return;
+				}
 			}
 
 			vuexContext.dispatch("fetchDeleteAuthUser", Number(tokenExpire) - new Date().getTime());
