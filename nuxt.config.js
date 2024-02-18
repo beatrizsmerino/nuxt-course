@@ -44,7 +44,7 @@ export default {
 	"env": {
 		"NODE_ENV": process.env.NODE_ENV,
 		"baseUrl": process.env.BASE_URL || "https://nuxt-course-b5643-default-rtdb.firebaseio.com",
-		"firebaseAPIKey": "AIzaSyAa98qlpsD3HOdpFE5gWic4JhLyqoGvgCE",
+		"firebaseAPIKey": process.env.FIREBASE_API_KEY,
 	},
 
 	// Define the workspace of Nuxt application: https://v2.nuxt.com/docs/configuration-glossary/configuration-rootdir/
