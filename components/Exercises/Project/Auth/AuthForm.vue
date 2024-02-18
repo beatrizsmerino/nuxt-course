@@ -3,16 +3,16 @@
 		<form
 			id="authForm"
 			class="form"
-			@submit.prevent="onLogin"
+			@submit.prevent="onSubmit"
 		>
 			<FormItem
-				:field-value="form.username"
-				field-id="authFormUsername"
-				field-label="Username"
+				:field-value="form.email"
+				field-id="authFormEmail"
+				field-label="Email"
 				field-type="text"
 				field-modifier="anim"
 				:field-required="true"
-				@update:fieldValue="value => (form.username = value)"
+				@update:fieldValue="value => (form.email = value)"
 			/>
 			<FormItem
 				:field-value="form.password"
@@ -27,16 +27,16 @@
 				<UIButton
 					class="button--success"
 					type="submit"
-					@button-click="onLogin"
+					@button-click="onSubmit"
 				>
-					{{ isLogin ? "Login" : "Signup" }}
+					{{ isSignIn ? "Sign in" : "Sign up" }}
 				</UIButton>
 				<UIButton
 					class="button--brand-2-dark-line"
 					type="button"
 					@button-click="onSwitch"
 				>
-					Switch to {{ isLogin ? "Signup" : "Login" }}
+					Switch to {{ isSignIn ? "Sign up" : "Sign in" }}
 				</UIButton>
 			</div>
 		</form>
@@ -53,19 +53,22 @@
 		},
 		data() {
 			return {
-				"isLogin": true,
+				"isSignIn": true,
 				"form": {
-					"username": "",
+					"email": "",
 					"password": "",
 				},
 			};
 		},
 		"methods": {
-			onLogin() {
-				console.log(this.form);
+			onSubmit() {
+				this.$emit("submit:auth", {
+					...this.form,
+					"isSignIn": this.isSignIn,
+				});
 			},
 			onSwitch() {
-				this.isLogin = !this.isLogin;
+				this.isSignIn = !this.isSignIn;
 			},
 		},
 	};

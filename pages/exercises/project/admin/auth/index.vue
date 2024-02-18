@@ -7,7 +7,7 @@
 			Auth
 		</template>
 		<template #content>
-			<AuthForm />
+			<AuthForm @submit:auth="onAuth" />
 		</template>
 	</Layout>
 </template>
@@ -25,6 +25,13 @@
 		"layout": "exercises",
 		"head": {
 			"title": "Auth | Project Exercise",
+		},
+		"methods": {
+			onAuth(userData) {
+				this.$store.dispatch("fetchCreateAuthUser", userData).then(() => {
+					this.$router.push("/exercises/project/admin");
+				});
+			},
 		},
 	};
 </script>

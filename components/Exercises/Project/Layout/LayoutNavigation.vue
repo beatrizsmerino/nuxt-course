@@ -23,14 +23,16 @@
 				class="layout-navigation__list"
 			>
 				<ul>
-					<li
-						v-for="(item, index) in navigationList"
-						:key="`navigation-link-${index}`"
-					>
-						<UIButton :to="item.url">
-							{{ item.name }}
-						</UIButton>
-					</li>
+					<template v-for="(item, index) in navigationList">
+						<li
+							v-if="!(item.name === 'Admin' && !isAuthUser) && !(item.name === 'Auth' && isAuthUser)"
+							:key="`navigation-link-${index}`"
+						>
+							<UIButton :to="item.url">
+								{{ item.name }}
+							</UIButton>
+						</li>
+					</template>
 				</ul>
 			</div>
 		</transition>
@@ -60,6 +62,10 @@
 						"name": "Admin",
 						"url": "/exercises/project/admin",
 					},
+					{
+						"name": "Auth",
+						"url": "/exercises/project/admin/auth",
+					},
 				],
 				"window": {
 					"width": 0,
@@ -75,6 +81,9 @@
 			},
 			changeOpenNavigation() {
 				return this.isOpen;
+			},
+			isAuthUser() {
+				return this.$store.getters.getIsAuthUser;
 			},
 		},
 		mounted() {
@@ -162,6 +171,7 @@
 				list-style: none;
 
 				li {
+					flex: 1 auto;
 					width: calc(25% - 1rem);
 
 					@include media("md") {

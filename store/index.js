@@ -1,11 +1,15 @@
+/* eslint-disable max-statements */
+/* eslint-disable complexity */
 /* eslint-disable max-lines-per-function */
 import { Store } from "vuex";
+import Cookie from "js-cookie";
 
 const createStore = () => new Store({
 	"state": {
 		"postList": [],
 		"postSelected": {},
 		"isError": null,
+		"authToken": null,
 	},
 	"mutations": {
 		setReadPostList(state, data) {
@@ -29,6 +33,12 @@ const createStore = () => new Store({
 		},
 		setCreateError(state, error) {
 			state.isError = error;
+		},
+		setCreateAuthToken(state, data) {
+			state.authToken = data;
+		},
+		setDeleteAuthToken(state) {
+			state.authToken = null;
 		},
 	},
 	"actions": {
@@ -64,12 +74,12 @@ const createStore = () => new Store({
 		},
 		fetchCreatePost(vuexContext, data) {
 			this.$axios
-				.$post(`/posts.json`, data)
+				.$post(`/posts.json?auth=${vuexContext.state.authToken}`, data)
 				.then(result => {
 					const firebaseId = result.name;
 
 					return this.$axios
-						.$patch(`/posts/${firebaseId}.json`, {
+						.$patch(`/posts/${firebaseId}.json?auth=${vuexContext.state.authToken}`, {
 							"id": firebaseId,
 						})
 						.then(resultUpdated => {
@@ -83,7 +93,7 @@ const createStore = () => new Store({
 		},
 		fetchUpdatePost(vuexContext, data) {
 			return this.$axios
-				.$put(`/posts/${data.id}.json`, data)
+				.$put(`/posts/${data.id}.json?auth=${vuexContext.state.authToken}`, data)
 				.then(result => {
 					vuexContext.commit("setUpdatePost", data);
 				})
@@ -91,11 +101,76 @@ const createStore = () => new Store({
 		},
 		fetchDeletePost(vuexContext, id) {
 			return this.$axios
-				.$delete(`/posts/${id}.json`)
+				.$delete(`/posts/${id}.json?auth=${vuexContext.state.authToken}`)
 				.then(() => {
 					vuexContext.commit("setDeletePost", id);
 				})
 				.catch(error => console.error(error));
+		},
+		fetchCreateAuthUser(vuexContext, data) {
+			const switchAuth = data.isSignIn ? `signInWithPassword` : `signUp`;
+
+			return this.$axios
+				.$post(
+					`https://identitytoolkit.googleapis.com/v1/accounts:${switchAuth}?key=${process.env.firebaseAPIKey}`,
+					{
+						"email": data.email,
+						"password": data.password,
+						"returnSecureToken": true,
+					},
+				)
+				.then(response => {
+					vuexContext.commit("setCreateAuthToken", response.idToken);
+					localStorage.setItem("authTokenId", response.idToken);
+					localStorage.setItem("authTokenExpire", new Date().getTime() + Number(response.expiresIn) * 1000);
+					Cookie.set("authTokenId", response.idToken);
+					Cookie.set("authTokenExpire", new Date().getTime() + Number(response.expiresIn) * 1000);
+				})
+				.catch(error => console.log(error));
+		},
+		fetchReadAuthUser(vuexContext, request) {
+			let tokenId = null;
+			let tokenExpire = null;
+
+			if (request) {
+				if (!request.headers.cookie) {
+					return;
+				}
+
+				const jwtCookie = request.headers.cookie
+					.split(";")
+					.find(cookie => cookie.trim().startsWith("authTokenId="));
+				if (!jwtCookie) {
+					return;
+				}
+				tokenId = jwtCookie.split("=")[1];
+
+				tokenExpire = request.headers.cookie
+					.split(";")
+					.find(cookie => cookie.trim().startsWith("authTokenExpire="))
+					.split("=")[1];
+			} else {
+				tokenId = localStorage.getItem("authTokenId");
+				tokenExpire = localStorage.getItem("authTokenExpire");
+			}
+
+			if (new Date().getTime() > Number(tokenExpire) || !tokenId) {
+				console.log("No authToken or invalid authToken");
+				vuexContext.dispatch("fetchDeleteAuthUser");
+
+				return;
+			}
+
+			vuexContext.commit("setCreateAuthToken", tokenId);
+		},
+		fetchDeleteAuthUser(vuexContext) {
+			vuexContext.commit("setDeleteAuthToken");
+			if (process.client) {
+				localStorage.removeItem("authTokenId");
+				localStorage.removeItem("authTokenExpire");
+			}
+			Cookie.remove("authTokenId");
+			Cookie.remove("authTokenExpire");
 		},
 	},
 	"getters": {
@@ -107,6 +182,9 @@ const createStore = () => new Store({
 		},
 		getIsError(state) {
 			return state.isError;
+		},
+		getIsAuthUser(state) {
+			return state.authToken !== null;
 		},
 	},
 });
