@@ -8,7 +8,7 @@ export default {
 
 	// Rendering: https://v2.nuxt.com/docs/features/rendering-modes/ https://v2.nuxt.com/docs/configuration-glossary/configuration-target#the-target-property
 	"ssr": true,
-	"target": "static",
+	"target": "server",
 
 	// Development or production mode: https://v2.nuxt.com/docs/configuration-glossary/configuration-dev/
 	"dev": true,
