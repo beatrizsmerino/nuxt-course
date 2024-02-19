@@ -5,8 +5,8 @@ import nuxtConfig from "./nuxt.config.js";
 
 const config = {
 	...nuxtConfig,
-	dev: false,
-	buildDir: "nuxt",
+	"dev": false,
+	"buildDir": "nuxt",
 };
 
 const nuxt = new Nuxt(config);
