@@ -1,6 +1,6 @@
 // index.js
 import functions from "firebase-functions";
-import { Nuxt } from "nuxt-start";
+import { Nuxt } from "nuxt";
 import nuxtConfig from "./nuxt.config.js";
 
 const config = {
