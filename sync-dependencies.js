@@ -24,8 +24,15 @@ functionsPackage.devDependencies = {
 };
 
 // If there are engines defined in the root package.json, use them
-if (rootPackage.engines) {
-	functionsPackage.engines = rootPackage.engines;
+if (rootPackage.engines && rootPackage.engines.node) {
+	// Take only the major version for Firebase compatibility
+	const majorVersion = rootPackage.engines.node.split(".")[0];
+	functionsPackage.engines = {
+
+		// Preserve other engines if needed
+		...functionsPackage.engines,
+		"node": majorVersion,
+	};
 }
 
 // Write the updated functions package.json file
