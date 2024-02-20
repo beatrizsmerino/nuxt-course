@@ -6,10 +6,10 @@
 		>
 			<UIIcon
 				icon-name="logo-nuxt-dark-theme"
-				:icon-aria-label="getRepoName()"
+				:icon-aria-label="getRepoName"
 			/>
 			<span class="page-header__title">
-				{{ getRepoName() }}
+				{{ getRepoName }}
 			</span>
 		</nuxt-link>
 		<PageNav />
@@ -17,7 +17,6 @@
 </template>
 
 <script>
-	import { getRepoName } from "@/mixins/repo-mixins.js";
 	import PageNav from "@/components/Page/PageNav";
 
 	export default {
@@ -25,8 +24,10 @@
 		"components": {
 			PageNav,
 		},
-		"methods": {
-			getRepoName,
+		"computed": {
+			getRepoName() {
+				return process.env.repoName;
+			},
 		},
 	};
 </script>

@@ -1,6 +1,5 @@
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
-import { getRepoName, getRepoDescription } from "./mixins/repo-mixins.js";
 
 dotenv.config();
 
@@ -44,7 +43,9 @@ export default {
 	"env": {
 		"NODE_ENV": process.env.NODE_ENV,
 		"baseUrl": process.env.BASE_URL || "https://nuxt-course-b5643-default-rtdb.firebaseio.com",
-		"firebaseAPIKey": process.env.FIREBASE_API_KEY,
+		"firebaseAPIKey": process.env.FIREBASE_API_KEY || "",
+		"repoName": process.env.PACKAGE_NAME || "Project name",
+		"repoDescription": process.env.PACKAGE_DESCRIPTION || "Project description",
 	},
 
 	// Define the workspace of Nuxt application: https://v2.nuxt.com/docs/configuration-glossary/configuration-rootdir/
@@ -64,38 +65,40 @@ export default {
 	},
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
-	"head": {
-		"title": getRepoName(),
-		"htmlAttrs": {
-			"lang": "en",
-		},
-		"meta": [
-			{ "charset": "utf-8" },
-			{
-				"name": "viewport",
-				"content": "width=device-width, initial-scale=1",
+	head() {
+		return {
+			"title": process.env.repoName,
+			"htmlAttrs": {
+				"lang": "en",
 			},
-			{
-				"hid": "description",
-				"name": "description",
-				"content": getRepoDescription(),
-			},
-			{
-				"name": "format-detection",
-				"content": "telephone=no",
-			},
-		],
-		"link": [
-			{
-				"rel": "icon",
-				"type": "image/x-icon",
-				"href": "/favicon.ico",
-			},
-			{
-				"rel": "stylesheet",
-				"href": "https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap",
-			},
-		],
+			"meta": [
+				{ "charset": "utf-8" },
+				{
+					"name": "viewport",
+					"content": "width=device-width, initial-scale=1",
+				},
+				{
+					"hid": "description",
+					"name": "description",
+					"content": process.env.repoDescription,
+				},
+				{
+					"name": "format-detection",
+					"content": "telephone=no",
+				},
+			],
+			"link": [
+				{
+					"rel": "icon",
+					"type": "image/x-icon",
+					"href": "/favicon.ico",
+				},
+				{
+					"rel": "stylesheet",
+					"href": "https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap",
+				},
+			],
+		};
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
