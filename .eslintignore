@@ -98,6 +98,3 @@ sw.*
 
 # Vim swap files
 *.swap
-
-# Deploy folder
-functions/

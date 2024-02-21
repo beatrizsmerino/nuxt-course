@@ -91,9 +91,3 @@ sw.*
 
 # Vim swap files
 *.swp
-
-# Deploy folder
-functions/nuxt
-functions/nuxt.config.js
-functions/package.json
-functions/package-lock.json

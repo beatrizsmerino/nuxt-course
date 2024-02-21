@@ -36,7 +36,6 @@ module.exports = {
 			"files": [
 				"package.json",
 				"package-lock.json",
-				"firebase.json",
 			],
 			"rules": {
 				"jsonc/comma-dangle": "off",
