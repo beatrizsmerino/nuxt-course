@@ -26,6 +26,19 @@ module.exports = {
 				"*.json",
 			],
 			"rules": {
+				"jsonc/comma-dangle": [
+					"error",
+					"always-multiline",
+				],
+			},
+		},
+		{
+			"files": [
+				"package.json",
+				"package-lock.json",
+				"firebase.json",
+			],
+			"rules": {
 				"jsonc/comma-dangle": "off",
 			},
 		},

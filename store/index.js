@@ -63,11 +63,9 @@ const createStore = () => new Store({
 			vuexContext.commit("setReadPostList", data);
 		},
 		fetchReadPostSelected(vuexContext, id) {
-			return this.$axios
-				.$get(`/posts/${id}.json`)
-				.then(result => {
-					vuexContext.commit("setReadPostSelected", result);
-				});
+			return this.$axios.$get(`/posts/${id}.json`).then(result => {
+				vuexContext.commit("setReadPostSelected", result);
+			});
 		},
 		fetchDeletePostSelected(vuexContext) {
 			vuexContext.commit("setDeletePostSelected");
@@ -122,7 +120,10 @@ const createStore = () => new Store({
 				.then(response => {
 					vuexContext.commit("setCreateAuthToken", response.idToken);
 					localStorage.setItem("authTokenId", response.idToken);
-					localStorage.setItem("authTokenExpire", new Date().getTime() + Number(response.expiresIn) * 1000);
+					localStorage.setItem(
+						"authTokenExpire",
+						new Date().getTime() + Number(response.expiresIn) * 1000,
+					);
 					Cookie.set("authTokenId", response.idToken);
 					Cookie.set("authTokenExpire", new Date().getTime() + Number(response.expiresIn) * 1000);
 

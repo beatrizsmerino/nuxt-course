@@ -6,7 +6,17 @@ module.exports = {
 		"body-max-line-length": [
 			2,
 			"always",
-			800,
+			10000,
+		],
+		"footer-max-line-length": [
+			2,
+			"always",
+			10000,
+		],
+		"footer-max-line-length": [
+			2,
+			"always",
+			10000,
 		],
 	},
 };

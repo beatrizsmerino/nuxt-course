@@ -98,3 +98,6 @@ sw.*
 
 # Assets folder
 assets/sprite
+
+# Deploy folder
+functions/
