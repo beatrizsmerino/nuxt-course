@@ -13,5 +13,10 @@ module.exports = {
 			"always",
 			10000,
 		],
+		"footer-max-line-length": [
+			2,
+			"always",
+			10000,
+		],
 	},
 };
