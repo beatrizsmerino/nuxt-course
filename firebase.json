@@ -12,6 +12,7 @@
 			"predeploy": [
 				"npm run lint",
 				"node sync-dependencies.js",
+				"cd functions/ && npm install",
 				"npm run build",
 				"rm -rf functions/nuxt",
 				"cp -r .nuxt/ functions/nuxt/",
