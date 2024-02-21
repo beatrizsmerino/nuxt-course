@@ -42,7 +42,7 @@ export default {
 	// Enviroment variables: https://v2.nuxt.com/docs/configuration-glossary/configuration-env#the-env-property
 	"env": {
 		"NODE_ENV": process.env.NODE_ENV,
-		"baseUrl": process.env.BASE_URL || "https://nuxt-course-b5643-default-rtdb.firebaseio.com",
+		"baseUrl": process.env.BASE_URL || "https://nuxt-course-6e533-default-rtdb.firebaseio.com",
 		"firebaseAPIKey": process.env.FIREBASE_API_KEY || "",
 		"repoName": process.env.PACKAGE_NAME || "Project name",
 		"repoDescription": process.env.PACKAGE_DESCRIPTION || "Project description",
@@ -158,7 +158,7 @@ export default {
 			{
 
 				// Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-				"baseURL": process.env.BASE_URL || "https://nuxt-course-b5643-default-rtdb.firebaseio.com",
+				"baseURL": process.env.BASE_URL || "https://nuxt-course-6e533-default-rtdb.firebaseio.com",
 				"credentials": false,
 			},
 		],
