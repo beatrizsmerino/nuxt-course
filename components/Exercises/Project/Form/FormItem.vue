@@ -37,6 +37,7 @@
 				v-model="updateFieldValue"
 				:class="formFieldModifier"
 				class="form__field form-field"
+				:style="`height: ${fieldHeight}rem; min-height: ${fieldHeight}rem;`"
 				:name="fieldId"
 				:type="fieldType"
 				:placeholder="fieldPlaceholder"
@@ -122,6 +123,10 @@
 			"fieldModifier": {
 				"type": String,
 				"default": "",
+			},
+			"fieldHeight": {
+				"type": Number,
+				"default": 16,
 			},
 			"fieldValue": {
 				"type": String,
@@ -332,8 +337,6 @@
 			}
 
 			.form-field {
-				height: 16rem;
-				min-height: 16rem;
 				max-height: 29rem;
 				resize: vertical;
 
