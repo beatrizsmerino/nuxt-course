@@ -185,6 +185,13 @@
 					this.formErrorModifier = `form-error--${this.fieldModifier}`;
 				}
 			},
+			autoGrow() {
+				if (this.fieldTag === "textarea" && this.fieldValue !== "") {
+					const element = this.$refs[this.fieldId];
+					element.style.height = "auto";
+					element.style.height = `${element.scrollHeight}px`;
+				}
+			},
 			onFocus() {
 				this.isFocus = true;
 				this.isInteracted = true;
@@ -196,13 +203,6 @@
 			},
 			onResize() {
 				this.autoGrow();
-			},
-			autoGrow() {
-				if (this.fieldTag === "textarea" && this.fieldValue !== "") {
-					const element = this.$refs[this.fieldId];
-					element.style.height = "auto";
-					element.style.height = `${element.scrollHeight}px`;
-				}
 			},
 		},
 	};
