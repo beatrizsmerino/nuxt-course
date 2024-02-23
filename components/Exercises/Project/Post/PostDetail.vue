@@ -20,22 +20,30 @@
 				<h2 class="post-detail__title">
 					{{ postData.title }}
 				</h2>
-				<span class="post-detail__date">
+				<span
+					v-if="postData.dateEdition"
+					class="post-detail__date"
+				>
 					Last updated on:
 					<time :datetime="postData.dateEdition">
 						{{ postData.dateEdition | dateFormatted }}
 					</time>
 				</span>
-				<span class="post-detail__author">
+				<span
+					v-if="postData.author"
+					class="post-detail__author"
+				>
 					Written by {{ postData.author }}
 				</span>
 			</div>
 			<div class="post-detail__content">
 				<div
+					v-if="postData.longDescription"
 					class="post-detail__long-description"
 					v-html="postData.longDescription"
 				/>
 				<UIButton
+					v-if="postData.link"
 					:href="postData.link"
 					class-type="link"
 					class="post-detail__button"
