@@ -203,10 +203,12 @@
 			onFocus() {
 				this.isFocus = true;
 				this.isInteracted = true;
+				this.$nextTick(this.autoGrow);
 			},
 			onBlur() {
 				this.isFocus = false;
 				this.isInteracted = true;
+				this.$nextTick(this.autoGrow);
 				this.$emit("blur");
 			},
 			onResize() {
