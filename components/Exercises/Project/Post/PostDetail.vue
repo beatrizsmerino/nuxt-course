@@ -3,7 +3,7 @@
 		<p v-if="isError">
 			Error loading data
 		</p>
-		<p v-else-if="Object.keys(postData).some(key => postData[key] === null || postData[key] === '')">
+		<p v-else-if="isRequiredEmpty">
 			Some of the data in this post is not yet complete, continue editing!
 		</p>
 		<template v-else>
@@ -66,6 +66,16 @@
 			},
 		},
 		"computed": {
+			isRequiredEmpty() {
+				const requiredFields = [
+					"title",
+					"category",
+					"shortDescription",
+				];
+				const isInvalidPostData = requiredFields.some(field => this.postData[field] === null || this.postData[field] === "");
+
+				return isInvalidPostData;
+			},
 			isError() {
 				return this.$store.getters.getIsError;
 			},
