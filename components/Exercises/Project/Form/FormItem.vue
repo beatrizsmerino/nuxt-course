@@ -170,8 +170,7 @@
 			},
 		},
 		mounted() {
-			this.createdCSSModifier();
-			this.$nextTick(this.autoGrow);
+			this.onLoad();
 			window.addEventListener("resize", this.onResize);
 		},
 		beforeDestroy() {
@@ -191,6 +190,10 @@
 					element.style.height = "auto";
 					element.style.height = `${element.scrollHeight}px`;
 				}
+			},
+			onLoad() {
+				this.createdCSSModifier();
+				this.$nextTick(this.autoGrow);
 			},
 			onFocus() {
 				this.isFocus = true;
