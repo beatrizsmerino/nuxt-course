@@ -211,7 +211,7 @@
 			},
 			validateTitle() {
 				const errorText =
-					validateFieldMaxLength(this.form.title, 30) ||
+					validateFieldMaxLength(this.form.title, 100) ||
 					validateFieldString(this.form.title) ||
 					validateFieldRequired(this.form.title);
 
