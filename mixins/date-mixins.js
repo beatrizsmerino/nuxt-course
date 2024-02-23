@@ -14,5 +14,5 @@ export const getDateFormatted = date => {
 	minutes = minutes < 10 ? `0${minutes}` : minutes;
 	seconds = seconds < 10 ? `0${seconds}` : seconds;
 
-	return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+	return `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
 };
