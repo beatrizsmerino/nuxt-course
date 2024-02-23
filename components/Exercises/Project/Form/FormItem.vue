@@ -33,6 +33,7 @@
 			<textarea
 				v-if="fieldTag == 'textarea'"
 				:id="fieldId"
+				:ref="fieldId"
 				v-model="updateFieldValue"
 				:class="formFieldModifier"
 				class="form__field form-field"
@@ -168,8 +169,9 @@
 				return this.fieldErrorText !== "";
 			},
 		},
-		created() {
+		mounted() {
 			this.createdCSSModifier();
+			this.$nextTick(this.autoGrow);
 		},
 		"methods": {
 			createdCSSModifier() {
@@ -188,10 +190,12 @@
 				this.isInteracted = true;
 				this.$emit("blur");
 			},
-			autoGrow(event) {
-				const element = event.target;
-				element.style.height = "auto";
-				element.style.height = `${element.scrollHeight}px`;
+			autoGrow() {
+				if (this.fieldTag === "textarea" && this.fieldValue !== "") {
+					const element = this.$refs[this.fieldId];
+					element.style.height = "auto";
+					element.style.height = `${element.scrollHeight}px`;
+				}
 			},
 		},
 	};
