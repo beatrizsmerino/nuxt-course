@@ -85,6 +85,7 @@
 				field-id="postFormShortDescription"
 				field-label="Short description"
 				field-placeholder="Capture the essence in a sentence"
+				field-tag="textarea"
 				field-modifier="anim"
 				:field-required="true"
 				:field-error-text="validationErrors.shortDescription"
