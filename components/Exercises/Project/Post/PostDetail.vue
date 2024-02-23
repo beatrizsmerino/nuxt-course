@@ -20,6 +20,9 @@
 				<h2 class="post-detail__title">
 					{{ postData.title }}
 				</h2>
+				<span class="post-detail__category">
+					{{ postData.category }}
+				</span>
 				<span
 					v-if="postData.dateEdition"
 					class="post-detail__date"
@@ -152,6 +155,16 @@
 
 		&__date {
 			margin-bottom: 0.5rem;
+		}
+
+		&__category {
+			display: flex;
+			max-width: max-content;
+			padding: 0.8rem 1.5rem;
+			border: 0.1rem solid $color-black;
+			border-radius: 2rem;
+			font-size: 0.8em;
+			user-select: none;
 		}
 
 		&__content {
