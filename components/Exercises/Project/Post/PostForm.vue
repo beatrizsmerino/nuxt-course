@@ -148,7 +148,8 @@
 					: {
 						"id": "",
 						"title": "",
-						"date": "",
+						"dateCreation": "",
+						"dateEdition": "",
 						"author": "",
 						"category": "",
 						"shortDescription": "",
@@ -191,8 +192,13 @@
 					this.form.id = crypto.randomUUID();
 				}
 			},
-			updateDate() {
-				this.form.date = new Date();
+			saveDate() {
+				if (!this.form.dateCreation) {
+					this.form.dateCreation = new Date();
+					this.form.dateEdition = new Date();
+				} else {
+					this.form.dateEdition = new Date();
+				}
 			},
 			updateErrorText(fieldName, errorMessage) {
 				if (errorMessage) {
@@ -258,7 +264,7 @@
 			onSave() {
 				this.validateForm();
 				if (this.isValid) {
-					this.updateDate();
+					this.saveDate();
 					this.$emit("save-post", this.form);
 				}
 			},
