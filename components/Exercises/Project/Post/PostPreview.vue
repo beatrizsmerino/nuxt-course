@@ -18,10 +18,10 @@
 		</template>
 		<template v-if="checkCssModifier === 'expanded'">
 			<time
-				:datetime="postData.date"
+				:datetime="postData.dateEdition"
 				class="post-preview__date"
 			>
-				{{ postData.date | dateFormatted }}
+				{{ postData.dateEdition | dateFormatted }}
 			</time>
 			<div class="post-preview__image">
 				<img
@@ -38,10 +38,10 @@
 		</template>
 		<template v-if="checkCssModifier === 'compacted'">
 			<time
-				:datetime="postData.date"
+				:datetime="postData.dateEdition"
 				class="post-preview__date"
 			>
-				{{ postData.date | dateFormatted }}
+				{{ postData.dateEdition | dateFormatted }}
 			</time>
 			<h3 class="post-preview__title">
 				{{ postData.title }}
