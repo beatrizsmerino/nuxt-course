@@ -33,9 +33,11 @@
 			<textarea
 				v-if="fieldTag == 'textarea'"
 				:id="fieldId"
+				:ref="fieldId"
 				v-model="updateFieldValue"
 				:class="formFieldModifier"
 				class="form__field form-field"
+				:style="`height: ${fieldHeight}rem; min-height: ${fieldHeight}rem;`"
 				:name="fieldId"
 				:type="fieldType"
 				:placeholder="fieldPlaceholder"
@@ -122,6 +124,10 @@
 				"type": String,
 				"default": "",
 			},
+			"fieldHeight": {
+				"type": Number,
+				"default": 16,
+			},
 			"fieldValue": {
 				"type": String,
 				"default": "",
@@ -168,8 +174,12 @@
 				return this.fieldErrorText !== "";
 			},
 		},
-		created() {
-			this.createdCSSModifier();
+		mounted() {
+			this.onLoad();
+			window.addEventListener("resize", this.onResize);
+		},
+		beforeDestroy() {
+			window.removeEventListener("resize", this.onResize);
 		},
 		"methods": {
 			createdCSSModifier() {
@@ -179,19 +189,30 @@
 					this.formErrorModifier = `form-error--${this.fieldModifier}`;
 				}
 			},
+			autoGrow() {
+				if (this.fieldTag === "textarea" && this.fieldValue !== "") {
+					const element = this.$refs[this.fieldId];
+					element.style.height = "auto";
+					element.style.height = `${element.scrollHeight * 0.1}rem`;
+				}
+			},
+			onLoad() {
+				this.createdCSSModifier();
+				this.$nextTick(this.autoGrow);
+			},
 			onFocus() {
 				this.isFocus = true;
 				this.isInteracted = true;
+				this.$nextTick(this.autoGrow);
 			},
 			onBlur() {
 				this.isFocus = false;
 				this.isInteracted = true;
+				this.$nextTick(this.autoGrow);
 				this.$emit("blur");
 			},
-			autoGrow(event) {
-				const element = event.target;
-				element.style.height = "auto";
-				element.style.height = `${element.scrollHeight}px`;
+			onResize() {
+				this.autoGrow();
 			},
 		},
 	};
@@ -318,8 +339,6 @@
 			}
 
 			.form-field {
-				height: 16rem;
-				min-height: 16rem;
 				max-height: 29rem;
 				resize: vertical;
 

@@ -85,7 +85,9 @@
 				field-id="postFormShortDescription"
 				field-label="Short description"
 				field-placeholder="Capture the essence in a sentence"
+				field-tag="textarea"
 				field-modifier="anim"
+				:field-height="4.3*2"
 				:field-required="true"
 				:field-error-text="validationErrors.shortDescription"
 				@blur="validateShortDescription"
@@ -209,7 +211,7 @@
 			},
 			validateTitle() {
 				const errorText =
-					validateFieldMaxLength(this.form.title, 30) ||
+					validateFieldMaxLength(this.form.title, 100) ||
 					validateFieldString(this.form.title) ||
 					validateFieldRequired(this.form.title);
 
@@ -245,7 +247,7 @@
 			},
 			validateLongDescription() {
 				const errorText =
-					validateFieldMaxLength(this.form.longDescription, 2000) ||
+					validateFieldMaxLength(this.form.longDescription, 10000) ||
 					validateFieldString(this.form.longDescription);
 
 				this.updateErrorText("longDescription", errorText);
