@@ -247,7 +247,7 @@
 			},
 			validateLongDescription() {
 				const errorText =
-					validateFieldMaxLength(this.form.longDescription, 2000) ||
+					validateFieldMaxLength(this.form.longDescription, 10000) ||
 					validateFieldString(this.form.longDescription);
 
 				this.updateErrorText("longDescription", errorText);
