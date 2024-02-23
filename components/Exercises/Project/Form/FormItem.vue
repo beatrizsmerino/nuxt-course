@@ -172,6 +172,10 @@
 		mounted() {
 			this.createdCSSModifier();
 			this.$nextTick(this.autoGrow);
+			window.addEventListener("resize", this.onResize);
+		},
+		beforeDestroy() {
+			window.removeEventListener("resize", this.onResize);
 		},
 		"methods": {
 			createdCSSModifier() {
@@ -189,6 +193,9 @@
 				this.isFocus = false;
 				this.isInteracted = true;
 				this.$emit("blur");
+			},
+			onResize() {
+				this.autoGrow();
 			},
 			autoGrow() {
 				if (this.fieldTag === "textarea" && this.fieldValue !== "") {
