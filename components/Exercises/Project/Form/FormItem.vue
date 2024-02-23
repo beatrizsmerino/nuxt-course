@@ -188,7 +188,7 @@
 				if (this.fieldTag === "textarea" && this.fieldValue !== "") {
 					const element = this.$refs[this.fieldId];
 					element.style.height = "auto";
-					element.style.height = `${element.scrollHeight}px`;
+					element.style.height = `${element.scrollHeight * 0.1}rem`;
 				}
 			},
 			onLoad() {
