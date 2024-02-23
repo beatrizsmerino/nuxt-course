@@ -4,7 +4,7 @@
 			Error loading data
 		</p>
 		<p v-else-if="Object.keys(postData).some(key => postData[key] === null || postData[key] === '')">
-			There are no data here yet, start editing!
+			Some of the data in this post is not yet complete, continue editing!
 		</p>
 		<template v-else>
 			<div class="post-detail__image">
