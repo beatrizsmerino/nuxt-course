@@ -1,4 +1,5 @@
 export const isString = data => typeof data === "string";
+export const isNumber = data => !isNaN(Number(data)) && isFinite(Number(data));
 export const isEmpty = data => !data.trim();
 export const isMaxLength = (data, numberCharacters) => data.length < numberCharacters;
 export const isUrl = data => {
@@ -59,6 +60,14 @@ export function validateFieldEmail(fieldValue) {
 export function validateFieldString(fieldValue) {
 	if (!isString(fieldValue)) {
 		return "This field must be a string";
+	}
+
+	return "";
+}
+
+export function validateFieldNumber(fieldValue) {
+	if (!isNumber(fieldValue)) {
+		return "This field must be a number";
 	}
 
 	return "";
