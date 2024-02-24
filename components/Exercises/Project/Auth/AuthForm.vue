@@ -49,15 +49,15 @@
 
 <script>
 	import {
+		validateFieldRequired,
+		validateFieldMinLength,
+		validateFieldMaxLength,
+		validateFieldEmail,
 		validateFieldContainsString,
 		validateFieldContainsNumber,
 		validateFieldContainsSpecialChar,
 		validateFieldContainsUpperCase,
 		validateFieldContainsLowerCase,
-		validateFieldEmail,
-		validateFieldRequired,
-		validateFieldMinLength,
-		validateFieldMaxLength,
 	} from "@/mixins/validation-mixins.js";
 	import FormItem from "@/components/Exercises/Project/Form/FormItem";
 
