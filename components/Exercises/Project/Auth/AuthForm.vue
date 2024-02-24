@@ -85,10 +85,7 @@
 				}
 			},
 			validateEmail() {
-				const errorText =
-					validateFieldEmail(this.form.email) ||
-					validateFieldString(this.form.email) ||
-					validateFieldRequired(this.form.email);
+				const errorText = validateFieldRequired(this.form.email) || validateFieldEmail(this.form.email);
 
 				this.updateErrorText("email", errorText);
 			},
