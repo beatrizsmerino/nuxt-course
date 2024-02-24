@@ -24,6 +24,11 @@ export const isEmail = (data) => {
 
 	return regex.test(data);
 };
+export const containsString = (data, substring) => data.includes(substring);
+export const containsNumber = data => (/\d/u).test(data);
+export const containsSpecialChar = data => (/[!@#$%^&*(),.?":{}|<>]/u).test(data);
+export const containsUpperCase = data => (/[A-Z]/u).test(data);
+export const containsLowerCase = data => (/[a-z]/u).test(data);
 
 export function validateFieldMaxLength(fieldValue, maxLength) {
 	if (!isMaxLength(fieldValue, maxLength)) {
@@ -68,6 +73,46 @@ export function validateFieldString(fieldValue) {
 export function validateFieldNumber(fieldValue) {
 	if (!isNumber(fieldValue)) {
 		return "This field must be a number";
+	}
+
+	return "";
+}
+
+export function validateFieldContainsString(fieldValue, stringToNotContain) {
+	if (containsString(fieldValue, stringToNotContain)) {
+		return `The password must not contain the string "${stringToNotContain}"`;
+	}
+
+	return "";
+}
+
+export function validateFieldContainsNumber(fieldValue) {
+	if (!containsNumber(fieldValue)) {
+		return "The password must contain at least one number";
+	}
+
+	return "";
+}
+
+export function validateFieldContainsSpecialChar(fieldValue) {
+	if (!containsSpecialChar(fieldValue)) {
+		return "The password must contain at least one special character";
+	}
+
+	return "";
+}
+
+export function validateFieldContainsUpperCase(fieldValue) {
+	if (!containsUpperCase(fieldValue)) {
+		return "The password must contain at least one uppercase letter";
+	}
+
+	return "";
+}
+
+export function validateFieldContainsLowerCase(fieldValue) {
+	if (!containsLowerCase(fieldValue)) {
+		return "The password must contain at least one lowercase letter";
 	}
 
 	return "";

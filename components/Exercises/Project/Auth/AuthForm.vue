@@ -49,7 +49,11 @@
 
 <script>
 	import {
-		validateFieldString,
+		validateFieldContainsString,
+		validateFieldContainsNumber,
+		validateFieldContainsSpecialChar,
+		validateFieldContainsUpperCase,
+		validateFieldContainsLowerCase,
 		validateFieldEmail,
 		validateFieldRequired,
 		validateFieldMinLength,
@@ -90,10 +94,17 @@
 				this.updateErrorText("email", errorText);
 			},
 			validatePassword() {
-				const errorText =
-					validateFieldMinLength(this.form.password, 6) ||
-					validateFieldString(this.form.password) ||
-					validateFieldRequired(this.form.password);
+				const validators = [
+					validateFieldRequired(this.form.password),
+					validateFieldMinLength(this.form.password, 6),
+					validateFieldContainsString(this.form.password),
+					validateFieldContainsNumber(this.form.password),
+					validateFieldContainsSpecialChar(this.form.password),
+					validateFieldContainsUpperCase(this.form.password),
+					validateFieldContainsLowerCase(this.form.password),
+				];
+
+				const errorText = validators.find(v => v !== "") || "";
 
 				this.updateErrorText("password", errorText);
 			},
