@@ -8,7 +8,39 @@
 
 		<section>
 			<article>
-				<p>Product ID: {{ $route.params.id }}</p>
+				<p>
+					<strong>ID:</strong>
+					{{ productData.id }}
+				</p>
+				<p>
+					<strong>Title:</strong>
+					{{ productData.title }}
+				</p>
+				<p>
+					<strong>Description:</strong>
+					{{ productData.description }}
+				</p>
+				<p>
+					<strong>Category:</strong>
+					{{ productData.category }}
+				</p>
+				<p>
+					<strong>Price:</strong>
+					{{ productData.price }}
+				</p>
+				<p>
+					<strong>Rating rate:</strong>
+					{{ productData.rating.rate }}
+				</p>
+				<p>
+					<strong>Rating count:</strong>
+					{{ productData.rating.count }}
+				</p>
+				<img
+					width="50%"
+					:src="productData.image"
+					:alt="productData.title"
+				>
 			</article>
 		</section>
 	</div>
