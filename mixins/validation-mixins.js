@@ -1,7 +1,7 @@
-export const isString = data => typeof data === "string";
-export const isNumber = data => !isNaN(Number(data)) && isFinite(Number(data));
 export const isEmpty = data => !data.trim();
 export const isMaxLength = (data, numberCharacters) => data.length < numberCharacters;
+export const isString = data => typeof data === "string";
+export const isNumber = data => !isNaN(Number(data)) && isFinite(Number(data));
 export const isUrl = data => {
 	if (!isEmpty(data)) {
 		try {
@@ -30,6 +30,14 @@ export const containsSpecialChar = data => (/[!@#$%^&*(),.?":{}|<>]/u).test(data
 export const containsUpperCase = data => (/[A-Z]/u).test(data);
 export const containsLowerCase = data => (/[a-z]/u).test(data);
 
+export function validateFieldRequired(fieldValue) {
+	if (isEmpty(fieldValue)) {
+		return "This field is required";
+	}
+
+	return "";
+}
+
 export function validateFieldMaxLength(fieldValue, maxLength) {
 	if (!isMaxLength(fieldValue, maxLength)) {
 		return `This field cannot exceed ${maxLength} characters`;
@@ -46,22 +54,6 @@ export function validateFieldMinLength(fieldValue, minLength) {
 	return "";
 }
 
-export function validateFieldUrl(fieldValue) {
-	if (!isUrl(fieldValue)) {
-		return "This field must be a url";
-	}
-
-	return "";
-}
-
-export function validateFieldEmail(fieldValue) {
-	if (!isEmail(fieldValue)) {
-		return "This field must be a email";
-	}
-
-	return "";
-}
-
 export function validateFieldString(fieldValue) {
 	if (!isString(fieldValue)) {
 		return "This field must be a string";
@@ -73,6 +65,22 @@ export function validateFieldString(fieldValue) {
 export function validateFieldNumber(fieldValue) {
 	if (!isNumber(fieldValue)) {
 		return "This field must be a number";
+	}
+
+	return "";
+}
+
+export function validateFieldUrl(fieldValue) {
+	if (!isUrl(fieldValue)) {
+		return "This field must be a url";
+	}
+
+	return "";
+}
+
+export function validateFieldEmail(fieldValue) {
+	if (!isEmail(fieldValue)) {
+		return "This field must be a email";
 	}
 
 	return "";
@@ -113,14 +121,6 @@ export function validateFieldContainsUpperCase(fieldValue) {
 export function validateFieldContainsLowerCase(fieldValue) {
 	if (!containsLowerCase(fieldValue)) {
 		return "The password must contain at least one lowercase letter";
-	}
-
-	return "";
-}
-
-export function validateFieldRequired(fieldValue) {
-	if (isEmpty(fieldValue)) {
-		return "This field is required";
 	}
 
 	return "";
