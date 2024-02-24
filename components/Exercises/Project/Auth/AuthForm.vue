@@ -57,6 +57,7 @@
 		validateFieldEmail,
 		validateFieldRequired,
 		validateFieldMinLength,
+		validateFieldMaxLength,
 	} from "@/mixins/validation-mixins.js";
 	import FormItem from "@/components/Exercises/Project/Form/FormItem";
 
@@ -97,6 +98,7 @@
 				const validators = [
 					validateFieldRequired(this.form.password),
 					validateFieldMinLength(this.form.password, 6),
+					validateFieldMaxLength(this.form.password, 20),
 					validateFieldContainsString(this.form.password),
 					validateFieldContainsNumber(this.form.password),
 					validateFieldContainsSpecialChar(this.form.password),
