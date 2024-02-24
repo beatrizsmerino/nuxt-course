@@ -3,42 +3,55 @@
 		<p v-if="isError">
 			Error loading data
 		</p>
-		<p v-else-if="Object.keys(postData).some(key => postData[key] === null || postData[key] === '')">
-			There are no data here yet, start editing!
+		<p v-else-if="isRequiredEmpty">
+			Some of the data in this post is not yet complete, continue editing!
 		</p>
 		<template v-else>
-			<div class="post-detail__image">
-				<span class="post-detail__index">
-					#{{ postData.id }}
-				</span>
-				<img
-					:src="postData.image"
-					:alt="postData.title"
-				>
-			</div>
 			<div class="post-detail__header">
+				<div class="post-detail__image">
+					<span class="post-detail__index">
+						#{{ postData.id }}
+					</span>
+					<img
+						:src="postData.image"
+						:alt="postData.title"
+					>
+				</div>
 				<h2 class="post-detail__title">
 					{{ postData.title }}
 				</h2>
-				<span class="post-detail__date">
-					Last updated on:
-					<time :datetime="postData.dateEdition">
-						{{ postData.dateEdition | dateFormatted }}
-					</time>
-				</span>
-				<span class="post-detail__author">
-					Written by {{ postData.author }}
-				</span>
+				<div class="post-detail__info">
+					<span class="post-detail__category">
+						{{ postData.category }}
+					</span>
+					<span
+						v-if="postData.dateEdition"
+						class="post-detail__date"
+					>
+						Last updated on:
+						<time :datetime="postData.dateEdition">
+							{{ postData.dateEdition | dateFormatted }}
+						</time>
+					</span>
+					<span
+						v-if="postData.author"
+						class="post-detail__author"
+					>
+						Written by {{ postData.author }}
+					</span>
+				</div>
 			</div>
 			<div class="post-detail__content">
 				<div
+					v-if="postData.longDescription"
 					class="post-detail__long-description"
 					v-html="postData.longDescription"
 				/>
 				<UIButton
+					v-if="postData.link"
 					:href="postData.link"
 					class-type="link"
-					class="post-detail__button"
+					class="post-detail__link"
 					target="_blank"
 				>
 					Read more
@@ -66,6 +79,16 @@
 			},
 		},
 		"computed": {
+			isRequiredEmpty() {
+				const requiredFields = [
+					"title",
+					"category",
+					"shortDescription",
+				];
+				const isInvalidPostData = requiredFields.some(field => this.postData[field] === null || this.postData[field] === "");
+
+				return isInvalidPostData;
+			},
 			isError() {
 				return this.$store.getters.getIsError;
 			},
@@ -75,6 +98,36 @@
 
 <style lang="scss" scoped>
 	.post-detail {
+		> * {
+			&:not(:last-child) {
+				margin-bottom: 4rem;
+			}
+		}
+
+		&__header {
+			> * {
+				&:not(:last-child) {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+
+		&__info {
+			> * {
+				&:not(:last-child) {
+					margin-bottom: 0.5rem;
+				}
+			}
+		}
+
+		&__content {
+			> * {
+				&:not(:last-child) {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+
 		&__index {
 			display: flex;
 			position: absolute;
@@ -120,10 +173,6 @@
 			}
 		}
 
-		&__title {
-			margin-bottom: 2rem;
-		}
-
 		&__date,
 		&__author {
 			display: inline-block;
@@ -132,12 +181,14 @@
 			font-weight: 300;
 		}
 
-		&__date {
-			margin-bottom: 0.5rem;
-		}
-
-		&__content {
-			margin-top: 2rem;
+		&__category {
+			display: flex;
+			max-width: max-content;
+			padding: 0.8rem 1.5rem;
+			border: 0.1rem solid $color-black;
+			border-radius: 2rem;
+			font-size: 0.8em;
+			user-select: none;
 		}
 
 		&__long-description {
@@ -174,12 +225,7 @@
 			}
 		}
 
-		&__button {
-			margin-top: 2rem;
-		}
-
 		&__feedback {
-			margin-top: 3rem;
 			font-style: italic;
 
 			a {
