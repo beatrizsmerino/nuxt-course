@@ -27,6 +27,25 @@
 			Breadcrumbs,
 		},
 		"layout": "exercises",
+		// eslint-disable-next-line consistent-return, complexity
+		async asyncData(context) {
+			try {
+				const response = await fetch(`https://fakestoreapi.com/products/${context.params.id}`);
+				if (!response.ok) {
+					throw new Error("Error fetching products");
+				}
+				const product = await response.json();
+
+				return { "productData": product };
+			} catch (error) {
+				const message =
+					error.response && error.response.data && error.response.data.message
+						? error.response.data.message
+						: "Error fetching products";
+				context.error({ "statusCode": 404,
+					message });
+			}
+		},
 		data() {
 			return {
 				"breadcrumbsListData": [
