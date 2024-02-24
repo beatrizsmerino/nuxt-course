@@ -14,6 +14,15 @@ export const isUrl = data => {
 
 	return true;
 };
+export const isEmail = (data) => {
+	if (isEmpty(data)) {
+		return false;
+	}
+
+	const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/u;
+
+	return regex.test(data);
+};
 
 export function validateFieldMaxLength(fieldValue, maxLength) {
 	if (!isMaxLength(fieldValue, maxLength)) {
@@ -34,6 +43,14 @@ export function validateFieldMinLength(fieldValue, minLength) {
 export function validateFieldUrl(fieldValue) {
 	if (!isUrl(fieldValue)) {
 		return "This field must be a url";
+	}
+
+	return "";
+}
+
+export function validateFieldEmail(fieldValue) {
+	if (!isEmail(fieldValue)) {
+		return "This field must be a email";
 	}
 
 	return "";

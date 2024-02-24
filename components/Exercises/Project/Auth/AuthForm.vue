@@ -48,7 +48,12 @@
 </template>
 
 <script>
-	import { validateFieldString, validateFieldRequired, validateFieldMinLength } from "@/mixins/validation-mixins.js";
+	import {
+		validateFieldString,
+		validateFieldEmail,
+		validateFieldRequired,
+		validateFieldMinLength,
+	} from "@/mixins/validation-mixins.js";
 	import FormItem from "@/components/Exercises/Project/Form/FormItem";
 
 	export default {
@@ -80,7 +85,10 @@
 				}
 			},
 			validateEmail() {
-				const errorText = validateFieldString(this.form.email) || validateFieldRequired(this.form.email);
+				const errorText =
+					validateFieldEmail(this.form.email) ||
+					validateFieldString(this.form.email) ||
+					validateFieldRequired(this.form.email);
 
 				this.updateErrorText("email", errorText);
 			},
