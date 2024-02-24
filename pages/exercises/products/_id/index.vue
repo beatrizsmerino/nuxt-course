@@ -68,7 +68,19 @@
 				}
 				const product = await response.json();
 
-				return { "productData": product };
+				return {
+					"productData": product,
+					"breadcrumbsListData": [
+						{
+							"url": "/exercises/products",
+							"name": "Products",
+						},
+						{
+							"url": null,
+							"name": `Product: ${product.title}`,
+						},
+					],
+				};
 			} catch (error) {
 				const message =
 					error.response && error.response.data && error.response.data.message
@@ -77,20 +89,6 @@
 				context.error({ "statusCode": 404,
 					message });
 			}
-		},
-		data() {
-			return {
-				"breadcrumbsListData": [
-					{
-						"url": "/exercises/products",
-						"name": "Products",
-					},
-					{
-						"url": null,
-						"name": "Product",
-					},
-				],
-			};
 		},
 		"head": {
 			"title": "Product Detail | Products Exercise",
