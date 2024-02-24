@@ -45,6 +45,8 @@
 
 <style lang="scss" scoped>
 	.breadcrumbs {
+		margin-bottom: 0;
+
 		&__list {
 			display: flex;
 			align-items: center;
