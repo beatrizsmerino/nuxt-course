@@ -104,7 +104,7 @@
 					validateFieldContainsLowerCase(this.form.password),
 				];
 
-				const errorText = validators.find(v => v !== "") || "";
+				const errorText = validators.find(validation => validation !== "") || "";
 
 				this.updateErrorText("password", errorText);
 			},
