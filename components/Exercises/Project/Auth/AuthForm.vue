@@ -48,7 +48,7 @@
 </template>
 
 <script>
-	import { validateFieldString, validateFieldRequired } from "@/mixins/validation-mixins.js";
+	import { validateFieldString, validateFieldRequired, validateFieldMinLength } from "@/mixins/validation-mixins.js";
 	import FormItem from "@/components/Exercises/Project/Form/FormItem";
 
 	export default {
@@ -85,7 +85,10 @@
 				this.updateErrorText("email", errorText);
 			},
 			validatePassword() {
-				const errorText = validateFieldString(this.form.password) || validateFieldRequired(this.form.password);
+				const errorText =
+					validateFieldMinLength(this.form.password, 6) ||
+					validateFieldString(this.form.password) ||
+					validateFieldRequired(this.form.password);
 
 				this.updateErrorText("password", errorText);
 			},

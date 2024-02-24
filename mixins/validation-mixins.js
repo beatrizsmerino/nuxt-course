@@ -23,6 +23,14 @@ export function validateFieldMaxLength(fieldValue, maxLength) {
 	return "";
 }
 
+export function validateFieldMinLength(fieldValue, minLength) {
+	if (isMaxLength(fieldValue, minLength)) {
+		return `This field needs more than ${minLength} characters`;
+	}
+
+	return "";
+}
+
 export function validateFieldUrl(fieldValue) {
 	if (!isUrl(fieldValue)) {
 		return "This field must be a url";
