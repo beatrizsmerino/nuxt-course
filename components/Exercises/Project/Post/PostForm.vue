@@ -87,7 +87,7 @@
 				field-placeholder="Capture the essence in a sentence"
 				field-tag="textarea"
 				field-modifier="anim"
-				:field-height="4.3*2"
+				:field-height="4.3 * 2"
 				:field-required="true"
 				:field-error-text="validationErrors.shortDescription"
 				@blur="validateShortDescription"
