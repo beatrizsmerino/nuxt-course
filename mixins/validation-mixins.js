@@ -15,7 +15,7 @@ export const isUrl = data => {
 
 	return true;
 };
-export const isEmail = (data) => {
+export const isEmail = data => {
 	if (isEmpty(data)) {
 		return false;
 	}
