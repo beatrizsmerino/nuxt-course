@@ -69,7 +69,7 @@
 						"url": "/exercises/project/home",
 						"name": "Project",
 						"description":
-							'<div class="exercise-steps"><ol><li></li><li></li><li></li><li></li><li></li></li></ol></div>',
+							'<div class="exercise-steps"><ol><li>Display the list of posts and select the post to view its details</li><li>CRUD of Post with Firebase (Create, Read, Update and Delete)</li><li>Authenticantion with Firebase through email and password (SignUp, SignIn and SignOut)</li><li>Props, $emit, vuex, asyncData, fetch, nuxtSeverInit</li><li>Local Storage and Cookies to manage data in server and client sides</li></ol></div>',
 						"status": false,
 					},
 				],
