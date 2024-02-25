@@ -62,7 +62,7 @@
 						"url": "/exercises/products",
 						"name": "Products",
 						"description":
-							'<div class="exercise-steps"><ol><li>Create two routes: /products and /products/:pid</li><li>Add a button to the main page. The button should navigate (programmatically) to /products</li><li>Add two links to the /products page. The links should go to /products/1 and /products/2</li><li>Output the product id on the /products/:pid page</li></ol></div>',
+							'<div class="exercise-steps"><ol><li>Create two routes: /products and /products/:id</li><li>Add a button to the main page. The button should navigate (programmatically) to /products</li><li>Add two links to the /products page. The links should go to /products/1 and /products/2</li><li>Output the product id on the /products/:id page</li></ol></div>',
 						"status": false,
 					},
 					{
