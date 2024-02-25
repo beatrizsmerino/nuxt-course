@@ -55,7 +55,7 @@
 						"url": "/exercises/users",
 						"name": "Users",
 						"description":
-							'<div class="exercise-steps"><ol><li>Creating components, layouts and pages</li><li>From Routes to Folders</li><li>Creating a Route with a Dynamic Path</li><li>Two-Way Data Binding to Custom Components in Vue.js</li><li>Adding Links & Navigating Around</li><li>Validating Parameters</li><li>Creating Nested Routes</li><li>Adding a Default Error Page</li></ol></div> ',
+							'<div class="exercise-steps"><ol><li>Creating components, layouts and pages</li><li>From routes to folders</li><li>Creating a route with a dynamic path</li><li>Two-way data binding to custom components in Vue.js</li><li>Adding links & navigating around</li><li>Validating parameters</li><li>Creating nested routes</li><li>Adding a default error page</li></ol></div> ',
 						"status": false,
 					},
 					{
