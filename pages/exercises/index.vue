@@ -68,7 +68,8 @@
 					{
 						"url": "/exercises/project/home",
 						"name": "Project",
-						"description": "",
+						"description":
+							'<div class="exercise-steps"><ol><li></li><li></li><li></li><li></li><li></li></li></ol></div>',
 						"status": false,
 					},
 				],
