@@ -55,21 +55,21 @@
 						"url": "/exercises/users",
 						"name": "Users",
 						"description":
-							'<div class="exercise-steps"><ol><li>Creating components, layouts and pages.</li><li>From routes to folders.</li><li>Creating a route with a dynamic path.</li><li>Two-way data binding to custom components in Vue.js.</li><li>Adding links & navigating around.</li><li>Validating parameters.</li><li>Creating nested routes.</li><li>Adding a default error page.</li></ol></div> ',
+							'<div class="exercise-steps"><ol><li>Creating components, layouts and pages.</li><li>From routes to folders.</li><li>Creating a route with a dynamic path.</li><li>Two-way data binding to custom components in Vue.js.</li><li>Adding links & navigating around.</li><li>Validating parameters.</li><li>Creating nested routes.</li><li>Adding a default <code>error</code> page.</li></ol></div> ',
 						"status": false,
 					},
 					{
 						"url": "/exercises/products",
 						"name": "Products",
 						"description":
-							'<div class="exercise-steps"><ol><li>Create two routes: /products and /products/:id.</li><li>Add a button to the main page. The button should navigate (programmatically) to /products.</li><li>Add two links to the /products page. The links should go to /products/1 and /products/2.</li><li>Output the product id on the /products/:id page.</li><li>Use a fake API to get a product list and a product data.</li></ol></div>',
+							'<div class="exercise-steps"><ol><li>Create two routes: <code>/products</code> and <code>/products/:id</code>.</li><li>Add a button to the main page. The button should navigate (programmatically) to <code>/products</code>.</li><li>Add two links to the <code>/products</code> page. The links should go to <code>/products/1</code> and <code>/products/2</code>.</li><li>Output the product id on the <code>/products/:id</code> page.</li><li>Use a fake API to get a product list and a product data.</li></ol></div>',
 						"status": false,
 					},
 					{
 						"url": "/exercises/project/home",
 						"name": "Project",
 						"description":
-							'<div class="exercise-steps"><ol><li>Display the list of posts and select the post to view its details.</li><li>CRUD of Post with Firebase (Create, Read, Update and Delete).</li><li>Authenticantion with Firebase through email and password (SignUp, SignIn and SignOut).</li><li>Props, $emit, vuex, asyncData, fetch, nuxtSeverInit.</li><li>Local Storage and Cookies to manage data in server and client sides.</li></ol></div>',
+							'<div class="exercise-steps"><ol><li>Display the list of posts and select the post to view its details.</li><li>CRUD of Post with Firebase (Create, Read, Update and Delete).</li><li>Authenticantion with Firebase through email and password (SignUp, SignIn and SignOut).</li><li><code>Props</code>, <code>$emit</code>, <code>vuex</code>, <code>asyncData</code>, <code>fetch</code>, <code>nuxtSeverInit</code>.</li><li>Local Storage and Cookies to manage data in server and client sides.</li></ol></div>',
 						"status": false,
 					},
 				],
