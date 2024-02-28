@@ -13,6 +13,7 @@
 <style lang="scss" scoped>
 	.exercise-title {
 		position: relative;
+		width: fit-content;
 		margin: 0 0 7rem;
 		color: $color-brand-1;
 		font-size: 4.5rem;
@@ -23,7 +24,7 @@
 			position: absolute;
 			bottom: -1rem;
 			left: 0;
-			width: 15rem;
+			width: 80%;
 			height: 0.4rem;
 			background-color: $color-brand-2;
 		}
