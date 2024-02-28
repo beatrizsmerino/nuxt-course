@@ -2,41 +2,39 @@
 	<div class="page__container page__inner">
 		<PageTitle :page-title="pageTitle" />
 
-		<div class="exercises-list">
-			<ul>
-				<li
-					v-for="(item, index) in exercisesList"
-					:key="`exercise-${index}`"
-					class="exercise"
-					:class="{ 'is-show': item.status }"
-				>
-					<div class="exercise__header">
-						<nuxt-link :to="item.url">
-							{{ item.name }}
-						</nuxt-link>
+		<ul class="exercises-list">
+			<li
+				v-for="(item, index) in exercisesList"
+				:key="`exercise-${index}`"
+				class="exercise"
+				:class="{ 'is-show': item.status }"
+			>
+				<div class="exercise__header">
+					<nuxt-link :to="item.url">
+						{{ item.name }}
+					</nuxt-link>
 
-						<UIButton
-							v-if="item.description"
-							class="button--icon"
-							@button-click="showMore(index)"
-						>
-							<transition name="rotate">
-								<UIIcon
-									:class="{ 'is-rotate': item.status }"
-									icon-name="chevron-down"
-									icon-aria-label="Show more"
-								/>
-							</transition>
-						</UIButton>
-					</div>
-					<div
+					<UIButton
 						v-if="item.description"
-						class="exercise__content"
-						v-html="item.description"
-					/>
-				</li>
-			</ul>
-		</div>
+						class="button--icon"
+						@button-click="showMore(index)"
+					>
+						<transition name="rotate">
+							<UIIcon
+								:class="{ 'is-rotate': item.status }"
+								icon-name="chevron-down"
+								icon-aria-label="Show more"
+							/>
+						</transition>
+					</UIButton>
+				</div>
+				<div
+					v-if="item.description"
+					class="exercise__content"
+					v-html="item.description"
+				/>
+			</li>
+		</ul>
 	</div>
 </template>
 
@@ -57,14 +55,14 @@
 						"url": "/exercises/users",
 						"name": "Users",
 						"description":
-							'<div class="exercise-steps"><ol><li>Creating components, layouts and pages.</li><li>From routes to folders.</li><li>Creating a route with a dynamic path.</li><li>Two-way data binding to custom components in Vue.js.</li><li>Adding links & navigating around.</li><li>Validating parameters.</li><li>Creating nested routes.</li><li>Adding a default <code>error</code> page.</li></ol></div> ',
+							"<ol><li>Creating components, layouts and pages.</li><li>From routes to folders.</li><li>Creating a route with a dynamic path.</li><li>Two-way data binding to custom components in Vue.js.</li><li>Adding links & navigating around.</li><li>Validating parameters.</li><li>Creating nested routes.</li><li>Adding a default <code>error</code> page.</li></ol>",
 						"status": false,
 					},
 					{
 						"url": "/exercises/products",
 						"name": "Products",
 						"description":
-							'<div class="exercise-steps"><ol><li>Create two routes: <code>/products</code> and <code>/products/:id</code>.</li><li>Add a button to the main page. The button should navigate (programmatically) to <code>/products</code>.</li><li>Add two links to the <code>/products</code> page. The links should go to <code>/products/1</code> and <code>/products/2</code>.</li><li>Output the product id on the <code>/products/:id</code> page.</li><li>Use a fake API to get a product list and a product data.</li></ol></div>',
+							"<ol><li>Create two routes: <code>/products</code> and <code>/products/:id</code>.</li><li>Add a button to the main page. The button should navigate (programmatically) to <code>/products</code>.</li><li>Add two links to the <code>/products</code> page. The links should go to <code>/products/1</code> and <code>/products/2</code>.</li><li>Output the product id on the <code>/products/:id</code> page.</li><li>Use a fake API to get a product list and a product data.</li></ol>",
 						"status": false,
 					},
 					{
@@ -89,10 +87,8 @@
 
 <style lang="scss">
 	.exercises-list {
-		ul {
-			padding: 0;
-			list-style: none;
-		}
+		padding: 0;
+		list-style: none;
 	}
 
 	.exercise {
