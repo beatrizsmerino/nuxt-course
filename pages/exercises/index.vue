@@ -2,41 +2,39 @@
 	<div class="page__container page__inner">
 		<PageTitle :page-title="pageTitle" />
 
-		<div class="exercises-list">
-			<ul>
-				<li
-					v-for="(item, index) in exercisesList"
-					:key="`exercise-${index}`"
-					class="exercise"
-					:class="{ 'is-show': item.status }"
-				>
-					<div class="exercise__header">
-						<nuxt-link :to="item.url">
-							{{ item.name }}
-						</nuxt-link>
+		<ul class="exercises-list">
+			<li
+				v-for="(item, index) in exercisesList"
+				:key="`exercise-${index}`"
+				class="exercise"
+				:class="{ 'is-show': item.status }"
+			>
+				<div class="exercise__header">
+					<nuxt-link :to="item.url">
+						{{ item.name }}
+					</nuxt-link>
 
-						<UIButton
-							v-if="item.description"
-							class="button--icon"
-							@button-click="showMore(index)"
-						>
-							<transition name="rotate">
-								<UIIcon
-									:class="{ 'is-rotate': item.status }"
-									icon-name="chevron-down"
-									icon-aria-label="Show more"
-								/>
-							</transition>
-						</UIButton>
-					</div>
-					<div
+					<UIButton
 						v-if="item.description"
-						class="exercise__content"
-						v-html="item.description"
-					/>
-				</li>
-			</ul>
-		</div>
+						class="button--icon"
+						@button-click="showMore(index)"
+					>
+						<transition name="rotate">
+							<UIIcon
+								:class="{ 'is-rotate': item.status }"
+								icon-name="chevron-down"
+								icon-aria-label="Show more"
+							/>
+						</transition>
+					</UIButton>
+				</div>
+				<div
+					v-if="item.description"
+					class="exercise__content"
+					v-html="item.description"
+				/>
+			</li>
+		</ul>
 	</div>
 </template>
 
@@ -89,10 +87,8 @@
 
 <style lang="scss">
 	.exercises-list {
-		ul {
-			padding: 0;
-			list-style: none;
-		}
+		padding: 0;
+		list-style: none;
 	}
 
 	.exercise {
