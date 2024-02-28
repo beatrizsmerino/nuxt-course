@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<template #title>
-			Project
+			Blog
 		</template>
 		<template #subtitle>
 			Create a new post
@@ -13,11 +13,11 @@
 </template>
 
 <script>
-	import Layout from "@/components/Exercises/Project/Layout/Layout";
-	import PostForm from "@/components/Exercises/Project/Post/PostForm";
+	import Layout from "@/components/Exercises/Blog/Layout/Layout";
+	import PostForm from "@/components/Exercises/Blog/Post/PostForm";
 
 	export default {
-		"name": "ViewProjectAdminPostCreate",
+		"name": "ViewBlogAdminPostCreate",
 		"components": {
 			Layout,
 			PostForm,
@@ -28,12 +28,12 @@
 			"auth-redirect",
 		],
 		"head": {
-			"title": "Create Post | Project Exercise",
+			"title": "Create Post | Blog Exercise",
 		},
 		"methods": {
 			createPost(postData) {
 				this.$store.dispatch("fetchCreatePost", postData).then(() => {
-					this.$router.push("/exercises/project/admin");
+					this.$router.push("/exercises/blog/admin");
 				});
 			},
 		},

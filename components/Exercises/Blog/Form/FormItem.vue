@@ -29,7 +29,7 @@
 				:required="fieldRequired"
 				@focus="onFocus"
 				@blur="onBlur"
-			>
+			/>
 			<textarea
 				v-if="fieldTag == 'textarea'"
 				:id="fieldId"
@@ -94,8 +94,8 @@
 </template>
 
 <script>
-	import FormLabel from "@/components/Exercises/Project/Form/FormLabel";
-	import FormError from "@/components/Exercises/Project/Form/FormError";
+	import FormLabel from "@/components/Exercises/Blog/Form/FormLabel";
+	import FormError from "@/components/Exercises/Blog/Form/FormError";
 
 	export default {
 		"name": "FormItem",

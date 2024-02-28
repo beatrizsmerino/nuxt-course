@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<template #title>
-			Project
+			Blog
 		</template>
 		<template #subtitle>
 			Auth
@@ -13,23 +13,23 @@
 </template>
 
 <script>
-	import Layout from "@/components/Exercises/Project/Layout/Layout";
-	import AuthForm from "@/components/Exercises/Project/Auth/AuthForm";
+	import Layout from "@/components/Exercises/Blog/Layout/Layout";
+	import AuthForm from "@/components/Exercises/Blog/Auth/AuthForm";
 
 	export default {
-		"name": "ViewProjectAdminAuth",
+		"name": "ViewBlogAdminAuth",
 		"components": {
 			Layout,
 			AuthForm,
 		},
 		"layout": "exercises",
 		"head": {
-			"title": "Auth | Project Exercise",
+			"title": "Auth | Blog Exercise",
 		},
 		"methods": {
 			onAuth(userData) {
 				this.$store.dispatch("fetchCreateAuthUser", userData).then(() => {
-					this.$router.push("/exercises/project/admin");
+					this.$router.push("/exercises/blog/admin");
 				});
 			},
 		},

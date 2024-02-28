@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<template #title>
-			Project
+			Blog
 		</template>
 		<template #content>
 			<PostDetail :post-data="getPostSelected" />
@@ -10,11 +10,11 @@
 </template>
 
 <script>
-	import Layout from "@/components/Exercises/Project/Layout/Layout";
-	import PostDetail from "@/components/Exercises/Project/Post/PostDetail";
+	import Layout from "@/components/Exercises/Blog/Layout/Layout";
+	import PostDetail from "@/components/Exercises/Blog/Post/PostDetail";
 
 	export default {
-		"name": "ViewProjectPostsDetail",
+		"name": "ViewBlogPostsDetail",
 		"components": {
 			Layout,
 			PostDetail,
@@ -24,7 +24,7 @@
 			return store.dispatch("fetchReadPostSelected", params.id);
 		},
 		"head": {
-			"title": "Post Detail | Project Exercise",
+			"title": "Post Detail | Blog Exercise",
 		},
 		"computed": {
 			getPostSelected() {

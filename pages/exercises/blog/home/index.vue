@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<template #title>
-			Project
+			Blog
 		</template>
 		<template #subtitle>
 			Last Posts
@@ -16,18 +16,18 @@
 </template>
 
 <script>
-	import Layout from "@/components/Exercises/Project/Layout/Layout";
-	import PostList from "@/components/Exercises/Project/Post/PostList";
+	import Layout from "@/components/Exercises/Blog/Layout/Layout";
+	import PostList from "@/components/Exercises/Blog/Post/PostList";
 
 	export default {
-		"name": "ViewProjectHome",
+		"name": "ViewBlogHome",
 		"components": {
 			Layout,
 			PostList,
 		},
 		"layout": "exercises",
 		"head": {
-			"title": "Home | Project Exercise",
+			"title": "Home | Blog Exercise",
 		},
 		"computed": {
 			getPostList() {

@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<template #title>
-			Project
+			Blog
 		</template>
 		<template #subtitle>
 			Posts created
@@ -14,7 +14,7 @@
 				@delete-post="deletePost"
 			/>
 			<article class="button-list">
-				<UIButton to="/exercises/project/admin/post/create">
+				<UIButton to="/exercises/blog/admin/post/create">
 					Create new post
 				</UIButton>
 				<UIButton
@@ -29,11 +29,11 @@
 </template>
 
 <script>
-	import Layout from "@/components/Exercises/Project/Layout/Layout";
-	import PostList from "@/components/Exercises/Project/Post/PostList";
+	import Layout from "@/components/Exercises/Blog/Layout/Layout";
+	import PostList from "@/components/Exercises/Blog/Post/PostList";
 
 	export default {
-		"name": "ViewProjectAdmin",
+		"name": "ViewBlogAdmin",
 		"components": {
 			Layout,
 			PostList,
@@ -44,7 +44,7 @@
 			"auth-redirect",
 		],
 		"head": {
-			"title": "Admin | Project Exercise",
+			"title": "Admin | Blog Exercise",
 		},
 		"computed": {
 			getPostList() {
@@ -60,7 +60,7 @@
 			},
 			onSignOut() {
 				this.$store.dispatch("fetchDeleteAuthUser");
-				this.$router.push("/exercises/project/admin/auth");
+				this.$router.push("/exercises/blog/admin/auth");
 			},
 		},
 	};

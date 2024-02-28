@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<template #title>
-			Project
+			Blog
 		</template>
 		<template #subtitle>
 			Description
@@ -26,16 +26,16 @@
 </template>
 
 <script>
-	import Layout from "@/components/Exercises/Project/Layout/Layout";
+	import Layout from "@/components/Exercises/Blog/Layout/Layout";
 
 	export default {
-		"name": "ViewProjectAbout",
+		"name": "ViewBlogAbout",
 		"components": {
 			Layout,
 		},
 		"layout": "exercises",
 		"head": {
-			"title": "About | Project Exercise",
+			"title": "About | Blog Exercise",
 		},
 	};
 </script>

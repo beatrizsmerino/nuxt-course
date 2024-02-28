@@ -48,23 +48,23 @@
 				"navigationList": [
 					{
 						"name": "Home",
-						"url": "/exercises/project/home",
+						"url": "/exercises/blog/home",
 					},
 					{
 						"name": "About Us",
-						"url": "/exercises/project/about-us",
+						"url": "/exercises/blog/about-us",
 					},
 					{
 						"name": "Posts",
-						"url": "/exercises/project/posts",
+						"url": "/exercises/blog/posts",
 					},
 					{
 						"name": "Admin",
-						"url": "/exercises/project/admin",
+						"url": "/exercises/blog/admin",
 					},
 					{
 						"name": "Auth",
-						"url": "/exercises/project/admin/auth",
+						"url": "/exercises/blog/admin/auth",
 					},
 				],
 				"window": {

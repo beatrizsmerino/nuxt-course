@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<template #title>
-			Project
+			Blog
 		</template>
 		<template #subtitle>
 			Update post #{{ getPostSelected.id }}
@@ -16,11 +16,11 @@
 </template>
 
 <script>
-	import Layout from "@/components/Exercises/Project/Layout/Layout";
-	import PostForm from "@/components/Exercises/Project/Post/PostForm";
+	import Layout from "@/components/Exercises/Blog/Layout/Layout";
+	import PostForm from "@/components/Exercises/Blog/Post/PostForm";
 
 	export default {
-		"name": "ViewProjectAdminPostUpdate",
+		"name": "ViewBlogAdminPostUpdate",
 		"components": {
 			Layout,
 			PostForm,
@@ -34,7 +34,7 @@
 			return store.dispatch("fetchReadPostSelected", params.id);
 		},
 		"head": {
-			"title": "Update Post | Project Exercise",
+			"title": "Update Post | Blog Exercise",
 		},
 		"computed": {
 			getPostSelected() {
@@ -47,7 +47,7 @@
 		"methods": {
 			updatePost(postData) {
 				this.$store.dispatch("fetchUpdatePost", postData).then(() => {
-					this.$router.push("/exercises/project/admin");
+					this.$router.push("/exercises/blog/admin");
 				});
 			},
 		},

@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<template #title>
-			Project
+			Blog
 		</template>
 		<template #subtitle>
 			All Posts
@@ -13,18 +13,18 @@
 </template>
 
 <script>
-	import Layout from "@/components/Exercises/Project/Layout/Layout";
-	import PostList from "@/components/Exercises/Project/Post/PostList";
+	import Layout from "@/components/Exercises/Blog/Layout/Layout";
+	import PostList from "@/components/Exercises/Blog/Post/PostList";
 
 	export default {
-		"name": "ViewProjectPosts",
+		"name": "ViewBlogPosts",
 		"components": {
 			Layout,
 			PostList,
 		},
 		"layout": "exercises",
 		"head": {
-			"title": "Post List | Project Exercise",
+			"title": "Post List | Blog Exercise",
 		},
 		"computed": {
 			getPostList() {
