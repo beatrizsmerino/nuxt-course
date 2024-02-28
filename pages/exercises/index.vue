@@ -132,17 +132,20 @@
 			display: none;
 			padding: 0 1.5rem 1.5rem;
 
-			::v-deep {
-				ul,
-				ol {
-					padding-left: 3rem;
+			ul,
+			ol {
+				padding-left: 3rem;
 
-					li {
-						&:not(:last-child) {
-							margin-bottom: 1rem;
-						}
-					}
+				li {
+					line-height: 1.5;
 				}
+			}
+
+			code {
+				padding: 0.2rem 0.6rem;
+				border-radius: 0.5rem;
+				background-color: $color-brand-2;
+				color: $color-brand-1;
 			}
 		}
 
