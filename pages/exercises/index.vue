@@ -142,6 +142,13 @@
 					}
 				}
 			}
+
+			code {
+				padding: 0.2rem 0.6rem;
+				border-radius: 0.5rem;
+				background-color: $color-brand-2;
+				color: $color-brand-1;
+			}
 		}
 
 		&.is-show {
