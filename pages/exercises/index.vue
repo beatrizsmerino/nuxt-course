@@ -132,15 +132,13 @@
 			display: none;
 			padding: 0 1.5rem 1.5rem;
 
-			::v-deep {
-				ul,
-				ol {
-					padding-left: 3rem;
+			ul,
+			ol {
+				padding-left: 3rem;
 
-					li {
-						&:not(:last-child) {
-							margin-bottom: 1rem;
-						}
+				li {
+					&:not(:last-child) {
+						margin-bottom: 1rem;
 					}
 				}
 			}
