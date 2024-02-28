@@ -137,6 +137,8 @@
 				padding-left: 3rem;
 
 				li {
+					line-height: 1.5;
+
 					&:not(:last-child) {
 						margin-bottom: 1rem;
 					}
