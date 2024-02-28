@@ -75,8 +75,8 @@
 		"computed": {
 			postNuxtLink() {
 				return this.isAdmin
-					? `/exercises/project/admin/post/update/${this.postData.id}`
-					: `/exercises/project/posts/${this.postData.id}`;
+					? `/exercises/blog/admin/post/update/${this.postData.id}`
+					: `/exercises/blog/posts/${this.postData.id}`;
 			},
 			shortDescription() {
 				return this.ellipsize(this.postData.description);

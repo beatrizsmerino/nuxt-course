@@ -59,8 +59,8 @@
 				<div class="post-detail__feedback">
 					<p>
 						Let me know that you think about the post, send a email to
-						<a href="mailto:feedback@project.com">
-							feedback@project.com
+						<a href="mailto:feedback@blog.com">
+							feedback@blog.com
 						</a>
 					</p>
 				</div>

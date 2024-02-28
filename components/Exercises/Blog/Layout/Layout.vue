@@ -17,7 +17,7 @@
 </template>
 
 <script>
-	import LayoutNavigation from "@/components/Exercises/Project/Layout/LayoutNavigation";
+	import LayoutNavigation from "@/components/Exercises/Blog/Layout/LayoutNavigation";
 	import UIExerciseTitle from "@/components/UI/UIExerciseTitle";
 	import UIExerciseSubtitle from "@/components/UI/UIExerciseSubtitle";
 
@@ -48,7 +48,7 @@
 			width: 100%;
 			height: 100%;
 			opacity: 0.5;
-			background-image: url("~assets/images/exercises/project/background.png");
+			background-image: url("~assets/images/exercises/blog/background.png");
 			background-repeat: no-repeat;
 			background-position: 95% 0;
 			background-size: 50rem;

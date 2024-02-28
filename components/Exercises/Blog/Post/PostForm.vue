@@ -1,8 +1,6 @@
 <template>
 	<article class="post-form">
-		<p v-if="isError">
-			Error loading data
-		</p>
+		<p v-if="isError">Error loading data</p>
 		<form
 			v-else
 			id="postForm"
@@ -130,7 +128,7 @@
 		validateFieldRequired,
 		validateFieldMaxLength,
 	} from "@/mixins/validation-mixins.js";
-	import FormItem from "@/components/Exercises/Project/Form/FormItem";
+	import FormItem from "@/components/Exercises/Blog/Form/FormItem";
 
 	export default {
 		"name": "PostForm",
@@ -148,17 +146,17 @@
 				"form": this.postData
 					? { ...this.postData }
 					: {
-						"id": "",
-						"title": "",
-						"dateCreation": "",
-						"dateEdition": "",
-						"author": "",
-						"category": "",
-						"shortDescription": "",
-						"longDescription": "",
-						"image": "",
-						"link": "",
-					},
+							"id": "",
+							"title": "",
+							"dateCreation": "",
+							"dateEdition": "",
+							"author": "",
+							"category": "",
+							"shortDescription": "",
+							"longDescription": "",
+							"image": "",
+							"link": "",
+						},
 				"data": {
 					"categoriesList": [
 						"Without",
@@ -271,7 +269,7 @@
 				}
 			},
 			onCancel() {
-				this.$router.push("/exercises/project/admin");
+				this.$router.push("/exercises/blog/admin");
 			},
 		},
 	};

@@ -66,8 +66,8 @@
 						"status": false,
 					},
 					{
-						"url": "/exercises/project/home",
-						"name": "Project",
+						"url": "/exercises/blog/home",
+						"name": "Blog",
 						"description": "",
 						"status": false,
 					},

@@ -59,7 +59,7 @@
 		validateFieldContainsUpperCase,
 		validateFieldContainsLowerCase,
 	} from "@/mixins/validation-mixins.js";
-	import FormItem from "@/components/Exercises/Project/Form/FormItem";
+	import FormItem from "@/components/Exercises/Blog/Form/FormItem";
 
 	export default {
 		"name": "AuthForm",
