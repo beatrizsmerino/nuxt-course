@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 module.exports = {
 	"env": {
 		"browser": true,
@@ -472,6 +473,18 @@ module.exports = {
 				"ignores": [],
 			},
 		],
+		"vue/html-self-closing": [
+			2,
+			{
+				"html": {
+					"void": "always",
+					"normal": "always",
+					"component": "always",
+				},
+				"svg": "always",
+				"math": "always",
+			},
+		],
 		"vue/max-attributes-per-line": [
 			2,
 			{
@@ -514,8 +527,11 @@ module.exports = {
 			{
 				"ignores": [
 					"pre",
+					"textarea",
 				],
+				"ignoreWhenNoAttributes": true,
 				"ignoreWhenEmpty": true,
+				"externalIgnores": [],
 			},
 		],
 		"wrap-iife": 2,
