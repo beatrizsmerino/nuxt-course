@@ -16,6 +16,7 @@
 						</nuxt-link>
 
 						<UIButton
+							v-if="item.description"
 							class="button--icon"
 							@button-click="showMore(index)"
 						>
@@ -29,6 +30,7 @@
 						</UIButton>
 					</div>
 					<div
+						v-if="item.description"
 						class="exercise__content"
 						v-html="item.description"
 					/>
