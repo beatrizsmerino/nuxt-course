@@ -1,6 +1,8 @@
 <template>
 	<article class="post-form">
-		<p v-if="isError">Error loading data</p>
+		<p v-if="isError">
+			Error loading data
+		</p>
 		<form
 			v-else
 			id="postForm"
@@ -146,17 +148,17 @@
 				"form": this.postData
 					? { ...this.postData }
 					: {
-							"id": "",
-							"title": "",
-							"dateCreation": "",
-							"dateEdition": "",
-							"author": "",
-							"category": "",
-							"shortDescription": "",
-							"longDescription": "",
-							"image": "",
-							"link": "",
-						},
+						"id": "",
+						"title": "",
+						"dateCreation": "",
+						"dateEdition": "",
+						"author": "",
+						"category": "",
+						"shortDescription": "",
+						"longDescription": "",
+						"image": "",
+						"link": "",
+					},
 				"data": {
 					"categoriesList": [
 						"Without",
