@@ -16,6 +16,7 @@
 						</nuxt-link>
 
 						<UIButton
+							v-if="item.description"
 							class="button--icon"
 							@button-click="showMore(index)"
 						>
@@ -29,6 +30,7 @@
 						</UIButton>
 					</div>
 					<div
+						v-if="item.description"
 						class="exercise__content"
 						v-html="item.description"
 					/>
@@ -68,8 +70,7 @@
 					{
 						"url": "/exercises/project/home",
 						"name": "Project",
-						"description":
-							'<div class="exercise-steps"><ol><li>Display the list of posts and select the post to view its details.</li><li>CRUD of Post with Firebase (Create, Read, Update and Delete).</li><li>Authenticantion with Firebase through email and password (SignUp, SignIn and SignOut).</li><li><code>Props</code>, <code>$emit</code>, <code>vuex</code>, <code>asyncData</code>, <code>fetch</code>, <code>nuxtSeverInit</code>.</li><li>Local Storage and Cookies to manage data in server and client sides.</li></ol></div>',
+						"description": "",
 						"status": false,
 					},
 				],
