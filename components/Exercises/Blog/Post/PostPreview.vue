@@ -27,7 +27,7 @@
 				<img
 					:src="postData.image"
 					:alt="postData.title"
-				>
+				/>
 			</div>
 			<h3 class="post-preview__title">
 				{{ postData.title }}

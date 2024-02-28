@@ -5,7 +5,7 @@
 			<link
 				href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
 				rel="stylesheet"
-			>
+			/>
 			<div class="max-w-8xl mx-auto sm:px-6 lg:px-8">
 				<a
 					class="flex justify-center pt-8 sm:pt-0"
@@ -28,7 +28,7 @@
 							Nuxt Documentation
 						</a>
 						, whether you are new or have previous experience with the framework.
-						<br >
+						<br />
 					</p>
 					<p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
 						To get started, remove

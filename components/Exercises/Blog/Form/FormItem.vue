@@ -29,7 +29,7 @@
 				:required="fieldRequired"
 				@focus="onFocus"
 				@blur="onBlur"
-			>
+			/>
 			<textarea
 				v-if="fieldTag == 'textarea'"
 				:id="fieldId"

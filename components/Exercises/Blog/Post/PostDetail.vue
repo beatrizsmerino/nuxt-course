@@ -15,7 +15,7 @@
 					<img
 						:src="postData.image"
 						:alt="postData.title"
-					>
+					/>
 				</div>
 				<h2 class="post-detail__title">
 					{{ postData.title }}

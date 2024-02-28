@@ -40,7 +40,7 @@
 					width="50%"
 					:src="productData.image"
 					:alt="productData.title"
-				>
+				/>
 			</article>
 		</section>
 	</div>
