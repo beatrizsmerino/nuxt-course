@@ -131,7 +131,14 @@
 
 		&__content {
 			display: none;
+			flex-direction: column;
 			padding: 0 1.5rem 1.5rem;
+
+			>* {
+				&:not(:last-child) {
+					margin-bottom: 1rem;
+				}
+			}
 
 			ul,
 			ol {
