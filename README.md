@@ -17,7 +17,7 @@ Designed for both beginners and seasoned developers alike, the course provides a
 
 The exercise `Blog` uses `Firebase` so needs have in the `.env` file the `FIREBASE_API_KEY` enviroment variable with the value of the `API Key`.
 
-You can found the `API Key` here:
+You can found the `API Key` [here](https://console.firebase.google.com/project/nuxt-course-6e533/settings/general):
 
 - In the `console.firebase.google.com`, select your project.
 - Go to the left menu and click on the `⚙️` icon, next to `Project Overview`.
