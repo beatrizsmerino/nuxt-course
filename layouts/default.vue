@@ -15,29 +15,48 @@
 		"components": {
 			PageHeader,
 		},
+		head() {
+			return {
+				"htmlAttrs": {
+					"class": "layout--default",
+				},
+			};
+		},
 	};
 </script>
 
 <style lang="scss">
+	@import "~/assets/scss/animations/animations-page";
+	@import "~/assets/scss/animations/animations-layout";
+
 	html {
-		box-sizing: border-box;
 		color: $color-brand-2;
-		font-family: Avenir, Helvetica, Arial, sans-serif;
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;
-		text-size-adjust: 100%;
-		word-spacing: 0.1rem;
+		font-family: $font-main;
 	}
 
-	*,
-	*:before,
-	*:after {
-		box-sizing: border-box;
-		margin: 0;
+	textarea {
+		font-family: $font-main;
 	}
+
+	html,
+	body,
+	.layout {
+		width: 100%;
+		height: 100%;
+	}
+
+	/* stylelint-disable selector-id-pattern */
+	#__nuxt,
+	#__layout {
+		height: 100%;
+	}
+
+	/* stylelint-enable selector-id-pattern */
 
 	.page {
-		margin-top: 3.5rem;
+		width: 100%;
+		height: 100%;
+		padding-top: 6rem;
 
 		&__container {
 			display: flex;
@@ -45,17 +64,27 @@
 			align-items: center;
 			justify-content: center;
 			width: 100%;
-			min-height: calc(100vh - 3.5rem);
 
 			> * {
 				&:not(:last-child) {
-					margin-bottom: 4rem;
+					margin-bottom: 6.4rem;
 				}
 			}
 		}
 
 		&__inner {
-			padding: 0 2rem;
+			padding: 0 3rem;
+		}
+
+		&__main {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			font-size: 1.6rem;
+
+			> * {
+				height: 100%;
+			}
 		}
 	}
 

@@ -1,0 +1,90 @@
+// COMPONENTS
+// FORM
+// =================================================
+
+.form {
+	width: 100%;
+	display: inline-block;
+
+	&__group {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+
+		@include media("sm") {
+			width: 100% !important;
+			flex-direction: column !important;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+
+			@include media("sm") {
+				margin: 0 0 2rem !important;
+			}
+		}
+
+		.form__item {
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__column {
+		@include media("sm") {
+			width: 100% !important;
+			flex-direction: column !important;
+		}
+
+		&:not(:last-child) {
+			margin-right: 2rem !important;
+
+			@include media("sm") {
+				margin-right: 0 !important;
+				margin-bottom: 2rem !important;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+
+		&:not(:last-child) {
+			margin-bottom: 1.9rem;
+		}
+	}
+
+	&__field {
+		min-height: 4.3rem;
+	}
+
+	&__info {
+		margin-top: 0.5rem;
+		font-size: 1.3rem;
+		color: $color-brand-2;
+	}
+
+	&__button-list {
+		display: flex;
+		justify-content: flex-end;
+
+		@include media("md") {
+			justify-content: space-between;
+		}
+
+		> * {
+			min-width: 12rem;
+
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
+
+			@include media("md") {
+				width: calc(50% - 1rem);
+				min-width: auto;
+			}
+		}
+	}
+}

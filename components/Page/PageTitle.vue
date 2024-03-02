@@ -19,6 +19,7 @@
 
 <style lang="scss" scoped>
 	.page-title {
+		font-size: 2.4rem;
 		text-align: center;
 
 		:deep(.page-title__highlight) {
@@ -27,7 +28,7 @@
 			background-image: linear-gradient(45deg, $color-brand-2, $color-brand-1, $color-brand-3);
 			background-repeat: repeat;
 			background-size: 100%;
-			font-size: 4rem;
+			font-size: 2.8em;
 			font-weight: 900;
 			-webkit-text-fill-color: transparent;
 			-moz-text-fill-color: transparent;
