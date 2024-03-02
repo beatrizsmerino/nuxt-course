@@ -8,6 +8,7 @@
 			>
 				<nuxt-link
 					class="page-nav__link"
+					:exact="!link.activeSubPages"
 					:to="link.path"
 				>
 					{{ link.name }}
@@ -31,6 +32,11 @@
 						"name": "About",
 						"path": "/about",
 					},
+					{
+						"name": "Exercises",
+						"path": "/exercises",
+						"activeSubPages": true,
+					},
 				],
 			};
 		},
@@ -44,12 +50,10 @@
 
 <style lang="scss" scoped>
 	.page-nav {
-		color: $color-brand-1;
-
 		&__list {
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-end;
 			margin: 0;
 			padding: 0;
 			list-style: none;
@@ -61,23 +65,23 @@
 			justify-content: center;
 
 			&:not(:last-child) {
-				&:after {
-					content: "|";
-					display: inline-block;
-					margin: 0 0.5rem;
-				}
+				margin-right: 1rem;
 			}
 		}
 
 		&__link {
 			padding: 0.5rem;
-			color: $color-brand-1;
+			color: $color-brand-3;
+			font-size: 2rem;
 			font-weight: bold;
 			text-decoration: none;
 
-			&:hover,
-			&.router-link-exact-active {
-				color: $color-brand-3;
+			&.is-active {
+				color: $color-white;
+			}
+
+			&:hover {
+				color: $color-brand-1;
 			}
 		}
 	}

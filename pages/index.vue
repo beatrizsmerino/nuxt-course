@@ -1,18 +1,21 @@
 <template>
-	<div class="home">
-		<section>
-			<Tutorial class="page__container page__inner" />
-		</section>
-	</div>
+	<Tutorial class="page__container page__inner" />
 </template>
 
 <script>
 	import Tutorial from "@/components/Tutorial";
 
 	export default {
-		"name": "Home",
+		"name": "ViewHome",
 		"components": {
 			Tutorial,
+		},
+		head() {
+			return {
+				"htmlAttrs": {
+					"class": "layout--default page--home",
+				},
+			};
 		},
 		mounted() {
 			console.log(process.env.NODE_ENV);

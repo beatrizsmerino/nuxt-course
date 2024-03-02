@@ -13,6 +13,17 @@ This repository serves as a complete learning and practice platform for masterin
 
 Designed for both beginners and seasoned developers alike, the course provides an in-depth exploration of `Nuxt 2`, enhancing the capabilities of `Vue.js` through practical, real-world applications. This repository contains my personal coding exercises, project work, and key learnings, reflecting my journey through the course and my progression in mastering the powerful features of `Nuxt 2`.
 
+## ⚙️ Configuration
+
+The exercise `Blog` uses `Firebase` so needs have in the `.env` file the `FIREBASE_API_KEY` enviroment variable with the value of the `API Key`.
+
+You can found the `API Key` [here](https://console.firebase.google.com/project/nuxt-course-6e533/settings/general):
+
+- In the `console.firebase.google.com`, select your project.
+- Go to the left menu and click on the `⚙️` icon, next to `Project Overview`.
+- Select the `Project Settings` option.
+- Go to `General`/`Your project`/`Web API Key`.
+
 ## 🚀 Commands
 
 ### Install dependencies
@@ -89,10 +100,6 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
-
-## 🚧 Status
-
-The current status of the project is under construction.
 
 ## 🔗 References
 

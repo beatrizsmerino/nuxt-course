@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html {
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	text-size-adjust: 100%;
+	word-spacing: 1px;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1rem;
+}
+
+textarea {
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+}
