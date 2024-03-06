@@ -8,7 +8,7 @@ on:
     branches: [ main, master ]
 jobs:
   check-node-build:
-    name: 🧩 Build, test and validate code
+    name: 🧩 Build and test code
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
