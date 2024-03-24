@@ -28,7 +28,7 @@
 		"@nuxtjs/svg-sprite": "^0.5.2",
 		"body-parser": "^1.20.2",
 		"core-js": "^3.36.0",
-		"express": "^4.18.3",
+		"express": "^4.19.1",
 		"js-cookie": "^3.0.5",
 		"nuxt": "^2.16.0",
 		"vue": "^2.7.14",
