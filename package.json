@@ -30,7 +30,7 @@
 		"core-js": "^3.37.1",
 		"express": "^4.19.2",
 		"js-cookie": "^3.0.5",
-		"nuxt": "^2.16.0",
+		"nuxt": "^3.12.1",
 		"vue": "^2.7.14",
 		"vue-server-renderer": "^2.7.16",
 		"vue-template-compiler": "^2.7.16",
