@@ -11,7 +11,7 @@
 		"dependencies:fix": "npm install --ignore-scripts && npx npm-force-resolutions",
 		"preinstall": "npm run install:clean && npm run dependencies:fix",
 		"postinstall": "npm run lint",
-		"prepare": "husky install",
+		"prepare": "husky",
 		"dev": "npm run env:package && nuxt",
 		"build": "npm run env:package && nuxt build",
 		"start": "npm run env:package && nuxt start",
