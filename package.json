@@ -42,7 +42,7 @@
 		"@babel/plugin-syntax-import-assertions": "^7.24.7",
 		"@commitlint/cli": "^19.3.0",
 		"@commitlint/config-conventional": "^19.2.2",
-		"@nuxt/babel-preset-app": "^2.17.4",
+		"@nuxt/babel-preset-app": "^2.18.1",
 		"@nuxtjs/eslint-config": "^12.0.0",
 		"@nuxtjs/eslint-module": "^3.1.0",
 		"@nuxtjs/style-resources": "^1.2.2",
