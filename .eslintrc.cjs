@@ -1,4 +1,3 @@
-/* eslint-disable max-lines */
 module.exports = {
 	"env": {
 		"browser": true,
