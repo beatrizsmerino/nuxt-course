@@ -1,4 +1,3 @@
-/* eslint-disable max-lines */
 module.exports = {
 	"env": {
 		"browser": true,
@@ -45,7 +44,7 @@ module.exports = {
 		{
 			"files": [
 				"package-lock.json",
-				".eslintrc.js",
+				".eslintrc.cjs",
 			],
 			"rules": {
 				"max-lines": "off",
