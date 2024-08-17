@@ -39,7 +39,6 @@
 	"devDependencies": {
 		"@babel/core": "^7.25.2",
 		"@babel/eslint-parser": "^7.25.1",
-		"@babel/plugin-syntax-import-assertions": "^7.24.7",
 		"@commitlint/cli": "^19.4.0",
 		"@commitlint/config-conventional": "^19.2.2",
 		"@nuxt/babel-preset-app": "^2.18.1",
