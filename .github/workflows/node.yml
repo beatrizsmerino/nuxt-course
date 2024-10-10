@@ -23,7 +23,7 @@ jobs:
           node-version: ${{ matrix.node }}
           check-latest: true
       - name: 🛠️ Storing 'node_modules' in cache
-        uses: actions/cache@v4.1.0
+        uses: actions/cache@v4.1.1
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
