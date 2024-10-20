@@ -91,8 +91,8 @@
 
 		&.is-active,
 		&:hover {
-			border-color: mix($color-white, $color-black, 20%);
-			background-color: mix($color-white, $color-black, 20%);
+			border-color: color.mix($color-white, $color-black, 20%);
+			background-color: color.mix($color-white, $color-black, 20%);
 			color: $color-white;
 
 			::v-deep {
@@ -154,8 +154,8 @@
 			color: $color-white;
 
 			&:hover {
-				border-color: mix($color-white, $color-black, 20%);
-				background-color: mix($color-white, $color-black, 20%);
+				border-color: color.mix($color-white, $color-black, 20%);
+				background-color: color.mix($color-white, $color-black, 20%);
 			}
 		}
 
@@ -237,12 +237,12 @@
 			height: 50%;
 			transform: rotate(-1deg);
 			border-radius: 0.5rem 1rem 0.2rem;
-			background-color: mix($color-white, $color-brand-1, 40%);
+			background-color: color.mix($color-white, $color-brand-1, 40%);
 		}
 
 		&:hover {
 			&:after {
-				background-color: mix($color-white, $color-brand-1, 20%);
+				background-color: color.mix($color-white, $color-brand-1, 20%);
 			}
 		}
 	}
