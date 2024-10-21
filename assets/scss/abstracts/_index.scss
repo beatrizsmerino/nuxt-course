@@ -3,6 +3,8 @@
 
 // ABSTRACTS
 // ----------------------------------------------------------------------
+@forward "./functions/abstracts-functions-contains";
+// -------------------
 @forward "./mixins/abstracts-mixins-media";
 // -------------------
 @forward "./variables/abstracts-variables-breakpoints";
