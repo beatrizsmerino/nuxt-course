@@ -21,7 +21,7 @@
 		"stylelint:fix": "stylelint \"./**/*.{css,scss,sass,vue}\" --fix --ignore-path ./.stylelintignore",
 		"lint": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",
 		"test": "jest",
-		"env:package": "node env-package.js"
+		"env:package": "node --no-warnings env-package.js"
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.13.6",
