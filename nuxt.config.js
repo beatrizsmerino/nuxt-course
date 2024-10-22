@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
+import sass from "sass";
 
 dotenv.config();
 
@@ -193,6 +194,18 @@ export default {
 
 					// Use the `.browserslistrc` file
 					"browsers": false,
+				},
+			},
+		},
+		"loaders": {
+			"scss": {
+				"implementation": sass,
+				"sassOptions": {
+					"silenceDeprecations": [
+
+						//  Mute old JS API deprecation warnings: https://sass-lang.com/documentation/breaking-changes/legacy-js-api/#silencing-warnings
+						"legacy-js-api",
+					],
 				},
 			},
 		},

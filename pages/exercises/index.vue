@@ -93,14 +93,14 @@
 	}
 
 	.exercise {
-		background-color: mix($color-white, $color-brand-2, 90%);
+		background-color: color.mix($color-white, $color-brand-2, 90%);
 
 		&:not(:last-child) {
 			margin-bottom: 1rem;
 		}
 
 		&:hover {
-			background-color: mix($color-white, $color-brand-2, 80%);
+			background-color: color.mix($color-white, $color-brand-2, 80%);
 		}
 
 		&__header {

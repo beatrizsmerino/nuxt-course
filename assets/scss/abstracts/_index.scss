@@ -1,0 +1,12 @@
+// PARTIALS SCSS
+// ===============================================================================
+
+// ABSTRACTS
+// ----------------------------------------------------------------------
+@forward "./functions/abstracts-functions-contains";
+// -------------------
+@forward "./mixins/abstracts-mixins-media";
+// -------------------
+@forward "./variables/abstracts-variables-breakpoints";
+@forward "./variables/abstracts-variables-colors";
+@forward "./variables/abstracts-variables-fonts";

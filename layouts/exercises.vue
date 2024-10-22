@@ -28,9 +28,9 @@
 <style lang="scss">
 	// PARTIALS SASS
 	// =================================================
-	@import "~/assets/scss/animations/animations-page";
-	@import "~/assets/scss/animations/animations-layout";
-	@import "~/assets/scss/components/components-form";
+	@use "~/assets/scss/animations/animations-page";
+	@use "~/assets/scss/animations/animations-layout";
+	@use "~/assets/scss/components/components-form";
 
 	.layout {
 		&--exercises {

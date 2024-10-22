@@ -21,8 +21,8 @@
 </script>
 
 <style lang="scss" scoped>
-	@import "~/assets/scss/animations/animations-page";
-	@import "~/assets/scss/animations/animations-layout";
+	@use "~/assets/scss/animations/animations-page";
+	@use "~/assets/scss/animations/animations-layout";
 
 	.layout {
 		&--error {
@@ -38,12 +38,12 @@
 
 				h1 {
 					margin-bottom: 2rem;
-					color: mix($color-white, $color-error, 50%);
+					color: color.mix($color-white, $color-error, 50%);
 					font-size: 4rem;
 				}
 
 				a {
-					color: mix($color-white, $color-error, 70%);
+					color: color.mix($color-white, $color-error, 70%);
 					font-size: 2.5rem;
 					font-weight: bold;
 					text-decoration: none;

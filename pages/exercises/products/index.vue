@@ -80,14 +80,14 @@
 					width: 100%;
 					height: 15rem;
 					padding: 2rem;
-					background-color: mix($color-white, $color-brand-2, 90%);
+					background-color: color.mix($color-white, $color-brand-2, 90%);
 					color: $color-brand-3;
 					font-size: 2rem;
 					font-weight: bold;
 					text-decoration: none;
 
 					&:hover {
-						background-color: mix($color-white, $color-brand-2, 80%);
+						background-color: color.mix($color-white, $color-brand-2, 80%);
 					}
 				}
 			}

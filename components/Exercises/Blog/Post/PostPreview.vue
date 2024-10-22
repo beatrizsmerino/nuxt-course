@@ -185,7 +185,7 @@
 		}
 
 		&--expanded {
-			background-color: mix($color-white, $color-brand-1, 40%);
+			background-color: color.mix($color-white, $color-brand-1, 40%);
 
 			.post-preview {
 				&__date {
@@ -208,11 +208,11 @@
 			}
 
 			&:hover {
-				background-color: mix($color-white, $color-brand-1, 20%);
+				background-color: color.mix($color-white, $color-brand-1, 20%);
 
 				.post-preview {
 					&__title {
-						color: mix($color-white, $color-black, 15%);
+						color: color.mix($color-white, $color-black, 15%);
 					}
 
 					&__short-description {
@@ -227,7 +227,7 @@
 			align-items: center;
 			gap: 2rem;
 			padding: 0.8rem 2rem;
-			border: 0.1rem solid mix($color-white, $color-black, 20%);
+			border: 0.1rem solid color.mix($color-white, $color-black, 20%);
 			background-color: $color-white;
 
 			.post-preview {
