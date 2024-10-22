@@ -2,11 +2,10 @@
 // ABSTRACTS, BASE, COMPONENTS, LAYOUT, PAGES, THEMES and VENDOR
 // ===============================================================================
 
+// SASS MODULES
+// ----------------------------------------------------------------------
+@use "sass:color";
+
 // ABSTRACTS
 // ----------------------------------------------------------------------
-// variables
-@import "abstracts/variables/abstracts-variables-breakpoints";
-@import "abstracts/variables/abstracts-variables-colors";
-@import "abstracts/variables/abstracts-variables-fonts";
-// mixins
-@import "abstracts/mixins/abstracts-mixins-media";
+@use "/abstracts/index" as *;
