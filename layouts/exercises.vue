@@ -27,11 +27,19 @@
 
 <style lang="scss">
 	// PARTIALS SASS
-	// =================================================
+	// ===============================================================================
+
+	// ANIMATIONS
+	// ----------------------------------------------------------------------
 	@use "~/assets/scss/animations/animations-page";
 	@use "~/assets/scss/animations/animations-layout";
-	@use "~/assets/scss/components/components-form";
 
+	// COMPONENTS
+	// ----------------------------------------------------------------------
+	@use "~/assets/scss/components/components-form";
+</style>
+
+<style lang="scss">
 	.layout {
 		&--exercises {
 			height: inherit;
