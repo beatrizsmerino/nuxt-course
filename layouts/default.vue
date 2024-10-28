@@ -38,11 +38,11 @@
 <style lang="scss">
 	html {
 		color: $color-brand-2;
-		font-family: $font-main;
+		font-family: $font-brand-1;
 	}
 
 	textarea {
-		font-family: $font-main;
+		font-family: $font-brand-1;
 	}
 
 	html,
