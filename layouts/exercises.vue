@@ -27,7 +27,8 @@
 
 <style lang="scss">
 	// PARTIALS SASS
-	// =================================================
+	// ===============================================================================
+
 	@use "~/assets/scss/animations/animations-page";
 	@use "~/assets/scss/animations/animations-layout";
 	@use "~/assets/scss/components/components-form";
