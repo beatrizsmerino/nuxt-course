@@ -26,6 +26,11 @@
 </script>
 
 <style lang="scss">
+	// PARTIALS SASS
+	// ===============================================================================
+
+	// ANIMATIONS
+	// ----------------------------------------------------------------------
 	@use "~/assets/scss/animations/animations-page";
 	@use "~/assets/scss/animations/animations-layout";
 

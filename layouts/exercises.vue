@@ -29,8 +29,13 @@
 	// PARTIALS SASS
 	// ===============================================================================
 
+	// ANIMATIONS
+	// ----------------------------------------------------------------------
 	@use "~/assets/scss/animations/animations-page";
 	@use "~/assets/scss/animations/animations-layout";
+
+	// COMPONENTS
+	// ----------------------------------------------------------------------
 	@use "~/assets/scss/components/components-form";
 
 	.layout {
