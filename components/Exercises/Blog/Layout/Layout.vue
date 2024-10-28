@@ -37,7 +37,7 @@
 		position: relative;
 		min-height: 100rem;
 		overflow: hidden;
-		font-family: $font-ubuntu;
+		font-family: $font-brand-2;
 
 		&:before {
 			content: "";
@@ -55,7 +55,7 @@
 		}
 
 		textarea {
-			font-family: $font-ubuntu;
+			font-family: $font-brand-2;
 		}
 
 		&__content {

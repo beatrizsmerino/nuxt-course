@@ -26,16 +26,23 @@
 </script>
 
 <style lang="scss">
+	// PARTIALS SASS
+	// ===============================================================================
+
+	// ANIMATIONS
+	// ----------------------------------------------------------------------
 	@use "~/assets/scss/animations/animations-page";
 	@use "~/assets/scss/animations/animations-layout";
+</style>
 
+<style lang="scss">
 	html {
 		color: $color-brand-2;
-		font-family: $font-main;
+		font-family: $font-brand-1;
 	}
 
 	textarea {
-		font-family: $font-main;
+		font-family: $font-brand-1;
 	}
 
 	html,
