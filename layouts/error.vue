@@ -28,7 +28,9 @@
 	// ----------------------------------------------------------------------
 	@use "~/assets/scss/animations/animations-page";
 	@use "~/assets/scss/animations/animations-layout";
+</style>
 
+<style lang="scss">
 	.layout {
 		&--error {
 			/* stylelint-disable selector-class-pattern */

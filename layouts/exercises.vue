@@ -37,7 +37,9 @@
 	// COMPONENTS
 	// ----------------------------------------------------------------------
 	@use "~/assets/scss/components/components-form";
+</style>
 
+<style lang="scss">
 	.layout {
 		&--exercises {
 			height: inherit;
