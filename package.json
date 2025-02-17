@@ -1,5 +1,5 @@
 {
-	"version": "2.3.2",
+	"version": "2.3.3",
 	"private": true,
 	"name": "nuxt-course",
 	"description": "Udemy course by Maximilian Schwarzmüller about Nuxt.js 2 Framework - Vue.js on Steroids. Build highly engaging Vue JS apps with Nuxt.js. Nuxt adds easy server-side-rendering and a folder-based config approach.",
