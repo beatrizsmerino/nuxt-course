@@ -76,6 +76,25 @@ module.exports = {
 				],
 			},
 		],
+		"declaration-property-value-no-unknown": [
+			true,
+			{
+				"ignoreProperties": {
+					"background-color": [
+						"/^rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\)$/",
+					],
+					"background-image": [
+						"/^linear-gradient\\(\\d+deg,\\s*(\\$[a-zA-Z0-9-_]+,\\s*)+\\$[a-zA-Z0-9-_]+\\)$/",
+					],
+					"border": [
+						"/^[0-9.]+(px|rem|em|%)\\s+(solid|dashed|dotted)\\s+(\\$[a-zA-Z0-9-_]+|rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\))$/",
+					],
+					"text-shadow": [
+						"/^(-?[0-9.]+(px|rem|em|%)?\\s+){2,3}\\$[a-zA-Z0-9-_]+$/",
+					],
+				},
+			},
+		],
 		"font-family-no-duplicate-names": true,
 		"font-family-no-missing-generic-family-keyword": true,
 		"function-calc-no-unspaced-operator": true,
