@@ -56,7 +56,7 @@
 					text-decoration: none;
 
 					&:hover {
-						text-decoration: undeline;
+						text-decoration: underline;
 					}
 				}
 			}
