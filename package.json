@@ -27,7 +27,7 @@
 		"@nuxtjs/axios": "^5.13.6",
 		"@nuxtjs/svg-sprite": "^0.5.2",
 		"body-parser": "^2.2.0",
-		"core-js": "^3.41.0",
+		"core-js": "^3.42.0",
 		"express": "^5.1.0",
 		"js-cookie": "^3.0.5",
 		"nuxt": "^2.18.1",
