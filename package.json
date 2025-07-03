@@ -38,7 +38,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.28.0",
-		"@babel/eslint-parser": "^7.27.5",
+		"@babel/eslint-parser": "^7.28.0",
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
 		"@nuxt/babel-preset-app": "^2.18.1",
