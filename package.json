@@ -1,10 +1,24 @@
 {
-	"version": "2.3.6",
+	"version": "2.4.0",
 	"private": true,
 	"name": "nuxt-course",
 	"description": "Udemy course by Maximilian Schwarzmüller about Nuxt.js 2 Framework - Vue.js on Steroids. Build highly engaging Vue JS apps with Nuxt.js. Nuxt adds easy server-side-rendering and a folder-based config approach.",
 	"author": "beatrizsmerino@gmail.com",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/beatrizsmerino/nuxt-course.git"
+	},
+	"bugs": {
+		"url": "https://github.com/beatrizsmerino/nuxt-course/issues"
+	},
+	"keywords": [
+		"nuxt",
+		"vue",
+		"ssr",
+		"javascript",
+		"udemy"
+	],
 	"type": "module",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
@@ -26,7 +40,7 @@
 	"dependencies": {
 		"@nuxtjs/axios": "^5.13.6",
 		"@nuxtjs/svg-sprite": "^0.5.2",
-		"body-parser": "^2.2.0",
+		"body-parser": "^2.2.1",
 		"core-js": "^3.47.0",
 		"express": "^5.1.0",
 		"js-cookie": "^3.0.5",
@@ -53,7 +67,7 @@
 		"browserslist": "^4.28.0",
 		"eslint": "^8.57.1",
 		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-jest": "^29.2.0",
+		"eslint-plugin-jest": "^29.2.1",
 		"eslint-plugin-jsonc": "^2.21.0",
 		"eslint-plugin-nuxt": "^4.0.0",
 		"eslint-plugin-prettier": "^5.5.4",
