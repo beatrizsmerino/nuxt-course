@@ -5,6 +5,20 @@
 	"description": "Udemy course by Maximilian Schwarzmüller about Nuxt.js 2 Framework - Vue.js on Steroids. Build highly engaging Vue JS apps with Nuxt.js. Nuxt adds easy server-side-rendering and a folder-based config approach.",
 	"author": "beatrizsmerino@gmail.com",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/beatrizsmerino/nuxt-course.git"
+	},
+	"bugs": {
+		"url": "https://github.com/beatrizsmerino/nuxt-course/issues"
+	},
+	"keywords": [
+		"nuxt",
+		"vue",
+		"ssr",
+		"javascript",
+		"udemy"
+	],
 	"type": "module",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
