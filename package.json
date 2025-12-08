@@ -64,7 +64,7 @@
 		"autoprefixer": "^10.4.22",
 		"babel-core": "^7.0.0-bridge.0",
 		"babel-jest": "^30.2.0",
-		"browserslist": "^4.28.0",
+		"browserslist": "^4.28.1",
 		"eslint": "^8.57.1",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-jest": "^29.2.1",
