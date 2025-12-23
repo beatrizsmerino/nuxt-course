@@ -1,5 +1,5 @@
 {
-	"version": "2.5.1",
+	"version": "2.6.0",
 	"private": true,
 	"name": "nuxt-course",
 	"description": "Udemy course by Maximilian Schwarzmüller about Nuxt.js 2 Framework - Vue.js on Steroids. Build highly engaging Vue JS apps with Nuxt.js. Nuxt adds easy server-side-rendering and a folder-based config approach.",
@@ -75,6 +75,7 @@
 		"husky": "^9.1.7",
 		"jest": "^30.2.0",
 		"jest-environment-jsdom": "^30.2.0",
+		"lint-staged": "^16.2.7",
 		"postcss": "^8.5.6",
 		"postcss-html": "^1.8.0",
 		"postcss-import": "^16.1.1",
@@ -95,6 +96,11 @@
 		"nth-check": "2.1.1"
 	},
 	"overrides": {
+		"read-pkg-up": {
+			"find-up": {
+				"path-exists": "^4.0.0"
+			}
+		},
 		"braces": "^3.0.3",
 		"micromatch": "^4.0.8",
 		"postcss": "^8.5.6",
