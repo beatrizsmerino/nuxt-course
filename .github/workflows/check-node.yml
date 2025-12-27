@@ -3,9 +3,9 @@
 name: ✅ Check project in different Node versions
 on:
   push:
-    branches: [ main, master ]
+    branches: [ master ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ master ]
 jobs:
   check-node-build:
     name: 🧩 Build and test code
