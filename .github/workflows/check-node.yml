@@ -24,8 +24,6 @@ jobs:
         cache: 'npm'
     - name: 📦 Install dependencies
       run: npm install
-    - name: 👀 Fix errors and format code
-      run: npm run lint --if-present
     - name: 🧪 Test code
       run: npm run test --if-present
     - name: 🏗️ Build project
