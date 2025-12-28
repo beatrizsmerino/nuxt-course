@@ -21,13 +21,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         check-latest: true
-    - name: 🛠️ Storing 'node_modules' in cache
-      uses: actions/cache@v5.0.1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+        cache: 'npm'
     - name: 📦 Install dependencies
       run: npm install
     - name: 👀 Fix errors and format code
