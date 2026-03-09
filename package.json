@@ -105,6 +105,11 @@
 				"path-exists": "^5.0.0"
 			}
 		},
+		"@nuxtjs/stylelint-module": {
+			"stylelint-webpack-plugin": {
+				"stylelint": "^16.26.1"
+			}
+		},
 		"read-pkg-up": {
 			"find-up": "^4.1.0"
 		},
