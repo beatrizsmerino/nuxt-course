@@ -106,3 +106,7 @@ More information about the usage of this directory in [the documentation](https:
 ## 🔗 References
 
 - Udemy: ["Nuxt.js 2 - Vue.js on Steroids" by Maximilian Schwarzmüller](https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/learn/lecture/9172330#overview)
+
+## 📄 License
+
+This project is licensed under the `MIT` License, which allows free use, modification and distribution. See [LICENSE](LICENSE) for details.
