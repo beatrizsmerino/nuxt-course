@@ -105,6 +105,11 @@
 				"path-exists": "^5.0.0"
 			}
 		},
+		"@nuxtjs/stylelint-module": {
+			"stylelint-webpack-plugin": {
+				"stylelint": "^16.26.1"
+			}
+		},
 		"read-pkg-up": {
 			"find-up": "^4.1.0"
 		},
@@ -118,6 +123,7 @@
 		"axios": "^0.28.0",
 		"http-proxy-middleware": "^3.0.5",
 		"nth-check": "^2.1.1",
+		"stylelint-config-recommended": "17.0.0",
 		"vue-jest": {
 			"babel-plugin-transform-es2015-modules-commonjs": {
 				"babel-template": {
