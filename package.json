@@ -94,11 +94,6 @@
 	},
 	"overrides": {
 		"@babel/traverse": "^7.28.0",
-		"@commitlint/top-level": {
-			"find-up": {
-				"path-exists": "^5.0.0"
-			}
-		},
 		"@nuxtjs/axios": {
 			"axios": "^0.28.0",
 			"http-proxy-middleware": "^3.0.5"
@@ -120,9 +115,6 @@
 			"cookie": "^0.7.2",
 			"devalue": "^5.3.2",
 			"tmp": "^0.2.4"
-		},
-		"read-pkg-up": {
-			"find-up": "^4.1.0"
 		},
 		"stylelint-config-recommended-vue": {
 			"stylelint-config-recommended": "17.0.0"
