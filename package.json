@@ -92,11 +92,6 @@
 		"stylelint-scss": "^6.14.0",
 		"vue-jest": "^3.0.7"
 	},
-	"resolutions": {
-		"glob-parent": "6.0.2",
-		"json5": "2.2.3",
-		"nth-check": "2.1.1"
-	},
 	"overrides": {
 		"@commitlint/top-level": {
 			"find-up": {
@@ -120,6 +115,8 @@
 		"@babel/traverse": "^7.28.0",
 		"axios": "^0.28.0",
 		"http-proxy-middleware": "^3.0.5",
+		"glob-parent": "^6.0.2",
+		"json5": "^2.2.3",
 		"nth-check": "^2.1.1",
 		"stylelint-config-recommended": "17.0.0",
 		"vue-jest": {
