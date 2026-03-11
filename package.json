@@ -108,6 +108,9 @@
 		},
 		"braces": "^3.0.3",
 		"glob-parent": "^6.0.2",
+		"jest-environment-jsdom": {
+			"http-proxy-agent": "^7.0.2"
+		},
 		"json5": "^2.2.3",
 		"micromatch": "^4.0.8",
 		"minimatch": "^3.1.4",
