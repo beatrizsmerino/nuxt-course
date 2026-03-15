@@ -94,14 +94,24 @@
 	},
 	"overrides": {
 		"@babel/traverse": "^7.28.0",
+		"@nuxt/webpack": {
+			"webpack": "^4.47.0"
+		},
 		"@nuxtjs/axios": {
 			"axios": "^0.28.0",
 			"http-proxy-middleware": "^3.0.5"
 		},
+		"@nuxtjs/eslint-module": {
+			"eslint-webpack-plugin": {
+				"webpack": "^4.47.0"
+			}
+		},
 		"@nuxtjs/stylelint-module": {
 			"stylelint-webpack-plugin": {
-				"stylelint": "^16.26.1"
-			}
+				"stylelint": "^16.26.1",
+				"webpack": "^4.47.0"
+			},
+			"webpack": "^4.47.0"
 		},
 		"@vue/component-compiler-utils": {
 			"postcss": "^8.5.8"
