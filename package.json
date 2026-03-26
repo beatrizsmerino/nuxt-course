@@ -32,9 +32,9 @@
 		"build": "npm run env:package && nuxt build",
 		"start": "npm run env:package && nuxt start",
 		"generate": "npm run env:package && nuxt generate",
-		"prettier:fix": "prettier --write \"./**/*.{css,scss,json,yml,yaml,js,cjs,mjs,vue}\"",
-		"eslint:fix": "eslint \"./**/*.{json,js,cjs,mjs,vue}\" --fix --ignore-path .eslintignore",
-		"stylelint:fix": "stylelint \"./**/*.{css,scss,vue}\" --fix --ignore-path .stylelintignore",
+		"prettier:fix": "prettier --write './**/*.{css,scss,json,yml,yaml,js,cjs,mjs,vue}'",
+		"eslint:fix": "eslint './**/*.{json,js,cjs,mjs,vue}' --fix --ignore-path .eslintignore",
+		"stylelint:fix": "stylelint './**/*.{css,scss,vue}' --fix --ignore-path .stylelintignore",
 		"lint": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",
 		"test": "jest",
 		"env:package": "node env-package.js"
