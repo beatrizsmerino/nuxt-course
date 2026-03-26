@@ -10,6 +10,15 @@ module.exports = {
 		"stylelint-scss",
 	],
 	"rules": {
+		"annotation-no-unknown": [
+			true,
+			{
+				"ignoreAnnotations": [
+					"default",
+					"global",
+				],
+			},
+		],
 		"at-rule-empty-line-before": [
 			"always",
 			{
@@ -19,6 +28,9 @@ module.exports = {
 				],
 				"ignore": [
 					"after-comment",
+				],
+				"ignoreAtRules": [
+					"else",
 				],
 			},
 		],
@@ -76,38 +88,13 @@ module.exports = {
 				],
 			},
 		],
-		"declaration-property-value-no-unknown": [
-			true,
-			{
-				"ignoreProperties": {
-					"background-color": [
-						"/^rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\)$/",
-					],
-					"background-image": [
-						"/^linear-gradient\\(\\d+deg,\\s*(\\$[a-zA-Z0-9-_]+,\\s*)+\\$[a-zA-Z0-9-_]+\\)$/",
-					],
-					"border": [
-						"/^[0-9.]+(px|rem|em|%)\\s+(solid|dashed|dotted)\\s+(\\$[a-zA-Z0-9-_]+|rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\))$/",
-					],
-					"text-shadow": [
-						"/^(-?[0-9.]+(px|rem|em|%)?\\s+){2,3}\\$[a-zA-Z0-9-_]+$/",
-					],
-				},
-			},
-		],
+		"declaration-property-value-no-unknown": null,
 		"font-family-no-duplicate-names": true,
 		"font-family-no-missing-generic-family-keyword": true,
 		"function-calc-no-unspaced-operator": true,
 		"function-linear-gradient-no-nonstandard-direction": true,
 		"function-name-case": "lower",
-		"function-no-unknown": [
-			true,
-			{
-				"ignoreFunctions": [
-					"mix",
-				],
-			},
-		],
+		"function-no-unknown": null,
 		"import-notation": null,
 		"keyframe-declaration-no-important": true,
 		"length-zero-no-unit": true,
@@ -134,6 +121,8 @@ module.exports = {
 			},
 		],
 		"scss/at-rule-no-unknown": true,
+		"scss/declaration-property-value-no-unknown": true,
+		"scss/function-no-unknown": true,
 		"scss/no-global-function-names": null,
 		"selector-class-pattern": [
 			"^([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?$",
@@ -192,4 +181,14 @@ module.exports = {
 		"@stylistic/indentation": "tab",
 		"@stylistic/string-quotes": "double",
 	},
+	"overrides": [
+		{
+			"files": [
+				"assets/scss/abstracts/mixins/_abstracts-mixins-media.scss",
+			],
+			"rules": {
+				"media-query-no-invalid": null,
+			},
+		},
+	],
 };
