@@ -76,25 +76,7 @@ module.exports = {
 				],
 			},
 		],
-		"declaration-property-value-no-unknown": [
-			true,
-			{
-				"ignoreProperties": {
-					"background-color": [
-						"/^rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\)$/",
-					],
-					"background-image": [
-						"/^linear-gradient\\(\\d+deg,\\s*(\\$[a-zA-Z0-9-_]+,\\s*)+\\$[a-zA-Z0-9-_]+\\)$/",
-					],
-					"border": [
-						"/^[0-9.]+(px|rem|em|%)\\s+(solid|dashed|dotted)\\s+(\\$[a-zA-Z0-9-_]+|rgba\\(\\$[a-zA-Z0-9-_]+,\\s*[0-9.]+\\))$/",
-					],
-					"text-shadow": [
-						"/^(-?[0-9.]+(px|rem|em|%)?\\s+){2,3}\\$[a-zA-Z0-9-_]+$/",
-					],
-				},
-			},
-		],
+		"declaration-property-value-no-unknown": null,
 		"font-family-no-duplicate-names": true,
 		"font-family-no-missing-generic-family-keyword": true,
 		"function-calc-no-unspaced-operator": true,
@@ -134,6 +116,7 @@ module.exports = {
 			},
 		],
 		"scss/at-rule-no-unknown": true,
+		"scss/declaration-property-value-no-unknown": true,
 		"scss/no-global-function-names": null,
 		"selector-class-pattern": [
 			"^([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?$",
