@@ -74,6 +74,14 @@ Format CSS, SCSS, JSON, YAML, JS and Vue files with [Prettier](https://prettier.
 npm run prettier:fix
 ```
 
+### Lint and fix files with ESLint
+
+Lint and fix JSON, JS and Vue files with [ESLint](https://eslint.org/).
+
+```bash
+npm run eslint:fix
+```
+
 ### Launch the development server with hot reload
 
 ```bash
