@@ -34,6 +34,14 @@ You can found the `API Key` [here](https://console.firebase.google.com/project/n
 npm install
 ```
 
+### Clean install dependencies
+
+Remove `node_modules` and `package-lock.json` to reinstall from scratch.
+
+```bash
+npm run install:clean
+```
+
 ### Launch the development server with hot reload
 
 ```bash
