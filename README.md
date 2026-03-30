@@ -119,6 +119,8 @@ npm run start
 
 ### Generate static project
 
+Generate a fully static project for deployment.
+
 ```bash
 npm run generate
 ```
