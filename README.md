@@ -66,6 +66,14 @@ Run [Prettier](https://prettier.io/) (`prettier:fix`), [ESLint](https://eslint.o
 npm run lint
 ```
 
+### Format files with Prettier
+
+Format CSS, SCSS, JSON, YAML, JS and Vue files with [Prettier](https://prettier.io/).
+
+```bash
+npm run prettier:fix
+```
+
 ### Launch the development server with hot reload
 
 ```bash
