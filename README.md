@@ -110,6 +110,8 @@ npm run dev
 
 ### Build project and start server for production
 
+Build the project for production and start the server.
+
 ```bash
 npm run build
 npm run start
