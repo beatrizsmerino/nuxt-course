@@ -102,6 +102,8 @@ npm run stylelint:fix
 
 ### Launch the development server with hot reload
 
+Launch the development server on `localhost` with hot reload.
+
 ```bash
 npm run dev
 ```
