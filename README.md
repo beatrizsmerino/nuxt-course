@@ -30,6 +30,8 @@ You can found the `API Key` [here](https://console.firebase.google.com/project/n
 
 ### Install dependencies
 
+Install all dependencies listed in `package.json`.
+
 ```bash
 npm install
 ```
