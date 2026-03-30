@@ -109,6 +109,14 @@ npm run start
 npm run generate
 ```
 
+### Run tests with Jest
+
+Run unit tests with [Jest](https://jestjs.io/).
+
+```bash
+npm run test
+```
+
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
 ## 📁 Special Directories
