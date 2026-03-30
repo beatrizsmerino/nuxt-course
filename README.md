@@ -58,6 +58,14 @@ Runs automatically after `postinstall` to enable `pre-commit` and `commit-msg` h
 npm run prepare
 ```
 
+### Generate environment variables
+
+Generate `.env` file with package `name` and `description` from `package.json`.
+
+```bash
+npm run env:package
+```
+
 ### Lint all files
 
 Run [Prettier](https://prettier.io/) (`prettier:fix`), [ESLint](https://eslint.org/) (`eslint:fix`) and [Stylelint](https://stylelint.io/) (`stylelint:fix`) to format and lint all project files.
