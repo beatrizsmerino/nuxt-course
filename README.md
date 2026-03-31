@@ -68,6 +68,14 @@ Generate `.env` file with package `name` and `description` from `package.json`.
 npm run env:package
 ```
 
+### Launch the development server with hot reload
+
+Launch the development server on `localhost` with hot reload.
+
+```bash
+npm run dev
+```
+
 ### Lints and fixes files
 
 Run [Prettier](https://prettier.io/) (`prettier:fix`), [ESLint](https://eslint.org/) (`eslint:fix`) and [Stylelint](https://stylelint.io/) (`stylelint:fix`) to format and lint all project files.
@@ -100,12 +108,12 @@ Lint and fix CSS, SCSS and Vue files with [Stylelint](https://stylelint.io/).
 npm run stylelint:fix
 ```
 
-### Launch the development server with hot reload
+### Run tests with Jest
 
-Launch the development server on `localhost` with hot reload.
+Run unit tests with [Jest](https://jestjs.io/).
 
 ```bash
-npm run dev
+npm run test
 ```
 
 ### Build project and start server for production
@@ -123,14 +131,6 @@ Generate a fully static project for deployment.
 
 ```bash
 npm run generate
-```
-
-### Run tests with Jest
-
-Run unit tests with [Jest](https://jestjs.io/).
-
-```bash
-npm run test
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
