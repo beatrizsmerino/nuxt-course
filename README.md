@@ -30,17 +30,95 @@ You can found the `API Key` [here](https://console.firebase.google.com/project/n
 
 ### Install dependencies
 
+Install all dependencies listed in `package.json`.
+
 ```bash
 npm install
 ```
 
+### Clean install dependencies
+
+Remove `node_modules` and `package-lock.json` to reinstall from scratch.
+
+```bash
+npm run install:clean
+```
+
+### Lint after install
+
+Runs automatically after `npm install` to run `npm run lint` on all project files.
+
+```bash
+npm run postinstall
+```
+
+### Set up Husky git hooks
+
+Runs automatically after `postinstall` to enable `pre-commit` and `commit-msg` hooks of [Husky](https://typicode.github.io/husky/).
+
+```bash
+npm run prepare
+```
+
+### Generate environment variables
+
+Generate `.env` file with package `name` and `description` from `package.json`.
+
+```bash
+npm run env:package
+```
+
 ### Launch the development server with hot reload
+
+Launch the development server on `localhost` with hot reload.
 
 ```bash
 npm run dev
 ```
 
+### Lints and fixes files
+
+Run [Prettier](https://prettier.io/) (`prettier:fix`), [ESLint](https://eslint.org/) (`eslint:fix`) and [Stylelint](https://stylelint.io/) (`stylelint:fix`) to format and lint all project files.
+
+```bash
+npm run lint
+```
+
+### Format files with Prettier
+
+Format CSS, SCSS, JSON, YAML, JS and Vue files with [Prettier](https://prettier.io/).
+
+```bash
+npm run prettier:fix
+```
+
+### Lint and fix files with ESLint
+
+Lint and fix JSON, JS and Vue files with [ESLint](https://eslint.org/).
+
+```bash
+npm run eslint:fix
+```
+
+### Lint and fix styles with Stylelint
+
+Lint and fix CSS, SCSS and Vue files with [Stylelint](https://stylelint.io/).
+
+```bash
+npm run stylelint:fix
+```
+
+### Run tests with Jest
+
+Run unit tests with [Jest](https://jestjs.io/).
+
+```bash
+npm run test
+```
+
 ### Build project and start server for production
+
+Build the project for production and start the server.
 
 ```bash
 npm run build
@@ -48,6 +126,8 @@ npm run start
 ```
 
 ### Generate static project
+
+Generate a fully static project for deployment.
 
 ```bash
 npm run generate
