@@ -98,3 +98,7 @@ sw.*
 
 # Vim swap files
 *.swap
+
+# FILES
+*.md
+LICENSE
