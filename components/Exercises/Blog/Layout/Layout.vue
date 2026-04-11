@@ -39,7 +39,7 @@
 		overflow: hidden;
 		font-family: $font-brand-2;
 
-		&:before {
+		&::before {
 			content: "";
 			display: inline-block;
 			position: absolute;

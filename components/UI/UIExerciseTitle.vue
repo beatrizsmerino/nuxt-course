@@ -18,7 +18,7 @@
 		color: $color-brand-1;
 		font-size: 4.5rem;
 
-		&:after {
+		&::after {
 			content: "";
 			display: inline-block;
 			position: absolute;

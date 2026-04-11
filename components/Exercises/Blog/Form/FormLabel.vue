@@ -49,7 +49,7 @@
 		&--required {
 			position: relative;
 
-			&:after {
+			&::after {
 				content: "*";
 				display: inline-block;
 				position: absolute;
