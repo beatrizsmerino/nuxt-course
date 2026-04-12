@@ -226,7 +226,7 @@
 		font-weight: 900;
 		text-decoration: none;
 
-		&:after {
+		&::after {
 			content: "";
 			display: inline-block;
 			position: absolute;
@@ -241,7 +241,7 @@
 		}
 
 		&:hover {
-			&:after {
+			&::after {
 				background-color: color.mix($color-white, $color-brand-1, 20%);
 			}
 		}
