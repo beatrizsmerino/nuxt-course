@@ -5,11 +5,12 @@
 #
 # Add below any extra paths that should not be formatted.
 
+
 # Build output
-dist
+dist/
 
 # Nuxt
-.nuxt
+.nuxt/
 
 # Project assets
-assets/sprite
+assets/sprite/
