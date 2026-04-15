@@ -5,11 +5,11 @@
 #
 # Add below any extra paths that should not be formatted.
 
-# nuxt.js build output
+# Nuxt
 .nuxt
 
-# Nuxt generate
+# Build output
 dist
 
-# Assets folder
+# Project assets
 assets/sprite
