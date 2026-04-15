@@ -1,9 +1,10 @@
-###
-# Place your Prettier ignore content here
+# Prettier defaults (no need to list):
+#   - Folders excluded automatically (node_modules/, .git/)
+#   - Files with unknown or extensionless types (.gitignore, LICENSE, .editorconfig)
+#   - Binary files (images, fonts, etc.)
+#
+# Add below any extra paths that should not be formatted.
 
-###
-# .gitignore content is duplicated here due to https://github.com/prettier/prettier/issues/8506
-.gitignore
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
@@ -42,7 +43,6 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
