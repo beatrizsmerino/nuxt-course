@@ -6,8 +6,8 @@
 # Add below any extra paths that should not be linted.
 
 
-# Nuxt
-.nuxt
-
 # Build output
 dist
+
+# Nuxt
+.nuxt
