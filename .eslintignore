@@ -6,8 +6,8 @@
 # Add below any extra paths that should not be linted.
 
 
-# nuxt.js build output
+# Nuxt
 .nuxt
 
-# Nuxt generate
+# Build output
 dist
