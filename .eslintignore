@@ -11,3 +11,6 @@ dist/
 
 # Nuxt
 .nuxt/
+
+# Project assets
+assets/sprite/
