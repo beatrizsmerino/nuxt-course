@@ -7,7 +7,7 @@
 
 
 # Build output
-dist
+dist/
 
 # Nuxt
-.nuxt
+.nuxt/
