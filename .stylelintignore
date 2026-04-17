@@ -9,5 +9,5 @@
 # Build output
 dist/
 
-# FOLDERS
-.nuxt
+# Nuxt
+.nuxt/
