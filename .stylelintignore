@@ -9,8 +9,8 @@
 # Build output
 dist/
 
+# Tests
+coverage/
+
 # Nuxt
 .nuxt/
-
-# Tests (Jest coverage reports)
-coverage/

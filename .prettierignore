@@ -9,6 +9,9 @@
 # Build output
 dist/
 
+# Tests
+coverage/
+
 # Nuxt
 .nuxt/
 
